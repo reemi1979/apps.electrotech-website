@@ -12,7 +12,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-
+import { useTranslation } from 'react-i18next';
 
 //POUR UTILISER AILLEURS
 // import { getCookiePrefs } from './components/CookieManager';
@@ -36,6 +36,8 @@ export const getCookiePrefs = () => {
 };
 
 const CookieManager = () => {
+
+  const { t } = useTranslation();
   const [visible, setVisible] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [prefs, setPrefs] = useState(defaultPrefs);
@@ -61,7 +63,7 @@ const CookieManager = () => {
   };
 
   const handleDeclineAll = () => {
-    handleSave({ ...defaultPrefs }); // Only "necessary" remains true
+    handleSave({ ...defaultPrefs });
   };
 
   return (
@@ -82,18 +84,18 @@ const CookieManager = () => {
           gap: 1,
         }}>
           <Typography variant="body2" textAlign="center">
-            Ce site utilise des cookies pour améliorer votre expérience. Cliquez sur « Accepter tout » pour autoriser tous les cookies, ou « Personnaliser » pour choisir vos préférences.
+            {t('cookie_title')}
           </Typography>
           <Box sx={{ display: 'flex', gap: 1 }}>
-            <Button variant="contained" color="primary" onClick={handleAcceptAll}>Accepter tout</Button>
-            <Button variant="outlined" color="inherit" onClick={handleDeclineAll}>Refuser tout</Button>
-            <Button variant="outlined" color="inherit" onClick={() => setDialogOpen(true)}>Personnaliser</Button>
+            <Button variant="contained" color="primary" onClick={handleAcceptAll}>{t('accepter_tout')}</Button>
+            <Button variant="outlined" color="inherit" onClick={handleDeclineAll}>{t('refuser_tout')}</Button>
+            <Button variant="outlined" color="inherit" onClick={() => setDialogOpen(true)}>{t('personnaliser')}</Button>
           </Box>
         </Box>
       )}
 
       <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)} fullScreen={fullScreen}>
-        <DialogTitle>Personnaliser les préférences de cookies</DialogTitle>
+        <DialogTitle>{t('cookie_personnaliser')}</DialogTitle>
         <DialogContent>
           <FormControlLabel control={<Checkbox checked disabled />} label="Nécessaire (Toujours actif)" />
           <FormControlLabel control={<Checkbox checked={prefs.functional} onChange={(e) => setPrefs(prev => ({ ...prev, functional: e.target.checked }))} />} label="Fonctionnelle" />
@@ -101,8 +103,8 @@ const CookieManager = () => {
           <FormControlLabel control={<Checkbox checked={prefs.advertising} onChange={(e) => setPrefs(prev => ({ ...prev, advertising: e.target.checked }))} />} label="Publicité" />
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setDialogOpen(false)} color="inherit">Annuler</Button>
-          <Button onClick={() => handleSave(prefs)} color="primary" variant="contained">Sauvegarder</Button>
+          <Button onClick={() => setDialogOpen(false)} color="inherit">{t('annuler')}</Button>
+          <Button onClick={() => handleSave(prefs)} color="primary" variant="contained">{t('sauvegarder')}</Button>
         </DialogActions>
       </Dialog>
     </>

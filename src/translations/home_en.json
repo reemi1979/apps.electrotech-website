@@ -1,0 +1,26 @@
+{
+
+    "accueil": "HOME",
+    "services": "SERVICES",
+    "projets": "PROJECTS",
+    "contact": "CONTACT",
+    "bienvenue": "Welcome to Electrotech",
+    "footer_droits": "All rights reserved",
+    "footer_politique": "Privacy Policy",
+    "footer_contact": "Contact us",
+    "hero_button_sound_on": "Unmute",
+    "hero_button_sound_off": "Mute",
+    "cookie_title": "This site uses cookies to enhance your experience. Click \"Accept All\" to allow all cookies, or \"Customize\" to choose your preferences.",
+    "cookie_personnaliser": "Customize cookie preferences",
+    "annuler": "Cancel",
+    "sauvegarder": "Save",
+    "accepter_tout": "Accept All",
+    "refuser_tout": "Decline All",
+    "personnaliser": "Customize",
+
+    "home_bienvenue": "Welcome to Electrotech",
+    "home_contenu_test": "This is test content with a video background and visible footer.",
+    "home_contenu_principal": "Main content after the Hero section."
+    
+  }
+  

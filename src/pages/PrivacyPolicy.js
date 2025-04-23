@@ -2,91 +2,94 @@
 
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const PrivacyPolicy = () => {
+  const { t } = useTranslation('policy');
+
   return (
     <Container maxWidth="md" sx={{ py: 4, color: 'white' }}>
       <Typography variant="h4" gutterBottom>
-        Politique de confidentialité
+        {t('privacy_title')}
       </Typography>
 
       <Typography variant="body1" paragraph>
-        Ce site Web utilise des fichiers témoins (cookies) pour améliorer votre expérience de navigation, afficher des contenus personnalisés et recueillir des statistiques sur l'utilisation du site.
+        {t('privacy_intro')}
       </Typography>
 
       <Typography variant="h6" gutterBottom>
-        Types de cookies utilisés
+        {t('privacy_types_title')}
       </Typography>
 
       <Box component="ul" sx={{ pl: 2 }}>
         <li>
-          <Typography variant="body1"><strong>Nécessaires</strong> : Essentiels pour le fonctionnement du site (ex. navigation, sécurité).</Typography>
+          <Typography variant="body1"><strong>{t('privacy_type_necessary_title')}</strong> : {t('privacy_type_necessary')}</Typography>
         </li>
         <li>
-          <Typography variant="body1"><strong>Fonctionnels</strong> : Permettent des fonctionnalités comme le partage sur les réseaux sociaux.</Typography>
+          <Typography variant="body1"><strong>{t('privacy_type_functional_title')}</strong> : {t('privacy_type_functional')}</Typography>
         </li>
         <li>
-          <Typography variant="body1"><strong>Analytiques</strong> : Utilisés pour analyser la fréquentation du site et améliorer le contenu.</Typography>
+          <Typography variant="body1"><strong>{t('privacy_type_analytics_title')}</strong> : {t('privacy_type_analytics')}</Typography>
         </li>
         <li>
-          <Typography variant="body1"><strong>Publicité</strong> : Servent à afficher des publicités personnalisées en fonction de votre activité.</Typography>
+          <Typography variant="body1"><strong>{t('privacy_type_ads_title')}</strong> : {t('privacy_type_ads')}</Typography>
         </li>
       </Box>
 
       <Typography variant="body1" paragraph>
-        Vous pouvez à tout moment modifier vos préférences en matière de cookies en cliquant sur le bouton « Personnaliser les cookies » ou en supprimant les fichiers témoins de votre navigateur.
+        {t('privacy_change_preferences')}
       </Typography>
 
       <Typography variant="body1" paragraph>
-        Pour toute question concernant la protection des données personnelles, veuillez nous contacter via le formulaire de contact du site.
+        {t('privacy_contact_intro')}
       </Typography>
 
       <Typography variant="h5" gutterBottom sx={{ mt: 5 }}>
-        Politique sur la protection des renseignements personnels
+        {t('privacy_rp_title')}
       </Typography>
 
       <Typography variant="body1" paragraph>
-        Dans le cadre de nos activités, Électrotech Automatisation Industrielle recueille et utilise des renseignements personnels à différents niveaux et auprès de différents acteurs. En tant qu’organisation privée, Électrotech est assujettie à la Loi sur la protection des renseignements personnels dans le secteur privé. L’entreprise est donc responsable d’assurer sa conformité à l’égard de cette obligation.
+        {t('privacy_rp_intro1')}
       </Typography>
 
       <Typography variant="body1" paragraph>
-        La présente politique a pour but de vous aider à comprendre nos pratiques en matière de cueillette, d’utilisation, de divulgation et de conservation des renseignements personnels.
+        {t('privacy_rp_intro2')}
       </Typography>
 
       <Typography variant="h6" gutterBottom>
-        Quand recueillons-nous des renseignements personnels et quels sont-ils ?
+        {t('privacy_rp_collect_title')}
       </Typography>
       <Box component="ul" sx={{ pl: 2 }}>
         <li>
-          <Typography variant="body1">Quand vous postulez pour un emploi au sein de notre entreprise : cela implique habituellement de fournir un CV et une lettre de motivation qui peuvent contenir votre nom, adresse, numéro de téléphone, courriel et d’autres renseignements personnels.</Typography>
+          <Typography variant="body1">{t('privacy_rp_collect_emploi')}</Typography>
         </li>
         <li>
-          <Typography variant="body1">Lorsque vous nous contactez par courriel : nous recueillons votre adresse courriel et les informations que vous indiquez.</Typography>
+          <Typography variant="body1">{t('privacy_rp_collect_email')}</Typography>
         </li>
       </Box>
 
       <Typography variant="h6" gutterBottom>
-        Pour quelle utilisation recueillons-nous des renseignements personnels et à qui les partageons-nous ?
+        {t('privacy_rp_usage_title')}
       </Typography>
       <Box component="ul" sx={{ pl: 2 }}>
-        <li><Typography variant="body1">Identifier une personne notamment dans le processus d’embauche (vérifier que le profil correspond, vérifier les antécédents, communiquer et embaucher, le cas échéant);</Typography></li>
-        <li><Typography variant="body1">Créer un dossier employé;</Typography></li>
-        <li><Typography variant="body1">Se conformer aux exigences légales (impôts, CNESST, etc.);</Typography></li>
+        <li><Typography variant="body1">{t('privacy_rp_usage_identify')}</Typography></li>
+        <li><Typography variant="body1">{t('privacy_rp_usage_dossier')}</Typography></li>
+        <li><Typography variant="body1">{t('privacy_rp_usage_legal')}</Typography></li>
       </Box>
 
       <Typography variant="body1" paragraph>
-        Nous limitons la collecte, l'utilisation et la divulgation de vos renseignements personnels uniquement aux fins que nous vous avons indiquées. Vos renseignements personnels ne peuvent être consultés que par nos employés autorisés, et ce, uniquement dans le cadre des tâches qui leur sont attribuées.
+        {t('privacy_rp_limit')}
       </Typography>
 
       <Typography variant="h6" gutterBottom>
-        Pendant combien de temps conservons-nous les renseignements personnels ?
+        {t('privacy_rp_retention_title')}
       </Typography>
       <Typography variant="body1" paragraph>
-        Nous conservons vos renseignements personnels que pour la durée nécessaire aux fins pour lesquelles ils ont été recueillis. Une fois les objectifs atteints, nous mettons en œuvre des moyens raisonnables pour détruire vos renseignements personnels et en assurer la confidentialité jusqu'à la fin.
+        {t('privacy_rp_retention')}
       </Typography>
 
       <Typography variant="h6" gutterBottom>
-        Responsable de la protection des renseignements personnels
+        {t('privacy_rp_responsable_title')}
       </Typography>
       <Typography variant="body1" paragraph>
         Isabelle Guay, directrice générale<br />
@@ -96,20 +99,20 @@ const PrivacyPolicy = () => {
       </Typography>
 
       <Typography variant="h6" gutterBottom>
-        Vos droits
+        {t('privacy_rp_rights_title')}
       </Typography>
       <Box component="ul" sx={{ pl: 2 }}>
-        <li><Typography variant="body1">Vous pouvez demander à consulter les informations personnelles que nous détenons sur vous.</Typography></li>
-        <li><Typography variant="body1">Nous devons nous assurer que les renseignements que nous détenons sur vous sont exacts et à jour.</Typography></li>
-        <li><Typography variant="body1">Vous pouvez demander la correction de vos renseignements personnels s’ils sont erronés ou dépassés.</Typography></li>
+        <li><Typography variant="body1">{t('privacy_rp_rights_consult')}</Typography></li>
+        <li><Typography variant="body1">{t('privacy_rp_rights_exact')}</Typography></li>
+        <li><Typography variant="body1">{t('privacy_rp_rights_correction')}</Typography></li>
       </Box>
 
       <Typography variant="body1" paragraph>
-        Pour toute question ou préoccupation, communiquez avec la personne responsable aux coordonnées ci-dessus.
+        {t('privacy_rp_rights_contact')}
       </Typography>
 
       <Typography variant="body2" sx={{ mt: 3 }}>
-        Mise à jour : 31 août 2024. Cette politique est révisée annuellement et à chaque modification légale importante.
+        {t('privacy_update')}
       </Typography>
     </Container>
   );

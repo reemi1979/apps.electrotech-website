@@ -3,8 +3,11 @@
 import React from 'react';
 import { Box, Typography, Link as MuiLink } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <Box
       component="footer"
@@ -18,15 +21,15 @@ const Footer = () => {
       }}
     >
       <Typography variant="body2">
-        © {new Date().getFullYear()} Électrotech - Tous droits réservés
+        © {new Date().getFullYear()} Électrotech - {t('footer_droits')}
       </Typography>
       <Typography variant="body2" sx={{ mt: 1 }}>
         <MuiLink component={Link} to="/politique-de-confidentialite" underline="hover" color="inherit">
-          Politique de confidentialité
+          {t('footer_politique')}
         </MuiLink>
         {' | '}
         <MuiLink component={Link} to="/contact" underline="hover" color="inherit">
-          Nous contacter
+          {t('footer_contact')}
         </MuiLink>
       </Typography>
     </Box>
