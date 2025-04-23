@@ -1,4 +1,9 @@
+// src/components/HeroVideo.js
+
 import React, { useRef, useState } from 'react';
+import Button from '@mui/material/Button';
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 
 const HeroVideo = () => {
 
@@ -17,7 +22,19 @@ const HeroVideo = () => {
 
   return (
     <>
-      <div className="video-container">
+      <div
+        className="video-container"
+        style={{
+          position: 'absolute', // ⬅️ plus de fixed
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: -1,
+          overflow: 'hidden',
+          pointerEvents: 'none',
+        }}
+      >
         <video
           ref={videoRef}
           src={videoPath}
@@ -25,16 +42,31 @@ const HeroVideo = () => {
           muted={isMuted}
           loop
           playsInline
-          style={{ width: '100vw', height: '100vh', objectFit: 'cover' }}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
         />
       </div>
 
-      <button
+      <Button
         onClick={toggleSound}
-        style={{ position: 'absolute', top: '20px', left: '20px', zIndex: 10 }}
+        variant="contained"
+        color="primary"
+        startIcon={isMuted ? <VolumeUpIcon /> : <VolumeOffIcon />}
+        sx={{
+          position: 'absolute',
+          top: 20,
+          left: 20,
+          zIndex: 10,
+          padding: '8px 16px',
+          fontSize: '1rem',
+          textTransform: 'none',
+        }}
       >
-        {isMuted ? '🔊 Activer le son' : '🔇 Couper le son'}
-      </button>
+        {isMuted ? 'Activer le son' : 'Couper le son'}
+      </Button>
     </>
   );
 }

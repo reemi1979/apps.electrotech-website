@@ -10,6 +10,12 @@ REACT_APP_VIDEO_PATH=/video.mp4
 "homepage": "/"
 
 
+2. 
+Modifier env.prodction : 
+REACT_APP_VIDEO_PATH=/video.mp4
+PUBLIC_URL=/
+
+
 3. Rebuild :
 npm run build
 
