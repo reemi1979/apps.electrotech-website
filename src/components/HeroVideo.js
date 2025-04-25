@@ -10,7 +10,7 @@ const HeroVideo = () => {
 
   const { t } = useTranslation();
   const videoRef = useRef(null);
-  const videoPath = process.env.REACT_APP_VIDEO_PATH;
+  const videoPath = process.env.PUBLIC_URL + '/video.mp4';
   const [isMuted, setIsMuted] = useState(true);
 
   const toggleSound = () => {

@@ -34,6 +34,7 @@ const HeaderBarResponsive = () => {
     { label: t('services'), link: '/services' },
     { label: t('projets'), link: '/projets' },
     { label: t('contact'), link: '/contact' },
+    { label: t('certifications'), link: '/certifications' },
   ];
 
   const toggleDrawer = () => setDrawerOpen(!drawerOpen);
@@ -44,11 +45,11 @@ const HeaderBarResponsive = () => {
         <Toolbar>
         <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
           <img
-            src={process.env.PUBLIC_URL + '/electron.png'}
+            src={process.env.PUBLIC_URL + '/electron.svg'}
             alt="Logo Electrotech"
-            style={{ width: 48, height: 48, marginRight: 8 }}
+            style={{ width: 72, height: 72, marginRight: 8 }}
           />
-          <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+          <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
             ELECTROTECH
           </Typography>
         </Box>
@@ -71,12 +72,15 @@ const HeaderBarResponsive = () => {
             ))
           )}
 
-        <FormControl variant="standard" sx={{ minWidth: 80, ml: 2 }}>
+        <FormControl variant="standard" sx={{ minWidth: 80, ml: 0 }}>
         <Select
           value={i18n.language}
           onChange={(e) => i18n.changeLanguage(e.target.value)}
           variant="standard"
           disableUnderline
+          MenuProps={{
+            disableScrollLock: true,
+          }}
           sx={{
             color: 'white',
             minWidth: 60,
@@ -100,13 +104,13 @@ const HeaderBarResponsive = () => {
         >
           <MenuItem value="fr">
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <img src={process.env.PUBLIC_URL + '/flags/fr.svg'} alt="FR" width={20} style={{ marginRight: 8 }} />
+              <img src={process.env.PUBLIC_URL + '/flags/fr.svg'} alt="FR" width={20} style={{ marginRight: 0 }} />
               Français
             </Box>
           </MenuItem>
           <MenuItem value="en">
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <img src={process.env.PUBLIC_URL + '/flags/us.svg'} alt="EN" width={20} style={{ marginRight: 8 }} />
+              <img src={process.env.PUBLIC_URL + '/flags/us.svg'} alt="EN" width={20} style={{ marginRight: 0 }} />
               English
             </Box>
           </MenuItem>

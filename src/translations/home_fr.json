@@ -4,6 +4,9 @@
     "services": "SERVICES",
     "projets": "PROJETS",
     "contact": "CONTACT",
+    "certifications": "CERTIFIATION",
+
+
     "bienvenue": "Bienvenue chez Électrotech",
     "footer_droits": "Tous droits réservés",
     "footer_politique": "Politique de confidentialité",
@@ -18,8 +21,51 @@
     "refuser_tout": "Refuser tout",
     "personnaliser": "Personnaliser",
 
-    "home_bienvenue": "Bienvenue chez Électrotech",
-    "home_contenu_test": "Ceci est du contenu test avec fond vidéo et footer visible.",
-    "home_contenu_principal": "Contenu principal après le Hero."
+    "home_contenu_principal": "Contenu principal après le Hero.",
+
+    "home_expertise": "Notre expertise",
+    "home_bienvenue": "Propulser l’avenir de l’automatisation",
+    "home_contenu_1": "Solutions sur mesure en panneaux électriques et automatisation",
+    "home_contenu_2": "Chez Electrotech, nous sommes spécialisés dans la conception, la fabrication et l'intégration de panneaux de contrôle électriques de haute qualité pour l'automatisation industrielle. Fondée en 1997, notre entreprise québécoise possède 27 ans d'expertise dans de multiples secteurs, offrant des solutions d'automatisation sur mesure qui améliorent l'efficacité, la fiabilité et la sécurité. Nous sommes reconnus pour notre excellence en contrôle industriel et en ingénierie d'automatisation, et nous nous engageons à dépasser les attentes de nos clients, partenaires et employés avec professionnalisme et intégrité.",
     
+    "home_industrie" : "Nos Industries",
+    "home_industrie_default_title": "Secteurs desservis",
+    "home_industrie_default_description": "Survolez une industrie pour en savoir plus.",
+    "home_industrie_airport_title": "Aéroportuaire",
+    "home_industrie_airport_description": "Systèmes automatisés fiables pour les infrastructures aéroportuaires critiques.",
+    "home_industrie_distribution_title": "Centre de distribution",
+    "home_industrie_distribution_description": "Automatisation rapide et précise pour la logistique moderne.",
+    "home_industrie_manufacturing_title": "Industrie manufacturière",
+    "home_industrie_manufacturing_description": "Solutions robustes pour améliorer l’efficacité de production.",
+    "home_industrie_oem_title": "OEM et équipementier",
+    "home_industrie_oem_description": "Intégration sur mesure pour vos équipements spécialisés.",
+    "home_industrie_foodpharma_title": "Alimentaire et pharmaceutique",
+    "home_industrie_foodpharma_description": "Contrôle rigoureux pour des environnements réglementés.",
+    "home_industrie_energy_title": "Énergie",
+    "home_industrie_energy_description": "Automatisation fiable pour la production et distribution d’énergie.",
+    "home_industrie_mining_title": "Secteur minier",
+    "home_industrie_mining_description": "Systèmes de contrôle résistants aux environnements extrêmes.",
+
+
+    "home_photos_1_title": "Automatisation industrielle",
+    "home_photos_1_category": "Des solutions avancées pour des processus fluides.",
+    "home_photos_1_description": "Chez Electrotech, nous concevons et programmons des systèmes d’automatisation industrielle sur mesure, adaptés aux besoins de chaque usine. Grâce à notre expertise en programmation d’automates (PLC) et en intégration de panneaux de contrôle, nous optimisons les procédés de production pour plus d’efficacité, de fiabilité et de sécurité.",
+
+    "home_photos_2_title": "Intégration de systèmes de contrôle",
+    "home_photos_2_category": "Automatisation fluide pour des opérations plus intelligentes",
+    "home_photos_2_description": "Des capteurs aux automates jusqu’aux tableaux de bord — nous unifions chaque composant de votre système industriel dans une solution d’automatisation intelligente et optimisée. Simplifiez vos processus, maximisez votre disponibilité.",
+
+    "home_photos_3_title": "Maintenance et support",
+    "home_photos_3_category": "Un service fiable pour faire tourner vos systèmes",
+    "home_photos_3_description": "Nos experts offrent un support réactif et une maintenance préventive pour assurer un fonctionnement fluide de vos systèmes — réduisant les arrêts et prolongeant la durée de vie de vos équipements.",
+
+    "home_photos_4_title": "Engagement qualité totale",
+    "home_photos_4_category": "L’excellence intégrée à chaque étape",
+    "home_photos_4_description": "Notre engagement envers la qualité totale signifie une attention aux détails à chaque étape — du premier fil jusqu’à l’inspection finale. Aucun raccourci, aucun compromis.",
+
+    "home_photos_5_title": "Panneaux électriques sur mesure",
+    "home_photos_5_category": "Conçus pour la précision et la durabilité",
+    "home_photos_5_description": "Conçus et fabriqués selon vos spécifications exactes, nos panneaux électriques combinent une disposition intelligente, un câblage robuste et une logique de commande évolutive — le tout appuyé par une fiabilité industrielle éprouvée."
+
+
   }

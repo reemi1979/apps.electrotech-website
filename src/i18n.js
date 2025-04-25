@@ -7,15 +7,19 @@ import homeFR from './translations/home_fr.json';
 import homeEN from './translations/home_en.json';
 import policyFR from './translations/policy_fr.json';
 import policyEN from './translations/policy_en.json';
+import qualityFR from './translations/quality_fr.json';
+import qualityEN from './translations/quality_en.json';
 
 const resources = {
   fr: {
     home: homeFR,
     policy: policyFR,
+    quality: qualityFR,
   },
   en: {
     home: homeEN,
     policy: policyEN,
+    quality: qualityEN,
   }
 };
 

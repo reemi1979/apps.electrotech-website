@@ -11,18 +11,19 @@ const theme = createTheme({
     },
 
     primary: {
-      main: '#0078D4',       // 🟦 Bleu principal : utilisé pour les boutons, liens, éléments actifs
+      main: '#0D4F8B',       // 🟦 Bleu principal : utilisé pour les boutons, liens, éléments actifs
       dark: '#005A9E',       // 🔵 Bleu foncé pour hover ou variantes plus sombres
       contrastText: '#ffffff'// ⚪ Texte dans les boutons primaires (blanc sur fond bleu)
     },
 
     secondary: {
-      main: '#FFD500'        // 🟨 Jaune accent : peut servir à mettre en valeur un bouton secondaire ou icône
+      main: '#BCBF2C'        // 🟨 Jaune accent : peut servir à mettre en valeur un bouton secondaire ou icône
     },
 
     text: {
-      primary: '#FFFFFF',    // ⚪ Texte principal sur fond foncé
-      secondary: '#CCCCCC'   // 🟫 Texte secondaire, sous-titres, détails
+      primary: '#FFFFFF',     // ⚪ Texte principal sur fond foncé
+      secondary: '#BCBF2C',   // 🟫 Texte secondaire, sous-titres, détails
+      dark: '#005A9E',        // 🔵 Bleu foncé pour hover ou variantes plus sombres
     }
   },
 

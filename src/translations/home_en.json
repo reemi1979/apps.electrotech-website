@@ -4,6 +4,9 @@
     "services": "SERVICES",
     "projets": "PROJECTS",
     "contact": "CONTACT",
+    "certifications": "CERTIFIATION",
+
+
     "bienvenue": "Welcome to Electrotech",
     "footer_droits": "All rights reserved",
     "footer_politique": "Privacy Policy",
@@ -18,9 +21,51 @@
     "refuser_tout": "Decline All",
     "personnaliser": "Customize",
 
-    "home_bienvenue": "Welcome to Electrotech",
-    "home_contenu_test": "This is test content with a video background and visible footer.",
-    "home_contenu_principal": "Main content after the Hero section."
-    
+    "home_industrie" : "Our Industries",
+    "home_industrie_default_title": "Industries Served",
+    "home_industrie_default_description": "Hover over an industry to learn more.",
+    "home_industrie_airport_title": "Airport Sector",
+    "home_industrie_airport_description": "Reliable automation systems for critical airport infrastructures.",
+    "home_industrie_distribution_title": "Distribution Center",
+    "home_industrie_distribution_description": "Fast and accurate automation for modern logistics.",
+    "home_industrie_manufacturing_title": "Manufacturing Industry",
+    "home_industrie_manufacturing_description": "Robust solutions to improve production efficiency.",
+    "home_industrie_oem_title": "OEM and Equipment Manufacturer",
+    "home_industrie_oem_description": "Custom integration for your specialized equipment.",
+    "home_industrie_foodpharma_title": "Food and Pharmaceutical",
+    "home_industrie_foodpharma_description": "Rigorous control for regulated environments.",
+    "home_industrie_energy_title": "Energy",
+    "home_industrie_energy_description": "Reliable automation for energy production and distribution.",
+    "home_industrie_mining_title": "Mining Sector",
+    "home_industrie_mining_description": "Control systems built for extreme environments.",
+
+    "home_expertise": "Our Expertise",
+    "home_bienvenue": "Powering the Future of Automation",
+    "home_contenu_1" : "Custom Electrical Panel & Automation Solutions",
+    "home_contenu_2" : "At Electrotech, we specialize in designing, manufacturing, and integrating high-quality electrical control panels for industrial automation. Founded in 1997, our Quebec-based company brings 27 years of expertise across multiple industries, delivering custom automation solutions that enhance efficiency, reliability, and safety. We are recognized for our excellence in industrial control and automation engineering, and we are committed to exceeding the expectations of our clients, partners, and employees with professionalism and integrity.",
+
+    "home_contenu_principal": "Main content after the Hero section.",
+
+    "home_photos_1_title": "Industrial Automation",
+    "home_photos_1_category": "Advanced solutions for streamlined processes.",
+    "home_photos_1_description": "At Electrotech, we design and program custom industrial automation systems tailored to each plant’s needs. With our expertise in PLC programming and control panel integration, we optimize production processes for greater efficiency, reliability, and safety.",
+
+    "home_photos_2_title": "Control Systems Integration",
+    "home_photos_2_category": "Seamless automation for smarter operations",
+    "home_photos_2_description": "From sensors to PLCs to dashboards — we bring every part of your industrial system together into one smart, streamlined automation solution. Simplify your process, maximize your uptime.",
+
+    "home_photos_3_title": "Maintenance & Support",
+    "home_photos_3_category": "Reliable service to keep your systems running",
+    "home_photos_3_description": "Our experts provide responsive support and preventative maintenance to ensure your systems run smoothly — minimizing downtime and extending equipment life.",
+
+    "home_photos_4_title": "Total Quality Commitment",
+    "home_photos_4_category": "Built-in excellence from start to finish",
+    "home_photos_4_description": "Our commitment to Total Quality means attention to detail in every step — from the first wire to final inspection. No shortcuts, no compromises.",
+
+    "home_photos_5_title": "Custom Electrical Panels",
+    "home_photos_5_category": "Engineered for precision and durability",
+    "home_photos_5_description": "Designed and built to match your exact specifications, our electrical panels combine smart layout, robust wiring, and scalable control logic — all backed by industrial-grade reliability."
+
+
   }
   
