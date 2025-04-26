@@ -51,6 +51,7 @@ const QualityPhotos = () => {
           open={Boolean(selected)}
           onClose={() => setSelected(null)}
           closeAfterTransition
+          disableScrollLock 
           slots={{ backdrop: Backdrop }}
           slotProps={{
             backdrop: {

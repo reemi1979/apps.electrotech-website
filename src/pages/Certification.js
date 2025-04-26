@@ -73,15 +73,15 @@ const Certification = () => {
             width: 150,
             height: 150,
             animation: 'pulse 2s ease-in-out infinite',
-            mb: 4,
+            mb: 2,
           }}
         />
       </Fade>
 
-      <Typography variant="h4" sx={{ mt: 4 , color: theme.palette.text.secondary }}>
+      <Typography variant="h4" sx={{  mt: 2 , color: theme.palette.text.secondary }}>
         <strong>{currentCert.name}</strong><br />
       </Typography>
-      <Typography variant="h6" sx={{ mt: 2 }}>
+      <Typography variant="h6" sx={{ minHeight: 100, mt: 2 }}>
         {t('certification_issuing_org')}: {currentCert.organization}<br />
         {t('certification_description')}: {currentCert.description}
       </Typography>
@@ -90,13 +90,13 @@ const Certification = () => {
         variant="body2"   
         sx={{ 
           fontStyle: 'italic', 
-          color: theme.palette.text.secondary,
+          color: theme.palette.text.dark,
         }}
       >
         {currentCert.trademark}
       </Typography>
 
-      <Typography variant="h4" sx={{ mt: 6 }}>
+      <Typography variant="h4" sx={{ color: theme.palette.text.secondary, mt: 6 }}>
         {t('certification_why_matter')}
       </Typography>
 
@@ -104,7 +104,7 @@ const Certification = () => {
         <QualityPhotos />
       </Box>
 
-      <Typography variant="h4" sx={{ mt: 6 }}>
+      <Typography variant="h4" sx={{ color: theme.palette.text.secondary, mt: 6 }}>
         {t('certification_help_title')}
       </Typography>
 

@@ -11,40 +11,43 @@ import { motion } from 'framer-motion';
 
 const Home = () => {
 
+  const [token, setToken] = useState(null);
+  const [apiData, setApiData] = useState(null);
+
   const { t } = useTranslation();
   const theme = useTheme();
 
   useEffect(() => {
-    talkToApiLightSail();
-    fetchNews();
+    if (token) {
+      fetchNews(token);
+    }
+  }, [token]);
+
+  // 1️⃣ Charger le token au démarrage
+  useEffect(() => {
+    async function fetchToken() {
+      try {
+        const response = await fetch('https://api.electrotech.ca/get-token');
+        const data = await response.json();
+        if (data.token) {
+          setToken(data.token);
+        } else {
+          console.error('Token non reçu:', data);
+        }
+      } catch (error) {
+        console.error('Erreur pour obtenir le token:', error);
+      }
+    }
+
+    fetchToken();
   }, []);
 
-  
-  const talkToApiLightSail = () => {
-    // fetch("https://api.electrotech.ca/api/data", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({ 
-    //     type: "update-project-data" , 
-    //     projectId: "023292323843242", 
-    //     blabla: "OK" })
-    // })
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     console.log("📦 Données reçues :", data);
-    //   })
-    //   .catch(err => {
-    //     console.error("❌ Erreur API :", err);
-    //   });
-  };
-  
-  const fetchNews = () => {
-
+  const fetchNews = (authToken) => {
     fetch("https://api.electrotech.ca/api/data", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json",
-        "x-api-key": "supercle12345"
+        "Authorization": `Bearer ${authToken}`
       },
       body: JSON.stringify({ type: "news" })
     })
@@ -56,11 +59,11 @@ const Home = () => {
     })
     .then(data => {
       console.log("📦 Données reçues :", data);
+      setApiData(data);
     })
     .catch(err => {
       console.error("❌ Erreur API :", err);
     });
-        
   };
 
   return (
