@@ -21,38 +21,46 @@ const Home = () => {
 
   
   const talkToApiLightSail = () => {
-    fetch("https://api.electrotech.ca/api/data", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ 
-        type: "update-project-data" , 
-        projectId: "023292323843242", 
-        blabla: "OK" })
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log("📦 Données reçues :", data);
-      })
-      .catch(err => {
-        console.error("❌ Erreur API :", err);
-      });
+    // fetch("https://api.electrotech.ca/api/data", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({ 
+    //     type: "update-project-data" , 
+    //     projectId: "023292323843242", 
+    //     blabla: "OK" })
+    // })
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     console.log("📦 Données reçues :", data);
+    //   })
+    //   .catch(err => {
+    //     console.error("❌ Erreur API :", err);
+    //   });
   };
   
   const fetchNews = () => {
+
     fetch("https://api.electrotech.ca/api/data", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ 
-        type: "news" 
-      })
+      headers: { 
+        "Content-Type": "application/json",
+        "x-api-key": "supercle12345"
+      },
+      body: JSON.stringify({ type: "news" })
     })
-      .then(res => res.json())
-      .then(data => {
-        console.log("📰 News of the Day:", data);
-      })
-      .catch(err => {
-        console.error("❌ Erreur API:", err);
-      });
+    .then(res => {
+      if (!res.ok) {
+        throw new Error(`Erreur API: ${res.status} ${res.statusText}`);
+      }
+      return res.json();
+    })
+    .then(data => {
+      console.log("📦 Données reçues :", data);
+    })
+    .catch(err => {
+      console.error("❌ Erreur API :", err);
+    });
+        
   };
 
   return (

@@ -42,6 +42,17 @@ const industries = [
     titleKey: 'home_industrie_mining_title',
     descriptionKey: 'home_industrie_mining_description',
   }
+  ,
+  {
+    src: process.env.PUBLIC_URL + '/photos/industries/h.png',
+    titleKey: 'home_industrie_engineer_title',
+    descriptionKey: 'home_industrie_engineer_description',
+  },
+  {
+    src: process.env.PUBLIC_URL + '/photos/industries/i.png',
+    titleKey: 'home_industrie_transport_title',
+    descriptionKey: 'home_industrie_transport_description',
+  }
 ];
 
 const MotionBox = motion(Box);
