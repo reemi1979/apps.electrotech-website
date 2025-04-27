@@ -136,12 +136,12 @@ const HeaderBarResponsive = () => {
                     fontSize: '20px',
                     minHeight: 60,
                     transition: 'none',
-                    textShadow: `
-                    -1px -1px 0 black, /* Top left */
-                    1px -1px 0 black, /* Top right */
-                    -1px 1px 0 black, /* Bottom left */
-                    1px 1px 0 black   /* Bottom right */
-                    `,
+                    // textShadow: `
+                    // -0px -0px 0 black, /* Top left */
+                    // 0px -0px 0 black, /* Top right */
+                    // -0px 0px 0 black, /* Bottom left */
+                    // 0px 0px 0 black   /* Bottom right */
+                    // `,
                     '&:hover': { color: theme.palette.text.secondary, backgroundColor: 'transparent' }, // Mouse-over effect
                   }}
                 >

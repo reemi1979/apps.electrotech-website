@@ -20,7 +20,9 @@
     "about": "ABOUT",
     "actualités" : "News",
     "actualités_retour" : "Back to News",
+    "load_more" : "Load More",
 
+    
     "bienvenue": "Welcome to Electrotech",
     "footer_droits": "All rights reserved",
     "footer_politique": "Privacy Policy",

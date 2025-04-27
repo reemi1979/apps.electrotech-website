@@ -27,7 +27,7 @@ const QualityPhotos = () => {
       description: t('quality_photos_2_description'),
     },
     {
-      src: process.env.PUBLIC_URL + '/photos/quality/c.png',
+      src: process.env.PUBLIC_URL + '/photos/quality/c.jpg',
       title: t('quality_photos_3_title'),
       category: t('quality_photos_3_category'),
       description: t('quality_photos_3_description')

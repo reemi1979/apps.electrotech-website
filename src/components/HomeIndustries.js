@@ -7,15 +7,15 @@ import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 
 const industries = [
-  { src: process.env.PUBLIC_URL + '/photos/industries/a.png', titleKey: 'home_industrie_airport_title', descriptionKey: 'home_industrie_airport_description' },
-  { src: process.env.PUBLIC_URL + '/photos/industries/b.png', titleKey: 'home_industrie_distribution_title', descriptionKey: 'home_industrie_distribution_description' },
-  { src: process.env.PUBLIC_URL + '/photos/industries/c.png', titleKey: 'home_industrie_manufacturing_title', descriptionKey: 'home_industrie_manufacturing_description' },
-  { src: process.env.PUBLIC_URL + '/photos/industries/d.png', titleKey: 'home_industrie_oem_title', descriptionKey: 'home_industrie_oem_description' },
-  { src: process.env.PUBLIC_URL + '/photos/industries/e.png', titleKey: 'home_industrie_foodpharma_title', descriptionKey: 'home_industrie_foodpharma_description' },
-  { src: process.env.PUBLIC_URL + '/photos/industries/f.png', titleKey: 'home_industrie_energy_title', descriptionKey: 'home_industrie_energy_description' },
-  { src: process.env.PUBLIC_URL + '/photos/industries/g.png', titleKey: 'home_industrie_mining_title', descriptionKey: 'home_industrie_mining_description' },
-  { src: process.env.PUBLIC_URL + '/photos/industries/h.png', titleKey: 'home_industrie_engineer_title', descriptionKey: 'home_industrie_engineer_description' },
-  { src: process.env.PUBLIC_URL + '/photos/industries/i.png', titleKey: 'home_industrie_transport_title', descriptionKey: 'home_industrie_transport_description' }
+  { src: process.env.PUBLIC_URL + '/photos/industries/a.jpg', titleKey: 'home_industrie_airport_title', descriptionKey: 'home_industrie_airport_description' },
+  { src: process.env.PUBLIC_URL + '/photos/industries/b.jpg', titleKey: 'home_industrie_distribution_title', descriptionKey: 'home_industrie_distribution_description' },
+  { src: process.env.PUBLIC_URL + '/photos/industries/c.jpg', titleKey: 'home_industrie_manufacturing_title', descriptionKey: 'home_industrie_manufacturing_description' },
+  { src: process.env.PUBLIC_URL + '/photos/industries/d.jpg', titleKey: 'home_industrie_oem_title', descriptionKey: 'home_industrie_oem_description' },
+  { src: process.env.PUBLIC_URL + '/photos/industries/e.jpg', titleKey: 'home_industrie_foodpharma_title', descriptionKey: 'home_industrie_foodpharma_description' },
+  { src: process.env.PUBLIC_URL + '/photos/industries/f.jpg', titleKey: 'home_industrie_energy_title', descriptionKey: 'home_industrie_energy_description' },
+  { src: process.env.PUBLIC_URL + '/photos/industries/g.jpg', titleKey: 'home_industrie_mining_title', descriptionKey: 'home_industrie_mining_description' },
+  { src: process.env.PUBLIC_URL + '/photos/industries/h.jpg', titleKey: 'home_industrie_engineer_title', descriptionKey: 'home_industrie_engineer_description' },
+  { src: process.env.PUBLIC_URL + '/photos/industries/i.jpg', titleKey: 'home_industrie_transport_title', descriptionKey: 'home_industrie_transport_description' }
 ];
 
 const MotionBox = motion(Box);
