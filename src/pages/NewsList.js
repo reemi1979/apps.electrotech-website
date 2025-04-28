@@ -43,10 +43,20 @@ const NewsList = () => {
 
             <br /> <br />
 
-            <Typography variant="h3" sx={{ mb: 6, textAlign: 'center', color: theme.palette.text.secondary }}>
+            <Typography variant="h3" sx={{ textAlign: 'center', color: theme.palette.text.secondary }}>
                 {t('actualités')}
             </Typography>
-
+            <Typography 
+                variant="h6"   
+                sx={{ 
+                fontStyle: 'italic', 
+                textAlign: 'center',
+                mb: 6, 
+                color: theme.palette.text.primary,
+                }}
+            >
+                {t('news_ai')}
+            </Typography>
             <br /> <br /> <br />
 
 

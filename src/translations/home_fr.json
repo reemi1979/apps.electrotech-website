@@ -21,12 +21,16 @@
     "actualités" : "Actualités",
     "actualités_retour" : "Retour aux actualités",
     "load_more" : "Chager plus",
+    "news_ai": "Nouvelles générées/modifiées par AI",
 
-    
     "bienvenue": "Bienvenue chez Électrotech",
-    "footer_droits": "Tous droits réservés",
+
+    "footer_droits": "Tous droits réservés (Site réalisé par Rémi Gauvin)",
     "footer_politique": "Politique de confidentialité",
     "footer_contact": "Nous contacter",
+    "footer_hide_background": "Cacher le fond",
+    "footer_show_background": "Afficher le fond",
+
     "hero_button_sound_on": "Activer le son",
     "hero_button_sound_off": "Couper le son",
     "cookie_title": "Ce site utilise des cookies pour améliorer votre expérience. Cliquez sur « Accepter tout » pour autoriser tous les cookies, ou « Personnaliser » pour choisir vos préférences.",

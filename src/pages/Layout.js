@@ -1,13 +1,20 @@
 // src/pages/Layout.js
 
-import React from 'react';
+import React, { useState } from 'react';
 import HeaderBarResponsive from '../components/HeaderBarResponsive';
 import Footer from '../components/Footer';
 import ScrollToTopButton from '../components/ScrollToTopButton';
-import { Outlet } from 'react-router-dom';
 import { Box } from '@mui/material';
+import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
+
+  const [backgroundEnabled, setBackgroundEnabled] = useState(true);
+
+  const toggleBackground = () => {
+    setBackgroundEnabled(prev => !prev);
+  };
+
   return (
 
     <Box
@@ -15,7 +22,7 @@ const Layout = () => {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        backgroundImage: `url(${process.env.PUBLIC_URL}/electron-bg.svg)`,
+        backgroundImage: backgroundEnabled ? `url(${process.env.PUBLIC_URL}/electron-bg.svg)` : 'none',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -29,7 +36,11 @@ const Layout = () => {
 
       <ScrollToTopButton />
 
-      <Footer />
+      <Footer 
+        toggleBackground={toggleBackground} 
+        backgroundEnabled={backgroundEnabled}
+      />
+
     </Box>
   );
 };
