@@ -38,6 +38,9 @@
 8. dans Cloudfront Error, remettre 403 et 404 a /index.html a place de /testNewApp/index.html
     pour permettre le open in new tab
 
+9. changer le .bat upload-news-to-s3.bat dans ElectrotechApi/ai
+    ACTUEL set "DEPLOY_PATH=testNewApp"
+    A METTRE set "DEPLOY_PATH="
 
 ✅ Résultat final :
     Ton site sera accessible à :

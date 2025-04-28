@@ -97,7 +97,18 @@ const NewsList = () => {
                             <Typography variant="h5" noWrap sx={{ color: theme.palette.text.secondary, mt: 1 }}>
                             {content.title}
                             </Typography>
-                            <Typography variant="body2" noWrap sx={{ mt: 1, color: theme.palette.text.primary }}>
+                            <Typography
+                                variant="body2"
+                                sx={{
+                                    mt: 1,
+                                    color: theme.palette.text.primary,
+                                    display: '-webkit-box',
+                                    WebkitLineClamp: 3,
+                                    WebkitBoxOrient: 'vertical',
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                }}
+                                >
                                 {content.resume}
                             </Typography>
                             </Box>
