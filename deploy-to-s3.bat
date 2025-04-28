@@ -45,9 +45,9 @@ echo ☁️ Déploiement vers S3: %BUCKET%/%DEPLOY_PATH%/
 echo ======================================
 
 if "%DEPLOY_PATH%"=="" (
-    call "%AWS_PATH%\aws.exe" s3 sync build/ s3://%BUCKET%/ --delete --exclude "news/*"
+    call "%AWS_PATH%\aws.exe" s3 sync build/ s3://%BUCKET%/ --delete
 ) else (
-    call "%AWS_PATH%\aws.exe" s3 sync build/ s3://%BUCKET%/%DEPLOY_PATH% --delete --exclude "news/*"
+    call "%AWS_PATH%\aws.exe" s3 sync build/ s3://%BUCKET%/%DEPLOY_PATH% --delete
 )
 
 if errorlevel 1 (
