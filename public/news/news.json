@@ -7,19 +7,20 @@
     "rawMessage": "Un très joyeux Temps des Fêtes de la part de Team Électrotech! \nNous vous souhaitons de passer du bon temps et de profiter de la compagnie de vos proches. \nSanté! 🎄🎄🎄",
     "fr": {
       "title": "Vœux Festifs d'Électrotech",
-      "resume": "L'équipe Électrotech vous souhaite un joyeux Temps des Fêtes et de bons moments avec vos proches. Santé ! 🎄",
+      "resume": "L'équipe Électrotech vous souhaite un joyeux Temps des Fêtes, plein de bons moments et de convivialité. Santé ! 🎄",
       "description": "<p>Un très joyeux Temps des Fêtes de la part de l'équipe Électrotech !</p><p>Nous vous souhaitons de passer du bon temps et de profiter de la compagnie de vos proches.</p><p>Santé ! 🎄🎄🎄</p>"
     },
     "en": {
       "title": "Festive Greetings from Electrotech",
-      "resume": "The Electrotech team wishes you a Merry Holiday Season and good times with your loved ones. Cheers! 🎄",
-      "description": "<p>A very merry Holiday Season from the Électrotech team!</p><p>We wish you a great time and hope you enjoy the company of your loved ones.</p><p>Cheers! 🎄🎄🎄</p>"
+      "resume": "The Electrotech team wishes you a Merry Holiday Season, filled with good times and conviviality. Cheers! 🎄",
+      "description": "<p>A very merry Holiday Season from the Électrotech team!</p><p>We wish you to have a great time and enjoy the company of your loved ones.</p><p>Cheers! 🎄🎄🎄</p>"
     },
     "date": "2024-12-19",
     "author": "Team Électrotech",
     "image": "img/news-001.jpg",
     "link": "https://www.facebook.com/1256508843146194/posts/1144968844300195",
-    "type": "image"
+    "type": "image",
+    "detected_as_job": false
   },
   {
     "id": "news-002",
@@ -28,20 +29,21 @@
     "sorting": 98,
     "rawMessage": "Électrotech est heureux d’annoncer sa sélection pour concevoir et fabriquer les panneaux de contrôle de la nouvelle salle à bagages/aérogare pour vols nationaux de l’aéroport de St-Hubert (YHU) nommé “Aéroport Métropolitain de Montréal” avec inauguration prévue en 2025. \n\nSuperficie: 225 000 pi2.\nCapacités: 4 millions de voyageurs par année, 9 portes d’embarquement, 28 comptoirs d’enregistrement. \n\nNous sommes très honorés de cette marque de confiance de la part de notre client Européen mais surtout que notre expertise pointue soit déployée ici au Québec…dans un aéroport complètement neuf, c’est unique comme opportunité!",
     "fr": {
-      "title": "Électrotech équipe l'aéroport YHU",
+      "title": "Électrotech à l'Aéroport Métropolitain",
       "resume": "Électrotech est sélectionné pour concevoir les panneaux de contrôle de la nouvelle aérogare de l'aéroport de St-Hubert, prévue pour 2025.",
       "description": "<p>Électrotech est heureux d’annoncer sa sélection pour concevoir et fabriquer les panneaux de contrôle de la nouvelle salle à bagages/aérogare pour vols nationaux de l’aéroport de St-Hubert (YHU) nommé “Aéroport Métropolitain de Montréal” avec inauguration prévue en 2025. </p><p></p><p>Superficie: 225 000 pi2.</p><p>Capacités: 4 millions de voyageurs par année, 9 portes d’embarquement, 28 comptoirs d’enregistrement. </p><p></p><p>Nous sommes très honorés de cette marque de confiance de la part de notre client Européen mais surtout que notre expertise pointue soit déployée ici au Québec…dans un aéroport complètement neuf, c’est unique comme opportunité!</p>"
     },
     "en": {
-      "title": "Électrotech is equipping the YHU airport.",
+      "title": "Electrical technician at the Metropolitan Airport",
       "resume": "Électrotech has been selected to design the control panels for the new terminal at St-Hubert airport, scheduled for completion in 2025.",
       "description": "<p>Électrotech is pleased to announce its selection to design and manufacture the control panels for the new baggage hall/terminal for domestic flights at St-Hubert Airport (YHU) named \"Montreal Metropolitan Airport\" with an inauguration planned for 2025.</p><p></p><p>Area: 225,000 sq ft.</p><p>Capacity: 4 million passengers per year, 9 boarding gates, 28 check-in counters.</p><p></p><p>We are very honored by this vote of confidence from our European client, but especially that our specialized expertise is being deployed here in Quebec... in a completely new airport, it's a unique opportunity!</p>"
     },
-    "date": "2024-11-28",
+    "date": "2024-11-27",
     "author": "Team Électrotech",
     "image": "img/news-002.jpg",
     "link": "https://www.facebook.com/1256508843146194/posts/1128256382638108",
-    "type": "image"
+    "type": "image",
+    "detected_as_job": false
   },
   {
     "id": "news-003",
@@ -51,18 +53,19 @@
     "rawMessage": "Le nouveau système de manutention de bagages du méga projet de “The New Terminal One” de l’aéroport international JFK/New-York continue de prendre forme. Récemment nos panneaux de contrôle de la première phase du projet ont été installés et les électriciens sont à procéder à leurs raccordements. Nous attendons avec impatience le jour de l'ouverture en juin 2026 !\nFier de Team Électrotech!",
     "fr": {
       "title": "Avancée du Terminal JFK",
-      "resume": "Le projet de manutention de bagages à JFK progresse avec l'installation des panneaux de contrôle, ouverture prévue en juin 2026. Bravo Électrotech !",
-      "description": "<p>Le nouveau système de manutention de bagages du méga projet de “The New Terminal One” de l’aéroport international JFK/New-York continue de prendre forme. Récemment nos panneaux de contrôle de la première phase du projet ont été installés et les électriciens sont à procéder à leurs raccordements. Nous attendons avec impatience le jour de l'ouverture en juin 2026 !</p><p>Fier de Team Électrotech!</p>\n\nTranslation:\nLe nouveau système de manutention des bagages du méga-projet \"The New Terminal One\" de l'aéroport international JFK/New York continue de prendre forme. Récemment, nos panneaux de contrôle de la première phase du projet ont été installés et les électriciens sont en train de procéder à leurs raccordements. Nous attendons avec impatience le jour de l'ouverture en juin 2026 !</p><p>Fier de l'équipe Électrotech !</p>"
+      "resume": "Le système de manutention de bagages du projet \"The New Terminal One\" à JFK progresse, avec une ouverture prévue en juin 2026.",
+      "description": "Le nouveau système de manutention de bagages du méga projet de “The New Terminal One” de l’aéroport international JFK/New-York continue de prendre forme. Récemment nos panneaux de contrôle de la première phase du projet ont été installés et les électriciens sont à procéder à leurs raccordements. Nous attendons avec impatience le jour de l'ouverture en juin 2026 !\n\nFier de Team Électrotech!"
     },
     "en": {
       "title": "JFK Terminal Progress",
-      "resume": "The baggage handling project at JFK is progressing with the installation of control panels, scheduled to open in June 2026. Congratulations Électrotech!",
-      "description": "The new baggage handling system of the mega project \"The New Terminal One\" at JFK International Airport/New York continues to take shape. Recently, our control panels for the first phase of the project have been installed, and the electricians are working on their connections. We are looking forward to the opening day in June 2026!</p><p>Proud of Team Electrotech!</p>"
+      "resume": "The baggage handling system of the \"The New Terminal One\" project at JFK is progressing, with an opening scheduled for June 2026.",
+      "description": "The new baggage handling system of the mega project \"The New Terminal One\" at JFK International Airport in New York continues to take shape. Recently, the control panels for the first phase of the project have been installed, and the electricians are proceeding with their connections. We are looking forward to the opening day in June 2026!\n\nProud of Team Electrotech!"
     },
     "date": "2024-11-13",
     "author": "Team Électrotech",
     "image": "img/news-003.jpg",
     "link": "https://www.facebook.com/1256508843146194/posts/1116984777098602",
-    "type": "image"
+    "type": "image",
+    "detected_as_job": false
   }
 ]

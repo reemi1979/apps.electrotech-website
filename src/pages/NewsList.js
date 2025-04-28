@@ -25,17 +25,18 @@ const NewsList = () => {
     const { t } = useTranslation();
     const [visibleNews, setVisibleNews] = useState(12);
 
-
     useEffect(() => {
         fetch(process.env.PUBLIC_URL + '/news/news.json')
         .then(res => res.json())
         .then(data => {
             const activeNews = data
-            .filter(n => n.activate)
-            .sort((a, b) => new Date(b.date) - new Date(a.date));
+                .filter(n => n.activate && n.detected_as_job !== true) // ➔ ignorer les jobs
+                .sort((a, b) => new Date(b.date) - new Date(a.date));
             setNewsList(activeNews);
         });
     }, []);
+    
+        
 
     return (
 
