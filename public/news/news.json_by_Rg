@@ -1,0 +1,956 @@
+[
+  {
+    "id": "news-001",
+    "activate": true,
+    "sorting": 53,
+    "type": "image",
+    "fr": {
+      "title": "Joyeux Temps des Fêtes!",
+      "resume": "Toute l'équipe d'Électrotech vous souhaite un merveilleux temps des Fêtes!",
+      "description": "<p>Un très joyeux Temps des Fêtes de la part de Team Électrotech! Nous vous souhaitons de passer du bon temps et de profiter de la compagnie de vos proches. Santé!</p>"
+    },
+    "en": {
+      "title": "Happy Holidays!",
+      "resume": "The Électrotech team wishes you a wonderful Holiday Season!",
+      "description": "<p>Wishing you a joyful Holiday Season from Team Électrotech! May you enjoy good times and the company of your loved ones. Cheers!</p>"
+    },
+    "date": "2024-12-19",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-002",
+    "activate": true,
+    "sorting": 52,
+    "type": "image",
+    "fr": {
+      "title": "Projet Aéroport St-Hubert",
+      "resume": "Conception de panneaux pour le nouvel aérogare de l'aéroport de St-Hubert.",
+      "description": "<p>Électrotech est heureux d’annoncer sa sélection pour concevoir et fabriquer les panneaux de contrôle de la nouvelle salle à bagages/aérogare pour vols nationaux de l’aéroport de St-Hubert (YHU), nommé « Aéroport Métropolitain de Montréal » avec inauguration prévue en 2025.</p><p>Superficie: 225 000 pi2. Capacité: 4 millions de voyageurs/an, 9 portes d'embarquement, 28 comptoirs d'enregistrement.</p><p>Nous sommes très honorés de cette marque de confiance et fiers de déployer notre expertise ici au Québec.</p>"
+    },
+    "en": {
+      "title": "St-Hubert Airport Project",
+      "resume": "Design of control panels for the new terminal at St-Hubert Airport.",
+      "description": "<p>Électrotech is proud to announce its selection to design and manufacture the control panels for the new baggage hall/terminal for domestic flights at St-Hubert Airport (YHU), named \"Montréal Metropolitan Airport\" with inauguration planned for 2025.</p><p>Area: 225,000 sq.ft. Capacity: 4 million travelers/year, 9 gates, 28 check-in counters.</p><p>We are honored by this mark of trust and proud to deploy our expertise here in Quebec.</p>"
+    },
+    "date": "2024-11-28",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-003",
+    "activate": true,
+    "sorting": 51,
+    "type": "image",
+    "fr": {
+      "title": "Avancement du projet JFK",
+      "resume": "Installation des premiers panneaux pour le nouveau terminal JFK-New York.",
+      "description": "<p>Le nouveau système de manutention de bagages du mégaprojet \"The New Terminal One\" de l'aéroport international JFK/New-York continue de prendre forme. Nos panneaux de contrôle de la première phase ont été installés et les électriciens procèdent aux raccordements. L'ouverture est prévue pour juin 2026!</p><p>Fiers de Team Électrotech!</p>"
+    },
+    "en": {
+      "title": "JFK Project Progress",
+      "resume": "Installation of first control panels for JFK New Terminal One.",
+      "description": "<p>The baggage handling system of the \"New Terminal One\" project at JFK International Airport is taking shape. Our control panels for the first phase have been installed and electricians are now connecting them. We eagerly await the opening in June 2026!</p><p>Proud of Team Électrotech!</p>"
+    },
+    "date": "2024-11-13",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-004",
+    "activate": true,
+    "sorting": 50,
+    "type": "image",
+    "fr": {
+      "title": "Lancement ChargePoly",
+      "resume": "Collaboration au lancement de bornes haute puissance.",
+      "description": "<p>Électrotech a accueilli l'équipe de ChargePoly Canada pour le lancement officiel de leurs bornes de recharge haute puissance pour véhicules lourds. Fiers d'avoir contribué à ce produit innovant et 100% canadien! Merci à Granby Industriel pour leur soutien lors de la conférence de presse!</p>"
+    },
+    "en": {
+      "title": "ChargePoly Launch",
+      "resume": "Collaboration on launch of high-power charging stations.",
+      "description": "<p>Électrotech welcomed ChargePoly Canada's team for the official launch of their high-power charging stations for heavy vehicles. Proud to have contributed to this innovative and fully Canadian product! Thanks to Granby Industriel for their participation in the press conference!</p>"
+    },
+    "date": "2024-10-31",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-005",
+    "activate": true,
+    "sorting": 49,
+    "type": "video",
+    "fr": {
+      "title": "Visite de nos installations",
+      "resume": "Découvrez nos technologies avec Zachary Fortin.",
+      "description": "<p>Notre chargé de projet, Zachary Fortin, vous offre un aperçu exclusif de nos installations. Venez découvrir comment nous mettons en œuvre nos technologies pour automatiser des systèmes et offrir des solutions sur mesure à nos clients. Contactez-nous : service@electrotech.ca</p>"
+    },
+    "en": {
+      "title": "Inside Our Facilities",
+      "resume": "Discover our technologies with Zachary Fortin.",
+      "description": "<p>Our project manager, Zachary Fortin, offers you an exclusive glimpse inside our facilities. Come see how we implement technologies to automate systems and deliver custom solutions to our clients. Contact us: service@electrotech.ca</p>"
+    },
+    "date": "2024-10-24",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-006",
+    "activate": true,
+    "type": "image",
+    "sorting": 6,
+    "fr": {
+      "title": "Célébration des vacances",
+      "resume": "Un dîner pour célébrer l'arrivée des vacances chez Électrotech.",
+      "description": "<p>On en a profité ce midi pour fêter l’arrivée des vacances et remercier Team Électrotech pour leur travail exemplaire. Bonnes vacances à tous!</p>"
+    },
+    "en": {
+      "title": "Vacation Celebration",
+      "resume": "A lunch to celebrate the start of vacation at Électrotech.",
+      "description": "<p>We took the opportunity today to celebrate the arrival of vacations and thank Team Électrotech for their exemplary work. Happy holidays to all!</p>"
+    },
+    "date": "2024-07-18",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-007",
+    "activate": true,
+    "type": "image",
+    "sorting": 5,
+    "fr": {
+      "title": "Défi EnBarque 2024",
+      "resume": "Participation au Défi EnBarque pour une cause locale.",
+      "description": "<p>Team Électrotech était une des 88 équipes participantes au Défi EnBarque de la Fondation du Centre Hospitalier de Granby. Plus de 360 000$ ont été récoltés, avec 1800 participants et plus de 5000 donateurs. Vive la solidarité!</p>"
+    },
+    "en": {
+      "title": "Défi EnBarque 2024",
+      "resume": "Participation in the Défi EnBarque for a local cause.",
+      "description": "<p>Team Électrotech was among the 88 teams participating in the Défi EnBarque of the Granby Hospital Foundation. Over $360,000 were raised, with 1,800 participants and more than 5,000 donors. Long live solidarity!</p>"
+    },
+    "date": "2024-05-29",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-008",
+    "activate": true,
+    "type": "image",
+    "sorting": 4,
+    "fr": {
+      "title": "Participation à Hannover Messe",
+      "resume": "Présence au plus grand salon industriel mondial.",
+      "description": "<p>Electrotech est à l’Hannover Messe en Allemagne, la plus grande exposition de technologie industrielle au monde. Merci à Siemens Canada pour l’accueil chaleureux.</p>"
+    },
+    "en": {
+      "title": "Participation at Hannover Messe",
+      "resume": "Present at the world's largest industrial trade fair.",
+      "description": "<p>Electrotech is at Hannover Messe in Germany, the world's largest industrial technology trade show. Thanks to Siemens Canada for the warm welcome.</p>"
+    },
+    "date": "2024-04-25",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-009",
+    "activate": true,
+    "type": "image",
+    "sorting": 3,
+    "fr": {
+      "title": "Visite de l'usine Siemens Amberg",
+      "resume": "Visite de l'une des plus grandes usines industrielles d'Allemagne.",
+      "description": "<p>Electrotech est à l’usine Siemens d’Amberg en Allemagne pour visiter leur immense site de production, où plus de 20 000 employés travaillent. Impressionnant! Merci Siemens!</p>"
+    },
+    "en": {
+      "title": "Visit to Siemens Amberg Factory",
+      "resume": "Tour of one of Germany's largest industrial plants.",
+      "description": "<p>Electrotech is visiting the Siemens Amberg plant in Germany today — a huge production facility with over 20,000 employees. Very impressive! Thank you Siemens!</p>"
+    },
+    "date": "2024-04-22",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-010",
+    "activate": true,
+    "type": "image",
+    "sorting": 2,
+    "fr": {
+      "title": "Participation au Passenger Terminal Expo",
+      "resume": "Présence au plus grand salon aéroportuaire au monde.",
+      "description": "<p>Électrotech est au Passenger Terminal Expo (PTE) de Francfort pour du développement des affaires. Le PTE est la plus grande exposition annuelle dédiée aux aéroports, attirant plus de 10 000 visiteurs de 120+ pays.</p>"
+    },
+    "en": {
+      "title": "Participation at Passenger Terminal Expo",
+      "resume": "Present at the world's largest airport expo.",
+      "description": "<p>Électrotech is attending the Passenger Terminal Expo (PTE) in Frankfurt for business development. PTE is the largest annual airport exhibition, drawing over 10,000 visitors from 120+ countries.</p>"
+    },
+    "date": "2024-04-18",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-011",
+    "activate": true,
+    "type": "image",
+    "sorting": 11,
+    "fr": {
+      "title": "Self Bag Drop pour SXM",
+      "resume": "Installation de 12 Self Bag Drop pour l'aéroport de Saint-Martin.",
+      "description": "<p>Notre dernière réalisation : 12 Self Bag Drop pour le Princess Juliana International Airport (SXM) à Saint-Martin dans les Antilles, 100% fabriqués par Team Électrotech.</p>"
+    },
+    "en": {
+      "title": "Self Bag Drop for SXM",
+      "resume": "Installation of 12 Self Bag Drop units at Saint-Martin Airport.",
+      "description": "<p>Our latest achievement: 12 Self Bag Drop units for Princess Juliana International Airport (SXM) in Saint-Martin, 100% manufactured by Team Électrotech.</p>"
+    },
+    "date": "2024-03-01",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-012",
+    "activate": true,
+    "type": "image",
+    "sorting": 10,
+    "fr": {
+      "title": "Première livraison JFK",
+      "resume": "Livraison des premiers panneaux pour la nouvelle salle à bagages de JFK.",
+      "description": "<p>Livraison des premiers panneaux de contrôle de la nouvelle salle à bagages de l'aéroport JFK de New York. Trois camions ont été requis pour cette première phase importante du projet.</p>"
+    },
+    "en": {
+      "title": "First Delivery to JFK",
+      "resume": "Delivery of first control panels for JFK's new baggage hall.",
+      "description": "<p>Delivery of the first control panels for the new baggage hall at JFK Airport, New York. Three trucks were required for this initial phase of the project.</p>"
+    },
+    "date": "2024-02-15",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-013",
+    "activate": true,
+    "type": "image",
+    "sorting": 9,
+    "fr": {
+      "title": "19 Self Bag Drop à Orlando",
+      "resume": "Installation terminée pour Spirit Airlines à Orlando (MCO).",
+      "description": "<p>L'intégration de 19 Self Bag Drop (dépôts de bagages automatisés) à l'aéroport d'Orlando (MCO) pour Spirit Airlines est complétée et opérationnelle. 100% fabriqué par Team Électrotech.</p>"
+    },
+    "en": {
+      "title": "19 Self Bag Drops in Orlando",
+      "resume": "Completed installation for Spirit Airlines at Orlando Airport (MCO).",
+      "description": "<p>The integration of 19 Self Bag Drop units at Orlando Airport (MCO) for Spirit Airlines is now completed and operational. 100% manufactured by Team Électrotech.</p>"
+    },
+    "date": "2023-06-20",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-014",
+    "activate": true,
+    "type": "image",
+    "sorting": 8,
+    "fr": {
+      "title": "Réaménagement de l'usine",
+      "resume": "Optimisation des opérations et du centre de traitement de câbles.",
+      "description": "<p>Team Électrotech réaménage son usine pour optimiser ses opérations et son centre de traitement de Fils & Câbles. Merci à toute l'équipe pour votre dévouement exceptionnel!</p>"
+    },
+    "en": {
+      "title": "Factory Reorganization",
+      "resume": "Optimizing operations and cable processing center.",
+      "description": "<p>Team Électrotech is reorganizing its factory to optimize operations and its Wire & Cable Processing Center. Thank you to our wonderful team for your exceptional dedication!</p>"
+    },
+    "date": "2023-04-12",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-015",
+    "activate": true,
+    "type": "image",
+    "sorting": 7,
+    "fr": {
+      "title": "Salon de l'emploi de Granby",
+      "resume": "Participation au Salon de l'Emploi du CRIF de Granby.",
+      "description": "<p>À la recherche de nouveaux talents, Électrotech participait aujourd'hui au Salon de l'Emploi du CRIF de Granby. Vous cherchez un nouveau défi? Faites-nous parvenir votre CV à : rh@electrotech.ca.</p>"
+    },
+    "en": {
+      "title": "Granby Job Fair",
+      "resume": "Participation in the CRIF Granby Job Fair.",
+      "description": "<p>Looking for new talents, Électrotech participated today in the CRIF Granby Job Fair. Are you looking for a new challenge? Send us your resume at: rh@electrotech.ca.</p>"
+    },
+    "date": "2024-03-29",
+    "author": "Team Électrotech"
+  },
+  {
+    "id": "news-016",
+    "activate": true,
+    "type": "image",
+    "sorting": 6,
+    "fr": {
+      "title": "Passenger Terminal Expo Amsterdam",
+      "resume": "Rencontre clients et développement des affaires à Amsterdam.",
+      "description": "<p>Électrotech est au Passenger Terminal Expo (PTE) à Amsterdam cette semaine pour rencontrer des clients et développer de nouvelles opportunités d'affaires dans le secteur aéroportuaire. L'événement permet également de découvrir les dernières innovations technologiques du marché.</p>"
+    },
+    "en": {
+      "title": "Passenger Terminal Expo Amsterdam",
+      "resume": "Client meetings and business development in Amsterdam.",
+      "description": "<p>Electrotech is attending the Passenger Terminal Expo (PTE) in Amsterdam this week for client meetings and business development opportunities in the airport sector. The event also showcases the latest technological innovations.</p>"
+    },
+    "date": "2023-03-17",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-017",
+    "activate": true,
+    "type": "image",
+    "sorting": 5,
+    "fr": {
+      "title": "Journée internationale des femmes",
+      "resume": "Merci à toutes les femmes d'Électrotech!",
+      "description": "<p>En cette Journée internationale des femmes, nous souhaitons remercier et célébrer toutes les femmes qui travaillent parmi nous. Un énorme merci à vous pour votre contribution essentielle!</p>"
+    },
+    "en": {
+      "title": "International Women's Day",
+      "resume": "Thank you to all the women at Electrotech!",
+      "description": "<p>On this International Women's Day, we want to thank and celebrate all the women working with us. A huge thank you for your vital contribution!</p>"
+    },
+    "date": "2024-03-08",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-018",
+    "activate": true,
+    "type": "image",
+    "sorting": 4,
+    "fr": {
+      "title": "Électrotech fête ses 25 ans",
+      "resume": "25 ans d'histoire et de succès célébrés avec toute l'équipe!",
+      "description": "<p>Ce week-end, Électrotech a célébré ses 25 ans d'histoire avec une soirée mémorable. Grâce à la générosité de nos partenaires d'affaires, nos employés ont été grandement choyés. Merci à tous pour votre confiance au cours des 25 dernières années!</p>"
+    },
+    "en": {
+      "title": "Electrotech Celebrates 25 Years",
+      "resume": "25 years of success celebrated with our team!",
+      "description": "<p>This past weekend, Electrotech celebrated 25 years of history with a memorable evening. Thanks to the generosity of our business partners, our employees were truly spoiled. Thank you all for your trust over the past 25 years!</p>"
+    },
+    "date": "2024-03-02",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-019",
+    "activate": true,
+    "type": "image",
+    "sorting": 3,
+    "fr": {
+      "title": "Projet majeur à Orlando (MCO)",
+      "resume": "Panneaux de contrôle pour l'aéroport international d'Orlando livrés avec succès.",
+      "description": "<p>Beaucoup de travail et de défis ont été relevés dans la réalisation de ce projet majeur. Il s'agit de comptoirs d’embarquement automatisés destinés à l'aéroport international d'Orlando (MCO). Bravo à toute l'équipe Électrotech pour cette réussite!</p>"
+    },
+    "en": {
+      "title": "Major Project at Orlando (MCO)",
+      "resume": "Control panels successfully delivered to Orlando International Airport.",
+      "description": "<p>A lot of work and challenges were overcome in the realization of this major project. It involved automated check-in counters for Orlando International Airport (MCO). Congratulations to the entire Electrotech team for this achievement!</p>"
+    },
+    "date": "2022-12-22",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-020",
+    "activate": true,
+    "type": "image",
+    "sorting": 2,
+    "fr": {
+      "title": "Nouveau panneau de contrôle pour production",
+      "resume": "Panneau principal de 20 pieds pour ligne de production livré au New Jersey.",
+      "description": "<p>Notre dernière réalisation: un panneau de contrôle principal de ligne de production de 20 pieds de long, séparé en deux pour l’expédition, avec une capacité de 600A et plusieurs variateurs de vitesse. Destination: New Jersey!</p>"
+    },
+    "en": {
+      "title": "New Production Line Control Panel",
+      "resume": "20-foot main control panel delivered to New Jersey.",
+      "description": "<p>Our latest achievement: a 20-foot-long main production line control panel, split in two for shipping, featuring 600A capacity and multiple speed drives. Destination: New Jersey!</p>"
+    },
+    "date": "2022-12-21",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-021",
+    "activate": true,
+    "type": "image",
+    "sorting": 1,
+    "fr": {
+      "title": "Levée de fonds « Mon Sommet Pour Toi »",
+      "resume": "120 000 $ remis à des organismes de Granby.",
+      "description": "<p>La semaine dernière, les sommes amassées lors de la levée de fonds « Mon Sommet Pour Toi » ont été remises aux organismes Oasis Santé Mentale, L’Autre Versant, L’Éveil et le Centre de prévention du suicide de La Haute-Yamaska. Grâce à votre générosité, 120 000 $ ont été collectés et remis en totalité. Nous sommes fiers d’avoir présidé cet événement pour une cause qui nous tient à cœur. Merci à tous!</p>"
+    },
+    "en": {
+      "title": "Fundraiser 'Mon Sommet Pour Toi'",
+      "resume": "$120,000 donated to organizations in Granby.",
+      "description": "<p>Last week, the funds raised during the 'Mon Sommet Pour Toi' event were donated to Oasis Santé Mentale, L’Autre Versant, L’Éveil, and the Suicide Prevention Center of La Haute-Yamaska. Thanks to your generosity, $120,000 was collected and fully donated. We are proud to have chaired this event for a cause close to our hearts. Thank you all!</p>"
+    },
+    "date": "2022-11-04",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-022",
+    "activate": true,
+    "type": "image",
+    "sorting": 0,
+    "fr": {
+      "title": "Installation à Chicago-ORD",
+      "resume": "Installation d'un nouveau type de comptoir pour Delta Airlines.",
+      "description": "<p>Électrotech est à l'aéroport de Chicago-ORD cette semaine pour visualiser l'installation finale d'un nouveau type de comptoir d'embarquement fabriqué à notre usine pour Delta Airlines. Fier de Team Électrotech!</p>"
+    },
+    "en": {
+      "title": "Installation at Chicago-ORD",
+      "resume": "New check-in counter installed for Delta Airlines.",
+      "description": "<p>Electrotech is at Chicago-ORD Airport this week to oversee the final installation of a new type of check-in counter manufactured at our plant for Delta Airlines. Proud of Team Electrotech!</p>"
+    },
+    "date": "2022-10-25",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-023",
+    "activate": true,
+    "type": "image",
+    "sorting": -1,
+    "fr": {
+      "title": "Centre de distribution Walmart - Toronto",
+      "resume": "Mise en place d'un nouveau méga centre automatisé.",
+      "description": "<p>Cette semaine, Team Électrotech assiste à la mise en place du dernier projet livré à Toronto : un immense centre de distribution automatisé destiné à Walmart. Des images valent mille mots!</p>"
+    },
+    "en": {
+      "title": "Walmart Distribution Center - Toronto",
+      "resume": "Setting up a new mega automated distribution center.",
+      "description": "<p>This week, Team Electrotech is assisting with the setup of the latest delivered project in Toronto: a massive automated distribution center for Walmart. A picture is worth a thousand words!</p>"
+    },
+    "date": "2022-08-26",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-024",
+    "activate": true,
+    "type": "image",
+    "sorting": -2,
+    "fr": {
+      "title": "Deuxième agrandissement 2022",
+      "resume": "Électrotech poursuit sa croissance et agrandit ses installations.",
+      "description": "<p>Dans le but d'augmenter sa productivité et poursuivre sa croissance, Électrotech a procédé à un nouvel agrandissement — le deuxième cette année — visant à devenir l'une des plus grandes usines de fabrication de panneaux de contrôle au Canada et un acteur majeur aux États-Unis. Fier de Team Électrotech!</p>"
+    },
+    "en": {
+      "title": "Second Expansion in 2022",
+      "resume": "Electrotech continues its growth with expanded facilities.",
+      "description": "<p>To boost productivity and support ongoing growth, Electrotech has completed another expansion — the second this year — aiming to become one of Canada's largest control panel manufacturing plants and a major player in the U.S. market. Proud of Team Electrotech!</p>"
+    },
+    "date": "2022-07-21",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-025",
+    "activate": true,
+    "type": "image",
+    "sorting": -3,
+    "fr": {
+      "title": "Livraison pour Walmart",
+      "resume": "Expédition d'un camion complet de panneaux de contrôle.",
+      "description": "<p>La construction du nouveau centre de distribution Walmart près de Toronto progresse bien. Nous avons récemment expédié un plein camion de panneaux de contrôle fabriqués par Team Électrotech. Bravo à toute l'équipe!</p>"
+    },
+    "en": {
+      "title": "Delivery for Walmart",
+      "resume": "A full truckload of control panels shipped.",
+      "description": "<p>The construction of Walmart’s new distribution center near Toronto is progressing well. We recently shipped a full truckload of control panels manufactured by Team Electrotech. Congratulations to the entire team!</p>"
+    },
+    "date": "2022-05-27",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-026",
+    "activate": true,
+    "type": "image",
+    "sorting": -4,
+    "fr": {
+      "title": "Atelier stratégique interne",
+      "resume": "Objectif : améliorer nos opérations pour mieux vous servir.",
+      "description": "<p>Atelier de remue-méninge et revue stratégique de nos opérations aujourd'hui avec Team Électrotech. Notre objectif : votre entière satisfaction!</p>"
+    },
+    "en": {
+      "title": "Internal Strategic Workshop",
+      "resume": "Objective: improve our operations to serve you better.",
+      "description": "<p>Brainstorming workshop and strategic review of our operations today with Team Electrotech. Our goal: your complete satisfaction!</p>"
+    },
+    "date": "2022-05-03",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-027",
+    "activate": true,
+    "type": "image",
+    "sorting": -5,
+    "fr": {
+      "title": "Support au DFW Airport",
+      "resume": "Support pour un système de traitement de bagages prototype.",
+      "description": "<p>Électrotech est à l’aéroport de Dallas/DFW cette semaine pour supporter la mise en service d’un système innovant de traitement de bagages. Notre passion : relever les défis aéroportuaires complexes!</p>"
+    },
+    "en": {
+      "title": "Support at DFW Airport",
+      "resume": "Supporting a prototype baggage handling system.",
+      "description": "<p>Electrotech is at Dallas/DFW Airport this week to support the startup of an innovative baggage handling system. Our passion: taking on complex airport challenges!</p>"
+    },
+    "date": "2022-04-01",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-028",
+    "activate": true,
+    "type": "image",
+    "sorting": -6,
+    "fr": {
+      "title": "Automatisation d'un entrepôt Walmart",
+      "resume": "Un projet majeur près de Toronto pour Walmart Canada.",
+      "description": "<p>La construction du nouvel entrepôt automatisé de 500 000 pi² destiné à Walmart Canada près de Toronto progresse rapidement. Team Électrotech est fier de fournir l'automatisation complète de cet ambitieux projet.</p>"
+    },
+    "en": {
+      "title": "Automation of a Walmart Warehouse",
+      "resume": "A major project near Toronto for Walmart Canada.",
+      "description": "<p>The construction of the new 500,000 sq.ft. automated warehouse for Walmart Canada near Toronto is progressing rapidly. Team Electrotech is proud to provide complete automation for this ambitious project.</p>"
+    },
+    "date": "2022-02-08",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-029",
+    "activate": true,
+    "type": "image",
+    "sorting": -7,
+    "fr": {
+      "title": "Expédition vers l'aéroport de Tijuana",
+      "resume": "Un projet pour le 5ᵉ aéroport le plus fréquenté du Mexique.",
+      "description": "<p>L’automatisation de la nouvelle salle à bagages de l’aéroport international de Tijuana (TIJ) a été expédiée cette semaine. Notre équipe est extrêmement fière de cette réalisation pour un aéroport accueillant 10 millions de voyageurs par an!</p>"
+    },
+    "en": {
+      "title": "Shipping to Tijuana Airport",
+      "resume": "A project for Mexico’s 5th busiest airport.",
+      "description": "<p>The automation system for Tijuana International Airport's new baggage hall (TIJ) was shipped this week. Our team is extremely proud of this achievement for an airport handling 10 million passengers per year!</p>"
+    },
+    "date": "2022-02-02",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-030",
+    "activate": true,
+    "type": "image",
+    "sorting": -8,
+    "fr": {
+      "title": "Premier centre de distribution Walmart",
+      "resume": "Une percée majeure pour Électrotech dans l’automatisation industrielle.",
+      "description": "<p>Nous sommes fiers d’avoir fourni les panneaux de contrôle pour le tout premier centre de distribution du genre pour Walmart dans le monde. Ce projet ambitieux nous a mené à obtenir un contrat majeur pour un centre de 550 000 pi² près de Toronto, opérationnel en 2024. Bravo Team Électrotech!</p>"
+    },
+    "en": {
+      "title": "First Walmart Distribution Center",
+      "resume": "A major breakthrough for Electrotech in industrial automation.",
+      "description": "<p>We are proud to have provided the control panels for Walmart’s first distribution center of its kind worldwide. This ambitious project led us to secure a major contract for a new 550,000 sq.ft. facility near Toronto, opening in 2024. Bravo Team Electrotech!</p>"
+    },
+    "date": "2021-12-20",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-031",
+    "activate": true,
+    "type": "image",
+    "sorting": -9,
+    "fr": {
+      "title": "Électrotech fête ses 25 ans avec Desjardins",
+      "resume": "Merci à Desjardins Entreprises pour leur soutien depuis nos débuts.",
+      "description": "<p>Desjardins Entreprises souligne les 25 ans d’Électrotech. De belles rencontres pour célébrer notre parcours depuis nos débuts modestes jusqu’à une présence internationale, soutenus par une équipe incroyable. Merci Desjardins pour votre confiance et votre soutien continu!</p>"
+    },
+    "en": {
+      "title": "Electrotech Celebrates 25 Years with Desjardins",
+      "resume": "Thank you to Desjardins Entreprises for their continued support since day one.",
+      "description": "<p>Desjardins Entreprises highlights Electrotech’s 25th anniversary. A great moment to celebrate our journey from humble beginnings to an international presence, supported by an incredible team. Thank you Desjardins for your trust and long-standing partnership!</p>"
+    },
+    "date": "2021-12-16",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-032",
+    "activate": true,
+    "type": "image",
+    "sorting": -10,
+    "fr": {
+      "title": "Participation au FTE à Las Vegas",
+      "resume": "Electrotech au salon de l'expérience passagers Future Travel Experience.",
+      "description": "<p>Électrotech participe au FTE « Future Travel Experience » cette semaine à Las Vegas. Un salon dédié à l'amélioration de l'expérience passagers dans les aéroports. Quel bonheur de retrouver nos clients!</p>"
+    },
+    "en": {
+      "title": "Participation at FTE in Las Vegas",
+      "resume": "Electrotech at the Future Travel Experience passenger expo.",
+      "description": "<p>Electrotech is participating at the Future Travel Experience (FTE) this week in Las Vegas. A show dedicated to improving passenger experience at airports. A pleasure to reconnect with our clients!</p>"
+    },
+    "date": "2021-12-08",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-033",
+    "activate": true,
+    "type": "image",
+    "sorting": -11,
+    "fr": {
+      "title": "Noël des enfants d'Électrotech",
+      "resume": "Beaucoup de sourires pour le Noël des enfants de notre équipe.",
+      "description": "<p>Le Père Noël était de passage ce week-end pour souligner le Noël des enfants de l’équipe Électrotech. Une journée remplie de plaisir et d'yeux pétillants!</p>"
+    },
+    "en": {
+      "title": "Electrotech’s Children's Christmas",
+      "resume": "Lots of smiles at our team’s children’s Christmas celebration.",
+      "description": "<p>Santa Claus visited Electrotech this weekend to celebrate Christmas with the children of our team members. A day filled with joy and sparkling eyes!</p>"
+    },
+    "date": "2021-12-15",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-034",
+    "activate": true,
+    "type": "image",
+    "sorting": -12,
+    "fr": {
+      "title": "Inauguration à l'aéroport de Denver (DEN)",
+      "resume": "Installation des 88 dépôts automatiques de bagages complétée.",
+      "description": "<p>Électrotech est fier d’avoir conçu et livré l’automation de 88 nouveaux comptoirs de dépôt de bagages (self-bag drops) à l’aéroport international de Denver (DEN). Ce projet représente la plus grande installation de ce type aux États-Unis!</p>"
+    },
+    "en": {
+      "title": "Inauguration at Denver Airport (DEN)",
+      "resume": "Installation of 88 self-bag drop units completed.",
+      "description": "<p>Electrotech is proud to have designed and delivered the automation for 88 new self-bag drop units at Denver International Airport (DEN). This represents the largest SBD installation in the United States!</p>"
+    },
+    "date": "2021-10-29",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-035",
+    "activate": true,
+    "type": "image",
+    "sorting": -13,
+    "fr": {
+      "title": "Investir dans l'innovation",
+      "resume": "Notre R&D assure notre succès avec nos partenaires.",
+      "description": "<p>Notre engagement envers la recherche et le développement de nouveaux produits et services est la clé de notre succès avec nos partenaires d’affaires. La quête de l’excellence est notre mot d’ordre!</p>"
+    },
+    "en": {
+      "title": "Investing in Innovation",
+      "resume": "Our R&D ensures our success with business partners.",
+      "description": "<p>Our commitment to research and development of new products and services is the key to our success with business partners. The pursuit of excellence is our motto!</p>"
+    },
+    "date": "2021-09-22",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-036",
+    "activate": true,
+    "type": "image",
+    "sorting": -14,
+    "fr": {
+      "title": "Les aéroports reprennent vie",
+      "resume": "Nouveaux projets aéroportuaires à San Jose, Atlanta, Dallas, Los Angeles et Newark.",
+      "description": "<p>Tranquillement, les aéroports reprennent vie. De nouveaux projets aéroportuaires avancent à San Jose (SJC), Atlanta (ATL), Dallas (DFW), Los Angeles (LAX) et Newark (EWR). Quel bonheur de pouvoir envisager de reprendre l’avion!</p>"
+    },
+    "en": {
+      "title": "Airports Are Coming Back to Life",
+      "resume": "New airport projects underway in San Jose, Atlanta, Dallas, Los Angeles, and Newark.",
+      "description": "<p>Airports are gradually coming back to life. New airport projects are moving forward in San Jose (SJC), Atlanta (ATL), Dallas (DFW), Los Angeles (LAX), and Newark (EWR). How exciting to think about flying again!</p>"
+    },
+    "date": "2021-09-08",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-037",
+    "activate": true,
+    "type": "image",
+    "sorting": -15,
+    "fr": {
+      "title": "Un espace gym pour nos employés",
+      "resume": "Un gym intégré à notre milieu de travail pour joindre l’utile à l’agréable!",
+      "description": "<p>Saviez-vous que nos employés bénéficient d'un espace gym directement sur leur lieu de travail? Une belle façon de joindre l'utile à l'agréable!</p>"
+    },
+    "en": {
+      "title": "A Gym Space for Our Employees",
+      "resume": "A gym integrated into our workplace to combine work and wellness!",
+      "description": "<p>Did you know our employees enjoy a gym facility directly within their workplace? A great way to combine business with pleasure!</p>"
+    },
+    "date": "2021-08-16",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-038",
+    "activate": true,
+    "type": "image",
+    "sorting": -16,
+    "fr": {
+      "title": "Nos projets internationaux",
+      "resume": "Électrotech livre des projets majeurs dans le monde entier.",
+      "description": "<p>Électrotech a réalisé des projets majeurs dans plusieurs grandes villes : Toronto, Vancouver, Denver, Hong Kong, Tokyo et Nassau. Découvrez l'étendue de nos services et réalisations!</p>"
+    },
+    "en": {
+      "title": "Our International Projects",
+      "resume": "Electrotech delivers major projects worldwide.",
+      "description": "<p>Electrotech has successfully delivered major projects in cities such as Toronto, Vancouver, Denver, Hong Kong, Tokyo, and Nassau. Discover more about our services and achievements!</p>"
+    },
+    "date": "2021-07-19",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-039",
+    "activate": true,
+    "type": "image",
+    "sorting": -17,
+    "fr": {
+      "title": "Jeux olympiques de Tokyo",
+      "resume": "Automatisation prête à accueillir les athlètes à Haneda.",
+      "description": "<p>À l'approche des Jeux olympiques de Tokyo, nos systèmes d'automatisation de dépôt de bagages sans contact sont prêts à accueillir les athlètes à l'aéroport d'Haneda. Bonne chance à tous les participants!</p>"
+    },
+    "en": {
+      "title": "Tokyo Olympics Readiness",
+      "resume": "Bag drop automation ready to welcome athletes at Haneda Airport.",
+      "description": "<p>As the Tokyo Olympics approach, our contactless bag drop automation systems are ready to welcome athletes at Haneda Airport. Best of luck to all the participants!</p>"
+    },
+    "date": "2021-07-15",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-040",
+    "activate": true,
+    "type": "image",
+    "sorting": -18,
+    "fr": {
+      "title": "Chef de file en panneaux de contrôle",
+      "resume": "Électrotech reconnu pour la qualité de ses panneaux de contrôle.",
+      "description": "<p>Grâce à des années d'expérience, Électrotech est devenu un chef de file dans l'assemblage de panneaux de contrôle de qualité pour l'industrie, les firmes d’ingénieurs-conseils et les entrepreneurs électriciens.</p>"
+    },
+    "en": {
+      "title": "Leader in Control Panel Assembly",
+      "resume": "Electrotech recognized for quality control panel assembly.",
+      "description": "<p>Over the years, Electrotech has established itself as a leader in the assembly of high-quality control panels for industries, engineering firms, and electrical contractors.</p>"
+    },
+    "date": "2021-06-30",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-041",
+    "activate": true,
+    "type": "image",
+    "sorting": -19,
+    "fr": {
+      "title": "Nos experts en dessin électrique",
+      "resume": "Confiez-nous la création de vos plans électriques sur mesure.",
+      "description": "<p>Nos dessinateurs(trices) sont des experts en la matière! Confiez-nous la création de vos plans électriques pour un résultat professionnel et conforme à vos besoins spécifiques.</p>"
+    },
+    "en": {
+      "title": "Our Electrical Drawing Experts",
+      "resume": "Entrust us with the creation of your custom electrical plans.",
+      "description": "<p>Our draftsmen and draftswomen are true experts! Trust us to create your professional, tailor-made electrical plans adapted to your needs.</p>"
+    },
+    "date": "2021-05-31",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-042",
+    "activate": true,
+    "type": "image",
+    "sorting": -20,
+    "fr": {
+      "title": "Fabrication de panneaux sur mesure",
+      "resume": "Fabrication en série ou sur mesure : notre spécialité!",
+      "description": "<p>Avec Électrotech, vous êtes entre bonnes mains! La fabrication de panneaux en série et sur mesure est notre spécialité. Confiez-nous vos projets d’automatisation pour des résultats d’exception!</p>"
+    },
+    "en": {
+      "title": "Custom Control Panel Manufacturing",
+      "resume": "Series or custom-made manufacturing: our specialty!",
+      "description": "<p>With Electrotech, you're in good hands! We specialize in both series and custom control panel manufacturing. Trust us with your automation projects for outstanding results!</p>"
+    },
+    "date": "2021-05-25",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-043",
+    "activate": true,
+    "type": "image",
+    "sorting": -21,
+    "fr": {
+      "title": "Expertise en aéroportuaire à Toronto",
+      "resume": "Automatisation des Self-bag Drop au Terminal 3 de Toronto-Pearson.",
+      "description": "<p>Notre expertise en automatisation est mise à profit pour accélérer l'enregistrement des bagages à l'aéroport international Toronto-Pearson (YYZ). Électrotech a eu le mandat d’automatiser les nouveaux comptoirs de dépôt de bagages « Self-bag Drop » au Terminal 3. Nous adorons ce type de projet!</p>"
+    },
+    "en": {
+      "title": "Airport Expertise at Toronto Pearson",
+      "resume": "Automation of Self-bag Drop at Toronto-Pearson Terminal 3.",
+      "description": "<p>Our automation expertise was put to use improving baggage handling speed at Toronto Pearson International Airport (YYZ). Electrotech was entrusted with automating the new 'Self-bag Drop' counters at Terminal 3. We love these kinds of projects!</p>"
+    },
+    "date": "2021-05-14",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-044",
+    "activate": true,
+    "type": "image",
+    "sorting": -22,
+    "fr": {
+      "title": "Depuis 1997 : Nos solutions de contrôle",
+      "resume": "Conception, dessin et fabrication de panneaux de contrôle sur mesure.",
+      "description": "<p>Depuis 1997, Électrotech conçoit, dessine et fabrique des panneaux de contrôle sur mesure et en série pour répondre aux défis d'automatisation de votre industrie.</p>"
+    },
+    "en": {
+      "title": "Since 1997: Our Control Panel Solutions",
+      "resume": "Design, drawing, and manufacturing of custom control panels.",
+      "description": "<p>Since 1997, Electrotech has been designing, drawing, and manufacturing custom and series-built control panels to help industries successfully meet their automation challenges.</p>"
+    },
+    "date": "2021-05-10",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-045",
+    "activate": true,
+    "type": "image",
+    "sorting": -23,
+    "fr": {
+      "title": "Panneaux de distribution pour Purolator",
+      "resume": "Livraison de panneaux 1600A certifiés CSA pour Purolator Super Hub.",
+      "description": "<p>Livraison aujourd'hui de panneaux de distribution 1600A/480VAC, spécialement conçus, fabriqués et certifiés CSA par notre équipe d'experts, destinés au projet Purolator National Super Hub à Toronto. Un type de panneau assez unique dans l'industrie!</p>"
+    },
+    "en": {
+      "title": "Distribution Panels for Purolator",
+      "resume": "Delivery of CSA-certified 1600A panels for Purolator Super Hub.",
+      "description": "<p>Today we delivered 1600A/480VAC distribution panels, specially designed, manufactured, and CSA-certified by our expert team, for the Purolator National Super Hub project in Toronto. A truly unique type of panel in the industry!</p>"
+    },
+    "date": "2021-04-29",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-046",
+    "activate": true,
+    "type": "image",
+    "sorting": -24,
+    "fr": {
+      "title": "Nouvelle ligne d'emballage BRP",
+      "resume": "Livraison prochaine d'un panneau de contrôle pour BRP à Queretaro.",
+      "description": "<p>Prochaine livraison : Panneau de contrôle destiné à une nouvelle ligne d'emballage chez BRP à Queretaro, Mexique. Une réalisation fièrement signée Électrotech.</p>"
+    },
+    "en": {
+      "title": "New Packaging Line for BRP",
+      "resume": "Upcoming delivery of a control panel for BRP in Queretaro.",
+      "description": "<p>Upcoming delivery: Control panel for a new packaging line at BRP in Queretaro, Mexico. Proudly manufactured by Electrotech.</p>"
+    },
+    "date": "2020-08-20",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-047",
+    "activate": true,
+    "type": "image",
+    "sorting": -25,
+    "fr": {
+      "title": "Projet d'automatisation pour Danone",
+      "resume": "Support d'un projet majeur pour l'usine de yogourt Danone au Québec.",
+      "description": "<p>Électrotech assiste une entreprise française dans la réalisation d'un projet majeur pour l'usine de yogourt Danone au Québec. De nombreux panneaux de contrôle certifiés CSA sont requis.</p>"
+    },
+    "en": {
+      "title": "Automation Project for Danone",
+      "resume": "Supporting a major project for Danone’s yogurt plant in Quebec.",
+      "description": "<p>Electrotech assists a French company in executing a major project for Danone’s yogurt factory in Quebec, delivering numerous CSA-certified control panels.</p>"
+    },
+    "date": "2020-07-02",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-048",
+    "activate": true,
+    "type": "image",
+    "sorting": -26,
+    "fr": {
+      "title": "Partenaire de l'usine Airbus A220",
+      "resume": "Électrotech collabore à l'automatisation de l'usine Airbus à Mobile, Alabama.",
+      "description": "<p>Dans les médias aujourd’hui : Inauguration de la nouvelle usine Airbus à Mobile, Alabama, où seront construits les A220. Électrotech est fier d’avoir collaboré à l’automatisation des immenses plateformes de travail. Bravo à Les Entreprises Courtval pour ce projet d'envergure!</p>"
+    },
+    "en": {
+      "title": "Partner in Airbus A220 Factory Project",
+      "resume": "Electrotech contributes to automation of Airbus factory in Mobile, Alabama.",
+      "description": "<p>In today’s news: Inauguration of Airbus' new plant in Mobile, Alabama, where A220 aircraft will be built. Electrotech proudly contributed by automating the massive work platforms. Congratulations to Les Entreprises Courtval for completing this ambitious project!</p>"
+    },
+    "date": "2020-05-20",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-049",
+    "activate": true,
+    "type": "image",
+    "sorting": -27,
+    "fr": {
+      "title": "Automatisation à Tokyo-Haneda",
+      "resume": "Livraison des panneaux pour la nouvelle salle à bagages de Tokyo.",
+      "description": "<p>La production des panneaux de contrôle pour l'automatisation des comptoirs de l'aéroport international Tokyo-Haneda (HND) est complétée. Malgré le Covid-19, Électrotech a respecté l'échéancier pour ce projet olympique d'envergure. Nous fermons temporairement l’usine par mesure sanitaire. Stay Safe!</p>"
+    },
+    "en": {
+      "title": "Automation at Tokyo-Haneda",
+      "resume": "Delivery of control panels for Tokyo’s new baggage hall completed.",
+      "description": "<p>Production of control panels for the automation of check-in counters at Tokyo-Haneda International Airport (HND) is complete. Despite Covid-19, Electrotech delivered on schedule for this major Olympic project. We now temporarily close our plant as a precaution. Stay Safe!</p>"
+    },
+    "date": "2020-03-23",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-050",
+    "activate": true,
+    "type": "image",
+    "sorting": -28,
+    "fr": {
+      "title": "Nouveau projet à l'aéroport de Québec",
+      "resume": "Participation à la mise en route de la nouvelle salle à bagages de YQB.",
+      "description": "<p>La mise en route progressive de la nouvelle salle à bagages de l'aéroport international Jean-Lesage de Québec (YQB) est en cours. Électrotech est fier d’avoir contribué à cet audacieux projet comportant plusieurs défis technologiques.</p>"
+    },
+    "en": {
+      "title": "New Project at Québec Airport",
+      "resume": "Assisting with startup of YQB’s new baggage handling area.",
+      "description": "<p>The progressive startup of the new baggage handling area at Québec City's Jean-Lesage International Airport (YQB) is underway. Electrotech is proud to have contributed to this ambitious project full of technological challenges.</p>"
+    },
+    "date": "2020-02-06",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-051",
+    "activate": true,
+    "type": "image",
+    "sorting": -29,
+    "fr": {
+      "title": "Contrat majeur à YVR",
+      "resume": "Électrotech remporte un contrat pour l'automatisation à l'aéroport de Vancouver.",
+      "description": "<p>Électrotech est fier d’avoir remporté un contrat important pour l’automatisation de la salle à bagages de l’Aéroport International de Vancouver (YVR), le deuxième aéroport le plus achalandé du Canada. Ce projet ambitieux, visant à bâtir l'aéroport du futur, bénéficie de notre expertise reconnue.</p>"
+    },
+    "en": {
+      "title": "Major Contract at YVR",
+      "resume": "Electrotech wins a baggage automation contract at Vancouver Airport.",
+      "description": "<p>Electrotech is proud to have secured a major contract for the baggage automation system at Vancouver International Airport (YVR), Canada’s second busiest airport. This ambitious project, part of building the airport of the future, highlights our proven expertise.</p>"
+    },
+    "date": "2019-09-20",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-052",
+    "activate": true,
+    "type": "image",
+    "sorting": -30,
+    "fr": {
+      "title": "Livraison à YUL",
+      "resume": "Prochaine livraison du panneau de contrôle pour la salle à bagages de Montréal.",
+      "description": "<p>Prochaine livraison prévue : panneau de contrôle du trieur central de la salle à bagages de l’Aéroport International Montréal-Trudeau (YUL), conçu par notre équipe et certifié CSA. Présentement en contrôle qualité chez Électrotech.</p>"
+    },
+    "en": {
+      "title": "Delivery to YUL",
+      "resume": "Upcoming delivery of control panel for Montréal-Trudeau Airport baggage area.",
+      "description": "<p>Upcoming delivery: central sorter control panel for Montréal-Trudeau International Airport (YUL) baggage hall, designed by our team and CSA-certified. Currently undergoing final quality control at Electrotech.</p>"
+    },
+    "date": "2019-08-30",
+    "author": "Équipe Électrotech"
+  },
+  {
+    "id": "news-053",
+    "activate": true,
+    "type": "image",
+    "sorting": -31,
+    "fr": {
+      "title": "Nouveaux aménagements d'usine",
+      "resume": "L'aménagement de notre aire de production 4.0 progresse à grands pas.",
+      "description": "<p>Les travaux à notre nouvelle usine avancent conformément à l’échéancier prévu. Le nouvel aménagement de notre aire de production 4.0 permettra d’augmenter capacité, productivité et efficacité. Merci à toute l’équipe d’Électrotech pour son travail exceptionnel. Bonnes vacances!</p>"
+    },
+    "en": {
+      "title": "New Plant Expansion",
+      "resume": "Our 4.0 production area expansion is progressing rapidly.",
+      "description": "<p>Work on our new plant is progressing as scheduled. The setup of our 4.0 production area will boost our capacity, productivity, and efficiency. Huge thanks to the entire Electrotech team for their outstanding work. Enjoy your well-deserved vacation!</p>"
+    },
+    "date": "2019-07-19",
+    "author": "Équipe Électrotech"
+  }
+]

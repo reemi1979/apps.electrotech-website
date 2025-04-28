@@ -35,6 +35,10 @@
     aws s3 rm s3://electrotech.ca-website/testNewApp/ --recursive
 
 
+8. dans Cloudfront Error, remettre 403 et 404 a /index.html a place de /testNewApp/index.html
+    pour permettre le open in new tab
+
+
 ✅ Résultat final :
     Ton site sera accessible à :
     https://www.electrotech.ca/
