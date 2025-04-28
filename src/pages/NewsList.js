@@ -32,7 +32,7 @@ const NewsList = () => {
         .then(data => {
             const activeNews = data
             .filter(n => n.activate)
-            .sort((a, b) => (b.sorting - a.sorting) || new Date(b.date) - new Date(a.date));
+            .sort((a, b) => new Date(b.date) - new Date(a.date));
             setNewsList(activeNews);
         });
     }, []);
