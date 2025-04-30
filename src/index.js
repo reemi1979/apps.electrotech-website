@@ -3,18 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ThemeProvider, CssBaseline } from '@mui/material';
-import theme from './theme';
+import CssBaseline from '@mui/material/CssBaseline';
+import ThemeContextProvider from './theme/ThemeContext';
 import './i18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline /> {/* applique le fond + texte global */}
+    <ThemeContextProvider>
+      <CssBaseline />
       <App />
-    </ThemeProvider>
+    </ThemeContextProvider>
   </React.StrictMode>
 );
 

@@ -16,6 +16,7 @@ const Home = () => {
 
   const { t } = useTranslation();
   const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
 
   useEffect(() => {
     if (token) {
@@ -32,10 +33,10 @@ const Home = () => {
         if (data.token) {
           setToken(data.token);
         } else {
-          console.error('Token non reçu:', data);
+          console.error('Token not received:', data);
         }
       } catch (error) {
-        console.error('Erreur pour obtenir le token:', error);
+        console.error('Token error:', error);
       }
     }
 
@@ -58,7 +59,7 @@ const Home = () => {
       return res.json();
     })
     .then(data => {
-      console.log("📦 Données reçues :", data);
+      console.log("📦 Data received :", data);
       setApiData(data);
     })
     .catch(err => {
@@ -98,32 +99,32 @@ const Home = () => {
         >
           <Box
             component="img"
-            src={process.env.PUBLIC_URL + '/logo.svg'}
+            src={process.env.PUBLIC_URL + '/logos/logo.svg'}
             alt="Électrotech Logo"
             sx={{
-              width: { xs: 400, md: 800 }, // 150px on mobile, 600px on desktop
+              width: { xs: 400, md: 800 },
               height: 'auto',
               mx: 'auto',
               display: 'block',
-              filter: 'brightness(0) invert(1)', // pure white
+              filter: isDark ? 'brightness(0) invert(1)' : 'none',
               transition: 'filter 0.5s ease-in-out',
               '&:hover': {
-                filter: 'none', // restores original logo colors on hover
-              },
+                filter: isDark ? 'none' : 'brightness(0)', // ✅ couleur en dark, noir en light
+              }
             }}
           />
         </motion.div>
 
-        <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary }}>
-          {t('home_bienvenue')}
+        <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.primary }}>
+          {t('home_welcome')}
         </Typography>
 
-        <Typography variant="h4"  sx={{mb: 2, maxWidth: 1400, margin: '0 auto', color: theme.palette.text.dark }}>
-          {t('home_contenu_1')}
+        <Typography variant="h4"  sx={{mb: 2, maxWidth: 1400, margin: '0 auto', color: theme.palette.custom.electrotechBlue }}>
+          {t('home_content_1')}
         </Typography>
 
         <Typography variant="h6" sx={{mb: 2, maxWidth: 1400, margin: '0 auto' }}>
-          {t('home_contenu_2')}
+          {t('home_content_2')}
         </Typography>
 
         <br /><br /><br /><br /><br /><br />
@@ -140,7 +141,7 @@ const Home = () => {
         </Typography>
 
         <Typography variant="body1">
-          {t('home_contenu_principal')}
+          {t('home_content_main')}
         </Typography>
 
       </Box>

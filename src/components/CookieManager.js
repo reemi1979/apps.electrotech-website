@@ -84,31 +84,69 @@ const CookieManager = () => {
           gap: 1,
         }}>
           <Typography variant="body2" textAlign="center">
-            {t('cookie_title')}
+            {t('cookie_banner_message')}
           </Typography>
           <Box sx={{ display: 'flex', gap: 1 }}>
-            <Button variant="contained" color="primary" onClick={handleAcceptAll}>{t('accepter_tout')}</Button>
-            <Button variant="outlined" color="inherit" onClick={handleDeclineAll}>{t('refuser_tout')}</Button>
-            <Button variant="outlined" color="inherit" onClick={() => setDialogOpen(true)}>{t('personnaliser')}</Button>
+            <Button variant="contained" color="primary" onClick={handleAcceptAll}>
+              {t('cookie_accept_all')}
+            </Button>
+            <Button variant="outlined" color="inherit" onClick={handleDeclineAll}>
+              {t('cookie_decline_all')}
+            </Button>
+            <Button variant="outlined" color="inherit" onClick={() => setDialogOpen(true)}>
+              {t('cookie_customize_button')}
+            </Button>
           </Box>
         </Box>
       )}
-
+  
       <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)} fullScreen={fullScreen}>
-        <DialogTitle>{t('cookie_personnaliser')}</DialogTitle>
+        <DialogTitle>{t('cookie_customize')}</DialogTitle>
         <DialogContent>
-          <FormControlLabel control={<Checkbox checked disabled />} label="Nécessaire (Toujours actif)" />
-          <FormControlLabel control={<Checkbox checked={prefs.functional} onChange={(e) => setPrefs(prev => ({ ...prev, functional: e.target.checked }))} />} label="Fonctionnelle" />
-          <FormControlLabel control={<Checkbox checked={prefs.analytics} onChange={(e) => setPrefs(prev => ({ ...prev, analytics: e.target.checked }))} />} label="Analytique" />
-          <FormControlLabel control={<Checkbox checked={prefs.advertising} onChange={(e) => setPrefs(prev => ({ ...prev, advertising: e.target.checked }))} />} label="Publicité" />
+          <FormControlLabel
+            control={<Checkbox checked disabled />}
+            label={t('cookie_category_necessary')}
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={prefs.functional}
+                onChange={(e) => setPrefs(prev => ({ ...prev, functional: e.target.checked }))}
+              />
+            }
+            label={t('cookie_category_functional')}
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={prefs.analytics}
+                onChange={(e) => setPrefs(prev => ({ ...prev, analytics: e.target.checked }))}
+              />
+            }
+            label={t('cookie_category_analytics')}
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={prefs.advertising}
+                onChange={(e) => setPrefs(prev => ({ ...prev, advertising: e.target.checked }))}
+              />
+            }
+            label={t('cookie_category_advertising')}
+          />
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setDialogOpen(false)} color="inherit">{t('annuler')}</Button>
-          <Button onClick={() => handleSave(prefs)} color="primary" variant="contained">{t('sauvegarder')}</Button>
+          <Button onClick={() => setDialogOpen(false)} color="inherit">
+            {t('cookie_cancel')}
+          </Button>
+          <Button onClick={() => handleSave(prefs)} color="primary" variant="contained">
+            {t('cookie_save')}
+          </Button>
         </DialogActions>
       </Dialog>
     </>
   );
+  
 };
 
 export default CookieManager;

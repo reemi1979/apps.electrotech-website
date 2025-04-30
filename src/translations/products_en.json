@@ -1,0 +1,71 @@
+{
+    "product_control_panel_standard_title": "Standard Control Panel",
+    "product_control_panel_custom_title": "Custom Control Panel",
+    "product_control_panel_serie_title": "Series Control Panel",
+    "product_control_panel_pushbutton_title": "Pushbutton Control Panel",
+    "product_control_panel_junctionbox_title": "Junction Box",
+
+    "selected_control_panel_standard_description_title": "Standard Control Panel",
+    "selected_control_panel_standard_description": "A control panel designed to monitor, manage, and optimize the operation of various industrial systems. It automates processes such as conveyor systems, pumping, motor control, production lines, and test benches.",
+
+    "selected_control_panel_custom_description_title": "Custom Control Panel",
+    "selected_control_panel_custom_description": "A custom-built enclosure designed to meet unique project-specific requirements.",
+
+    "selected_control_panel_serie_description_title": "Series Control Panel",
+    "selected_control_panel_serie_description": "Engineered for high-volume production, this control panel supports repetitive manufacturing with optimal efficiency.",
+
+    "selected_control_panel_pushbutton_description_title": "Push Button Control Box",
+    "selected_control_panel_pushbutton_description": "Compact enclosure with durable push buttons for simple, direct and reliable field control.",
+
+    "selected_control_panel_junctionbox_description_title": "Junction Box",
+    "selected_control_panel_junctionbox_description": "A junction box is an electrical enclosure designed to organize, protect, and distribute cable connections in an automated system or electrical installation. It ensures safety, clarity, and ease of maintenance.",
+
+    "product_cables_cables_title": "Cables",
+    "product_cables_harness_title": "Harnesses",
+    "product_cables_wires_title": "Wires",
+    "product_cables_connectors_title": "Connectors",
+
+    "selected_cables_cables_description_title": "Standard Cables",
+    "selected_cables_cables_description": "Industrial-grade cables for various environments.",
+
+    "selected_cables_harness_description_title": "Custom Harnesses",
+    "selected_cables_harness_description": "Pre-wired organized assemblies for quick install.",
+
+    "selected_cables_wires_description_title": "Electric Wires",
+    "selected_cables_wires_description": "High-quality insulated wires for all voltages.",
+
+    "selected_cables_connectors_description_title": "Connectors",
+    "selected_cables_connectors_description": "Durable connectors for fast and secure wiring.",
+
+
+    "product_markers_cables_title": "Cable Markers",
+    "product_markers_wires_title": "Wire Markers",
+    "product_markers_plates_title": "Engraved Plates",
+    "product_markers_components_title": "Identified Components",
+
+    "product_warning_min_order": "These products are manufactured as part of our control panel projects. They are not usually sold individually, except for special orders, and are subject to minimum quantities.",
+    
+    "selected_markers_cables_description_title": "Cable Markers",
+    "selected_markers_cables_description": "Identification solutions for industrial cables.",
+  
+    "selected_markers_wires_description_title": "Wire Markers",
+    "selected_markers_wires_description": "Durable and fast identification for electric wires.",
+  
+    "selected_markers_plates_description_title": "Engraved Plates",
+    "selected_markers_plates_description": "Durable signage plates for equipment.",
+
+    "selected_markers_stainless_description_title": "Stainless Steel Engraved Plates",
+    "selected_markers_stainless_description": "Durable stainless steel signage plates for equipment.",
+
+    "selected_markers_components_description_title": "Identified Components",
+    "selected_markers_components_description": "Direct labeling for components or backplate.",
+
+    "selected_markers_terminals_description_title": "Terminals Blocks Markers",
+    "selected_markers_terminals_description": "Direct labeling for terminals blocks.",
+
+    "products_lines_section_title": "Trusted Brands We Supply",
+    "products_lines_section_description": "We distribute quality components from leading manufacturers to build or maintain your control Control Panels. Many other parts are available — contact us for more information.",
+
+    "brands_trademark_note": "All logos and trademarks are the property of their respective owners and are used for identification purposes only. If you are the owner and wish to have your logo removed, please contact us."
+}
+    

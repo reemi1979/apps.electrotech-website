@@ -40,13 +40,13 @@ const HomeIndustries = () => {
       >
         <Typography
           variant="h3"
-          sx={{ mb: 2, color: theme.palette.text.secondary }}
+          sx={{ mb: 2, color: theme.palette.custom.electrotechYellow }}
         >
           {t('home_industrie_default_title')}
         </Typography>
         <Typography
           variant="h4"
-          sx={{ mb: 2, maxWidth: 1400, mx: 'auto', color: theme.palette.text.dark }}
+          sx={{ mb: 2, maxWidth: 1400, mx: 'auto', color: theme.palette.custom.electrotechBlue }}
         >
           {t('home_industrie_default_description')}
         </Typography>
@@ -71,6 +71,10 @@ const HomeIndustries = () => {
                 transform: selected === item ? 'scale(1.05)' : 'scale(1)',
                 boxShadow: selected === item ? '0 0 15px rgba(255,255,255,0.6)' : 'none',
                 cursor: 'pointer',
+                '&:hover': {
+                  boxShadow: '0 0 15px rgba(255,255,255,0.6)', // shadow always on hover
+                  transform: 'scale(1.05)', // optional: slight zoom on hover too
+                },
               }}
             />
           </Grid>
@@ -131,10 +135,10 @@ const HomeIndustries = () => {
                     mb: 3,
                   }}
                 />
-                <Typography variant="h4" sx={{ mb: 2, color: theme.palette.text.secondary }}>
+                <Typography variant="h4" sx={{ mb: 2, color: theme.palette.custom.electrotechYellowy }}>
                   {t(selected.titleKey)}
                 </Typography>
-                <Typography variant="body1" sx={{ color: theme.palette.text.primary }}>
+                <Typography variant="body1" sx={{ color: theme.palette.custom.electrotechBlue }}>
                   {t(selected.descriptionKey)}
                 </Typography>
               </MotionBox>

@@ -52,7 +52,7 @@ const NewsDetail = () => {
     if (!news) {
         return (
         <Container sx={{ py: 10, textAlign: 'center' }}>
-            <Typography variant="h4" sx={{ color: theme.palette.text.secondary }}>
+            <Typography variant="h4" sx={{ color: theme.palette.custom.electrotechYellow }}>
             {t('news_not_found')}
             </Typography>
         </Container>
@@ -71,7 +71,7 @@ const NewsDetail = () => {
             onClick={() => navigate(-1)}
             sx={{ fontSize: '1rem' }}
             >
-            ← {t('actualités_retour')}
+            ← {t('news_back_button')}
             </Button>
         </Box>
 
@@ -113,7 +113,7 @@ const NewsDetail = () => {
 
         <Typography 
             variant="body1" 
-            sx={{ maxWidth: 900, mx: 'auto', textAlign: 'left', whiteSpace: 'pre-line' }}
+            sx={{ maxWidth: 900, mx: 'auto', textAlign: 'left', whiteSpace: 'pre-line', color: theme.palette.text.primary}}
             dangerouslySetInnerHTML={{ __html: description }}
         >
         </Typography>

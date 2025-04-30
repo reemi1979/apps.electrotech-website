@@ -36,8 +36,8 @@ const News = () => {
       />
 
       {sortedNews.map((item) => (
-        <Box key={item.id} sx={{ mb: 8 }}> {/* No dark box */}
-          <Typography variant="h3" sx={{ color: theme.palette.text.secondary, mb: 2 }}>
+        <Box key={item.id} sx={{ mb: 8 }}>
+          <Typography variant="h3" sx={{ color: theme.palette.custom.electrotechYellow, mb: 2 }}>
             {item[i18n.language]?.title || item.en.title}
           </Typography>
           <Box
@@ -111,7 +111,7 @@ const News = () => {
                 <Typography variant="h4" sx={{ mb: 2, color: theme.palette.text.secondary }}>
                   {selected[i18n.language]?.title || selected.en.title}
                 </Typography>
-                <Typography variant="caption" sx={{ fontStyle: 'italic', color: theme.palette.text.dark }}>
+                <Typography variant="caption" sx={{ fontStyle: 'italic', color: theme.palette.custom.electrotechBlue }}>
                   {selected.author} - {selected.date}
                 </Typography>
               </MotionBox>

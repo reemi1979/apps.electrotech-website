@@ -86,15 +86,26 @@ const Certification = () => {
         {t('certification_description')}: {currentCert.description}
       </Typography>
 
-      <Typography 
-        variant="body2"   
-        sx={{ 
-          fontStyle: 'italic', 
-          color: theme.palette.text.dark,
+      <Box
+        sx={{
+          backgroundColor: theme.palette.custom.electrotechYellow,
+          color: theme.palette.custom.electrotechBlue,
+          px: 2,
+          py: 1,
+          borderRadius: 2,
+          display: 'inline-block', // pour que la boîte ne prenne que la taille du texte
+          mt: 2
         }}
       >
-        {currentCert.trademark}
-      </Typography>
+        <Typography variant="body2" sx={{ 
+          fontStyle: 'italic',
+          fontWeight: 'bold',
+          m: 0 
+          }}>
+          {currentCert.trademark}
+        </Typography>
+      </Box>
+
 
       <Typography variant="h4" sx={{ color: theme.palette.text.secondary, mt: 6 }}>
         {t('certification_why_matter')}

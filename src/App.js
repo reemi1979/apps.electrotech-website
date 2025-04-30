@@ -6,6 +6,10 @@ import Home from './pages/Home';
 import Certification from './pages/Certification';
 import NewsList from './pages/NewsList';
 import NewsDetail from './pages/NewsDetail';
+import ProductsControlPanels from './pages/ProductsControlPanels';
+import ProductsCables from './pages/ProductsCables';
+import ProductsMarkers from './pages/ProductsMarkers';
+import ProductsLines from './pages/ProductsLines';
 import Layout from './pages/Layout';
 
 const App = () => {
@@ -19,7 +23,12 @@ const App = () => {
             <Route path="/certifications" element={<Certification />} />
             <Route path="/news" element={<NewsList />} />
             <Route path="/:slug" element={<NewsDetail />} />
-            <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/products-control-panels" element={<ProductsControlPanels />} />
+            <Route path="/products-cables" element={<ProductsCables />} />
+            <Route path="/products-markers" element={<ProductsMarkers />} />
+            <Route path="/products-lines" element={<ProductsLines />} />
+
           </Route>
         </Routes>
       </Router>

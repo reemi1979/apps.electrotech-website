@@ -1,0 +1,71 @@
+{
+    
+    "product_control_panel_standard_title": "Boitier de contrôle standard",
+    "product_control_panel_custom_title": "Boitier de contrôle personnalisé",
+    "product_control_panel_serie_title": "Boitier de contrôle de série",
+    "product_control_panel_pushbutton_title": "Boitier de contrôle boutons-poussoirs",
+    "product_control_panel_junctionbox_title": "Boîte de jonction",
+    
+    "selected_control_panel_standard_description_title": "Boitier de contrôle standard",
+    "selected_control_panel_standard_description": "Un panneau de contrôle est conçu pour superviser, gérer et optimiser le fonctionnement de divers systèmes industriels. Il permet d’automatiser des procédés tels que le convoyage, le pompage, le contrôle de moteurs, les lignes de production ou encore les bancs de test. ",
+    
+    "selected_control_panel_custom_description_title": "Boitier de contrôle personnalisé",
+    "selected_control_panel_custom_description": "Un boîtier conçu sur mesure pour répondre à des besoins uniques, adaptés à chaque projet spécifique.",
+    
+    "selected_control_panel_serie_description_title": "Boitier de contrôle de série",
+    "selected_control_panel_serie_description": "Conçu pour la production en grande série, ce panneau de contrôle permet la fabrication répétitive à haut volume, avec une efficacité optimale.",
+    
+    "selected_control_panel_pushbutton_description_title": "Boitier de contrôle boutons-poussoirs",
+    "selected_control_panel_pushbutton_description": "Boîtier compact intégrant des boutons-poussoirs robustes pour un contrôle simple, direct et fiable sur le terrain.",
+    
+    "selected_control_panel_junctionbox_description_title": "Boîte de jonction",
+    "selected_control_panel_junctionbox_description": "Une boîte de jonction est un boîtier électrique conçu pour regrouper, protéger et distribuer les connexions de câbles dans un système automatisé ou une installation électrique. Elle joue un rôle essentiel dans la sécurisation et l’organisation du câblage, tout en assurant une maintenance simplifiée.",
+
+    "product_cables_cables_title": "Câbles",
+    "product_cables_harness_title": "Harnais",
+    "product_cables_wires_title": "Fils",
+    "product_cables_connectors_title": "Connecteurs",
+  
+    "selected_cables_cables_description_title": "Câbles standards",
+    "selected_cables_cables_description": "Câbles adaptés aux environnements industriels.",
+  
+    "selected_cables_harness_description_title": "Harnais personnalisés",
+    "selected_cables_harness_description": "Assemblages de fils organisés et prêts à installer.",
+  
+    "selected_cables_wires_description_title": "Fils électriques",
+    "selected_cables_wires_description": "Fils isolés de haute qualité pour diverses tensions.",
+  
+    "selected_cables_connectors_description_title": "Connecteurs",
+    "selected_cables_connectors_description": "Connecteurs industriels robustes pour câblage rapide.",
+    
+    "product_markers_cables_title": "Marqueurs pour câbles",
+    "product_markers_wires_title": "Marqueurs pour fils",
+    "product_markers_plates_title": "Plaques gravées",
+    "product_markers_components_title": "Composantes identifiées",
+  
+    "product_warning_min_order": "Nous fabriquons ces produits dans le cadre de nos projets de panneaux de contrôle. Ils ne sont généralement pas vendues à l’unité, sauf pour des commandes spéciales, et sont sujettes à des quantités minimales.",
+
+    "selected_markers_cables_description_title": "Marqueurs pour câbles",
+    "selected_markers_cables_description": "Solutions de repérage pour câbles industriels.",
+  
+    "selected_markers_wires_description_title": "Marqueurs pour fils",
+    "selected_markers_wires_description": "Identification rapide et durable des fils électriques.",
+  
+    "selected_markers_plates_description_title": "Plaques gravées",
+    "selected_markers_plates_description": "Plaques signalétiques durables pour équipements.",
+
+    "selected_markers_stainless_description_title": "Plaques gravées en acier inox.",
+    "selected_markers_stainless_description": "Plaques signalétiques en acier inoxydable durables pour équipements.",
+
+    "selected_markers_components_description_title": "Composantes identifiées",
+    "selected_markers_components_description": "Marquage direct sur les composantes ou la plaque de montage.",
+
+    "selected_markers_terminals_description_title": "Marqueurs Borniers",
+    "selected_markers_terminals_description": "Marquage direct pour bornes, porte fusibles et relais.",
+
+    "products_lines_section_title": "Marques de confiance que nous distribuons",
+    "products_lines_section_description": "Nous distribuons des composantes de qualité provenant de fabricants réputés pour la fabrication ou l’entretien de vos panneaux de contrôle. Plusieurs autres pièces sont disponibles — contactez-nous pour plus d’informations.",
+
+    "brands_trademark_note": "Tous les logos et marques de commerce sont la propriété de leurs détenteurs respectifs et sont utilisés uniquement à des fins d’identification. Si vous êtes le propriétaire et souhaitez que votre logo soit retiré, veuillez nous contacter."
+  }
+    

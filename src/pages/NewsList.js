@@ -45,21 +45,46 @@ const NewsList = () => {
             <br /> <br />
 
             <Typography variant="h3" sx={{ textAlign: 'center', color: theme.palette.text.secondary }}>
-                {t('actualités')}
+                {t('news_title')}
             </Typography>
-            <Typography 
-                variant="h6"   
-                sx={{ 
-                fontStyle: 'italic', 
-                textAlign: 'center',
-                mb: 6, 
-                color: theme.palette.text.primary,
-                }}
-            >
+            <Typography variant="h6" sx={{ textAlign: 'center', color: theme.palette.text.primary, mb: 0 }}>
+            {t('news_title_sub')}
+            </Typography>
+            <Typography variant="body2" sx={{ fontStyle: 'italic', textAlign: 'center', mb: 0, color: theme.palette.text.secondary }}>
                 {t('news_ai')}
             </Typography>
-            <br /> <br /> <br />
+            <Typography variant="body2" sx={{ fontStyle: 'italic', textAlign: 'center', mb: 4, color: theme.palette.text.secondary }}>
+                {t('news_ai_note')}
+            </Typography>
 
+            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 0 }}>
+            <a
+                href="https://www.facebook.com/ElectrotechAutomatisationIndustrielle"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                display: 'flex',
+                alignItems: 'center',
+                textDecoration: 'none',
+                color: 'inherit',
+                transition: 'color 0.3s',
+                }}
+                onMouseOver={e => (e.currentTarget.style.color = '#1877F2')}
+                onMouseOut={e => (e.currentTarget.style.color = 'inherit')}
+            >
+                <img
+                src={process.env.PUBLIC_URL + "/logos/facebook.svg"}
+                alt="Facebook"
+                style={{ width: 36, height: 36, marginRight: 10 }}
+                />
+                <Typography variant="h5" fontWeight="bold">
+                {t('facebook_follow_us')}
+                </Typography>
+            </a>
+            </Box>
+
+
+            <br /> <br />
 
             <Grid container spacing={3} justifyContent="center">
                 {newsList.slice(0, visibleNews).map((news) => {
@@ -83,9 +108,9 @@ const NewsList = () => {
                             borderRadius: 2,
                             textDecoration: 'none',
                             color: 'inherit',
-                            backgroundColor: '#1e1e1e',
+                            backgroundColor: theme.palette.background.default,
                             transition: 'background-color 0.3s',
-                            '&:hover': { backgroundColor: '#2c2c2c' }
+                            '&:hover': { backgroundColor: theme.palette.background.paper }
                             }}
                         >
                             <Box
@@ -102,7 +127,7 @@ const NewsList = () => {
                             }}
                             />
                             <Box sx={{ flex: 1, minWidth: 200 }}>
-                            <Typography variant="caption" sx={{ color: theme.palette.text.dark }}>
+                            <Typography variant="caption" sx={{ color: theme.palette.custom.electrotechBlue }}>
                                 {new Date(news.date).toLocaleDateString()}
                             </Typography>
                             <Typography variant="h5" noWrap sx={{ color: theme.palette.text.secondary, mt: 1 }}>
@@ -123,7 +148,7 @@ const NewsList = () => {
                                 {content.resume}
                             </Typography>
                             </Box>
-                            <ArrowForwardIosIcon sx={{ ml: 2, color: theme.palette.text.secondary }} />
+                            <ArrowForwardIosIcon sx={{ ml: 2, color: theme.palette.custom.electrotechYellow }} />
                         </Box>
                         </Grid>
                     );
@@ -143,6 +168,7 @@ const NewsList = () => {
                     </Button>
                 </Box>
             )}
+
 
     </Container>
 

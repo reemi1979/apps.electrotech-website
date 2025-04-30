@@ -22,7 +22,7 @@ const Layout = () => {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        backgroundImage: backgroundEnabled ? `url(${process.env.PUBLIC_URL}/electron-bg.svg)` : 'none',
+        backgroundImage: backgroundEnabled ? `url(${process.env.PUBLIC_URL}/logos/electron-bg.svg)` : 'none',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',

@@ -16,85 +16,121 @@ import { Select, MenuItem, FormControl } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-
+import ThemeToggleButton from './ThemeToggleButton';
 import i18n from '../i18n';
+import { useLocation } from 'react-router-dom';
 
 const HeaderBarResponsive = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery('(max-width:1300px)');
+  const location = useLocation();
 
-
+  const isHome = location.pathname === '/' || location.pathname === '/home';
   const { t } = useTranslation();
 
+  const electrotechTextColor = isHome
+    ? theme.palette.text.primary
+    : theme.palette.mode === 'dark'
+      ? theme.palette.text.primary
+      : theme.palette.custom.electrotechBlue;
+
+  const navControlsColors = () => {
+    const isDark = theme.palette.mode === 'dark';
+  
+    return {
+      color: isHome
+        ? 'white'
+        : isDark
+          ? 'white'
+          : 'black',
+  
+      textShadow: isHome
+        ? `-1px -1px 0 black,
+            1px -1px 0 black,
+          -1px 1px 0 black,
+            1px 1px 0 black`
+        : 'none'
+    };
+  };
+
+      
   const navGroups = {
     main: [
-      { label: t('accueil'), link: '/' },
+      { label: t('home'), link: '/' },
       { label: t('news'), link: '/news' },
       { label: t('certifications'), link: '/certifications' },
       { label: t('quote'), link: '/quote' },
     ],
     products: [
-      { label: t('products_panels'), link: '/products_panels' },
-      { label: t('products_cables'), link: '/products_cables' },
-      { label: t('products_labels'), link: '/products_labels' },
-      { label: t('products_parts'), link: '/products_parts' },
+      { label: t('products_panels'), link: '/products-control-panels' },
+      { label: t('products_cables'), link: '/products-cables' },
+      { label: t('products_markers'), link: '/products-markers' },
+      { label: t('products_lines'), link: '/products-lines' },
     ],
     services: [
-      { label: t('services_design'), link: '/services_design' },
-      { label: t('services_programming'), link: '/services_programming' },
-      { label: t('services_assembly'), link: '/services_assembly' },
-      { label: t('services_cutout'), link: '/services_cutout' },
+      { label: t('services_design'), link: '/services-design' },
+      { label: t('services_programming'), link: '/services-programming' },
+      { label: t('services_assembly'), link: '/services-assembly' },
+      { label: t('services_cutout'), link: '/services-cutout' },
     ],
     about: [
-      { label: t('about_us_contact'), link: '/contact_us' },
-      { label: t('about_us_team'), link: '/our_team' },
-      { label: t('about_us_join_us'), link: '/join_us' },
+      { label: t('about_us_contact'), link: '/contact-us' },
+      { label: t('about_us_team'), link: '/our-team' },
+      { label: t('about_us_join_us'), link: '/join-us' },
     ],
   };
 
   const toggleDrawer = () => setDrawerOpen(!drawerOpen);
 
-  const renderNavGroup = (groupName, groupItems) => (
-    <FormControl
-      variant="standard"
-      sx={{
-        minWidth: 120,
-        ml: 2,
-        minHeight: 64, // Ensures the box has enough height to handle text changes
-        display: 'flex',
-        alignItems: 'center', // Keeps the arrow and text vertically aligned
-        justifyContent: 'flex-end', // Fixes the bottom center point
-        '&:hover': { color: theme.palette.text.secondary }, // Mouse-over effect
-      }}
-    >
+  const renderNavGroup = (groupName, groupItems) => {
+    const navStyle = navControlsColors(); // ✅ même logique que pour les boutons
+  
+    return (
+      <FormControl
+        variant="standard"
+        sx={{
+          minWidth: 120,
+          ml: 2,
+          minHeight: 64,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'flex-end',
+          '&:hover': {
+            color: theme.palette.custom.electrotechYellow
+          }
+        }}
+      >
+
       <Select
         displayEmpty
         variant="standard"
         disableUnderline
         MenuProps={{ disableScrollLock: true }}
         sx={{
-            fontSize: '20px',
-            color: 'white',
-            minHeight: 60,
-            textShadow: `
-                    -1px -1px 0 black, /* Top left */
-                    1px -1px 0 black, /* Top right */
-                    -1px 1px 0 black, /* Bottom left */
-                    1px 1px 0 black   /* Bottom right */
-                    `,
-            '&:hover': { color: theme.palette.text.secondary }, // Mouse-over effect
-            '&.Mui-focused': { color: theme.palette.text.secondary }, // When <Select> is focused
+          fontSize: '20px',
+          minHeight: 60,
+          ...navStyle, // ✅ couleur + textShadow
+          '&:hover': {
+            color: theme.palette.custom.electrotechYellow
+          },
+          '&.Mui-focused': {
+            color: theme.palette.custom.electrotechYellow
+          },    
+          '& .MuiSelect-icon': {
+            color: navStyle.color // ✅ flèche visible en light + dark
+          }
         }}
         renderValue={() => t(groupName)}
       >
+
         {groupItems.map((item) => (
           <MenuItem
             key={item.link}
             component={Link}
             to={item.link}
             sx={{
-              '&:hover': { color: theme.palette.text.secondary }, // Mouse-over effect
+              '&:hover': { color: theme.palette.custom.electrotechYellow }, // Mouse-over effect
             }}
           >
             {item.label}
@@ -103,6 +139,9 @@ const HeaderBarResponsive = () => {
       </Select>
     </FormControl>
   );
+  }
+
+  const navStyle = navControlsColors();
 
   return (
     <>
@@ -110,56 +149,74 @@ const HeaderBarResponsive = () => {
         <Toolbar>
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
             <img
-              src={`${process.env.PUBLIC_URL}/electron.svg`}
+              src={`${process.env.PUBLIC_URL}/logos/electron.svg`}
               alt="Logo Electrotech"
               style={{ width: 72, height: 72, marginRight: 8 }}
             />
-            <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
-              ELECTROTECH
-            </Typography>
+          <Typography
+            variant="h5"
+            sx={{
+              color: electrotechTextColor,
+              fontWeight: 'bold'
+            }}
+          >
+            ELECTROTECH
+          </Typography>
           </Box>
 
           {isMobile ? (
-            <IconButton color="inherit" edge="end" onClick={toggleDrawer}>
+            <IconButton
+              edge="end"
+              onClick={toggleDrawer}
+              sx={{
+                color: navControlsColors().color, // 🔥 applique la bonne couleur
+                '&:hover': {
+                  color: theme.palette.custom.electrotechYellow
+                }
+              }}
+            >
               <MenuIcon />
             </IconButton>
           ) : (
             <>
-              {navGroups.main.map((item) => (
-                <Button
-                  key={item.link}
-                  component={Link}
-                  to={item.link}
-                  color="inherit"
-                  sx={{
-                    textTransform: 'none',
-                    fontSize: '20px',
-                    minHeight: 60,
-                    transition: 'none',
-                    textShadow: `
-                    -1px -1px 0 black, /* Top left */
-                    1px -1px 0 black, /* Top right */
-                    -1px 1px 0 black, /* Bottom left */
-                    1px 1px 0 black   /* Bottom right */
-                    `,
-                    '&:hover': { color: theme.palette.text.secondary, backgroundColor: 'transparent' }, // Mouse-over effect
-                  }}
-                >
-                  {item.label}
-                </Button>
-              ))}
+            <ThemeToggleButton />
+              {navGroups.main.map((item) => {
+                const navStyle = navControlsColors(); // ← APPEL ICI
+
+                return (
+                  <Button
+                    key={item.link}
+                    component={Link}
+                    to={item.link}
+                    color="inherit"
+                    sx={{
+                      textTransform: 'none',
+                      fontSize: '20px',
+                      minHeight: 60,
+                      transition: 'none',
+                      ...navStyle, // ← APPLICATION ICI
+                      '&:hover': {
+                        color: theme.palette.custom.electrotechYellow,
+                        backgroundColor: 'transparent'
+                      }
+                    }}
+                  >
+                    {item.label}
+                  </Button>
+                );
+              })}
               {renderNavGroup('products', navGroups.products)}
               {renderNavGroup('services', navGroups.services)}
               {renderNavGroup('about', navGroups.about)}
             </>
           )}
-
+          
           <FormControl
             variant="standard"
             sx={{
               minWidth: 80,
               ml: 2,
-              '&:hover': { color: theme.palette.text.secondary, fontWeight: 'bold' }, // Mouse-over effect
+              '&:hover': { color: theme.palette.custom.electrotechYellow, fontWeight: 'bold' }, // Mouse-over effect
             }}
           >
             <Select
@@ -169,16 +226,19 @@ const HeaderBarResponsive = () => {
               disableUnderline
               MenuProps={{ disableScrollLock: true }}
               sx={{
-                color: 'white',
-                '&:hover': { color: theme.palette.text.secondary }, // Mouse-over effect
-                '& .MuiSelect-icon': { color: 'white' },
+                fontSize: '20px',
+                ...navStyle,
+                '&:hover': { color: theme.palette.custom.electrotechYellow },
+                '& .MuiSelect-icon': {
+                  color: navStyle.color
+                }
               }}
               renderValue={(value) => {
                 const flag = value.startsWith('fr') ? 'fr' : 'us';
                 return (
-                  <Box sx={{ display: 'flex', alignItems: 'center', fontSize: '20px', }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', fontSize: '20px' }}>
                     <img
-                      src={`${process.env.PUBLIC_URL}/flags/${flag}.svg`}
+                      src={`${process.env.PUBLIC_URL}/logos/flags/${flag}.svg`}
                       alt={flag}
                       width={20}
                       style={{ marginRight: 6 }}
@@ -191,7 +251,9 @@ const HeaderBarResponsive = () => {
               <MenuItem value="fr">Français</MenuItem>
               <MenuItem value="en">English</MenuItem>
             </Select>
+
           </FormControl>
+          
         </Toolbar>
       </AppBar>
 
@@ -208,6 +270,8 @@ const HeaderBarResponsive = () => {
           </List>
         </Box>
       </Drawer>
+
+      
     </>
   );
 };

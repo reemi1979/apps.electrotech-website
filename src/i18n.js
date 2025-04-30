@@ -9,17 +9,21 @@ import policyFR from './translations/policy_fr.json';
 import policyEN from './translations/policy_en.json';
 import qualityFR from './translations/quality_fr.json';
 import qualityEN from './translations/quality_en.json';
+import productsFR from './translations/products_fr.json';
+import productsEN from './translations/products_en.json';
 
 const resources = {
   fr: {
     home: homeFR,
     policy: policyFR,
     quality: qualityFR,
+    products: productsFR,
   },
   en: {
     home: homeEN,
     policy: policyEN,
     quality: qualityEN,
+    products: productsEN,
   }
 };
 
