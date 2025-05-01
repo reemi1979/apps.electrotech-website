@@ -6,9 +6,6 @@ body, html {
   overflow-x: hidden;
   overflow-y: auto;
   font-family: 'Eurostile', 'Segoe UI', sans-serif;
-  background-color: #1e1e1e;
-  
-  color: white;
 }
 
 .video-container {

@@ -40,13 +40,13 @@ const HomeIndustries = () => {
       >
         <Typography
           variant="h3"
-          sx={{ mb: 2, color: theme.palette.custom.electrotechYellow }}
+          sx={{ mb: 2, color: theme.palette.text.secondary }}
         >
           {t('home_industrie_default_title')}
         </Typography>
         <Typography
           variant="h4"
-          sx={{ mb: 2, maxWidth: 1400, mx: 'auto', color: theme.palette.custom.electrotechBlue }}
+          sx={{ mb: 2, maxWidth: 1400, mx: 'auto', color: theme.palette.text.blue }}
         >
           {t('home_industrie_default_description')}
         </Typography>
@@ -61,6 +61,7 @@ const HomeIndustries = () => {
               src={item.src}
               alt={t(item.titleKey)}
               onClick={() => setSelected(item)}
+              onMouseOver={() => setSelected(item)}
               sx={{
                 width: 100,
                 height: 100,
@@ -69,10 +70,21 @@ const HomeIndustries = () => {
                 mx: 'auto',
                 transition: 'all 0.3s ease-in-out',
                 transform: selected === item ? 'scale(1.05)' : 'scale(1)',
-                boxShadow: selected === item ? '0 0 15px rgba(255,255,255,0.6)' : 'none',
+                boxShadow:
+                selected === item.name
+                  ? `0 0 15px ${
+                      theme.palette.mode === 'dark'
+                        ? 'rgba(255,255,255,0.6)'
+                        : 'rgba(0,0,0,0.8)'
+                    }`
+                  : 'none',
                 cursor: 'pointer',
                 '&:hover': {
-                  boxShadow: '0 0 15px rgba(255,255,255,0.6)', // shadow always on hover
+                  boxShadow: `0 0 15px ${
+                    theme.palette.mode === 'dark'
+                      ? 'rgba(255,255,255,0.6)'
+                      : 'rgba(0,0,0,0.8)'
+                  }`,
                   transform: 'scale(1.05)', // optional: slight zoom on hover too
                 },
               }}
@@ -81,74 +93,99 @@ const HomeIndustries = () => {
         ))}
       </Grid>
 
-      {/* MODAL POPUP RECTANGULAIRE AVEC ANIMATION */}
-      <AnimatePresence>
+      <Box
+        sx={{
+          height: 140, // fixe la hauteur globale
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          textAlign: 'center',
+        }}
+      >
         {selected && (
-          <Modal
-            open={Boolean(selected)}
-            onClose={() => setSelected(null)}
-            disableScrollLock // 👈 empêche le body de "shifter" à l'ouverture du modal
-            closeAfterTransition
-            slots={{ backdrop: Backdrop }}
-            slotProps={{
-              backdrop: {
-                timeout: 500,
-                sx: { backgroundColor: 'rgba(0, 0, 0, 0.8)' },
-              },
-            }}
-          >
-            <Box
-              sx={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                outline: 'none',
-              }}
-            >
-              <MotionBox
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
-                sx={{
-                  width: '90vw',
-                  maxWidth: 700,
-                  bgcolor: '#111',
-                  borderRadius: 3,
-                  overflow: 'hidden',
-                  color: 'white',
-                  textAlign: 'center',
-                  p: 4,
-                }}
-              >
-                {/* Image RECTANGLE dans le modal */}
-                <Box
-                  component="img"
-                  src={selected.src}
-                  alt={t(selected.titleKey)}
-                  sx={{
-                    width: '100%',
-                    height: 300,
-                    borderRadius: 2,
-                    objectFit: 'cover',
-                    mb: 3,
-                  }}
-                />
-                <Typography variant="h4" sx={{ mb: 2, color: theme.palette.custom.electrotechYellowy }}>
-                  {t(selected.titleKey)}
-                </Typography>
-                <Typography variant="body1" sx={{ color: theme.palette.custom.electrotechBlue }}>
-                  {t(selected.descriptionKey)}
-                </Typography>
-              </MotionBox>
-            </Box>
-          </Modal>
+          <>
+            <Typography variant="h4" sx={{ mb: 1, color: theme.palette.text.secondary }}>
+              {t(selected.titleKey)}
+            </Typography>
+            <Typography variant="h6" sx={{ color: theme.palette.text.primary }}>
+              {t(selected.descriptionKey)}
+            </Typography>
+          </>
         )}
-      </AnimatePresence>
+      </Box>
+
+
+
+      {/* DISABLED, EN BAS... MODAL POPUP RECTANGULAIRE AVEC ANIMATION */}
+    
 
     </Box>
   );
 };
 
 export default HomeIndustries;
+
+
+{/* <AnimatePresence>
+{selected && (
+  <Modal
+    open={Boolean(selected)}
+    onClose={() => setSelected(null)}
+    disableScrollLock // 👈 empêche le body de "shifter" à l'ouverture du modal
+    closeAfterTransition
+    slots={{ backdrop: Backdrop }}
+    slotProps={{
+      backdrop: {
+        timeout: 500,
+        sx: { backgroundColor: 'rgba(0, 0, 0, 0.8)' },
+      },
+    }}
+  >
+    <Box
+      sx={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        outline: 'none',
+      }}
+    >
+      <MotionBox
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.9 }}
+        transition={{ duration: 0.3 }}
+        sx={{
+          width: '90vw',
+          maxWidth: 700,
+          bgcolor: '#111',
+          borderRadius: 3,
+          overflow: 'hidden',
+          color: 'white',
+          textAlign: 'center',
+          p: 4,
+        }}
+      >
+        <Box
+          component="img"
+          src={selected.src}
+          alt={t(selected.titleKey)}
+          sx={{
+            width: '100%',
+            height: 300,
+            borderRadius: 2,
+            objectFit: 'cover',
+            mb: 3,
+          }}
+        />
+        <Typography variant="h4" sx={{ mb: 2, color: theme.palette.custom.electrotechYellowy }}>
+          {t(selected.titleKey)}
+        </Typography>
+        <Typography variant="h6" sx={{ color: theme.palette.text.blue }}>
+          {t(selected.descriptionKey)}
+        </Typography>
+      </MotionBox>
+    </Box>
+  </Modal>
+)}
+</AnimatePresence> */}

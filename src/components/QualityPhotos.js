@@ -5,13 +5,14 @@ import { Box, Typography, Grid, Modal, Backdrop } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import InViewPhotoCard from './InViewPhotoCard';
 import { useTranslation } from 'react-i18next';
-
+import { useTheme } from '@mui/material/styles';
 
 const MotionBox = motion(Box);
 
 const QualityPhotos = () => {
   const [selected, setSelected] = useState(null);
   const { t } = useTranslation('quality');
+  const theme = useTheme();
 
   const photos = [
     {
@@ -91,7 +92,7 @@ const QualityPhotos = () => {
                 <Typography variant="h5" fontWeight="bold" sx={{ mb: 2 }}>
                   {selected.title}
                 </Typography>
-                <Typography variant="body1">{selected.description}</Typography>
+                <Typography variant="h6">{selected.description}</Typography>
               </Box>
             </MotionBox>
           </Box>

@@ -42,22 +42,15 @@ const NewsList = () => {
 
         <Container sx={{ py: 8, maxWidth: '800px', mx: 'auto' }}>
 
-            <br /> <br />
-
-            <Typography variant="h3" sx={{ textAlign: 'center', color: theme.palette.text.secondary }}>
+            <Typography variant="h3" sx={{ textAlign: 'center', color: theme.palette.text.secondary, mt: 6 }}>
                 {t('news_title')}
             </Typography>
-            <Typography variant="h6" sx={{ textAlign: 'center', color: theme.palette.text.primary, mb: 0 }}>
+            <Typography variant="h5" sx={{ textAlign: 'center', color: theme.palette.text.primary, mb: 0 }}>
             {t('news_title_sub')}
             </Typography>
-            <Typography variant="body2" sx={{ fontStyle: 'italic', textAlign: 'center', mb: 0, color: theme.palette.text.secondary }}>
-                {t('news_ai')}
-            </Typography>
-            <Typography variant="body2" sx={{ fontStyle: 'italic', textAlign: 'center', mb: 4, color: theme.palette.text.secondary }}>
-                {t('news_ai_note')}
-            </Typography>
 
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 0 }}>
+
+            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
             <a
                 href="https://www.facebook.com/ElectrotechAutomatisationIndustrielle"
                 target="_blank"
@@ -127,7 +120,7 @@ const NewsList = () => {
                             }}
                             />
                             <Box sx={{ flex: 1, minWidth: 200 }}>
-                            <Typography variant="caption" sx={{ color: theme.palette.custom.electrotechBlue }}>
+                            <Typography variant="caption" sx={{ color: theme.palette.text.blue }}>
                                 {new Date(news.date).toLocaleDateString()}
                             </Typography>
                             <Typography variant="h5" noWrap sx={{ color: theme.palette.text.secondary, mt: 1 }}>
@@ -169,6 +162,12 @@ const NewsList = () => {
                 </Box>
             )}
 
+            <Typography variant="body1" sx={{ fontStyle: 'italic', textAlign: 'center', mt: 6, color: theme.palette.text.secondary }}>
+                {t('news_ai')}
+            </Typography>
+            <Typography variant="body1" sx={{ fontStyle: 'italic', textAlign: 'center', mb: 0, color: theme.palette.text.secondary }}>
+                {t('news_ai_note')}
+            </Typography>
 
     </Container>
 

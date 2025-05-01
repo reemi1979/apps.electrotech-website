@@ -1,19 +1,21 @@
 // src/pages/PrivacyPolicy.js
 
-import React from 'react';
+import React from 'react'
 import { Container, Typography, Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '@mui/material/styles';
 
 const PrivacyPolicy = () => {
   const { t } = useTranslation('policy');
+  const theme = useTheme();
 
   return (
-    <Container maxWidth="md" sx={{ py: 4, color: 'white' }}>
+    <Container maxWidth="md" sx={{ mt:8, py: 4, color: theme.palette.text.primary }}>
       <Typography variant="h4" gutterBottom>
         {t('privacy_title')}
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="h6" paragraph>
         {t('privacy_intro')}
       </Typography>
 
@@ -23,48 +25,48 @@ const PrivacyPolicy = () => {
 
       <Box component="ul" sx={{ pl: 2 }}>
         <li>
-          <Typography variant="body1"><strong>{t('privacy_type_necessary_title')}</strong> : {t('privacy_type_necessary')}</Typography>
+          <Typography variant="h6"><strong>{t('privacy_type_necessary_title')}</strong> : {t('privacy_type_necessary')}</Typography>
         </li>
         <li>
-          <Typography variant="body1"><strong>{t('privacy_type_functional_title')}</strong> : {t('privacy_type_functional')}</Typography>
+          <Typography variant="h6"><strong>{t('privacy_type_functional_title')}</strong> : {t('privacy_type_functional')}</Typography>
         </li>
         <li>
-          <Typography variant="body1"><strong>{t('privacy_type_analytics_title')}</strong> : {t('privacy_type_analytics')}</Typography>
+          <Typography variant="h6"><strong>{t('privacy_type_analytics_title')}</strong> : {t('privacy_type_analytics')}</Typography>
         </li>
         <li>
-          <Typography variant="body1"><strong>{t('privacy_type_ads_title')}</strong> : {t('privacy_type_ads')}</Typography>
+          <Typography variant="h6"><strong>{t('privacy_type_ads_title')}</strong> : {t('privacy_type_ads')}</Typography>
         </li>
       </Box>
-
-      <Typography variant="body1" paragraph>
+h6h6
+      <Typography variant="h6" paragraph>
         {t('privacy_change_preferences')}
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="h6" paragraph>
         {t('privacy_contact_intro')}
       </Typography>
 
-      <Typography variant="h5" gutterBottom sx={{ mt: 5 }}>
+      <Typography variant="h6" gutterBottom sx={{ mt: 5 }}>
         {t('privacy_rp_title')}
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="h6" paragraph>
         {t('privacy_rp_intro1')}
       </Typography>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="h6" paragraph>
         {t('privacy_rp_intro2')}
-      </Typography>
+      </Typography>F
 
       <Typography variant="h6" gutterBottom>
         {t('privacy_rp_collect_title')}
       </Typography>
       <Box component="ul" sx={{ pl: 2 }}>
         <li>
-          <Typography variant="body1">{t('privacy_rp_collect_emploi')}</Typography>
+          <Typography variant="h6">{t('privacy_rp_collect_emploi')}</Typography>
         </li>
         <li>
-          <Typography variant="body1">{t('privacy_rp_collect_email')}</Typography>
+          <Typography variant="h6">{t('privacy_rp_collect_email')}</Typography>
         </li>
       </Box>
 
@@ -72,26 +74,26 @@ const PrivacyPolicy = () => {
         {t('privacy_rp_usage_title')}
       </Typography>
       <Box component="ul" sx={{ pl: 2 }}>
-        <li><Typography variant="body1">{t('privacy_rp_usage_identify')}</Typography></li>
-        <li><Typography variant="body1">{t('privacy_rp_usage_dossier')}</Typography></li>
-        <li><Typography variant="body1">{t('privacy_rp_usage_legal')}</Typography></li>
+        <li><Typography variant="h6">{t('privacy_rp_usage_identify')}</Typography></li>
+        <li><Typography variant="h6">{t('privacy_rp_usage_dossier')}</Typography></li>
+        <li><Typography variant="h6">{t('privacy_rp_usage_legal')}</Typography></li>
       </Box>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="h6" paragraph>
         {t('privacy_rp_limit')}
       </Typography>
 
       <Typography variant="h6" gutterBottom>
         {t('privacy_rp_retention_title')}
       </Typography>
-      <Typography variant="body1" paragraph>
+      <Typography variant="h6" paragraph>
         {t('privacy_rp_retention')}
       </Typography>
 
       <Typography variant="h6" gutterBottom>
         {t('privacy_rp_responsable_title')}
       </Typography>
-      <Typography variant="body1" paragraph>
+      <Typography variant="h6" paragraph>
         Isabelle Guay, directrice générale<br />
         iguay@electrotech.ca<br />
         450 776-2628<br />
@@ -102,12 +104,12 @@ const PrivacyPolicy = () => {
         {t('privacy_rp_rights_title')}
       </Typography>
       <Box component="ul" sx={{ pl: 2 }}>
-        <li><Typography variant="body1">{t('privacy_rp_rights_consult')}</Typography></li>
-        <li><Typography variant="body1">{t('privacy_rp_rights_exact')}</Typography></li>
-        <li><Typography variant="body1">{t('privacy_rp_rights_correction')}</Typography></li>
+        <li><Typography variant="h6">{t('privacy_rp_rights_consult')}</Typography></li>
+        <li><Typography variant="h6">{t('privacy_rp_rights_exact')}</Typography></li>
+        <li><Typography variant="h6">{t('privacy_rp_rights_correction')}</Typography></li>
       </Box>
 
-      <Typography variant="body1" paragraph>
+      <Typography variant="h6" paragraph>
         {t('privacy_rp_rights_contact')}
       </Typography>
 

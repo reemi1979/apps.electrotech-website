@@ -23,7 +23,15 @@ const manufacturers = [
   { name: 'Weidmuller', logo: process.env.PUBLIC_URL + '/photos/products/parts/weidmuller.svg' },
   { name: 'Ferraz Shawmut', logo: process.env.PUBLIC_URL + '/photos/products/parts/ferraz-shawmut.svg' },
   { name: 'Panduit', logo: process.env.PUBLIC_URL + '/photos/products/parts/panduit.svg' },
-  { name: 'Mersen', logo: process.env.PUBLIC_URL + '/photos/products/parts/mersen.svg' }
+  { name: 'Mersen', logo: process.env.PUBLIC_URL + '/photos/products/parts/mersen.svg' },
+  { name: 'Turck', logo: process.env.PUBLIC_URL + '/photos/products/parts/turck.svg' },
+  { name: 'SEW Eurodrive', logo: process.env.PUBLIC_URL + '/photos/products/parts/sew.svg' },
+  { name: 'Banner', logo: process.env.PUBLIC_URL + '/photos/products/parts/banner.svg' },
+  { name: 'Harting', logo: process.env.PUBLIC_URL + '/photos/products/parts/harting.svg' },
+  { name: 'Wöhner', logo: process.env.PUBLIC_URL + '/photos/products/parts/wohner.svg' },
+  { name: 'Icotek', logo: process.env.PUBLIC_URL + '/photos/products/parts/icotek.svg' },
+  { name: 'Puls', logo: process.env.PUBLIC_URL + '/photos/products/parts/puls.jpeg' },
+  { name: 'Pepperl+Fuchs', logo: process.env.PUBLIC_URL + '/photos/products/parts/pf.svg' }
 ];
 
 const ProductsLines = () => {
@@ -32,15 +40,20 @@ const ProductsLines = () => {
   
   return (
     <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
+   
       <Typography
           variant="h3"
           gutterBottom
-          sx={{ color: theme.palette.custom.electrotechYellow }}
+          sx={{ mt:6 , color: theme.palette.text.secondary }}
       >
         {t('products_lines_section_title')}
       </Typography>
-      <Typography variant="h6" sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}>
+      <Typography variant="h6" sx={{ maxWidth: 800, mx: 'auto'}}>
         {t('products_lines_section_description')}
+      </Typography>
+
+      <Typography variant="h6" gutterBottom sx={{ mb: 6, color: theme.palette.text.blue }}>
+        {t(`brands_warning_min_order`)}
       </Typography>
 
       <Grid container spacing={4} justifyContent="center">
@@ -82,7 +95,7 @@ const ProductsLines = () => {
             mt: 6,
             fontStyle: 'italic',
             fontSize: '1.2rem',
-            color: theme.palette.custom.electrotechYellow,
+            color: theme.palette.text.blue,
             maxWidth: 800,
             mx: 'auto',
             display: 'block',

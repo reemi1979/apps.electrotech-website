@@ -13,39 +13,39 @@ import productsFR from './translations/products_fr.json';
 import productsEN from './translations/products_en.json';
 
 const resources = {
-  fr: {
+fr: {
     home: homeFR,
     policy: policyFR,
     quality: qualityFR,
     products: productsFR,
-  },
-  en: {
+},
+en: {
     home: homeEN,
     policy: policyEN,
     quality: qualityEN,
     products: productsEN,
-  }
+}
 };
 
 i18n
-  .use(HttpApi)
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
+.use(HttpApi)
+.use(LanguageDetector)
+.use(initReactI18next)
+.init({
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json'
+    loadPath: '/locales/{{lng}}/{{ns}}.json'
     },
     resources,
     fallbackLng: 'fr', // 👈 important si langue non supportée
     supportedLngs: ['fr', 'en'], // 👈 limite aux langues qu’on gère
     defaultNS: 'home',
     detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage'],
+    order: ['localStorage', 'navigator'],
+    caches: ['localStorage'],
     },
     interpolation: {
-      escapeValue: false,
+    escapeValue: false,
     },
-  });
+});
 
 export default i18n;

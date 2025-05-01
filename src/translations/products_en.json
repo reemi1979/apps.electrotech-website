@@ -4,6 +4,7 @@
     "product_control_panel_serie_title": "Series Control Panel",
     "product_control_panel_pushbutton_title": "Pushbutton Control Panel",
     "product_control_panel_junctionbox_title": "Junction Box",
+    "selected_control_panel_help": "Hover over a category type to learn more.",
 
     "selected_control_panel_standard_description_title": "Standard Control Panel",
     "selected_control_panel_standard_description": "A control panel designed to monitor, manage, and optimize the operation of various industrial systems. It automates processes such as conveyor systems, pumping, motor control, production lines, and test benches.",
@@ -14,8 +15,8 @@
     "selected_control_panel_serie_description_title": "Series Control Panel",
     "selected_control_panel_serie_description": "Engineered for high-volume production, this control panel supports repetitive manufacturing with optimal efficiency.",
 
-    "selected_control_panel_pushbutton_description_title": "Push Button Control Box",
-    "selected_control_panel_pushbutton_description": "Compact enclosure with durable push buttons for simple, direct and reliable field control.",
+    "selected_control_panel_pushbuttons_description_title": "Push Button Control Box",
+    "selected_control_panel_pushbuttons_description": "Compact enclosure with durable push buttons for simple, direct and reliable field control.",
 
     "selected_control_panel_junctionbox_description_title": "Junction Box",
     "selected_control_panel_junctionbox_description": "A junction box is an electrical enclosure designed to organize, protect, and distribute cable connections in an automated system or electrical installation. It ensures safety, clarity, and ease of maintenance.",
@@ -44,6 +45,7 @@
     "product_markers_components_title": "Identified Components",
 
     "product_warning_min_order": "These products are manufactured as part of our control panel projects. They are not usually sold individually, except for special orders, and are subject to minimum quantities.",
+    "brands_warning_min_order": "Parts seeling Are subject to minimum quantities.",
     
     "selected_markers_cables_description_title": "Cable Markers",
     "selected_markers_cables_description": "Identification solutions for industrial cables.",
@@ -64,7 +66,7 @@
     "selected_markers_terminals_description": "Direct labeling for terminals blocks.",
 
     "products_lines_section_title": "Trusted Brands We Supply",
-    "products_lines_section_description": "We distribute quality components from leading manufacturers to build or maintain your control Control Panels. Many other parts are available — contact us for more information.",
+    "products_lines_section_description": "We distribute quality components from leading manufacturers to build or maintain your control Control Panels. More brands availables.",
 
     "brands_trademark_note": "All logos and trademarks are the property of their respective owners and are used for identification purposes only. If you are the owner and wish to have your logo removed, please contact us."
 }

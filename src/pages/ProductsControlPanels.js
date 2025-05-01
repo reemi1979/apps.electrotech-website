@@ -14,15 +14,20 @@ const ProductsControlPanels = () => {
 
   return (
     <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
-      <Box sx={{ textAlign: 'left', mt: 2, maxWidth: 800, mx: 'auto' }}>
+
+      <Typography variant="h6" textAlign="center" sx={{ mt: 2, color: theme.palette.text.primary }}>
+        {t('selected_control_panel_help')}
+      </Typography>
+
+      <Box sx={{ textAlign: 'left' , maxWidth: 800, mx: 'auto' }}>
         <ProductsControlPanelsTypes selected={selected} setSelected={setSelected} />
       </Box>
 
-      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.custom.electrotechYellow }}>
+      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.secondary }}>
         {t(`selected_control_panel_${selected}_description_title`)}
       </Typography>
 
-      <Typography variant="h6" sx={{ mb: 4, maxWidth: 800, mx: 'auto' }}>
+      <Typography variant="h6" sx={{ mb: 4, minHeight: 100, maxWidth: 800, mx: 'auto', color: theme.palette.text.primary }}>
         {t(`selected_control_panel_${selected}_description`)}
       </Typography>
 

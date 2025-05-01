@@ -6,6 +6,8 @@
     "product_control_panel_pushbutton_title": "Boitier de contrôle boutons-poussoirs",
     "product_control_panel_junctionbox_title": "Boîte de jonction",
     
+    "selected_control_panel_help": "Survolez une catégorie pour en savoir plus.",
+
     "selected_control_panel_standard_description_title": "Boitier de contrôle standard",
     "selected_control_panel_standard_description": "Un panneau de contrôle est conçu pour superviser, gérer et optimiser le fonctionnement de divers systèmes industriels. Il permet d’automatiser des procédés tels que le convoyage, le pompage, le contrôle de moteurs, les lignes de production ou encore les bancs de test. ",
     
@@ -15,8 +17,8 @@
     "selected_control_panel_serie_description_title": "Boitier de contrôle de série",
     "selected_control_panel_serie_description": "Conçu pour la production en grande série, ce panneau de contrôle permet la fabrication répétitive à haut volume, avec une efficacité optimale.",
     
-    "selected_control_panel_pushbutton_description_title": "Boitier de contrôle boutons-poussoirs",
-    "selected_control_panel_pushbutton_description": "Boîtier compact intégrant des boutons-poussoirs robustes pour un contrôle simple, direct et fiable sur le terrain.",
+    "selected_control_panel_pushbuttons_description_title": "Boitier de contrôle boutons-poussoirs",
+    "selected_control_panel_pushbuttons_description": "Boîtier compact intégrant des boutons-poussoirs robustes pour un contrôle simple, direct et fiable sur le terrain.",
     
     "selected_control_panel_junctionbox_description_title": "Boîte de jonction",
     "selected_control_panel_junctionbox_description": "Une boîte de jonction est un boîtier électrique conçu pour regrouper, protéger et distribuer les connexions de câbles dans un système automatisé ou une installation électrique. Elle joue un rôle essentiel dans la sécurisation et l’organisation du câblage, tout en assurant une maintenance simplifiée.",
@@ -44,6 +46,7 @@
     "product_markers_components_title": "Composantes identifiées",
   
     "product_warning_min_order": "Nous fabriquons ces produits dans le cadre de nos projets de panneaux de contrôle. Ils ne sont généralement pas vendues à l’unité, sauf pour des commandes spéciales, et sont sujettes à des quantités minimales.",
+    "brands_warning_min_order": "Material sales are subject to minimum order quantities.",
 
     "selected_markers_cables_description_title": "Marqueurs pour câbles",
     "selected_markers_cables_description": "Solutions de repérage pour câbles industriels.",
@@ -64,7 +67,7 @@
     "selected_markers_terminals_description": "Marquage direct pour bornes, porte fusibles et relais.",
 
     "products_lines_section_title": "Marques de confiance que nous distribuons",
-    "products_lines_section_description": "Nous distribuons des composantes de qualité provenant de fabricants réputés pour la fabrication ou l’entretien de vos panneaux de contrôle. Plusieurs autres pièces sont disponibles — contactez-nous pour plus d’informations.",
+    "products_lines_section_description": "Nous distribuons des composantes de qualité provenant de fabricants réputés pour la fabrication ou l’entretien de vos panneaux de contrôle. Plusieurs autres marques disponibles",
 
     "brands_trademark_note": "Tous les logos et marques de commerce sont la propriété de leurs détenteurs respectifs et sont utilisés uniquement à des fins d’identification. Si vous êtes le propriétaire et souhaitez que votre logo soit retiré, veuillez nous contacter."
   }

@@ -26,6 +26,8 @@
     "news_title_sub": "Tenez-vous à jour avec les dernières actualités, projets et nouveautés d'Électrotech.",
     "facebook_follow_us" : "Suivez-nous sur Facebook",
 
+    "theme_toggle_light": "MODE CLAIR",
+    "theme_toggle_dark": "MODE SOMBRE",
     "bienvenue": "Bienvenue chez Électrotech",
 
     "footer_rights": "Tous droits réservés (Site réalisé par Rémi Gauvin)",
@@ -56,7 +58,9 @@
     "home_welcome": "Propulser l’avenir de l’automatisation",
     "home_content_1": "Solutions sur mesure en panneaux électriques et automatisation",
     "home_content_2": "Chez Electrotech, nous sommes spécialisés dans la conception, la fabrication et l'intégration de panneaux de contrôle électriques de haute qualité pour l'automatisation industrielle. Fondée en 1997, notre entreprise québécoise possède 27 ans d'expertise dans de multiples secteurs, offrant des solutions d'automatisation sur mesure qui améliorent l'efficacité, la fiabilité et la sécurité. Nous sommes reconnus pour notre excellence en contrôle industriel et en ingénierie d'automatisation, et nous nous engageons à dépasser les attentes de nos clients, partenaires et employés avec professionnalisme et intégrité.",
-    
+    "home_contact_us_title" : "Information générale",
+    "home_contact_us" : "Écrivez-nous",
+
     "home_industrie" : "Nos Industries",
     "home_industrie_default_title": "Secteurs desservis",
     "home_industrie_default_description": "Survolez une industrie pour en savoir plus.",

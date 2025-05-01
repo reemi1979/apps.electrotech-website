@@ -21,43 +21,51 @@ export const getDesignTokens = (mode) => ({
 
     //Requis pour @MUI
     primary: {
-      main: '#005A9E',       // 🔵 Bleu electrotech
-      contrastText: '#ffffff'// ⚪ Texte sur fond bleu
+      main: '#005A9E',          // 🔵 Dark: Bleu electrotech (Boutons, @Mui components)
+      contrastText: '#ffffff'   // ⚪ Light: Texte sur fond bleu (Boutons, @Mui components)
     },
 
     //Requis pour @MUI
     secondary: {
       main: mode === 'dark' 
-        ? '#BCBF2C'        // 🟨 Jaune Electrotech
-        : '#005A9E',        // 🔵 Jaune Electrotech
+        ? '#444444'             // ⚫ Dark: Gris foncé (Boutons, @Mui components)
+        : '#005A9E',            // 🔵 Light: Bleu Electrotech (Boutons, @Mui components)
     },
 
     divider: mode === 'dark' 
-      ? '#444444' // ⚫ Gris foncé pour séparation
-      : '#cccccc', // ⚪ Gris clair pour séparation
+      ? '#444444'               // ⚫ Dark: Gris foncé pour séparation
+      : '#cccccc',              // ⚪ Light: Gris clair pour séparation
 
     text: {
       primary: mode === 'dark' 
-        ? '#FFFFFF' // ⚪ Dark: texte normal
-        : '#000000', // ⚫ Light: texte normal
+        ? '#FFFFFF'             // ⚪ Dark: white text // SMALL TEXT, PARAGRAPH
+        : '#000000',            // ⚫ Light: black text // SMALL TEXT, PARAGRAPH
       secondary: mode === 'dark' 
-      ? '#BCBF2C'        // 🟨 Jaune Electrotech
-      : '#005A9E',        // 🔵 Jaune Electrotech
+        ? '#BCBF2C'             // 🟨 Dark: yellow text // TITLE
+        : '#005A9E',            // 🔵 Light: blue text // TITLE
+      blue: mode === 'dark' 
+        ? '#005A9E'             // 🔵 Dark: always blue text // SUB-TITLE
+        : '#005A9E',            // 🔵 Light: always blue text // SUB-TITLE
     },
 
     custom: {
       electrotechBlue: mode === 'dark' 
-        ? '#5B9BD5' // 🔵 Bleu electrotech + Pale proche gris
-        : '#005A9E', // 🔵 Bleu electrotech
+        ? '#005A9E' // 🔵 Dark: divers, toujours bleu. 
+        : '#005A9E', // 🔵 Light: divers, toujours bleu.  
       electrotechYellow:  mode === 'dark'
-        ? '#BCBF2C' // 🟨 Jaune Electrotech
-        : '#BCBF2C', // 🟨 Jaune Electrotech
+        ? '#BCBF2C' // 🟨 Dark: divers, toujours jaune
+        : '#BCBF2C', // 🟨 Light: divers, toujours jaune
     },
 
   },
 
   typography: {
-    fontFamily: '"Eurostile", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif'
+    fontFamily: '"Eurostile", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif',
+    allVariants: {
+      color: mode === 'dark' 
+        ? '#FFFFFF'             // ⚪ Dark: white text // SMALL TEXT, PARAGRAPH
+        : '#000000',            // ⚫ Light: black text // SMALL TEXT, PARAGRAPH
+    },
   },
 
   shape: {

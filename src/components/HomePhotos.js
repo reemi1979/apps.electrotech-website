@@ -104,7 +104,7 @@ const HomePhotos = () => {
                 <Typography variant="h5" fontWeight="bold" sx={{ mb: 2 }}>
                   {selected.title}
                 </Typography>
-                <Typography variant="body1">{selected.description}</Typography>
+                <Typography variant="h6">{selected.description}</Typography>
               </Box>
             </MotionBox>
           </Box>

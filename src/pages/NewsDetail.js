@@ -52,7 +52,7 @@ const NewsDetail = () => {
     if (!news) {
         return (
         <Container sx={{ py: 10, textAlign: 'center' }}>
-            <Typography variant="h4" sx={{ color: theme.palette.custom.electrotechYellow }}>
+            <Typography variant="h4" sx={{ color: theme.palette.text.secondary }}>
             {t('news_not_found')}
             </Typography>
         </Container>
@@ -112,7 +112,7 @@ const NewsDetail = () => {
         )}
 
         <Typography 
-            variant="body1" 
+            variant="h6" 
             sx={{ maxWidth: 900, mx: 'auto', textAlign: 'left', whiteSpace: 'pre-line', color: theme.palette.text.primary}}
             dangerouslySetInnerHTML={{ __html: description }}
         >

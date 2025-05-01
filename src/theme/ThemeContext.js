@@ -1,31 +1,42 @@
 // src/theme/ThemeContext.js
 import React, { createContext, useState, useEffect, useMemo } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import GlobalStyles from '@mui/material/GlobalStyles';
 import { getDesignTokens } from './theme';
 
 export const ColorModeContext = createContext();
 
 const ThemeContextProvider = ({ children }) => {
-  const [mode, setMode] = useState('dark');
+const [mode, setMode] = useState('dark');
 
-  useEffect(() => {
+useEffect(() => {
     const saved = localStorage.getItem('colorMode');
     if (saved) setMode(saved);
-  }, []);
+}, []);
 
-  const toggleColorMode = () => {
+const toggleColorMode = () => {
     const next = mode === 'light' ? 'dark' : 'light';
     setMode(next);
     localStorage.setItem('colorMode', next);
-  };
+};
 
-  const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
-  return (
+return (
     <ColorModeContext.Provider value={{ mode, toggleColorMode }}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    <ThemeProvider theme={theme}>
+        <GlobalStyles 
+        styles={{ 
+            body: { 
+            color: theme.palette.text.primary,
+            backgroundColor: theme.palette.background.default,
+            } 
+        }} 
+        />
+        {children}
+    </ThemeProvider>
     </ColorModeContext.Provider>
-  );
+);
 };
 
 export default ThemeContextProvider;

@@ -1,152 +1,212 @@
 // src/pages/Homes.js
 
 import React, { useEffect, useState } from 'react';
-import HeroVideo from '../components/HeroVideo';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Grid, Button } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { isMobile } from 'react-device-detect';
+
+import HeroVideo from '../components/HeroVideo';
 import HomePhotos from '../components/HomePhotos';
 import HomeIndustries from '../components/HomeIndustries';
-import { useTheme } from '@mui/material/styles';
-import { motion } from 'framer-motion';
+
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+
 
 const Home = () => {
 
-  const [token, setToken] = useState(null);
-  const [apiData, setApiData] = useState(null);
-
-  const { t } = useTranslation();
-  const theme = useTheme();
-  const isDark = theme.palette.mode === 'dark';
-
-  useEffect(() => {
-    if (token) {
-      fetchNews(token);
-    }
-  }, [token]);
-
-  // 1️⃣ Charger le token au démarrage
-  useEffect(() => {
-    async function fetchToken() {
-      try {
-        const response = await fetch('https://api.electrotech.ca/get-token');
-        const data = await response.json();
-        if (data.token) {
-          setToken(data.token);
-        } else {
-          console.error('Token not received:', data);
+    const [token, setToken] = useState(null);
+    const [apiData, setApiData] = useState(null);
+    const { t } = useTranslation();
+    const theme = useTheme();
+    const isDark = theme.palette.mode === 'dark';
+    const mapLink = isMobile
+    ? 'geo:0,0?q=625+Simonds+Sud,+Granby,+QC+J2J+1C2'
+    : 'https://www.google.com/maps?q=625+Simonds+Sud,+Granby,+QC+J2J+1C2';
+                            
+    useEffect(() => {
+        if (token) {
+        fetchNews(token);
         }
-      } catch (error) {
-        console.error('Token error:', error);
-      }
-    }
+    }, [token]);
 
-    fetchToken();
-  }, []);
+    // 1️⃣ Charger le token au démarrage
+    useEffect(() => {
+        async function fetchToken() {
+        try {
+            const response = await fetch('https://api.electrotech.ca/get-token');
+            const data = await response.json();
+            if (data.token) {
+            setToken(data.token);
+            } else {
+            console.error('Token not received:', data);
+            }
+        } catch (error) {
+            console.error('Token error:', error);
+        }
+        }
 
-  const fetchNews = (authToken) => {
-    fetch("https://api.electrotech.ca/api/data", {
-      method: "POST",
-      headers: { 
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${authToken}`
-      },
-      body: JSON.stringify({ type: "news" })
-    })
-    .then(res => {
-      if (!res.ok) {
-        throw new Error(`Erreur API: ${res.status} ${res.statusText}`);
-      }
-      return res.json();
-    })
-    .then(data => {
-      console.log("📦 Data received :", data);
-      setApiData(data);
-    })
-    .catch(err => {
-      console.error("❌ Erreur API :", err);
-    });
-  };
+        fetchToken();
+    }, []);
 
-  return (
-    <>
-      {/* SECTION HERO */}
-      <Box sx={{ position: 'relative', zIndex: 0, height: '100vh' }}>
-        <HeroVideo />
+    const fetchNews = (authToken) => {
+        fetch("https://api.electrotech.ca/api/data", {
+        method: "POST",
+        headers: { 
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${authToken}`
+        },
+        body: JSON.stringify({ type: "news" })
+        })
+        .then(res => {
+        if (!res.ok) {
+            throw new Error(`Erreur API: ${res.status} ${res.statusText}`);
+        }
+        return res.json();
+        })
+        .then(data => {
+        console.log("📦 Data received :", data);
+        setApiData(data);
+        })
+        .catch(err => {
+        console.error("❌ Erreur API :", err);
+        });
+    };
 
-        {/* TEXTE CENTRÉ EN BAS */}
-        <Box
-          sx={{
-            position: 'absolute',
-            bottom: 80,
-            left: 0,
-            right: 0,
-            textAlign: 'center',
-            zIndex: 1,
-            px: 2,
-          }}
-        >
+    return (
+        <>
+
+        <Box sx={{ position: 'relative', zIndex: 0, height: '100vh' }}>
+            <HeroVideo />
+
+            <Box
+                sx={{
+                    position: 'absolute',
+                    bottom: 80,
+                    left: 0,
+                    right: 0,
+                    textAlign: 'center',
+                    zIndex: 1,
+                    px: 2,
+                }}
+            >
+            </Box>
 
         </Box>
-      </Box>
 
-      {/* SECTION CONTENU APRÈS LE HERO */}
-      <Box sx={{ position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
+        <Box sx={{ position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <Box
-            component="img"
-            src={process.env.PUBLIC_URL + '/logos/logo.svg'}
-            alt="Électrotech Logo"
-            sx={{
-              width: { xs: 400, md: 800 },
-              height: 'auto',
-              mx: 'auto',
-              display: 'block',
-              filter: isDark ? 'brightness(0) invert(1)' : 'none',
-              transition: 'filter 0.5s ease-in-out',
-              '&:hover': {
-                filter: isDark ? 'none' : 'brightness(0)', // ✅ couleur en dark, noir en light
-              }
-            }}
-          />
-        </motion.div>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+            >
+            <Box
+                component="img"
+                src={process.env.PUBLIC_URL + '/logos/logo.svg'}
+                alt="Électrotech Logo"
+                sx={{
+                width: { xs: 400, md: 800 },
+                height: 'auto',
+                mx: 'auto',
+                display: 'block',
+                filter: isDark ? 'brightness(0) invert(1)' : 'none',
+                transition: 'filter 0.5s ease-in-out',
+                '&:hover': {
+                    filter: isDark ? 'none' : 'brightness(0)', // ✅ couleur en dark, noir en light
+                }
+                }}
+            />
+            </motion.div>
 
-        <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.primary }}>
-          {t('home_welcome')}
-        </Typography>
+            <Typography variant="h3" sx={{ mt:8, mb: 2 , color: theme.palette.text.secondary }}>
+                {t('home_welcome')}
+            </Typography>
 
-        <Typography variant="h4"  sx={{mb: 2, maxWidth: 1400, margin: '0 auto', color: theme.palette.custom.electrotechBlue }}>
-          {t('home_content_1')}
-        </Typography>
+            <Typography variant="h4"  sx={{mb: 2, maxWidth: 1400, margin: '0 auto', color: theme.palette.text.primary }}>
+                {t('home_content_1')}
+            </Typography>
 
-        <Typography variant="h6" sx={{mb: 2, maxWidth: 1400, margin: '0 auto' }}>
-          {t('home_content_2')}
-        </Typography>
+            <Typography variant="h6" sx={{mb: 2, maxWidth: 1400, margin: '0 auto' }}>
+                {t('home_content_2')}
+            </Typography>
 
-        <br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br />
 
-        <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
-          {t('home_expertise')}
-          <HomePhotos />
-        </Typography>
+            <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
+                {t('home_expertise')}
+            <HomePhotos />
+            </Typography>
 
-        <br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br />
 
-        <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
-          <HomeIndustries />
-        </Typography>
+            <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
+            <HomeIndustries />
+            </Typography>
 
-        <Typography variant="body1">
-          {t('home_content_main')}
-        </Typography>
+            <Typography variant="h6">
+                {/* {t('home_content_main')} */}
+            </Typography>
 
-      </Box>
-    </>
-  );
+            <Box sx={{ textAlign: 'center', py: 6 }}>
+            <Typography variant="h4" sx={{ fontWeight: 'bold', color: theme.palette.primary.secondary, mb: 4 }}>
+                CONTACTEZ-NOUS
+            </Typography>
+
+            <Grid container spacing={4} justifyContent="center">
+                <Grid
+                    item
+                    xs={12}
+                    sm={4}
+                    sx={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+                    >
+                    <LocationOnIcon sx={{ fontSize: 50, color: theme.palette.text.secondary }} />
+                    <Typography
+                        variant="body1"
+                        component="a"
+                        href={mapLink}
+                        target={isMobile ? undefined : '_blank'}
+                        rel={isMobile ? undefined : 'noopener noreferrer'}
+                        sx={{
+                        color: theme.palette.text.primary,
+                        mt: 1,
+                        textDecoration: 'none',
+                        '&:hover': { textDecoration: 'underline' },
+                        }}
+                    >
+                        625 Simonds Sud<br />
+                        Granby, Québec, Canada<br />
+                        J2J 1C2
+                    </Typography>
+                </Grid>
+
+
+
+                <Grid item xs={12} sm={4}>
+                    <PhoneIphoneIcon sx={{ fontSize: 50, color: theme.palette.text.secondary }} />
+                    <Typography variant="body1" sx={{ mt: 1, color: theme.palette.text.primary }}>
+                        1-450-776-2628
+                    </Typography>
+                </Grid>
+
+                {/* Écrivez-nous */}
+                <Grid item xs={12} sm={4}>
+                    <AlternateEmailIcon sx={{ fontSize: 50, color: theme.palette.text.secondary }} />
+                    <Typography variant="body1" sx={{ mt: 1, color: theme.palette.text.primary }}>
+                        {t('home_contact_us_title')}
+                    </Typography>
+                    <Button variant="contained" color="primary" sx={{ mt: 2 }} >
+                        {t('home_contact_us')}
+                    </Button>
+                </Grid>
+            </Grid>
+            </Box>
+        </Box>
+        </>
+    );
 };
 
 export default Home;

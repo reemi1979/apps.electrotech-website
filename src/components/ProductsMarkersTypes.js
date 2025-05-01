@@ -3,6 +3,8 @@ import React from 'react';
 import { Box, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '@mui/material/styles';
+
 
 const markerTypes = [
   { src: process.env.PUBLIC_URL + '/photos/products/markers/a.jpg', titleKey: 'product_markers_cables_title', name: 'cables' },
@@ -18,7 +20,9 @@ const markerTypes = [
 const MotionBox = motion(Box);
 
 const ProductsMarkersTypes = ({ selected, setSelected }) => {
+
   const { t } = useTranslation('products');
+  const theme = useTheme();
 
   return (
     <Box sx={{ px: 2, py: 6, maxWidth: 1400, mx: 'auto' }}>
@@ -38,10 +42,21 @@ const ProductsMarkersTypes = ({ selected, setSelected }) => {
                 mx: 'auto',
                 transition: 'all 0.3s ease-in-out',
                 transform: selected === item.name ? 'scale(1.05)' : 'scale(1)',
-                boxShadow: selected === item.name ? '0 0 15px rgba(255,255,255,0.6)' : 'none',
+                boxShadow:
+                selected === item.name
+                  ? `0 0 15px ${
+                      theme.palette.mode === 'dark'
+                        ? 'rgba(255,255,255,0.6)'
+                        : 'rgba(0,0,0,0.8)'
+                    }`
+                  : 'none',
                 cursor: 'pointer',
                 '&:hover': {
-                  boxShadow: '0 0 15px rgba(255,255,255,0.6)',
+                  boxShadow: `0 0 15px ${
+                    theme.palette.mode === 'dark'
+                      ? 'rgba(255,255,255,0.6)'
+                      : 'rgba(0,0,0,0.8)'
+                  }`,
                   transform: 'scale(1.05)'
                 }
               }}

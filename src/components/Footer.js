@@ -16,7 +16,7 @@ const Footer = ({ toggleBackground, backgroundEnabled }) => {
       component="footer"
       sx={{
         backgroundColor: theme.palette.background.paper,
-        color: theme.palette.custom.electrotechBlue,
+        color: theme.palette.text.primary,
         textAlign: 'center',
         py: 2,
         mt: 0,
@@ -27,7 +27,7 @@ const Footer = ({ toggleBackground, backgroundEnabled }) => {
         © {new Date().getFullYear()} Électrotech Automatisation Industrielle inc. - {t('footer_rights')}
       </Typography>
 
-      <Typography variant="body2" sx={{ mt: 1 }}>
+      <Typography variant="h6" sx={{ mt: 1 }}>
         <MuiLink component={Link} to="/privacy-policy" underline="hover" color="inherit">
           {t('footer_privacy_policy')}
         </MuiLink>
