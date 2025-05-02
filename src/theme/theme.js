@@ -17,6 +17,10 @@ export const getDesignTokens = (mode) => ({
       white: mode === 'dark' 
         ? '#ffffff' // ⬜ Light: 
         : '#ffffff', // ⬜ Light: 
+
+      contrast: mode === 'dark' 
+        ? '#ffffff' // ⬜ Light: 
+        : '#2c2c2c', // ⬛ Light: 
     },
 
     //Requis pour @MUI
@@ -46,6 +50,9 @@ export const getDesignTokens = (mode) => ({
       blue: mode === 'dark' 
         ? '#005A9E'             // 🔵 Dark: always blue text // SUB-TITLE
         : '#005A9E',            // 🔵 Light: always blue text // SUB-TITLE
+      white: mode === 'dark' 
+        ? '#cccccc'             // ⚪ Dark: always white text // SUB-TITLE
+        : '#cccccc',            // ⚪ Light: always white text // SUB-TITLE
     },
 
     custom: {

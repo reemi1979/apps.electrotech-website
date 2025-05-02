@@ -8,10 +8,10 @@
     "products_cables": "CÂBLES",
     "products_markers": "MARQUEURS",
     "products_lines": "GAMMES DE PRODUITS",
-    "services_design": "SERVICES DE CONCEPTION",
-    "services_programming": "SERVICES DE PROGRAMMATION",
-    "services_assembly": "SERVICES D'ASSEMBLAGE",
-    "services_cutout": "SERVICES DE DÉCOUPE",
+    "services_design": "CONCEPTION",
+    "services_programming": "PROGRAMMATION",
+    "services_assembly": "ASSEMBLAGE",
+    "services_cutout": "DÉCOUPE CNC",
     "about_us_contact": "NOUS CONTACTER",
     "about_us_team": "NOTRE ÉQUIPE",
     "about_us_join_us": "REJOIGNEZ-NOUS",
@@ -83,7 +83,21 @@
     "home_industrie_transport_title": "Secteur des transports",
     "home_industrie_transport_description": "Panneaux de contrôle pour applications maritimes et sous-marines complexes.",
 
+    "home_service": "Nos Services",
+    "home_service_default_title": "Services Offerts",
+    "home_service_default_description": "Survolez un service pour en savoir plus.",
+    "home_service_assy_title": "Assemblage",
+    "home_service_assy_description": "Assemblage de panneaux de contrôle et d’équipements connexes.",
+    "home_service_design_title": "Conception",
+    "home_service_design_description": "Conception de schémas électriques, plans et mises en page techniques.",
+    "home_service_machine_title": "Intégration Machine",
+    "home_service_machine_description": "Intégration des panneaux de contrôle dans vos machines.",
+    "home_service_prog_title": "Programmation",
+    "home_service_prog_description": "Programmation d’automates (PLC) et d’interfaces (HMI) adaptée à vos panneaux de contrôle.",
+    "home_service_cnc_title": "Usinage CNC",
+    "home_service_cnc_description": "Perçage et usinage de précision des panneaux ou plaques arrière grâce à notre machine Rittal Perforex CNC.",
 
+    
     "home_photos_1_title": "Automatisation industrielle",
     "home_photos_1_category": "Des solutions avancées pour des processus fluides.",
     "home_photos_1_description": "Chez Electrotech, nous concevons et programmons des systèmes d’automatisation industrielle sur mesure, adaptés aux besoins de chaque usine. Grâce à notre expertise en programmation d’automates (PLC) et en intégration de panneaux de contrôle, nous optimisons les procédés de production pour plus d’efficacité, de fiabilité et de sécurité.",
@@ -102,7 +116,12 @@
 
     "home_photos_5_title": "Panneaux électriques sur mesure",
     "home_photos_5_category": "Conçus pour la précision et la durabilité",
-    "home_photos_5_description": "Conçus et fabriqués selon vos spécifications exactes, nos panneaux électriques combinent une disposition intelligente, un câblage robuste et une logique de commande évolutive — le tout appuyé par une fiabilité industrielle éprouvée."
+    "home_photos_5_description": "Conçus et fabriqués selon vos spécifications exactes, nos panneaux électriques combinent une disposition intelligente, un câblage robuste et une logique de commande évolutive — le tout appuyé par une fiabilité industrielle éprouvée.",
+
+    "home_photos_6_title": "Conception et dessins",
+    "home_photos_6_category": "Ingénierie de précision et de durabilité",
+    "home_photos_6_description": "Conçus et fabriqués selon vos spécifications exactes, nos panneaux électriques allient agencement intelligent, câblage robuste et logique de contrôle évolutive, le tout avec une fiabilité industrielle."
+
 
 
   }

@@ -10,6 +10,7 @@ import { isMobile } from 'react-device-detect';
 import HeroVideo from '../components/HeroVideo';
 import HomePhotos from '../components/HomePhotos';
 import HomeIndustries from '../components/HomeIndustries';
+import HomeServices from '../components/HomeServices';
 
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
@@ -138,18 +139,19 @@ const Home = () => {
 
             <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
                 {t('home_expertise')}
-            <HomePhotos />
+                <HomePhotos />
             </Typography>
 
             <br /><br /><br /><br /><br /><br />
 
             <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
-            <HomeIndustries />
+                <HomeIndustries />
             </Typography>
 
-            <Typography variant="h6">
-                {/* {t('home_content_main')} */}
+            <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
+                <HomeServices />
             </Typography>
+
 
             <Box sx={{ textAlign: 'center', py: 6 }}>
             <Typography variant="h4" sx={{ fontWeight: 'bold', color: theme.palette.primary.secondary, mb: 4 }}>

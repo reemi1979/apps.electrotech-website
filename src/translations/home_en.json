@@ -8,10 +8,10 @@
     "products_cables": "CABLES",
     "products_markers": "MARKERS",
     "products_lines": "PRODUCTS LINE",
-    "services_design": "DESIGN SERVICES",
-    "services_programming": "PROGRAMMING SERVICES",
-    "services_assembly": "ASSEMBLY SERVICES",
-    "services_cutout": "CUTOUT SERVICES",
+    "services_design": "DESIGN",
+    "services_programming": "PROGRAMATION",
+    "services_assembly": "ASSEMBLY",
+    "services_cutout": "CNC CUTOUT",
     "about_us_contact": "CONTACT US",
     "about_us_team": "OUR TEAM",
     "about_us_join_us": "JOIN US",
@@ -73,6 +73,21 @@
     "home_industrie_transport_title": "Transportation Sector",
     "home_industrie_transport_description": "Control panels for complex maritime and underwater applications.",
 
+    "home_service": "Our Services",
+    "home_service_default_title": "Services Offered",
+    "home_service_default_description": "Hover over a service to learn more.",
+    "home_service_assy_title": "Assembly",
+    "home_service_assy_description": "Assembly of control panels and related equipment.",
+    "home_service_design_title": "Design",
+    "home_service_design_description": "Design of electrical schematics, layouts, and technical plans.",
+    "home_service_machine_title": "Machine Integration",
+    "home_service_machine_description": "Integration of control panels into your machinery.",
+    "home_service_prog_title": "Programming",
+    "home_service_prog_description": "PLC and HMI programming tailored to your control panels.",
+    "home_service_cnc_title": "CNC Machining",
+    "home_service_cnc_description": "Precision drilling and machining of panels or backplates using our Rittal Perforex CNC machine.",
+
+
     "home_expertise": "Our Expertise",
     "home_welcome": "Powering the Future of Automation",
     "home_content_1" : "Custom Electrical Panel & Automation Solutions",
@@ -100,8 +115,11 @@
 
     "home_photos_5_title": "Custom Electrical Panels",
     "home_photos_5_category": "Engineered for precision and durability",
-    "home_photos_5_description": "Designed and built to match your exact specifications, our electrical panels combine smart layout, robust wiring, and scalable control logic — all backed by industrial-grade reliability."
+    "home_photos_5_description": "Designed and built to match your exact specifications, our electrical panels combine smart layout, robust wiring, and scalable control logic — all backed by industrial-grade reliability.",
 
+    "home_photos_6_title": "Design and drawings",
+    "home_photos_6_category": "Engineered for precision and durability",
+    "home_photos_6_description": "Designed and built to match your exact specifications, our electrical panels combine smart layout, robust wiring, and scalable control logic — all backed by industrial-grade reliability."
 
   }
   
