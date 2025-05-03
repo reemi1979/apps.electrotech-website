@@ -11,11 +11,10 @@ import HeroVideo from '../components/HeroVideo';
 import HomePhotos from '../components/HomePhotos';
 import HomeIndustries from '../components/HomeIndustries';
 import HomeServices from '../components/HomeServices';
-
+import ScrollToNextSectionButton from '../components/ScrollToNextSectionButton';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-
 
 const Home = () => {
 
@@ -27,7 +26,19 @@ const Home = () => {
     const mapLink = isMobile
     ? 'geo:0,0?q=625+Simonds+Sud,+Granby,+QC+J2J+1C2'
     : 'https://www.google.com/maps?q=625+Simonds+Sud,+Granby,+QC+J2J+1C2';
-                            
+    
+    const [currentSection, setCurrentSection] = useState(1);
+    const nextSectionId = `section${currentSection + 1}`; // incrémente
+    const isLastSection = currentSection >= 6;
+    
+    useEffect(() => {
+      const handleScroll = () => {
+      };
+    
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);      
+
     useEffect(() => {
         if (token) {
         fetchNews(token);
@@ -80,9 +91,9 @@ const Home = () => {
     return (
         <>
 
-        <Box sx={{ position: 'relative', zIndex: 0, height: '100vh' }}>
+        <Box id="section1" sx={{ position: 'relative', zIndex: 0, height: '100vh' }}>
             <HeroVideo />
-
+            
             <Box
                 sx={{
                     position: 'absolute',
@@ -98,7 +109,8 @@ const Home = () => {
 
         </Box>
 
-        <Box sx={{ position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
+
+        <Box id="section2" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
 
             <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -110,7 +122,7 @@ const Home = () => {
                 src={process.env.PUBLIC_URL + '/logos/logo.svg'}
                 alt="Électrotech Logo"
                 sx={{
-                width: { xs: 400, md: 800 },
+                width: { xs: '100%', md: 800 },
                 height: 'auto',
                 mx: 'auto',
                 display: 'block',
@@ -131,27 +143,42 @@ const Home = () => {
                 {t('home_content_1')}
             </Typography>
 
-            <Typography variant="h6" sx={{mb: 2, maxWidth: 1400, margin: '0 auto' }}>
+            <Typography variant="h6" sx={{mb: 10, maxWidth: 1400, margin: '0 auto' }}>
                 {t('home_content_2')}
             </Typography>
 
-            <br /><br /><br /><br /><br /><br />
+        </Box>
+            
 
-            <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
+        <Box id="section3" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
+
+            <Typography variant="h3" sx={{ minHeight: '100vh', mb: 2 , color: theme.palette.text.secondary}}>
                 {t('home_expertise')}
                 <HomePhotos />
             </Typography>
 
-            <br /><br /><br /><br /><br /><br />
+        </Box>
+
+
+        <Box id="section4" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
 
             <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
                 <HomeIndustries />
             </Typography>
 
+        </Box>   
+            
+
+        <Box id="section5" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
+
             <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
                 <HomeServices />
             </Typography>
 
+        </Box>
+
+  
+        <Box id="section6" sx={{ minHeight: '80vh', position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
 
             <Box sx={{ textAlign: 'center', py: 6 }}>
             <Typography variant="h4" sx={{ fontWeight: 'bold', color: theme.palette.primary.secondary, mb: 4 }}>
@@ -206,7 +233,12 @@ const Home = () => {
                 </Grid>
             </Grid>
             </Box>
+
         </Box>
+
+        <ScrollToNextSectionButton sectionIds={['section1', 'section2', 'section3', 'section4', 'section5', 'section6']} />
+
+
         </>
     );
 };

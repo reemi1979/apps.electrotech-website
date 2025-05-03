@@ -1,5 +1,5 @@
 // src/pages/Certification.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Box, Typography, Grid, Container, Fade } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -8,6 +8,7 @@ import ceLogo from '../assets/ce_light-gray.svg';
 import ulLogo from '../assets/ul_light-gray.svg';
 import QualityPhotos from '../components/QualityPhotos';
 import { useTheme } from '@mui/material/styles';
+import ScrollToNextSectionButton from '../components/ScrollToNextSectionButton';
 
 const MotionBox = motion(Box);
 
@@ -51,6 +52,32 @@ const Certification = () => {
         }
     };
 
+    const [selectedIndex, setSelectedIndex] = useState(0);
+    const intervalRef = useRef(null);
+    const timeoutRef = useRef(null);
+
+    const startInterval = () => {
+        intervalRef.current = setInterval(() => {
+          setSelectedIndex(prev => (prev + 1) % messages.length);
+        }, 2000);
+      };
+    
+      useEffect(() => {
+        startInterval();
+        return () => {
+          clearInterval(intervalRef.current);
+          clearTimeout(timeoutRef.current);
+        };
+      }, []);
+    
+      const handleUserAction = (index) => {
+        setSelectedIndex(index);
+        clearInterval(intervalRef.current);
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = setTimeout(() => {
+          startInterval();
+        }, 10000);
+      };
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -69,123 +96,133 @@ const Certification = () => {
     return (
     <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
 
-        <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.secondary, mt: 6 }}>
-            {t('certification_title')}
-        </Typography>
-        <Typography variant="h6" sx={{ mb: 4, maxWidth: 800, mx: 'auto', color: theme.palette.text.primary }}>
-            {t('certification_title_description')}
-        </Typography>
+        <Box id="section1" sx={{ minHeight: '100vh', position: 'relative', px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
 
-        <Fade in={fadeIn} timeout={500}>
-            <Box
-                component="img"
-                src={currentCert.logo}
-                alt={`${currentKey.toUpperCase()} Certification Logo`}
-                sx={{
-                width: 150,
-                height: 150,
-                mb: 2,
-                animation: 'pulse 2s ease-in-out infinite',
-                filter: isDark ? 'none' : 'invert(1)',
-                }}
-            />
-        </Fade>
+            <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.secondary, mt: 1 }}>
+                {t('certification_title')}
+            </Typography>
+            <Typography variant="h6" sx={{ mb: 1, maxWidth: 800, mx: 'auto', color: theme.palette.text.primary }}>
+                {t('certification_title_description')}
+            </Typography>
 
-        <Typography variant="h4" sx={{  mt: 2 , color: theme.palette.text.secondary }}>
-            <strong>{currentCert.name}</strong><br />
-        </Typography>
-        <Typography variant="h6" sx={{ mt: 2 , color: theme.palette.text.primary }}>
-            {t('certification_issuing_org')}: {currentCert.organization}<br />
-        </Typography>
-
-        <Typography 
-            variant="body2" 
-            sx={{ 
-                fontStyle: 'italic',
-                fontWeight: 'bold',
-                m: 0 ,
-                color: theme.palette.text.blue
-            }}>
-            {currentCert.trademark}
-        </Typography>
-
-
-        <Typography variant="h4" sx={{ color: theme.palette.text.secondary, mt: 6, mb:2 }}>
-            {t('certification_why_matter')}
-        </Typography>
-
-        <Grid container spacing={4} justifyContent="center" sx={{ minHeight: { xs: 400, sm: 'auto' } }}>
-            {messages.map((item, index) => (
-                <Grid item xs={6} sm={4} md={3} lg={2} key={index} textAlign="center">
-                <MotionBox
+            <Fade in={fadeIn} timeout={500}>
+                <Box
                     component="img"
-                    src={item.src}
-                    alt={t(item.titleKey)}
-                    onClick={() => setSelected(item)}
-                    onMouseOver={() => setSelected(item)}
+                    src={currentCert.logo}
+                    alt={`${currentKey.toUpperCase()} Certification Logo`}
                     sx={{
-                    width: 100,
-                    height: 100,
-                    borderRadius: '50%',
-                    objectFit: 'cover',
-                    mx: 'auto',
-                    transition: 'all 0.3s ease-in-out',
-                    transform: selected === item ? 'scale(1.05)' : 'scale(1)',
-                    boxShadow:
-                    selected === item.name
-                        ? `0 0 15px ${
-                            theme.palette.mode === 'dark'
-                            ? 'rgba(255,255,255,0.6)'
-                            : 'rgba(0,0,0,0.8)'
-                        }`
-                        : 'none',
-                    cursor: 'pointer',
-                    '&:hover': {
-                        boxShadow: `0 0 15px ${
-                        theme.palette.mode === 'dark'
-                            ? 'rgba(255,255,255,0.6)'
-                            : 'rgba(0,0,0,0.8)'
-                        }`,
-                        transform: 'scale(1.05)', // optional: slight zoom on hover too
-                    },
+                    width: 150,
+                    height: 150,
+                    mb: 2,
+                    animation: 'pulse 2s ease-in-out infinite',
+                    filter: isDark ? 'none' : 'invert(1)',
                     }}
                 />
-                </Grid>
-            ))}
-        </Grid>
+            </Fade>
 
-        <Box
-            sx={{
-                height: 140,
+            <Typography variant="h4" sx={{  mt: 2 , color: theme.palette.text.secondary }}>
+                <strong>{currentCert.name}</strong><br />
+            </Typography>
+            <Typography variant="h6" sx={{ mt: 2 , color: theme.palette.text.primary }}>
+                {t('certification_issuing_org')}: {currentCert.organization}<br />
+            </Typography>
+
+            <Typography 
+                variant="body2" 
+                sx={{ 
+                    fontStyle: 'italic',
+                    fontWeight: 'bold',
+                    m: 0 ,
+                    color: theme.palette.text.blue
+                }}>
+                {currentCert.trademark}
+            </Typography>
+
+        </Box>
+
+        <Box id="section2" sx={{ minHeight: '100vh', position: 'relative', px: 2, py:2, textAlign: 'center', mx: 'auto', }}>
+
+            <Typography variant="h4" sx={{ color: theme.palette.text.secondary, mt: 1 }}>
+                {t('certification_help_title')}
+            </Typography>
+
+            <Typography variant="h6" sx={{ mt: 2, maxWidth: 800, mx: 'auto', color: theme.palette.text.primary }}>
+                {t('certification_help_text')}
+            </Typography>
+
+            <Box component="ul" sx={{ textAlign: 'left', mt: 0, maxWidth: 800, mx: 'auto' }}>
+                <QualityPhotos />
+            </Box>
+
+        </Box>
+
+        <Box id="section3" sx={{ minHeight: '80vh', position: 'relative', px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
+
+            <Typography variant="h4" sx={{ color: theme.palette.text.secondary, mt: 1, mb:2 }}>
+                {t('certification_why_matter')}
+            </Typography>
+
+            <Grid container spacing={4} justifyContent="center" sx={{ mb:2, minHeight: { xs: 400, sm: 'auto' } }}>
+                {messages.map((item, index) => (
+                    <Grid item xs={6} sm={4} md={3} lg={2} key={index} textAlign="center">
+                    <MotionBox
+                        component="img"
+                        src={item.src}
+                        alt={t(item.titleKey)}
+                        onClick={() => handleUserAction(index)}
+                        onMouseOver={() => handleUserAction(index)}
+                        sx={{
+                        width: 100,
+                        height: 100,
+                        borderRadius: '50%',
+                        objectFit: 'cover',
+                        mx: 'auto',
+                        transition: 'all 0.3s ease-in-out',
+                            transform: selectedIndex === index ? 'scale(1.05)' : 'scale(1)',
+                            boxShadow: selectedIndex === index
+                            ? `0 0 15px ${theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.8)'}`
+                            : 'none',
+                            cursor: 'pointer',
+                            '&:hover': { transform: 'scale(1.05)' },
+                        }}
+                    />
+                    </Grid>
+                ))}
+            </Grid>
+
+            <Box
+                sx={{
+                height: 'auto',
+                minHeight: 200,
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 textAlign: 'center',
-            }}
-        >
-        {selected && (
-            <>
-            <Typography variant="h4" sx={{ mb: 1, color: theme.palette.text.secondary }}>
-                {t(selected.titleKey)}
-            </Typography>
-            <Typography variant="h6" sx={{ color: theme.palette.text.primary }}>
-                {t(selected.descriptionKey)}
-            </Typography>
-            </>
-        )}
+                px: 3,
+                py: 2,
+                mx: 'auto',
+                maxWidth: 600,
+                border: `2px solid ${theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.2)'}`,
+                borderRadius: 4,
+                boxShadow: theme.palette.mode === 'dark'
+                    ? '0 4px 20px rgba(0,0,0,0.7)'
+                    : '0 4px 20px rgba(0,0,0,0.1)',
+                background: theme.palette.mode === 'dark'
+                    ? 'linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))'
+                    : 'linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01))',
+                }}
+            >
+                <Typography variant="h4" sx={{ mb: 1, color: theme.palette.text.secondary }}>
+                {t(messages[selectedIndex].titleKey)}
+                </Typography>
+                <Typography variant="h6" sx={{ color: theme.palette.text.primary }}>
+                {t(messages[selectedIndex].descriptionKey)}
+                </Typography>
+            </Box>
+
         </Box>
 
-        <Box component="ul" sx={{ textAlign: 'left', mt: 2, maxWidth: 800, mx: 'auto' }}>
-            <QualityPhotos />
-        </Box>
-
-        <Typography variant="h4" sx={{ color: theme.palette.text.secondary, mt: 6 }}>
-            {t('certification_help_title')}
-        </Typography>
-
-        <Typography variant="h6" sx={{ mt: 2, maxWidth: 800, mx: 'auto', color: theme.palette.text.primary }}>
-            {t('certification_help_text')}
-        </Typography>
+        <ScrollToNextSectionButton sectionIds={['section1', 'section2', 'section3']} />
 
         <style>
             {`
@@ -196,7 +233,10 @@ const Certification = () => {
                 }
             `}
         </style>
+
     </Container>
+
+    
     );
 };
 
