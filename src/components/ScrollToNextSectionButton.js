@@ -50,11 +50,19 @@ const ScrollToNextSectionButton = ({ sectionIds }) => {
     const nextIndex = currentIndex;
     const nextSection = document.getElementById(sectionIds[nextIndex]);
     if (nextSection) {
+
+      //avec animation 
+
       gsap.to(window, {
         duration: 1,
         scrollTo: { y: nextSection, offsetY: 0 },
         ease: "power2.inOut"
       });
+
+      // sans animation
+      
+      // nextSection.scrollIntoView({ behavior: 'auto' }); 
+
     }
   };
 

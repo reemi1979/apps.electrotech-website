@@ -55,7 +55,7 @@ const MotionBox = motion(Box);
     const selected = industries[selectedIndex];
 
     return (
-        <Box sx={{ px: 2, py: 6, maxWidth: 1400, mx: 'auto' }}>
+        <Box sx={{ px: 2, maxWidth: 1400, mx: 'auto' }}>
         
             {/* TITRE FIXE EN HAUT */}
             <Box
@@ -75,16 +75,16 @@ const MotionBox = motion(Box);
                 </Typography>
                 <Typography
                 variant="h4"
-                sx={{ mb: 2, maxWidth: 1400, mx: 'auto', color: theme.palette.text.blue }}
+                sx={{ maxWidth: 1400, mx: 'auto', color: theme.palette.text.blue }}
                 >
                 {t('home_industrie_default_description')}
                 </Typography>
             </Box>
 
             {/* IMAGES EN CERCLES */}
-            <Grid container spacing={4} justifyContent="center" sx={{ mb:2, minHeight: { xs: 400, sm: 'auto' } }}>
+            <Grid container spacing={2} justifyContent="center" sx={{ mb:2, minHeight: { xs: 400, sm: 'auto' } }}>
                 {industries.map((item, index) => (
-                <Grid item xs={6} sm={4} md={3} lg={2} key={index} textAlign="center">
+                <Grid item xs={4} sm={4} md={3} lg={2} key={index} textAlign="center">
                     <MotionBox
                     component="img"
                     src={item.src}
@@ -92,6 +92,7 @@ const MotionBox = motion(Box);
                     onClick={() => handleUserAction(index)}
                     onMouseOver={() => handleUserAction(index)}
                     sx={{
+                        willChange: 'transform',
                         width: 100,
                         height: 100,
                         borderRadius: '50%',

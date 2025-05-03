@@ -156,7 +156,7 @@ const Certification = () => {
 
         </Box>
 
-        <Box id="section3" sx={{ minHeight: '80vh', position: 'relative', px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
+        <Box id="section3" sx={{ minHeight: '80vh', position: 'relative', px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
 
             <Typography variant="h4" sx={{ color: theme.palette.text.secondary, mt: 1, mb:2 }}>
                 {t('certification_why_matter')}
@@ -192,6 +192,7 @@ const Certification = () => {
 
             <Box
                 sx={{
+                willChange: 'transform',
                 height: 'auto',
                 minHeight: 200,
                 display: 'flex',

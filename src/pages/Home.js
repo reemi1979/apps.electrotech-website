@@ -110,7 +110,7 @@ const Home = () => {
         </Box>
 
 
-        <Box id="section2" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
+        <Box id="section2" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
 
             <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -135,7 +135,7 @@ const Home = () => {
             />
             </motion.div>
 
-            <Typography variant="h3" sx={{ mt:8, mb: 2 , color: theme.palette.text.secondary }}>
+            <Typography variant="h3" sx={{ mt:2, mb: 2 , color: theme.palette.text.secondary }}>
                 {t('home_welcome')}
             </Typography>
 
@@ -150,9 +150,9 @@ const Home = () => {
         </Box>
             
 
-        <Box id="section3" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
+        <Box id="section3" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
 
-            <Typography variant="h3" sx={{ minHeight: '100vh', mb: 2 , color: theme.palette.text.secondary}}>
+            <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
                 {t('home_expertise')}
                 <HomePhotos />
             </Typography>
@@ -160,7 +160,7 @@ const Home = () => {
         </Box>
 
 
-        <Box id="section4" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
+        <Box id="section4" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
 
             <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
                 <HomeIndustries />
@@ -169,7 +169,7 @@ const Home = () => {
         </Box>   
             
 
-        <Box id="section5" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
+        <Box id="section5" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
 
             <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
                 <HomeServices />
@@ -178,7 +178,7 @@ const Home = () => {
         </Box>
 
   
-        <Box id="section6" sx={{ minHeight: '80vh', position: 'relative', zIndex: 1, px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
+        <Box id="section6" sx={{ minHeight: '80vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
 
             <Box sx={{ textAlign: 'center', py: 6 }}>
             <Typography variant="h4" sx={{ fontWeight: 'bold', color: theme.palette.primary.secondary, mb: 4 }}>

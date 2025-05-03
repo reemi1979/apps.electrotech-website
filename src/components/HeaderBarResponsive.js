@@ -53,7 +53,6 @@ const HeaderBarResponsive = () => {
         
     const navGroups = {
         main: [
-        { label: t('home'), link: '/' },
         { label: t('news'), link: '/news' },
         { label: t('certifications'), link: '/certifications' },
         { label: t('quote'), link: '/quote' },
@@ -71,8 +70,10 @@ const HeaderBarResponsive = () => {
         { label: t('services_cutout'), link: '/services-cutout' },
         ],
         about: [
+        { label: t('achievements'), link: '/achievements' },  
         { label: t('about_us_contact'), link: '/contact-us' },
         { label: t('about_us_team'), link: '/our-team' },
+        { label: t('about_us_our_partners'), link: '/our-partners' },
         { label: t('about_us_join_us'), link: '/join-us' },
         ],
     };
@@ -85,6 +86,11 @@ const HeaderBarResponsive = () => {
         }
     };
 
+    const renderCombinedProductsServices = () => {
+        const combinedItems = [...navGroups.products, ...navGroups.services];
+        return renderNavGroup('products_and_services', combinedItems);
+    };
+      
     const renderNavGroup = (groupName, groupItems) => {
         const navStyle = navControlsColors(); // ✅ même logique que pour les boutons
     
@@ -148,38 +154,37 @@ const HeaderBarResponsive = () => {
     return (
         <>
         <AppBar position="absolute" elevation={0} sx={{ backgroundColor: 'transparent' }}>
+            
             <Toolbar>
-            <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-                <img
-                src={`${process.env.PUBLIC_URL}/logos/electron.svg`}
-                alt="Logo Electrotech"
-                style={{ width: 72, height: 72, marginRight: 8 }}
-                />
-            <Typography
-                variant="h5"
-                sx={{
-                color: electrotechTextColor,
-                fontWeight: 'bold'
-                }}
-            >
-                ELECTROTECH
-            </Typography>
+
+            <Box 
+                component={Link}
+                to="/"
+                sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, textDecoration: 'none' }}>
+                
+                <img src={`${process.env.PUBLIC_URL}/logos/electron.svg`} alt="Logo Electrotech" 
+                    style={{ width: 72, height: 72, marginRight: 8 }}/>
+
+                <Typography variant="h5" sx={{ color: electrotechTextColor, fontWeight: 'bold'}} >
+                    ELECTROTECH
+                </Typography>
+
             </Box>
 
             {isSmallScreen  ? (
+
                 <IconButton
                     edge="end"
                     onClick={toggleDrawer}
-                    sx={{
-                        color: navControlsColors().color, // 🔥 applique la bonne couleur
-                        '&:hover': {
-                        color: theme.palette.custom.electrotechYellow
-                        }
-                    }}
+                    sx={{ color: navControlsColors().color, '&:hover': { color: theme.palette.custom.electrotechYellow } }}
                 >
-                <MenuIcon />
+                    <MenuIcon />
                 </IconButton>
+
+
             ) : (
+
+
                 <>
                 <ThemeToggleButton />
                 {navGroups.main.map((item) => {
@@ -207,9 +212,9 @@ const HeaderBarResponsive = () => {
                     </Button>
                     );
                 })}
+                
 
-                {renderNavGroup('products', navGroups.products)}
-                {renderNavGroup('services', navGroups.services)}
+                {renderCombinedProductsServices()}
                 {renderNavGroup('about', navGroups.about)}
 
                 <FormControl
