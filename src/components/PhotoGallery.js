@@ -1,29 +1,21 @@
 import React, { useState } from 'react';
-import { Box, Typography, Grid, Modal, Backdrop } from '@mui/material';
+import { Box, Grid, Modal, Backdrop } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import InViewPhotoCard from './InViewPhotoCard';
-import { useTranslation } from 'react-i18next';
 
 const MotionBox = motion(Box);
 
-const ProductsControlPanelsPhotos = ({ selectedType }) => {
-  const { t } = useTranslation('products');
+const PhotoGallery = ({ basePath, typeFolderMap, selectedType }) => {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   const genPhotos = (folder, count) =>
     Array.from({ length: count }, (_, i) => ({
-      src: `${process.env.PUBLIC_URL}/photos/products/controlpanels/${folder}/${String.fromCharCode(97 + i)}.jpg`
+      src: `${process.env.PUBLIC_URL}/${basePath}/${folder}/${String.fromCharCode(97 + i)}.jpg`
     }));
 
-  const photoMap = {
-    standard: genPhotos('standard', 11), // génère a.jpg à h.jpg
-    custom: genPhotos('custom', 11), // exemple : 3 photos (a, b, c)
-    serie: genPhotos('serie', 12),
-    pushbuttons: genPhotos('pushbuttons', 12),
-    junctionbox: genPhotos('junctionbox', 5),
-  };
-
-  const photos = photoMap[selectedType] || [];
+  const folder = typeFolderMap[selectedType];
+  const photoCount = typeFolderMap.counts?.[selectedType] || 3;
+  const photos = folder ? genPhotos(folder, photoCount) : [];
 
   return (
     <>
@@ -83,4 +75,4 @@ const ProductsControlPanelsPhotos = ({ selectedType }) => {
   );
 };
 
-export default ProductsControlPanelsPhotos;
+export default PhotoGallery;

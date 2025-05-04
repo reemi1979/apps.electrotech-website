@@ -64,10 +64,11 @@ const HeaderBarResponsive = () => {
         { label: t('products_lines'), link: '/products-lines' },
         ],
         services: [
-        { label: t('services_design'), link: '/services-design' },
-        { label: t('services_programming'), link: '/services-programming' },
-        { label: t('services_assembly'), link: '/services-assembly' },
-        { label: t('services_cutout'), link: '/services-cutout' },
+        { label: t('services_assembly'), link: '/services/0' },
+        { label: t('services_design'), link: '/services/1' },
+        { label: t('services_machine'), link: '/services/2' },
+        { label: t('services_programming'), link: '/services/3' },
+        { label: t('services_cutout'), link: '/services/4' },
         ],
         about: [
         { label: t('achievements'), link: '/achievements' },  
@@ -160,16 +161,24 @@ const HeaderBarResponsive = () => {
             <Box 
                 component={Link}
                 to="/"
-                sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, textDecoration: 'none' }}>
-                
-                <img src={`${process.env.PUBLIC_URL}/logos/electron.svg`} alt="Logo Electrotech" 
-                    style={{ width: 72, height: 72, marginRight: 8 }}/>
+                sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, textDecoration: 'none' }}
+                >
+                <img
+                    src={`${process.env.PUBLIC_URL}/logos/electron.svg`}
+                    alt="Logo Electrotech"
+                    style={{ width: 72, height: 72, marginRight: 8 }}
+                />
 
-                <Typography variant="h5" sx={{ color: electrotechTextColor, fontWeight: 'bold'}} >
+                <Box sx={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
+                    <Typography variant="h5" sx={{ color: electrotechTextColor, fontWeight: 'bold' }}>
                     ELECTROTECH
-                </Typography>
+                    </Typography>
+                    <Typography variant="caption" sx={{ color: electrotechTextColor, fontSize: '0.7rem' }}>
+                    AUTOMATISATION INDUSTRIELLE INC.
+                    </Typography>
+                </Box>
+                </Box>
 
-            </Box>
 
             {isSmallScreen  ? (
 

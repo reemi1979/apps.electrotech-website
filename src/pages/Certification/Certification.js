@@ -3,12 +3,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Box, Typography, Grid, Container, Fade } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import csaLogo from '../assets/csa_light-gray.svg';
-import ceLogo from '../assets/ce_light-gray.svg';
-import ulLogo from '../assets/ul_light-gray.svg';
-import QualityPhotos from '../components/QualityPhotos';
+import csaLogo from '../../assets/csa_light-gray.svg';
+import ceLogo from '../../assets/ce_light-gray.svg';
+import ulLogo from '../../assets/ul_light-gray.svg';
+import QualityPhotos from './QualityPhotos';
 import { useTheme } from '@mui/material/styles';
-import ScrollToNextSectionButton from '../components/ScrollToNextSectionButton';
+import ScrollToNextSectionButton from '../../components/ScrollToNextSectionButton';
 
 const MotionBox = motion(Box);
 

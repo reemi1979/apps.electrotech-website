@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import { Box, Typography, Container } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import ProductsControlPanelsTypes from '../components/ProductsControlPanelsTypes';
+import ProductsControlPanelsTypes from './ProductsControlPanelsTypes';
 import { useTheme } from '@mui/material/styles';
-import ProductsControlPanelsPhotos from '../components/ProductsControlPanelsPhotos';
+import ProductsControlPanelsPhotos from './ProductsControlPanelsPhotos';
 
 const ProductsControlPanels = () => {
   const theme = useTheme();

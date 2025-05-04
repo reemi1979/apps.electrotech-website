@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Box, Typography, Container } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
-import ProductsMarkersTypes from '../components/ProductsMarkersTypes';
+import ProductsMarkersTypes from './ProductsMarkersTypes';
 
 const ProductsMarkers = () => {
   const theme = useTheme();

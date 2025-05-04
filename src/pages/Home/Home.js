@@ -7,11 +7,11 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { isMobile } from 'react-device-detect';
 
-import HeroVideo from '../components/HeroVideo';
-import HomePhotos from '../components/HomePhotos';
-import HomeIndustries from '../components/HomeIndustries';
-import HomeServices from '../components/HomeServices';
-import ScrollToNextSectionButton from '../components/ScrollToNextSectionButton';
+import HeroVideo from './HeroVideo';
+import HomePhotos from './HomePhotos';
+import HomeIndustries from './HomeIndustries';
+import HomeServices from './HomeServices';
+import ScrollToNextSectionButton from '../../components/ScrollToNextSectionButton';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';

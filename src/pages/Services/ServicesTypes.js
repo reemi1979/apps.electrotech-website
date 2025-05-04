@@ -1,4 +1,4 @@
-// src/components/HomeServices.js
+// src/components/ServicesTypes.js
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Box, Typography, Grid } from '@mui/material';
@@ -15,10 +15,10 @@ const services = [
 ];
 
 const MotionBox = motion(Box);
+const selectedTypeMap = ['assy', 'design', 'machine', 'prog', 'cnc'];
 
-const HomeServices = () => {
-
-    const [selectedIndex, setSelectedIndex] = useState(0);
+const ServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => {
+    
     const theme = useTheme();
     const { t } = useTranslation();
     const intervalRef = useRef(null);
@@ -42,7 +42,8 @@ const HomeServices = () => {
         setSelectedIndex(index);
         clearInterval(intervalRef.current); // stop auto-switch
         clearTimeout(timeoutRef.current);   // clear timeout si déjà lancé
-    
+        setSelected(selectedTypeMap[index]);
+
         timeoutRef.current = setTimeout(() => {
             startInterval(); // redémarre après 10s
         }, 10000);
@@ -117,7 +118,7 @@ const HomeServices = () => {
         <Box
             sx={{
             height: 'auto',
-            minHeight: 140, // garde un minimum mais s’adapte si plus de texte
+            minHeight: 160, 
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -148,15 +149,9 @@ const HomeServices = () => {
             )}
         </Box>
 
-
-
-
-        {/* DISABLED, EN BAS... MODAL POPUP RECTANGULAIRE AVEC ANIMATION */}
-        
-
         </Box>
     );
 };
 
-export default HomeServices;
+export default ServicesTypes;
 
