@@ -1,15 +1,16 @@
-// src/Home/ServicesTypesHome.js
-
-import React from 'react';
+// src/Home/HomeServices.js
+import React, { useState } from 'react';
 import ServicesTypes from '../Services/ServicesTypes';
 
-// On passe des fonctions "vides" pour éviter les erreurs
 const HomeServices = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selected, setSelected] = useState(null);
+
   return (
     <ServicesTypes
-      selectedIndex={0}
-      setSelectedIndex={() => {}}
-      setSelected={() => {}}
+      selectedIndex={selectedIndex}
+      setSelectedIndex={setSelectedIndex}
+      setSelected={setSelected}
     />
   );
 };

@@ -41,7 +41,7 @@ const Home = () => {
 
     useEffect(() => {
         if (token) {
-        fetchNews(token);
+            fetchProjectData(token);
         }
     }, [token]);
 
@@ -64,29 +64,28 @@ const Home = () => {
         fetchToken();
     }, []);
 
-    const fetchNews = (authToken) => {
-        fetch("https://api.electrotech.ca/api/data", {
-        method: "POST",
-        headers: { 
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${authToken}`
-        },
-        body: JSON.stringify({ type: "news" })
+    const fetchProjectData = (authToken) => {
+        fetch("https://api.electrotech.ca/getDataProject", {
+            method: "GET",
+            headers: { 
+                "Authorization": `Bearer ${authToken}`
+            }
         })
         .then(res => {
-        if (!res.ok) {
-            throw new Error(`Erreur API: ${res.status} ${res.statusText}`);
-        }
-        return res.json();
+            if (!res.ok) {
+                throw new Error(`Erreur API: ${res.status} ${res.statusText}`);
+            }
+            return res.json();
         })
         .then(data => {
-        console.log("📦 Data received :", data);
-        setApiData(data);
+            console.log("📦 Données projet reçues :", data);
+            setApiData(data);
         })
         .catch(err => {
-        console.error("❌ Erreur API :", err);
+            console.error("❌ Erreur API (projet) :", err);
         });
     };
+    
 
     return (
         <>
