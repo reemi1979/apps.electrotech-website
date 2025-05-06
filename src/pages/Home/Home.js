@@ -1,4 +1,4 @@
-// src/pages/Homes.js
+// src/Home/Homes.js
 
 import React, { useEffect, useState } from 'react';
 import { Box, Typography, Grid, Button } from '@mui/material';
@@ -18,8 +18,6 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 const Home = () => {
 
-    const [token, setToken] = useState(null);
-    const [apiData, setApiData] = useState(null);
     const { t } = useTranslation();
     const theme = useTheme();
     const isDark = theme.palette.mode === 'dark';
@@ -39,53 +37,6 @@ const Home = () => {
       return () => window.removeEventListener('scroll', handleScroll);
     }, []);      
 
-    useEffect(() => {
-        if (token) {
-            fetchProjectData(token);
-        }
-    }, [token]);
-
-    // 1️⃣ Charger le token au démarrage
-    useEffect(() => {
-        async function fetchToken() {
-        try {
-            const response = await fetch('https://api.electrotech.ca/get-token');
-            const data = await response.json();
-            if (data.token) {
-            setToken(data.token);
-            } else {
-            console.error('Token not received:', data);
-            }
-        } catch (error) {
-            console.error('Token error:', error);
-        }
-        }
-
-        fetchToken();
-    }, []);
-
-    const fetchProjectData = (authToken) => {
-        fetch("https://api.electrotech.ca/getDataProject", {
-            method: "GET",
-            headers: { 
-                "Authorization": `Bearer ${authToken}`
-            }
-        })
-        .then(res => {
-            if (!res.ok) {
-                throw new Error(`Erreur API: ${res.status} ${res.statusText}`);
-            }
-            return res.json();
-        })
-        .then(data => {
-            console.log("📦 Données projet reçues :", data);
-            setApiData(data);
-        })
-        .catch(err => {
-            console.error("❌ Erreur API (projet) :", err);
-        });
-    };
-    
 
     return (
         <>

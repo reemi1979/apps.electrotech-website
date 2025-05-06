@@ -1,4 +1,4 @@
-// src/components/QualityPhotos.js
+// src/pages/Certification/QualityPhotos.js
 
 import React from 'react';
 import PhotoGalleryWithLabels from '../../components/PhotoGalleryWithLabels';

@@ -1,4 +1,4 @@
-// src/pages/NewsDetail.js
+// src/pages/News/NewsDetail.js
 
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';

@@ -1,4 +1,4 @@
-// src/components/ProductsControlPanelsPhotos.js
+// src/pages/Products/ProductsControlPanelsPhotos.js
 import React from 'react';
 import PhotoGallery from '../../components/PhotoGallery';
 

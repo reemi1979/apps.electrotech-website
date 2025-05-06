@@ -42,6 +42,27 @@
 
     "hero_button_sound_on": "Activer le son",
     "hero_button_sound_off": "Couper le son",
+    "hero_tracking": "Suivez l’avancement de votre projet!",
+    "hero_tracking_button": "Faire le suivi",
+    
+
+
+    "tracking_title": "Suivez l’avancement de votre projet!",
+    "tracking_title_description": "Demandez à votre chargé de projet chez Electrotech pour obtenir votre numéro de suivi.",
+    "tracking_textfield": "Numéro de projet",
+    "tracking_textfield_directive": "Entrez un numéro de projet",   
+    "tracking_search_button": "Chercher",
+    "tracking_no_result":"Aucun projet trouvé pour ",
+    "tracking_for": "Tracking pour ",
+    "tracking_step_received": "Reçu par Electrotech",
+    "tracking_step_confirmed": "Confirmé",
+    "tracking_step_orders_sent": "Commandes Envoyés",
+    "tracking_step_orders": "Approvisionnement",
+    "tracking_step_cnc_completed": "Assemblage Mécanique",
+    "tracking_step_production": "Assemblage Électrique",
+    "tracking_step_tests": "Tests",
+    "tracking_step_shipped": "Expédié",
+
 
     "cookie_banner_message": "Ce site utilise des cookies pour améliorer votre expérience. Cliquez sur « Accepter tout » pour autoriser tous les cookies, ou « Personnaliser » pour choisir vos préférences.",
     "cookie_customize": "Personnaliser les préférences de cookies",

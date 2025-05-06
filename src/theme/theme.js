@@ -53,6 +53,9 @@ export const getDesignTokens = (mode) => ({
       white: mode === 'dark' 
         ? '#cccccc'             // ⚪ Dark: always white text // SUB-TITLE
         : '#cccccc',            // ⚪ Light: always white text // SUB-TITLE
+      black: mode === 'dark' 
+        ? '#444444'              // ⚫ Dark: always black text // SUB-TITLE
+        : '#444444' ,            // ⚫ Light: always black text // SUB-TITLE
     },
 
     custom: {

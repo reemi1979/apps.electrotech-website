@@ -1,4 +1,4 @@
-// src/components/ServicesPhotos.js
+// src/pages/Services/ServicesPhotos.js
 import React from 'react';
 import PhotoGallery from '../../components/PhotoGallery';
 

@@ -1,4 +1,4 @@
-// src/pages/ProductsMarkers.js
+// src/pages/Products/ProductsMarkers.js
 import React, { useState } from 'react';
 import { Box, Typography, Container } from '@mui/material';
 import { useTranslation } from 'react-i18next';

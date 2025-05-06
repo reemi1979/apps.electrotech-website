@@ -1,4 +1,4 @@
-// src/components/ProductsCablesTypes.js
+// src/components/Products/ProductsCablesTypes.js
 import React from 'react';
 import { Box, Grid } from '@mui/material';
 import { motion } from 'framer-motion';

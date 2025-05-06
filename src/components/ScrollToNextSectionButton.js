@@ -1,3 +1,5 @@
+// src/components/ScrollToNextSectionButton.js
+
 import React, { useEffect, useState } from 'react';
 import { Fab, Zoom } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -77,6 +79,7 @@ const ScrollToNextSectionButton = ({ sectionIds }) => {
           bottom: 32,
           left: '50%',
           transform: 'translateX(-50%)',
+          marginLeft: '-28px', // <-- correction for Fab default width
           backgroundColor: '#0078D4',
           color: 'white',
           zIndex: 9999,

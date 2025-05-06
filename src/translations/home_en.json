@@ -42,6 +42,24 @@
 
     "hero_button_sound_on": "Unmute",
     "hero_button_sound_off": "Mute",
+    "hero_tracking": "Follow your project progress!",
+    "hero_tracking_button": "Track",
+
+    "tracking_title": "Follow your project progress!",
+    "tracking_title_description": "Ask your project manager at Electrotech to obtain your tracking number.",
+    "tracking_textfield": "Project number",
+    "tracking_textfield_directive": "Enter your project number",
+    "tracking_search_button": "Search",
+    "tracking_no_result":"No project found for ",
+    "tracking_for": "Tracking for ",
+    "tracking_step_received": "Received by Electrotech",
+    "tracking_step_confirmed": "Confirmed",
+    "tracking_step_orders_sent": "Orders Sent",
+    "tracking_step_orders": "Material Supply",
+    "tracking_step_cnc_completed": "Mechanical Assembly",
+    "tracking_step_production": "Electrical Assembly",
+    "tracking_step_tests": "Tests",
+    "tracking_step_shipped": "Shipped",
 
     "cookie_banner_message": "This site uses cookies to enhance your experience. Click \"Accept All\" to allow all cookies, or \"Customize\" to choose your preferences.",
     "cookie_customize": "Customize cookie preferences",
@@ -54,6 +72,7 @@
     "cookie_category_functional": "Functional",
     "cookie_category_analytics": "Analytics",
     "cookie_category_advertising": "Advertising",
+    
 
     "home_industrie" : "Our Industries",
     "home_industrie_default_title": "Industries Served",

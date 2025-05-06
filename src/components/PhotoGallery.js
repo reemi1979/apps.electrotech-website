@@ -1,3 +1,5 @@
+// src/components/PhotoGallery.js
+
 import React, { useState } from 'react';
 import { Box, Grid, Modal, Backdrop } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';

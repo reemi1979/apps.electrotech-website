@@ -1,4 +1,4 @@
-// src/components/HomePhotos.js
+// src/Home/HomePhotos.js
 
 import React from 'react';
 import PhotoGalleryWithLabels from '../../components/PhotoGalleryWithLabels';

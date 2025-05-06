@@ -1,3 +1,5 @@
+// src/components/HeaderBarResponsive.js
+
 import React, { useState } from 'react';
 import {
     AppBar, Toolbar, Button, IconButton, Drawer,

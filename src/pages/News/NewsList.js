@@ -1,4 +1,4 @@
-    // src/pages/NewsList.js
+// src/pages/News/NewsList.js
 
 import React, { useState, useEffect } from 'react';
 import { Box, Typography, Container, Grid } from '@mui/material';

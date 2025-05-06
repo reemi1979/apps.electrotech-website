@@ -1,4 +1,4 @@
-// src/pages/Certification.js
+// src/pages/Certification/Certification.js
 import React, { useState, useEffect, useRef } from 'react';
 import { Box, Typography, Grid, Container, Fade } from '@mui/material';
 import { useTranslation } from 'react-i18next';

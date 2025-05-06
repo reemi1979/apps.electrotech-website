@@ -14,6 +14,7 @@ import ProductsMarkers from './pages/Products/ProductsMarkers';
 import ProductsLines from './pages/Products/ProductsLines';
 import Services from './pages/Services/Services';
 import Layout from './pages/Layout';
+import TrackingProjects from './pages/Tracking/TrackingProjects';
 
 const App = () => {
   return (
@@ -32,6 +33,8 @@ const App = () => {
             <Route path="/products-markers" element={<ProductsMarkers />} />
             <Route path="/products-lines" element={<ProductsLines />} />
             <Route path="/services/:index" element={<Services />} />
+            <Route path="/tracking" element={<TrackingProjects />} />
+            <Route path="/tracking/:projectNumber" element={<TrackingProjects />} />
           </Route>
         </Routes>
       </Router>

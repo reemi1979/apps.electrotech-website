@@ -1,4 +1,4 @@
-    // src/components/HomeIndustries.js
+// src/Home/HomeIndustries.js
 
 import React, { useState , useEffect, useRef } from 'react';
 import { Box, Typography, Grid } from '@mui/material';

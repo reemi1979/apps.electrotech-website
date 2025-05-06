@@ -1,10 +1,14 @@
-// src/components/HeroVideo.js
+// src/Home/HeroVideo.js
 
 import React, { useRef, useState } from 'react';
-import Button from '@mui/material/Button';
+import { Box, Typography, Button } from '@mui/material';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import { useTheme } from '@mui/material/styles';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+
 
 const HeroVideo = () => {
 
@@ -12,6 +16,8 @@ const HeroVideo = () => {
   const videoRef = useRef(null);
   const videoPath = process.env.PUBLIC_URL + '/video.mp4';
   const [isMuted, setIsMuted] = useState(true);
+  const navigate = useNavigate();
+  const theme = useTheme();
 
   const toggleSound = () => {
     if (videoRef.current) {
@@ -52,6 +58,40 @@ const HeroVideo = () => {
           }}
         />
       </div>
+
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: 100, // ✅ 100px from bottom
+          left: '50%',
+          transform: 'translateX(-50%)',
+          backgroundColor: theme.palette.background.white,
+          p: 2,
+          borderRadius: 0,
+          zIndex: 10,
+          display: 'flex',
+          alignItems: 'center',
+          width: { xs: '90%', sm: 'auto' }, 
+          justifyContent: 'center', 
+          flexWrap: 'wrap', 
+        }}
+        
+      >
+        <Typography variant="h6" sx={{ color: theme.palette.text.black, fontSize: '1rem', fontWeight: 'bold' }}>
+          {t('hero_tracking')}
+        </Typography>
+
+        <Button
+          onClick={() => navigate('/tracking')}
+          variant="contained"
+          color="primary"
+          endIcon={<ArrowCircleRightIcon />}
+          sx={{ ml: 4, px: 4, py: 1, textTransform: 'none' }}
+        >
+          {t('hero_tracking_button')}
+        </Button>
+      </Box>
+
 
       <Button
         onClick={toggleSound}

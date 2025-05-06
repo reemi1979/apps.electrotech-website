@@ -1,4 +1,4 @@
-// src/pages/News.js
+// src/pages/News/News.js
 
 import React, { useState, useEffect } from 'react';
 import { Box, Typography, Container, Modal, Backdrop } from '@mui/material';

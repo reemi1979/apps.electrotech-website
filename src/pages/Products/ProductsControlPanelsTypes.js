@@ -1,4 +1,4 @@
-// src/components/ProductsControlPanelsTypes.js
+// src/pages/Products/ProductsControlPanelsTypes.js
 
 import React from 'react';
 import { Box, Grid } from '@mui/material';

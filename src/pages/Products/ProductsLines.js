@@ -1,4 +1,4 @@
-// src/pages/ProductsLines.js
+// src/pages/Products/ProductsLines.js
 import React from 'react';
 import { Box, Typography, Container, Grid } from '@mui/material';
 import { motion } from 'framer-motion';

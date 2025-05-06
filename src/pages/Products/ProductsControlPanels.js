@@ -1,4 +1,4 @@
-// src/pages/ProductsControlPanels.js
+// src/pages/Products/ProductsControlPanels.js
 
 import React, { useState } from 'react';
 import { Box, Typography, Container } from '@mui/material';
