@@ -1,11 +1,19 @@
 {
+    "since": "Depuis",
     "our_team_title_page": "Rencontrez Notre Équipe",
     "our_team_intro": "Les experts derrière vos solutions d’automatisation. Chez Electrotech Automatisation Industrielle, notre équipe est la force motrice de notre succès. Avec une passion commune pour l’innovation, la précision et la fiabilité, nous travaillons ensemble pour offrir à nos clients des solutions d’automatisation de panneaux électriques de première qualité.",
     "our_team_leadership_title": "Notre Direction",
-    "our_team_charles_title": "Charles Fortin – Fondateur",
+
+    "our_team_charles_title": "Président et Fondateur",
     "our_team_charles_desc": "Avec 30 ans d’expérience en automatisation électrique, Charles dirige notre entreprise avec un engagement envers l’excellence et les technologies de pointe.",
-    "our_team_isabelle_title": "Isabelle Guay – Directrice des opérations",
+    "our_team_isabelle_title": "Directrice des opérations",
     "our_team_isabelle_desc": "Garantissant l’exécution sans faille des projets, Isabelle supervise nos processus de fabrication et assure le contrôle qualité à chaque étape.",
+    "our_team_zachary_title": "Chargé de projet",
+    "our_team_zachary_desc": "Assurant une exécution fluide du concept à la réalisation, livrant dans les délais et le budget prévus.",
+    "our_team_jerome_title": "Chargé de projet",
+    "our_team_jerome_desc": "Assurant une exécution fluide du concept à la réalisation, livrant dans les délais et le budget prévus.",
+    
+    "our_team_team_others": "Nos autres postes clés",
     "our_team_team_title": "Notre Équipe",
     "our_team_designers": "Concepteurs électriques – Experts en conception de systèmes d’automatisation et de contrôle, assurant des solutions optimisées pour la performance et l’efficacité.",
     "our_team_technicians": "Techniciens et assembleurs – Professionnels qualifiés qui construisent, câblent et testent chaque panneau avec précision et souci du détail.",

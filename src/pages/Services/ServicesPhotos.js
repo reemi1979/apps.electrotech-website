@@ -11,7 +11,7 @@ const typeFolderMap = {
   counts: {
     assy: 3,
     design: 3,
-    machine: 3,
+    machine: 6,
     prog: 2,
     cnc: 2
   }

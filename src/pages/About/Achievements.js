@@ -1,101 +1,132 @@
 // src/pages/Achievements/Achievements.js
-
 import React from 'react';
-import { Box, Typography, Grid, Container, Button } from '@mui/material';
-import { motion } from 'framer-motion';
+import { Box, Typography, Container, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
-
-const MotionBox = motion(Box);
+import { Link } from 'react-router-dom';
+import { Divider } from '@mui/material';
+import Slideshow from './AchievementsPhotos';
 
 const Achievements = () => {
   const theme = useTheme();
   const { t } = useTranslation('achievements');
 
   return (
-    <Container sx={{ py: 8, textAlign: 'center' }}>
-      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.blue, mt: 10 }}>
+    <Container sx={{ py: 8 }}>
+      {/* Centered title and intro */}
+      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.blue, mt: 10, textAlign: 'center' }}>
         {t('achievements_title')}
       </Typography>
 
-      <Typography variant="h6" component="p" sx={{ maxWidth: 800, mx: 'auto' }}>
+      <Typography
+        variant="h6"
+        component="p"
+        sx={{ maxWidth: 800, mx: 'auto', mb: 4, textAlign: 'center' }}
+      >
         {t('achievements_intro')}
       </Typography>
 
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-          {t('key_milestones_title')}
-        </Typography>
+      {/* <Box
+        component="img"
+        src={`${process.env.PUBLIC_URL}/photos/achievements/a.jpg`} 
+        alt="Achievements Banner"
+        sx={{
+          width: '100%',
+          maxWidth: 1000,
+          height: 'auto',
+          aspectRatio: '3 / 1',
+          objectFit: 'cover',
+          borderRadius: 4,
+          display: 'block',
+          mx: 'auto',
+          mb: 4,
+        }}
+      /> */}
 
-        <Box textAlign="left" sx={{ maxWidth: 800, mx: 'auto' }}>
+      <Slideshow />
+
+      <Divider sx={{ my: 2, borderColor: 'text.secondary', borderBottomWidth: 2 }} />
+
+      {/* Left-aligned content */}
+      <Box sx={{ maxWidth: 800, mx: 'auto', textAlign: 'left' }}>
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
+            {t('key_milestones_title')}
+          </Typography>
+
           <Typography variant="h5" sx={{ color: theme.palette.text.blue }}>
             {t('milestone_1_title')}
           </Typography>
           <Typography variant="h6" component="p">{t('milestone_1_desc')}</Typography>
 
-          <Typography variant="h5" sx={{ color: theme.palette.text.blue }}>
+          <Typography variant="h5" sx={{ color: theme.palette.text.blue, mt: 2 }}>
             {t('milestone_2_title')}
           </Typography>
           <Typography variant="h6" component="p">{t('milestone_2_desc')}</Typography>
 
-          <Typography variant="h5" sx={{ color: theme.palette.text.blue }}>
+          <Typography variant="h5" sx={{ color: theme.palette.text.blue, mt: 2 }}>
             {t('milestone_3_title')}
           </Typography>
           <Typography variant="h6" component="p">{t('milestone_3_desc')}</Typography>
 
-          <Typography variant="h5" sx={{ color: theme.palette.text.blue }}>
+          <Typography variant="h5" sx={{ color: theme.palette.text.blue, mt: 2 }}>
             {t('milestone_4_title')}
           </Typography>
           <Typography variant="h6" component="p">{t('milestone_4_desc')}</Typography>
         </Box>
-      </Box>
 
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-          {t('client_testimonials_title')}
-        </Typography>
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
+            {t('client_testimonials_title')}
+          </Typography>
 
-        <Box textAlign="left" sx={{ maxWidth: 800, mx: 'auto' }}>
           <Typography variant="h6" component="p">{t('testimonial_1')}</Typography>
-          <Typography variant="h6" component="p">{t('testimonial_2')}</Typography>
+          <Typography variant="h6" component="p" sx={{ mt: 1 }}>
+            {t('testimonial_2')}
+          </Typography>
         </Box>
-      </Box>
 
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-          {t('at_a_glance_title')}
-        </Typography>
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
+            {t('at_a_glance_title')}
+          </Typography>
 
-        <Box textAlign="left" sx={{ maxWidth: 800, mx: 'auto' }}>
-          <ul>
-            <li><Typography variant="h6" component="p">{t('glance_1')}</Typography></li>
-            <li><Typography variant="h6" component="p">{t('glance_2')}</Typography></li>
-            <li><Typography variant="h6" component="p">{t('glance_3')}</Typography></li>
-            <li><Typography variant="h6" component="p">{t('glance_4')}</Typography></li>
-            <li><Typography variant="h6" component="p">{t('glance_5')}</Typography></li>
-          </ul>
+            <Box textAlign="left" sx={{ maxWidth: 800, mx: 'auto' }}>
+            <ul>
+              <li><Typography variant="h6" component="p">{t('glance_1')}</Typography></li>
+              <li><Typography variant="h6" component="p">{t('glance_2')}</Typography></li>
+              <li><Typography variant="h6" component="p">{t('glance_3')}</Typography></li>
+              <li><Typography variant="h6" component="p">{t('glance_4')}</Typography></li>
+              <li><Typography variant="h6" component="p">{t('glance_5')}</Typography></li>
+            </ul>
+          </Box>
         </Box>
-      </Box>
 
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-          {t('why_proud_title')}
-        </Typography>
-        <Typography variant="h6" component="p" sx={{ maxWidth: 800, mx: 'auto' }}>
-          {t('why_proud_desc')}
-        </Typography>
-      </Box>
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
+            {t('why_proud_title')}
+          </Typography>
+          <Typography variant="h6" component="p">
+            {t('why_proud_desc')}
+          </Typography>
+        </Box>
 
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-          {t('work_with_us_title')}
-        </Typography>
-        <Typography variant="h6" component="p" sx={{ maxWidth: 800, mx: 'auto' }}>
-          {t('work_with_us_desc')}
-        </Typography>
-        <Button variant="contained" color="primary">
-          {t('contact_us_button')}
-        </Button>
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
+            {t('work_with_us_title')}
+          </Typography>
+          <Typography variant="h6" component="p" sx={{ mb: 2 }}>
+            {t('work_with_us_desc')}
+          </Typography>
+          <Button
+            component={Link}
+            to="/contact-us"
+            variant="contained"
+            color="primary"
+          >
+            {t('contact_us_button')}
+          </Button>
+        </Box>
       </Box>
     </Container>
   );
