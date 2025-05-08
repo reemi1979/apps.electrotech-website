@@ -13,6 +13,8 @@ import ProductsCables from './pages/Products/ProductsCables';
 import ProductsMarkers from './pages/Products/ProductsMarkers';
 import ProductsLines from './pages/Products/ProductsLines';
 import Services from './pages/Services/Services';
+import Achievements from './pages/About/Achievements';
+import OurTeam from './pages/About/OurTeam';
 import Layout from './pages/Layout';
 import TrackingProjects from './pages/Tracking/TrackingProjects';
 
@@ -35,6 +37,8 @@ const App = () => {
             <Route path="/services/:index" element={<Services />} />
             <Route path="/tracking" element={<TrackingProjects />} />
             <Route path="/tracking/:projectNumber" element={<TrackingProjects />} />
+            <Route path="/achievements" element={<Achievements />} />
+            <Route path="/our-team" element={<OurTeam />} />
           </Route>
         </Routes>
       </Router>

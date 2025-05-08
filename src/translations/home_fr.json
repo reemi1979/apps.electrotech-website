@@ -62,7 +62,7 @@
     "tracking_step_production": "Assemblage Électrique",
     "tracking_step_tests": "Tests",
     "tracking_step_shipped": "Expédié",
-
+    "tracking_step_error_alert": "Contactez nous pour info",
 
     "cookie_banner_message": "Ce site utilise des cookies pour améliorer votre expérience. Cliquez sur « Accepter tout » pour autoriser tous les cookies, ou « Personnaliser » pour choisir vos préférences.",
     "cookie_customize": "Personnaliser les préférences de cookies",

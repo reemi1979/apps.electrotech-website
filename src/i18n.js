@@ -12,6 +12,10 @@ import qualityFR from './translations/quality_fr.json';
 import qualityEN from './translations/quality_en.json';
 import productsFR from './translations/products_fr.json';
 import productsEN from './translations/products_en.json';
+import achievementsFR from './translations/achievements_fr.json';
+import achievementsEN from './translations/achievements_en.json';
+import aboutFR from './translations/about_fr.json';
+import aboutEN from './translations/about_en.json';
 
 const resources = {
 fr: {
@@ -19,12 +23,16 @@ fr: {
     policy: policyFR,
     quality: qualityFR,
     products: productsFR,
+    achievements: achievementsFR,
+    about: aboutFR,
 },
 en: {
     home: homeEN,
     policy: policyEN,
     quality: qualityEN,
     products: productsEN,
+    achievements: achievementsEN,
+    about: aboutEN,
 }
 };
 

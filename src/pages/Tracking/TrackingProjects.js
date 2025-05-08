@@ -60,22 +60,33 @@ const TrackingProjects = () => {
 
 
     const panelCount = selectedProject?.panels || 1; // évite div/0
+
     const cncPercent = selectedProject?.cnc
       ? ((selectedProject.cnc.backplate / panelCount) + (selectedProject.cnc.panel / panelCount)) / 2
       : 0;
+      
     const cncPercentClamped = Math.min(cncPercent, 1);
+
     let testPercent = 0;
     if (selectedProject) {
       const rawPercent = (selectedProject.test?.qtytested || 0) / (selectedProject.panels || 1);
       if (selectedProject.test?.completed) {
-        testPercent = 1; // si completed → 100%
+        testPercent = 1; // Force 100% if completed
       } else {
-        testPercent = Math.min(rawPercent, 0.99); // sinon max 99%
+        testPercent = Math.min(rawPercent, 0.90); // Clamp to max 90% if not completed
       }
     }    
-    const prodPercent = selectedProject
-        ? Math.min(1, (selectedProject.prod.proddone || 0) / (selectedProject.prod.prodplan || 1))
-        : 0;
+
+    let prodPercent = 0;
+    if (selectedProject) {
+      const rawPercent = (selectedProject.prod.proddone || 0) / (selectedProject.prod.prodplan || 1);
+      if (selectedProject.prod.completed) {
+        prodPercent = 1; // Force 100% if completed
+      } else {
+        prodPercent = Math.min(rawPercent, 0.9); // Clamp to max 90% if not completed
+      }
+    }
+    
 
     const steps = selectedProject ? [
         { label: t('tracking_step_received'), value: true },
@@ -93,12 +104,26 @@ const TrackingProjects = () => {
         ] : []),
         {
             label: `${t('tracking_step_production')} (${Math.round(prodPercent * 100)}%)`,
-            value: selectedProject.prod.completed
-        },
-        {
+            optional: selectedProject.state?.quaranteen
+              ? <Typography variant="caption" color="error">{t('tracking_step_error_alert')}</Typography>
+              : undefined,
+            value: selectedProject.prod.completed,
+            error: selectedProject.state?.quaranteen
+          },
+          {
             label: `${t('tracking_step_tests')} (${Math.round(testPercent * 100)}%)`,
-            value: selectedProject.test.completed
-        },
+            optional:
+              selectedProject.test?.qtytested === selectedProject.panels &&
+              !selectedProject.test?.completed ? (
+                <Typography variant="caption" color="error">
+                  {t('tracking_step_error_alert')}
+                </Typography>
+              ) : undefined,
+            value: selectedProject.test.completed,
+            error:
+              selectedProject.test?.qtytested === selectedProject.panels &&
+              !selectedProject.test?.completed
+          },
         { label: t('tracking_step_shipped'), value: selectedProject.shipping.shipped }
     ] : [];
         
@@ -157,20 +182,17 @@ const TrackingProjects = () => {
             <Stepper alternativeLabel={!isMobile} orientation={isMobile ? 'vertical' : 'horizontal'}>
                 {steps.map((step, index) => (
                     <Step key={index} completed={!!step.value}>
-                        <StepLabel
-                            optional={
-                                step.percent !== undefined && step.percent < 1
-                                    ? <Typography variant="caption">{Math.round(step.percent * 100)}%</Typography>
-                                    : undefined
-                            }
-                        >
-                            {step.label}
-                        </StepLabel>
-                        {isMobile && (
-                                <Typography color={step.value ? 'green' : 'grey'}>
-                                    {step.value ? 'Completed' : 'In Progress'}
-                                </Typography>
-                        )}
+                    <StepLabel
+                        optional={step.optional}
+                        error={step.error}
+                    >
+                        {step.label}
+                    </StepLabel>
+                    {isMobile && (
+                        <Typography color={step.value ? 'green' : 'grey'}>
+                        {step.value ? 'Completed' : 'In Progress'}
+                        </Typography>
+                    )}
                     </Step>
                 ))}
             </Stepper>

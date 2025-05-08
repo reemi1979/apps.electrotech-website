@@ -60,6 +60,8 @@
     "tracking_step_production": "Electrical Assembly",
     "tracking_step_tests": "Tests",
     "tracking_step_shipped": "Shipped",
+    "tracking_step_error_alert": "Contact us for info",
+
 
     "cookie_banner_message": "This site uses cookies to enhance your experience. Click \"Accept All\" to allow all cookies, or \"Customize\" to choose your preferences.",
     "cookie_customize": "Customize cookie preferences",
