@@ -4,6 +4,7 @@ import { Box, Typography, Container } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import ProductsMarkersTypes from './ProductsMarkersTypes';
+import BackgroundBanner from '../../components/BackgroundBanner';
 
 const ProductsMarkers = () => {
   const theme = useTheme();
@@ -11,7 +12,11 @@ const ProductsMarkers = () => {
   const [selected, setSelected] = useState('cables');
 
   return (
-    <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
+    <Box sx={{ position: 'relative' }}>
+      
+    <BackgroundBanner image="photos/lobby.jpg" height={550} top={200} />
+
+<Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
 
       <Typography variant="h6" textAlign="center" sx={{ mt: 2, color: theme.palette.text.primary }}>
         {t('selected_control_panel_help')}
@@ -21,18 +26,19 @@ const ProductsMarkers = () => {
         <ProductsMarkersTypes selected={selected} setSelected={setSelected} />
       </Box>
 
-      <Typography variant="h6" gutterBottom sx={{ color: theme.palette.text.blue }}>
+      <Typography variant="h6" gutterBottom sx={{ color: theme.palette.text.white }}>
         {t(`product_warning_min_order`)}
       </Typography>
 
-      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.secondary }}>
+      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.yellow }}>
         {t(`selected_markers_${selected}_description_title`)}
       </Typography>
 
-      <Typography variant="h6" sx={{ mb: 4, maxWidth: 800, mx: 'auto', color: theme.palette.text.primary }}>
+      <Typography variant="h6" sx={{ mb: 4, maxWidth: 800, mx: 'auto', color: theme.palette.text.white }}>
         {t(`selected_markers_${selected}_description`)}
       </Typography>
     </Container>
+    </Box>
   );
 };
 

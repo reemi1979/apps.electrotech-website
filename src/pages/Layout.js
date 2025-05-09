@@ -42,7 +42,7 @@ const Layout = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundAttachment: 'fixed',
-                animation: backgroundEnabled ? 'fadeBg 25s infinite' : 'none',
+                animation: backgroundEnabled ? 'fadeBg 15s infinite' : 'none',
                 zIndex: 0,
                 pointerEvents: 'none',
             },
@@ -50,7 +50,7 @@ const Layout = () => {
                 '0%': { opacity: 0 },
                 '10%': { opacity: 1 },
                 '15%': { opacity: 1 },
-                '20%': { opacity: 0 },
+                '20%': { opacity: 1 },
                 '100%': { opacity: 0 },
             },
         }}

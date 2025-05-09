@@ -1,29 +1,25 @@
-// src/Home/HomeIndustries.js
+// src/pages/Services/ServicesTypes.js
 
-import React, { useState , useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import BackgroundBanner from '../../components/BackgroundBanner';
 
-const industries = [
-{ src: process.env.PUBLIC_URL + '/photos/industries/a.jpg', titleKey: 'home_industrie_airport_title', descriptionKey: 'home_industrie_airport_description' },
-{ src: process.env.PUBLIC_URL + '/photos/industries/b.jpg', titleKey: 'home_industrie_distribution_title', descriptionKey: 'home_industrie_distribution_description' },
-{ src: process.env.PUBLIC_URL + '/photos/industries/c.jpg', titleKey: 'home_industrie_manufacturing_title', descriptionKey: 'home_industrie_manufacturing_description' },
-{ src: process.env.PUBLIC_URL + '/photos/industries/d.jpg', titleKey: 'home_industrie_oem_title', descriptionKey: 'home_industrie_oem_description' },
-{ src: process.env.PUBLIC_URL + '/photos/industries/e.jpg', titleKey: 'home_industrie_foodpharma_title', descriptionKey: 'home_industrie_foodpharma_description' },
-{ src: process.env.PUBLIC_URL + '/photos/industries/f.jpg', titleKey: 'home_industrie_energy_title', descriptionKey: 'home_industrie_energy_description' },
-{ src: process.env.PUBLIC_URL + '/photos/industries/g.jpg', titleKey: 'home_industrie_mining_title', descriptionKey: 'home_industrie_mining_description' },
-{ src: process.env.PUBLIC_URL + '/photos/industries/h.jpg', titleKey: 'home_industrie_engineer_title', descriptionKey: 'home_industrie_engineer_description' },
-{ src: process.env.PUBLIC_URL + '/photos/industries/i.jpg', titleKey: 'home_industrie_transport_title', descriptionKey: 'home_industrie_transport_description' }
+const services = [
+{ src: process.env.PUBLIC_URL + '/photos/services/a.jpg', titleKey: 'home_service_assy_title', descriptionKey: 'home_service_assy_description' },
+{ src: process.env.PUBLIC_URL + '/photos/services/b.jpg', titleKey: 'home_service_design_title', descriptionKey: 'home_service_design_description' },
+{ src: process.env.PUBLIC_URL + '/photos/services/c.jpg', titleKey: 'home_service_machine_title', descriptionKey: 'home_service_machine_description' },
+{ src: process.env.PUBLIC_URL + '/photos/services/d.jpg', titleKey: 'home_service_prog_title', descriptionKey: 'home_service_prog_description' },
+{ src: process.env.PUBLIC_URL + '/photos/services/e.jpg', titleKey: 'home_service_cnc_title', descriptionKey: 'home_service_cnc_description' },
 ];
 
 const MotionBox = motion(Box);
+const selectedTypeMap = ['assy', 'design', 'machine', 'prog', 'cnc'];
 
-    const HomeIndustries = () => {
+const HomeServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => {
     
-    const [selectedIndex, setSelectedIndex] = useState(0);
     const theme = useTheme();
     const { t } = useTranslation();
     const intervalRef = useRef(null);
@@ -31,7 +27,11 @@ const MotionBox = motion(Box);
 
     const startInterval = () => {
         intervalRef.current = setInterval(() => {
-            setSelectedIndex(prev => (prev + 1) % industries.length);
+            setSelectedIndex(prev => {
+                const newIndex = (prev + 1) % services.length;
+                setSelected(selectedTypeMap[newIndex]); // ✅ Update selected type for photos
+                return newIndex;
+            });
         }, 2000);
     };
 
@@ -47,21 +47,23 @@ const MotionBox = motion(Box);
         setSelectedIndex(index);
         clearInterval(intervalRef.current); // stop auto-switch
         clearTimeout(timeoutRef.current);   // clear timeout si déjà lancé
-    
+        setSelected(selectedTypeMap[index]);
+
         timeoutRef.current = setTimeout(() => {
             startInterval(); // redémarre après 10s
         }, 10000);
     };
 
-    const selected = industries[selectedIndex];
+    const selected = services[selectedIndex];
 
     return (
-    
+
         <Box sx={{ position: 'relative' }}>
               
-        <BackgroundBanner image="photos/lobby.jpg" height={500} top={150} />
-
+            <BackgroundBanner image="photos/yellow.jpg" height={300} top={150} />
+        
             <Box sx={{ px: 2, maxWidth: 1400, mx: 'auto' }}>
+            
                 {/* TITRE FIXE EN HAUT */}
                 <Box
                     sx={{
@@ -76,19 +78,19 @@ const MotionBox = motion(Box);
                     variant="h3"
                     sx={{ mb: 2, color: theme.palette.text.secondary }}
                     >
-                    {t('home_industrie_default_title')}
+                    {t('home_service_default_title')}
                     </Typography>
                     <Typography
                     variant="h4"
                     sx={{ maxWidth: 1400, mx: 'auto', color: theme.palette.text.blue }}
                     >
-                    {t('home_industrie_default_description')}
+                    {t('home_service_default_description')}
                     </Typography>
                 </Box>
 
                 {/* IMAGES EN CERCLES */}
-                <Grid container spacing={2} justifyContent="center" sx={{ mb:2, minHeight: { xs: 400, sm: 'auto' } }}>
-                    {industries.map((item, index) => (
+                <Grid container spacing={2} justifyContent="center" sx={{ mb:2, minHeight: { xs: 270, sm: 'auto' } }}>
+                    {services.map((item, index) => (
                     <Grid item xs={4} sm={4} md={3} lg={2} key={index} textAlign="center">
                         <MotionBox
                         component="img"
@@ -104,28 +106,29 @@ const MotionBox = motion(Box);
                             objectFit: 'cover',
                             mx: 'auto',
                             transition: 'all 0.3s ease-in-out',
-                            transform: selectedIndex === index ? 'scale(1.05)' : 'scale(1)',
-                                boxShadow: selectedIndex === index
+                            transform: selected === item ? 'scale(1.05)' : 'scale(1)',
+                            boxShadow: selectedIndex === index
                                 ? `0 0 15px ${
                                     theme.palette.mode === 'dark'
                                         ? 'rgba(255,255,255,0.6)'
                                         : 'rgba(0,0,0,0.8)'
                                     }`
                                 : 'none',
-                                cursor: 'pointer',
                                 '&:hover': {
-                                transform: 'scale(1.05)', // hover = zoom seulement
-                                },
+                                transform: 'scale(1.05)', // juste le scale
+                            },
+
                         }}
                         />
                     </Grid>
                     ))}
                 </Grid>
 
+
                 <Box
                     sx={{
                     height: 'auto',
-                    minHeight: 140,
+                    minHeight: 160, 
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
@@ -144,19 +147,23 @@ const MotionBox = motion(Box);
                         : 'linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01))',
                     }}
                 >
-                    <Typography variant="h4" sx={{ mb: 1, color: theme.palette.text.secondary }}>
-                    {t(industries[selectedIndex].titleKey)}
-                    </Typography>
-                    <Typography variant="h6" sx={{ color: theme.palette.text.primary }}>
-                    {t(industries[selectedIndex].descriptionKey)}
-                    </Typography>
+                    {selected && (
+                    <>
+                        <Typography variant="h4" sx={{ mb: 1, color: theme.palette.text.secondary }}>
+                        {t(selected.titleKey)}
+                        </Typography>
+                        <Typography variant="h6" sx={{ color: theme.palette.text.primary }}>
+                        {t(selected.descriptionKey)}
+                        </Typography>
+                    </>
+                    )}
                 </Box>
+
             </Box>
+
         </Box>
-
-
     );
 };
 
-export default HomeIndustries;
+export default HomeServicesTypes;
 

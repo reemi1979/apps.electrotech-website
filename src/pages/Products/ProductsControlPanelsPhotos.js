@@ -1,6 +1,6 @@
 // src/pages/Products/ProductsControlPanelsPhotos.js
 import React from 'react';
-import PhotoGallery from '../../components/PhotoGallery';
+import PhotoGallerySlideShow from '../../components/PhotoGallerySlideShow';
 
 const typeFolderMap = {
   standard: 'standard',
@@ -12,7 +12,7 @@ const typeFolderMap = {
 };
 
 const ProductsControlPanelsPhotos = ({ selectedType }) => (
-  <PhotoGallery basePath="photos/products/controlpanels" typeFolderMap={typeFolderMap} selectedType={selectedType} />
+  <PhotoGallerySlideShow basePath="photos/products/controlpanels" typeFolderMap={typeFolderMap} selectedType={selectedType} slidesPerView={2}/>
 );
 
 export default ProductsControlPanelsPhotos;

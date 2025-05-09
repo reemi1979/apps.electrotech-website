@@ -13,6 +13,7 @@
     "services_assembly": "CONTROL PANELS ASSEMBLY",
     "services_cutout": "ENCLOSURE MACHINING",
     "services_machine": "MACHINE INTEGRATION",
+    "service_panel_help":"Hover over a category type to learn more.",
     "about_us_contact": "CONTACT US",
     "about_us_team": "OUR TEAM",
     "about_us_join_us": "JOIN US",
@@ -112,9 +113,8 @@
     "home_service_cnc_title": "Enclosures Machining",
     "home_service_cnc_description": "Precision drilling and machining of enclosures or backplates using our Rittal Perforex CNC machine.",
 
-
     "home_expertise": "Our Expertise",
-    "home_welcome": "Powering the Future of Automation",
+    "home_welcome": "Committed to Excellence",
     "home_content_1" : "Custom Electrical Panel & Automation Solutions",
     "home_content_2" : "At Electrotech, we specialize in designing, manufacturing, and integrating high-quality electrical control panels for industrial automation. Founded in 1997, our Quebec-based company brings 27 years of expertise across multiple industries, delivering custom automation solutions that enhance efficiency, reliability, and safety. We are recognized for our excellence in industrial control and automation engineering, and we are committed to exceeding the expectations of our clients, partners, and employees with professionalism and integrity.",
     "home_contact_us_title" : "General Information",

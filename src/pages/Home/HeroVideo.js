@@ -10,11 +10,13 @@ import { useTheme } from '@mui/material/styles';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 
+
 const HeroVideo = () => {
 
   const { t } = useTranslation();
   const videoRef = useRef(null);
   const videoPath = process.env.PUBLIC_URL + '/video.mp4';
+  const videoPhoto = process.env.PUBLIC_URL + '/video.jpg';
   const [isMuted, setIsMuted] = useState(true);
   const navigate = useNavigate();
   const theme = useTheme();
@@ -30,6 +32,7 @@ const HeroVideo = () => {
 
   return (
     <>
+    
       <div
         className="video-container"
         style={{
@@ -43,9 +46,11 @@ const HeroVideo = () => {
           pointerEvents: 'none',
         }}
       >
+        
         <video
           ref={videoRef}
           src={videoPath}
+          poster={videoPhoto}
           autoPlay
           muted={isMuted}
           loop
@@ -57,6 +62,7 @@ const HeroVideo = () => {
             objectPosition: 'center top'
           }}
         />
+
       </div>
 
       <Box

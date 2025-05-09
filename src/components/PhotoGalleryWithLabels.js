@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Box, Typography, Grid, Modal, Backdrop } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
-import InViewPhotoCard from './InViewPhotoCard'; // 👈 adapte si chemin différent
+import InViewPhotoCard from './InViewPhotoCard';
 import { useTheme } from '@mui/material/styles';
 
 const MotionBox = motion(Box);
@@ -11,6 +11,12 @@ const MotionBox = motion(Box);
 const PhotoGalleryWithLabels = ({ photos }) => {
   const [selected, setSelected] = useState(null);
   const theme = useTheme();
+
+  const isDark = theme.palette.mode === 'dark';
+  const overlayGradient = isDark
+    ? 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)'
+    : 'linear-gradient(to top, rgba(255,255,255,0.7), transparent)';
+  const textShadow = isDark ? '1px 1px 4px rgba(0,0,0,0.8)' : '1px 1px 4px rgba(255,255,255,0.8)';
 
   return (
     <>
@@ -33,7 +39,7 @@ const PhotoGalleryWithLabels = ({ photos }) => {
             slotProps={{
               backdrop: {
                 timeout: 500,
-                sx: { backgroundColor: 'rgba(0, 0, 0, 0.8)' },
+                sx: { backgroundColor: 'rgba(0, 0, 0, 0.8)' }, // stays dark for modal background
               },
             }}
           >
@@ -57,8 +63,8 @@ const PhotoGalleryWithLabels = ({ photos }) => {
                   position: 'relative',
                   borderRadius: 3,
                   overflow: 'hidden',
-                  bgcolor: theme.palette.background.default ?? '#111',
-                  color: theme.palette.text.white ?? 'white',
+                  bgcolor: theme.palette.background.default,
+                  color: theme.palette.text.primary,
                 }}
               >
                 {/* Image */}
@@ -73,7 +79,7 @@ const PhotoGalleryWithLabels = ({ photos }) => {
                   }}
                 />
 
-                {/* Dégradé overlay */}
+                {/* Overlay gradient */}
                 <Box
                   sx={{
                     position: 'absolute',
@@ -81,11 +87,11 @@ const PhotoGalleryWithLabels = ({ photos }) => {
                     left: 0,
                     right: 0,
                     height: '50%',
-                    background: 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)',
+                    background: overlayGradient,
                   }}
                 />
 
-                {/* Texte */}
+                {/* Text on image */}
                 <Box
                   sx={{
                     position: 'absolute',
@@ -99,8 +105,8 @@ const PhotoGalleryWithLabels = ({ photos }) => {
                     variant="caption"
                     sx={{
                       textTransform: 'uppercase',
-                      color: 'white',
-                      textShadow: '1px 1px 4px rgba(0,0,0,0.8)',
+                      color: theme.palette.text.primary,
+                      textShadow: textShadow,
                     }}
                   >
                     {selected.category}
@@ -110,8 +116,8 @@ const PhotoGalleryWithLabels = ({ photos }) => {
                     fontWeight="bold"
                     sx={{
                       mb: 1,
-                      color: 'white',
-                      textShadow: '1px 1px 4px rgba(0,0,0,0.8)',
+                      color: theme.palette.text.primary,
+                      textShadow: textShadow,
                     }}
                   >
                     {selected.title}
@@ -119,8 +125,8 @@ const PhotoGalleryWithLabels = ({ photos }) => {
                   <Typography
                     variant="body1"
                     sx={{
-                      color: 'white',
-                      textShadow: '1px 1px 4px rgba(0,0,0,0.8)',
+                      color: theme.palette.text.primary,
+                      textShadow: textShadow,
                     }}
                   >
                     {selected.description}

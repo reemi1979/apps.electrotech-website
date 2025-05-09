@@ -2,51 +2,55 @@
 
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 import CookieManager from './components/CookieManager';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import Home from './pages/Home/Home';
-import Certification from './pages/Certification/Certification';
-import NewsList from './pages/News/NewsList';
-import NewsDetail from './pages/News/NewsDetail';
-import ProductsControlPanels from './pages/Products/ProductsControlPanels';
-import ProductsCables from './pages/Products/ProductsCables';
-import ProductsMarkers from './pages/Products/ProductsMarkers';
-import ProductsLines from './pages/Products/ProductsLines';
-import Services from './pages/Services/Services';
-import Achievements from './pages/About/Achievements';
-import OurTeam from './pages/About/OurTeam';
 import Layout from './pages/Layout';
-import TrackingProjects from './pages/Tracking/TrackingProjects';
+
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home/Home'));
+const Certification = lazy(() => import('./pages/Certification/Certification'));
+const NewsList = lazy(() => import('./pages/News/NewsList'));
+const NewsDetail = lazy(() => import('./pages/News/NewsDetail'));
+const ProductsControlPanels = lazy(() => import('./pages/Products/ProductsControlPanels'));
+const ProductsCables = lazy(() => import('./pages/Products/ProductsCables'));
+const ProductsMarkers = lazy(() => import('./pages/Products/ProductsMarkers'));
+const ProductsLines = lazy(() => import('./pages/Products/ProductsLines'));
+const Services = lazy(() => import('./pages/Services/Services'));
+const Achievements = lazy(() => import('./pages/About/Achievements'));
+const OurTeam = lazy(() => import('./pages/About/OurTeam'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TrackingProjects = lazy(() => import('./pages/Tracking/TrackingProjects'));
 
 const App = () => {
   return (
     <>
-      
       <Router basename={process.env.PUBLIC_URL}>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/certifications" element={<Certification />} />
-            <Route path="/news" element={<NewsList />} />
-            <Route path="/:slug" element={<NewsDetail />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/products-control-panels" element={<ProductsControlPanels />} />
-            <Route path="/products-cables" element={<ProductsCables />} />
-            <Route path="/products-markers" element={<ProductsMarkers />} />
-            <Route path="/products-lines" element={<ProductsLines />} />
-            <Route path="/services/:index" element={<Services />} />
-            <Route path="/tracking" element={<TrackingProjects />} />
-            <Route path="/tracking/:projectNumber" element={<TrackingProjects />} />
-            <Route path="/achievements" element={<Achievements />} />
-            <Route path="/our-team" element={<OurTeam />} />
-          </Route>
-        </Routes>
+        <Suspense fallback={<div style={{ textAlign: 'center', padding: '2rem' }}>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="/certifications" element={<Certification />} />
+              <Route path="/news" element={<NewsList />} />
+              <Route path="/:slug" element={<NewsDetail />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/products-control-panels" element={<ProductsControlPanels />} />
+              <Route path="/products-cables" element={<ProductsCables />} />
+              <Route path="/products-markers" element={<ProductsMarkers />} />
+              <Route path="/products-lines" element={<ProductsLines />} />
+              <Route path="/services/:index" element={<Services />} />
+              <Route path="/tracking" element={<TrackingProjects />} />
+              <Route path="/tracking/:projectNumber" element={<TrackingProjects />} />
+              <Route path="/achievements" element={<Achievements />} />
+              <Route path="/our-team" element={<OurTeam />} />
+            </Route>
+          </Routes>
+        </Suspense>
       </Router>
 
       <CookieManager />
-
     </>
   );
 };
 
 export default App;
+

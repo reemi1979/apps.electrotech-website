@@ -8,25 +8,25 @@ export const getDesignTokens = (mode) => ({
     background: {
       default: mode === 'dark' 
         ? '#1e1e1e' // ⬛ Dark: fond global
-        : '#f4f4f4', // ⬜ Light: fond global
+        : '#dedede', // ⬜ Light: fond global
 
       paper: mode === 'dark' 
         ? '#2c2c2c' // ⬛ Dark: cards/dialogs
-        : '#ffffff', // ⬜ Light: cards/dialogs
+        : '#dedede', // ⬜ Light: cards/dialogs
 
       white: mode === 'dark' 
-        ? '#ffffff' // ⬜ Light: 
-        : '#ffffff', // ⬜ Light: 
+        ? '#dedede' // ⬜ Light: 
+        : '#dedede', // ⬜ Light: 
 
       contrast: mode === 'dark' 
-        ? '#ffffff' // ⬜ Light: 
+        ? '#dedede' // ⬜ Light: 
         : '#2c2c2c', // ⬛ Light: 
     },
 
     //Requis pour @MUI
     primary: {
       main: '#005A9E',          // 🔵 Dark: Bleu electrotech (Boutons, @Mui components)
-      contrastText: '#ffffff'   // ⚪ Light: Texte sur fond bleu (Boutons, @Mui components)
+      contrastText: '#dedede'   // ⚪ Light: Texte sur fond bleu (Boutons, @Mui components)
     },
 
     //Requis pour @MUI
@@ -38,11 +38,11 @@ export const getDesignTokens = (mode) => ({
 
     divider: mode === 'dark' 
       ? '#444444'               // ⚫ Dark: Gris foncé pour séparation
-      : '#cccccc',              // ⚪ Light: Gris clair pour séparation
+      : '#a8a8a8',              // ⚪ Light: Gris clair pour séparation
 
     text: {
       primary: mode === 'dark' 
-        ? '#FFFFFF'             // ⚪ Dark: white text // SMALL TEXT, PARAGRAPH
+        ? '#dedede'             // ⚪ Dark: white text // SMALL TEXT, PARAGRAPH
         : '#000000',            // ⚫ Light: black text // SMALL TEXT, PARAGRAPH
       secondary: mode === 'dark' 
         ? '#BCBF2C'             // 🟨 Dark: yellow text // TITLE
@@ -51,11 +51,14 @@ export const getDesignTokens = (mode) => ({
         ? '#005A9E'             // 🔵 Dark: always blue text // SUB-TITLE
         : '#005A9E',            // 🔵 Light: always blue text // SUB-TITLE
       white: mode === 'dark' 
-        ? '#cccccc'             // ⚪ Dark: always white text // SUB-TITLE
-        : '#cccccc',            // ⚪ Light: always white text // SUB-TITLE
+        ? '#dedede'             // ⚪ Dark: always white text // SUB-TITLE
+        : '#dedede',            // ⚪ Light: always white text // SUB-TITLE
       black: mode === 'dark' 
         ? '#444444'              // ⚫ Dark: always black text // SUB-TITLE
         : '#444444' ,            // ⚫ Light: always black text // SUB-TITLE
+      yellow: mode === 'dark' 
+        ? '#BCBF2C'              // 🟨 Dark: always yellow text // SUB-TITLE
+        : '#BCBF2C' ,            // 🟨 Light: always yellow text // SUB-TITLE
     },
 
     custom: {

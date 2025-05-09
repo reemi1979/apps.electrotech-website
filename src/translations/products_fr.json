@@ -9,7 +9,8 @@
     "selected_control_panel_help": "Survolez une catégorie pour en savoir plus.",
 
     "selected_control_panel_standard_description_title": "Boitier de contrôle standard",
-    "selected_control_panel_standard_description": "Un panneau de contrôle est conçu pour superviser, gérer et optimiser le fonctionnement de divers systèmes industriels. Il permet d’automatiser des procédés tels que le convoyage, le pompage, le contrôle de moteurs, les lignes de production ou encore les bancs de test. ",
+    "selected_control_panel_standard_description": "Un panneau conçu pour surveiller, contrôler et optimiser des systèmes comme convoyeurs, pompes, moteurs, lignes de production et bancs d’essai."
+,
     
     "selected_control_panel_custom_description_title": "Boitier de contrôle personnalisé",
     "selected_control_panel_custom_description": "Un boîtier conçu sur mesure pour répondre à des besoins uniques, adaptés à chaque projet spécifique.",
@@ -21,7 +22,7 @@
     "selected_control_panel_pushbuttons_description": "Boîtier compact intégrant des boutons-poussoirs robustes pour un contrôle simple, direct et fiable sur le terrain.",
     
     "selected_control_panel_junctionbox_description_title": "Boîte de jonction",
-    "selected_control_panel_junctionbox_description": "Une boîte de jonction est un boîtier électrique conçu pour regrouper, protéger et distribuer les connexions de câbles dans un système automatisé ou une installation électrique. Elle joue un rôle essentiel dans la sécurisation et l’organisation du câblage, tout en assurant une maintenance simplifiée.",
+    "selected_control_panel_junctionbox_description": "Une boîte de jonction regroupe, protège et distribue les connexions électriques, assurant sécurité, organisation et maintenance simplifiée.",
 
     "product_cables_cables_title": "Câbles",
     "product_cables_harness_title": "Harnais",

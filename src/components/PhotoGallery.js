@@ -4,15 +4,17 @@ import React, { useState } from 'react';
 import { Box, Grid, Modal, Backdrop } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import InViewPhotoCard from './InViewPhotoCard';
+import { useTheme } from '@mui/material/styles';
 
 const MotionBox = motion(Box);
 
 const PhotoGallery = ({ basePath, typeFolderMap, selectedType }) => {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
+  const theme = useTheme();
 
   const genPhotos = (folder, count) =>
     Array.from({ length: count }, (_, i) => ({
-      src: `${process.env.PUBLIC_URL}/${basePath}/${folder}/${String.fromCharCode(97 + i)}.jpg`
+      src: `${process.env.PUBLIC_URL}/${basePath}/${folder}/${String.fromCharCode(97 + i)}.jpg`,
     }));
 
   const folder = typeFolderMap[selectedType];
@@ -61,10 +63,10 @@ const PhotoGallery = ({ basePath, typeFolderMap, selectedType }) => {
                 sx={{
                   width: '90vw',
                   maxWidth: 700,
-                  bgcolor: '#111',
+                  bgcolor: theme.palette.background.default,
                   borderRadius: 3,
                   overflow: 'hidden',
-                  color: 'white',
+                  color: theme.palette.text.primary,
                 }}
               >
                 <Box component="img" src={selectedPhoto.src} sx={{ width: '100%' }} />

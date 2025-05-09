@@ -1,13 +1,14 @@
 // src/Home/HomeServices.js
 import React, { useState } from 'react';
-import ServicesTypes from '../Services/ServicesTypes';
+import HomeServicesTypes from './HomeServicesTypes';
+
 
 const HomeServices = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [selected, setSelected] = useState(null);
 
   return (
-    <ServicesTypes
+    <HomeServicesTypes
       selectedIndex={selectedIndex}
       setSelectedIndex={setSelectedIndex}
       setSelected={setSelected}

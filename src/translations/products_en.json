@@ -7,7 +7,7 @@
     "selected_control_panel_help": "Hover over a category type to learn more.",
 
     "selected_control_panel_standard_description_title": "Standard Control Panel",
-    "selected_control_panel_standard_description": "A control panel designed to monitor, manage, and optimize the operation of various industrial systems. It automates processes such as conveyor systems, pumping, motor control, production lines, and test benches.",
+    "selected_control_panel_standard_description": "A panel designed to monitor, control, and optimize industrial systems like conveyors, pumps, motors, production lines, and test benches.",
 
     "selected_control_panel_custom_description_title": "Custom Control Panel",
     "selected_control_panel_custom_description": "A custom-built enclosure designed to meet unique project-specific requirements.",
@@ -19,7 +19,8 @@
     "selected_control_panel_pushbuttons_description": "Compact enclosure with durable push buttons for simple, direct and reliable field control.",
 
     "selected_control_panel_junctionbox_description_title": "Junction Box",
-    "selected_control_panel_junctionbox_description": "A junction box is an electrical enclosure designed to organize, protect, and distribute cable connections in an automated system or electrical installation. It ensures safety, clarity, and ease of maintenance.",
+    "selected_control_panel_junctionbox_description": "A junction box groups, protects, and distributes electrical connections, ensuring safety, organization, and easy maintenance."
+,
 
     "product_cables_cables_title": "Cables",
     "product_cables_harness_title": "Harnesses",

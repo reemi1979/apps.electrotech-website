@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Box } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const imageList = [
   `${process.env.PUBLIC_URL}/photos/achievements/a.jpg`,
@@ -13,7 +14,14 @@ const imageList = [
 
 const AchievementsPhotos = () => {
   const [index, setIndex] = useState(0);
+  const { t } = useTranslation('about');
 
+  const photos = [
+    { src: process.env.PUBLIC_URL + '/photos/achievements/a.jpg', title: t('quality_photos_1_title'), category: t('quality_photos_1_category'), description: t('quality_photos_1_description') },
+    { src: process.env.PUBLIC_URL + '/photos/achievements/b.jpg', title: t('quality_photos_2_title'), category: t('quality_photos_2_category'), description: t('quality_photos_2_description') },
+    { src: process.env.PUBLIC_URL + '/photos/achievements/c.jpg', title: t('quality_photos_3_title'), category: t('quality_photos_3_category'), description: t('quality_photos_3_description') },
+  ];
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % imageList.length);

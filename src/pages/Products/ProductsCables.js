@@ -4,13 +4,21 @@ import { Box, Typography, Container } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import ProductsCablesTypes from './ProductsCablesTypes';
+import BackgroundBanner from '../../components/BackgroundBanner';
+
 
 const ProductsCables = () => {
   const theme = useTheme();
   const { t } = useTranslation('products');
   const [selected, setSelected] = useState('cables'); // valeur par défaut
+ 
 
   return (
+        <Box sx={{ position: 'relative' }}>
+      
+          <BackgroundBanner image="photos/lobby.jpg" height={550} top={200} />
+    
+
     <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
 
       <Typography variant="h6" textAlign="center" sx={{ mt: 2, color: theme.palette.text.primary }}>
@@ -21,18 +29,19 @@ const ProductsCables = () => {
         <ProductsCablesTypes selected={selected} setSelected={setSelected} />
       </Box>
 
-      <Typography variant="h6" gutterBottom sx={{ color: theme.palette.text.blue }}>
+      <Typography variant="h6" gutterBottom sx={{ color: theme.palette.text.white }}>
         {t(`product_warning_min_order`)}
       </Typography>
 
-      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.secondary }}>
+      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.yellow }}>
         {t(`selected_cables_${selected}_description_title`)}
       </Typography>
 
-      <Typography variant="h6" sx={{ mb: 4, maxWidth: 800, mx: 'auto', color: theme.palette.text.primary }}>
+      <Typography variant="h6" sx={{ mb: 4, maxWidth: 800, mx: 'auto', color: theme.palette.text.white }}>
         {t(`selected_cables_${selected}_description`)}
       </Typography>
     </Container>
+    </Box>
   );
 };
 

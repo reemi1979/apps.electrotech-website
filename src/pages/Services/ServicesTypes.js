@@ -26,7 +26,11 @@ const ServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => {
 
     const startInterval = () => {
         intervalRef.current = setInterval(() => {
-            setSelectedIndex(prev => (prev + 1) % services.length);
+            setSelectedIndex(prev => {
+                const newIndex = (prev + 1) % services.length;
+                setSelected(selectedTypeMap[newIndex]); // ✅ Update selected type for photos
+                return newIndex;
+            });
         }, 2000);
     };
 
@@ -54,30 +58,6 @@ const ServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => {
     return (
         <Box sx={{ px: 2, maxWidth: 1400, mx: 'auto' }}>
         
-        {/* TITRE FIXE EN HAUT */}
-        <Box
-            sx={{
-            textAlign: 'center',
-            mb: 6,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-start',
-            }}
-        >
-            <Typography
-            variant="h3"
-            sx={{ mb: 2, color: theme.palette.text.secondary }}
-            >
-            {t('home_service_default_title')}
-            </Typography>
-            <Typography
-            variant="h4"
-            sx={{ maxWidth: 1400, mx: 'auto', color: theme.palette.text.blue }}
-            >
-            {t('home_service_default_description')}
-            </Typography>
-        </Box>
-
         {/* IMAGES EN CERCLES */}
         <Grid container spacing={2} justifyContent="center" sx={{ mb:2, minHeight: { xs: 270, sm: 'auto' } }}>
             {services.map((item, index) => (
@@ -114,44 +94,19 @@ const ServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => {
             ))}
         </Grid>
 
-
-        <Box
-            sx={{
-            height: 'auto',
-            minHeight: 160, 
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            textAlign: 'center',
-            px: 3,
-            py: 2,
-            mx: 'auto',
-            maxWidth: 600,
-            border: `2px solid ${theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.2)'}`,
-            borderRadius: 4,
-            boxShadow: theme.palette.mode === 'dark'
-                ? '0 4px 20px rgba(0,0,0,0.7)'
-                : '0 4px 20px rgba(0,0,0,0.1)',
-            background: theme.palette.mode === 'dark'
-                ? 'linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))'
-                : 'linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01))',
-            }}
-        >
             {selected && (
-            <>
-                <Typography variant="h4" sx={{ mb: 1, color: theme.palette.text.secondary }}>
-                {t(selected.titleKey)}
-                </Typography>
-                <Typography variant="h6" sx={{ color: theme.palette.text.primary }}>
-                {t(selected.descriptionKey)}
-                </Typography>
-            </>
+                <Box sx={{ textAlign: 'center' }}>
+                    <Typography variant="h3" sx={{ mb: 1, color: theme.palette.text.yellow }}>
+                    {t(selected.titleKey)}
+                    </Typography>
+                    <Typography variant="h6" sx={{ color: theme.palette.text.white }}>
+                    {t(selected.descriptionKey)}
+                    </Typography>
+                </Box>
             )}
-        </Box>
 
         </Box>
     );
 };
 
 export default ServicesTypes;
-

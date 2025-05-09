@@ -1,8 +1,10 @@
 // src/Home/HomePhotos.js
 
 import React from 'react';
+import { Box } from '@mui/material';
 import PhotoGalleryWithLabels from '../../components/PhotoGalleryWithLabels';
 import { useTranslation } from 'react-i18next';
+import BackgroundBanner from '../../components/BackgroundBanner';
 
 const HomePhotos = () => {
   const { t } = useTranslation();
@@ -16,7 +18,12 @@ const HomePhotos = () => {
     { src: process.env.PUBLIC_URL + '/photos/home/f.svg', title: t('home_photos_6_title'), category: t('home_photos_6_category'), description: t('home_photos_6_description') },
   ];
 
-  return <PhotoGalleryWithLabels photos={photos} />;
+  return (
+    <Box sx={{ position: 'relative' }}>
+      <BackgroundBanner image="photos/blue.jpg" height={300} top={150} />
+        <PhotoGalleryWithLabels photos={photos} />
+    </Box>
+  );
 };
 
 export default HomePhotos;

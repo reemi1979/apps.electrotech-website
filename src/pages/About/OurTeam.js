@@ -1,11 +1,12 @@
 // src/pages/About/Ourteam.js
 
-import React, { useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Box, Typography, Container, Button, Grid } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { Divider } from '@mui/material';
+import BackgroundBanner from '../../components/BackgroundBanner';
 
 const teamMembers = [
   {
@@ -28,27 +29,78 @@ const teamMembers = [
     fullname: 'Jérôme Fortin',
     img: 'jerome.jpg',
   },
+  {
+    key: 'remi',
+    fullname: 'Rémi Gauvin',
+    img: 'remi.jpg',
+  },
+  {
+    key: 'gabriel',
+    fullname: 'Gabriel Potvin',
+    img: 'gab.jpg',
+  },
+  {
+    key: 'jpd',
+    fullname: 'Jean-Philippe Duval',
+    img: 'jpd.jpg',
+  },
+  {
+    key: 'alex',
+    fullname: 'Alex Mailhot',
+    img: 'alex.jpg',
+  },
+  {
+    key: 'martine',
+    fullname: 'Martine Lecours',
+    img: 'martine.jpg',
+  },
+  {
+    key: 'pascal',
+    fullname: 'Pascal Fleury',
+    img: 'pascal.jpg',
+  },
+  {
+    key: 'jocelyn',
+    fullname: 'Jocelyn Lamarre',
+    img: 'jocelyn.jpg',
+  },
 ];
 
 const OurTeam = () => {
   const theme = useTheme();
   const { t } = useTranslation('about');
+  const [bannerTop, setBannerTop] = useState(200);
+  const titleRef = useRef(null);
   const [hoveredMember, setHoveredMember] = useState(null);
 
+  useEffect(() => {
+    if (titleRef.current) {
+      const titleRect = titleRef.current.getBoundingClientRect();
+      const scrollTop = window.scrollY || window.pageYOffset;
+      const top = titleRect.top + scrollTop;
+      setBannerTop(top);
+    }
+  }, []);
+
+
   return (
+
+    <Box sx={{ position: 'relative' }}>
+      
+    <BackgroundBanner image="photos/ourteam/bg1.jpg" height={500} top={bannerTop} />
+
     <Container sx={{ py: 8 }}>
       {/* Centered title + intro */}
-      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.blue, mt: 10, textAlign: 'center' }}>
+
+      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.blue, mt: 5, textAlign: 'center' }}>
         {t('our_team_title_page')}
       </Typography>
 
-      <Typography variant="h6" component="p" sx={{ maxWidth: 800, mx: 'auto', mb: 4, textAlign: 'center' }}>
+      <Typography ref={titleRef} variant="h6" component="p" sx={{ color: theme.palette.text.white, maxWidth: 800, mx: 'auto', mb: 4, textAlign: 'center' }}>
         {t('our_team_intro')}
       </Typography>
 
-      {/* Team members (kept in center block) */}
-      <Container sx={{ py: 8, textAlign: 'center' }}>
-      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.blue, mt: 1 }}>
+      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.white, mt: 1, mb: 4, textAlign: 'center' }}>
         {t('our_team_team_title')}
       </Typography>
 
@@ -86,7 +138,8 @@ const OurTeam = () => {
                   objectFit: 'cover',
                 }}
               />
-            </Box>
+            </Box >
+            <Box sx={{ textAlign: 'center' }}>
             <Typography
               variant="h6"
               sx={{
@@ -109,11 +162,13 @@ const OurTeam = () => {
             >
               {t(`our_team_${member.key}_title`)}
             </Typography>
-
+            </Box>
           </Grid>
 
         ))}
       </Grid>
+
+      {/* <Container sx={{ py: 8, textAlign: 'center' }}>
 
       <Box sx={{ mt: 2, minHeight: 50, maxWidth: 600, mx: 'auto' }}>
         <Typography variant="body1" sx={{ color: theme.palette.text.primary }}>
@@ -121,8 +176,7 @@ const OurTeam = () => {
         </Typography>
       </Box>
 
-
-    </Container>
+    </Container> */}
 
       {/* ALL TO LEFT FROM HERE ↓↓↓ */}
 
@@ -166,6 +220,7 @@ const OurTeam = () => {
         </Button>
       </Box>
     </Container>
+    </Box>
   );
 };
 

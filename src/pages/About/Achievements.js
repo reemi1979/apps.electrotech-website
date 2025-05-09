@@ -1,19 +1,39 @@
 // src/pages/Achievements/Achievements.js
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Box, Typography, Container, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { Divider } from '@mui/material';
 import Slideshow from './AchievementsPhotos';
+import BackgroundBanner from '../../components/BackgroundBanner';
 
 const Achievements = () => {
   const theme = useTheme();
   const { t } = useTranslation('achievements');
+  const slideshowRef = useRef(null);
+  const [bannerTop, setBannerTop] = useState(350);
+
+  // Measure slideshow vertical center
+  useEffect(() => {
+    if (slideshowRef.current) {
+      const rect = slideshowRef.current.getBoundingClientRect();
+      const scrollTop = window.scrollY || window.pageYOffset;
+      const center = rect.top + scrollTop + rect.height / 2 - 100; // Adjusted offset
+      setBannerTop(center);
+    }
+  }, []);
 
   return (
+
+    <Box sx={{ position: 'relative' }}>
+      <BackgroundBanner image="photos/blue.jpg" height={100} top={bannerTop} />
+
     <Container sx={{ py: 8 }}>
-      {/* Centered title and intro */}
+      {/* Centered title and intro */}    
+      
+ 
+
       <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.blue, mt: 10, textAlign: 'center' }}>
         {t('achievements_title')}
       </Typography>
@@ -26,24 +46,9 @@ const Achievements = () => {
         {t('achievements_intro')}
       </Typography>
 
-      {/* <Box
-        component="img"
-        src={`${process.env.PUBLIC_URL}/photos/achievements/a.jpg`} 
-        alt="Achievements Banner"
-        sx={{
-          width: '100%',
-          maxWidth: 1000,
-          height: 'auto',
-          aspectRatio: '3 / 1',
-          objectFit: 'cover',
-          borderRadius: 4,
-          display: 'block',
-          mx: 'auto',
-          mb: 4,
-        }}
-      /> */}
-
-      <Slideshow />
+        <Box ref={slideshowRef}>
+          <Slideshow />
+        </Box>
 
       <Divider sx={{ my: 2, borderColor: 'text.secondary', borderBottomWidth: 2 }} />
 
@@ -128,7 +133,9 @@ const Achievements = () => {
           </Button>
         </Box>
       </Box>
+      
     </Container>
+    </Box>
   );
 };
 

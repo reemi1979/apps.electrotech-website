@@ -6,7 +6,7 @@ import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { isMobile } from 'react-device-detect';
-
+import LazyLoad from 'react-lazyload';
 import HeroVideo from './HeroVideo';
 import HomePhotos from './HomePhotos';
 import HomeIndustries from './HomeIndustries';
@@ -42,7 +42,10 @@ const Home = () => {
         <>
 
         <Box id="section1" sx={{ position: 'relative', zIndex: 0, height: '100vh' }}>
+            
+        <LazyLoad once>
             <HeroVideo />
+        </LazyLoad>
             
             <Box
                 sx={{
@@ -67,7 +70,7 @@ const Home = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
             >
-            <Box
+            <LazyLoad once><Box
                 component="img"
                 src={process.env.PUBLIC_URL + '/logos/logo.svg'}
                 alt="Électrotech Logo"
@@ -82,7 +85,7 @@ const Home = () => {
                     filter: isDark ? 'none' : 'brightness(0)', // ✅ couleur en dark, noir en light
                 }
                 }}
-            />
+            /></LazyLoad>
             </motion.div>
 
             <Typography variant="h3" sx={{ mt:2, mb: 2 , color: theme.palette.text.secondary }}>
@@ -100,17 +103,16 @@ const Home = () => {
         </Box>
             
 
-        <Box id="section3" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
+        <Box id="section3" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto', }}>
 
             <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
-                {t('home_expertise')}
-                <HomePhotos />
+                {t('home_expertise')}     
             </Typography>
-
+            <LazyLoad once><HomePhotos /></LazyLoad>
         </Box>
 
 
-        <Box id="section4" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
+        <Box id="section4" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto', }}>
 
             <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
                 <HomeIndustries />
@@ -119,14 +121,13 @@ const Home = () => {
         </Box>   
             
 
-        <Box id="section5" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
+            <Box id="section5" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto', }}>
 
-            <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
-                <HomeServices />
-            </Typography>
+                <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
+                    <HomeServices />
+                </Typography>
 
-        </Box>
-
+            </Box>
   
         <Box id="section6" sx={{ minHeight: '80vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
 

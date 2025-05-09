@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import ProductsControlPanelsTypes from './ProductsControlPanelsTypes';
 import { useTheme } from '@mui/material/styles';
 import ProductsControlPanelsPhotos from './ProductsControlPanelsPhotos';
+import BackgroundBanner from '../../components/BackgroundBanner';
 
 const ProductsControlPanels = () => {
   const theme = useTheme();
@@ -13,27 +14,34 @@ const ProductsControlPanels = () => {
   const [selected, setSelected] = useState('standard'); // valeur par défaut
 
   return (
-    <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
+    <Box sx={{ position: 'relative' }}>
+  
+      <BackgroundBanner image="photos/lobby.jpg" height={550} top={200} />
 
-      <Typography variant="h6" textAlign="center" sx={{ mt: 2, color: theme.palette.text.primary }}>
-        {t('selected_control_panel_help')}
-      </Typography>
 
-      <Box sx={{ textAlign: 'left' , maxWidth: 800, mx: 'auto' }}>
-        <ProductsControlPanelsTypes selected={selected} setSelected={setSelected} />
-      </Box>
+      <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
 
-      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.secondary }}>
-        {t(`selected_control_panel_${selected}_description_title`)}
-      </Typography>
+        <Typography variant="h6" textAlign="center" sx={{ mt: 2, color: theme.palette.text.primary }}>
+          {t('selected_control_panel_help')}
+        </Typography>
 
-      <Typography variant="h6" sx={{ mb: 4, minHeight: 100, maxWidth: 800, mx: 'auto', color: theme.palette.text.primary }}>
-        {t(`selected_control_panel_${selected}_description`)}
-      </Typography>
+        <Box sx={{ textAlign: 'left' , maxWidth: 800, mx: 'auto' }}>
+          <ProductsControlPanelsTypes selected={selected} setSelected={setSelected} />
+        </Box>
 
-      <ProductsControlPanelsPhotos selectedType={selected} />
-      
-    </Container>
+        <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.yellow }}>
+          {t(`selected_control_panel_${selected}_description_title`)}
+        </Typography>
+
+        <Typography variant="h6" sx={{ mb: 4, minHeight: 100, maxWidth: 800, mx: 'auto', color: theme.palette.text.white }}>
+          {t(`selected_control_panel_${selected}_description`)}
+        </Typography>
+
+        <ProductsControlPanelsPhotos selectedType={selected} />
+        
+      </Container>
+
+    </Box>
   );
 };
 

@@ -1,9 +1,10 @@
 // src/pages/Products/ProductsLines.js
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Box, Typography, Container, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
+import BackgroundBanner from '../../components/BackgroundBanner';
 
 const MotionBox = motion(Box);
 
@@ -37,61 +38,103 @@ const manufacturers = [
 const ProductsLines = () => {
   const { t } = useTranslation('products');
   const theme = useTheme();
+  const firstLogoRef = useRef(null);
+  const [bannerTop, setBannerTop] = useState(400);
+
+  useEffect(() => {
+    const updateBannerPosition = () => {
+      if (firstLogoRef.current) {
+        const rect = firstLogoRef.current.getBoundingClientRect();
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const topPosition = rect.top + scrollTop;
+        setBannerTop(topPosition + 50);
+      }
+    };
   
+    // Run after render + layout
+    const raf = requestAnimationFrame(updateBannerPosition);
+  
+    // Update on resize
+    window.addEventListener('resize', updateBannerPosition);
+  
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('resize', updateBannerPosition);
+    };
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (firstLogoRef.current) {
+        const rect = firstLogoRef.current.getBoundingClientRect();
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const topPosition = rect.top + scrollTop;
+        setBannerTop(topPosition + 50);
+      }
+    }, 100); // 100ms delay to allow layout
+  
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
-   
-      <Typography
-          variant="h3"
-          gutterBottom
-          sx={{ mt:6 , color: theme.palette.text.secondary }}
-      >
-        {t('products_lines_section_title')}
-      </Typography>
-      <Typography variant="h6" sx={{ maxWidth: 800, mx: 'auto'}}>
-        {t('products_lines_section_description')}
-      </Typography>
+    <Box sx={{ position: 'relative' }}>
+      <BackgroundBanner image="photos/lobby.jpg" height={350} top={bannerTop} />
 
-      <Typography variant="h6" gutterBottom sx={{ mb: 6, color: theme.palette.text.blue }}>
-        {t(`brands_warning_min_order`)}
-      </Typography>
+      <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
+        <Typography variant="h3" gutterBottom sx={{ mt: 6, color: theme.palette.text.secondary }}>
+          {t('products_lines_section_title')}
+        </Typography>
+        <Typography variant="h6" sx={{ maxWidth: 800, mx: 'auto' }}>
+          {t('products_lines_section_description')}
+        </Typography>
 
-      <Grid container spacing={4} justifyContent="center">
-        {manufacturers.map((item, index) => (
-          <Grid item xs={6} sm={4} md={3} lg={2} key={index} textAlign="center">
-                <MotionBox
-                  component="img"
-                  src={item.logo}
-                  alt={item.name}
-                  title={item.name}
-                  sx={{
-                    width: 100,
-                    height: 100,
-                    objectFit: 'contain', 
-                    backgroundColor: theme.palette.background.white,
-                    borderRadius: 2, 
-                    p: 1, 
-                    mx: 'auto',
-                    transition: 'all 0.3s ease-in-out',
-                    transform: 'scale(1)',
-                    '&:hover': {
-                      transform: 'scale(1.05)',
-                      boxShadow: '0 0 15px rgba(255,255,255,0.6)',
-                    }
-                  }}
-                />
+        <Typography variant="h6" gutterBottom sx={{ mb: 6, color: theme.palette.text.blue }}>
+          {t(`brands_warning_min_order`)}
+        </Typography>
 
+        <Grid container spacing={4} justifyContent="center">
+          {manufacturers.map((item, index) => (
+            <Grid
+              item
+              xs={6}
+              sm={4}
+              md={3}
+              lg={2}
+              key={index}
+              textAlign="center"
+              ref={index === 0 ? firstLogoRef : null}
+            >
+              <MotionBox
+                component="img"
+                src={item.logo}
+                alt={item.name}
+                title={item.name}
+                sx={{
+                  width: 100,
+                  height: 100,
+                  objectFit: 'contain',
+                  backgroundColor: theme.palette.background.white,
+                  borderRadius: 2,
+                  p: 1,
+                  mx: 'auto',
+                  transition: 'all 0.3s ease-in-out',
+                  transform: 'scale(1)',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 0 15px rgba(255,255,255,0.6)',
+                  },
+                }}
+              />
+              <Typography variant="subtitle1" sx={{ mt: 1, color: theme.palette.text.primary }}>
+                {item.name}
+              </Typography>
+            </Grid>
+          ))}
+        </Grid>
 
-            <Typography variant="subtitle1" sx={{ mt: 1 , color: theme.palette.text.primary }}>
-              {item.name}
-            </Typography>
-          </Grid>
-        ))}
-      </Grid>
-
-      <Typography
-        variant="caption"
-        sx={{
+        <Typography
+          variant="caption"
+          sx={{
             mt: 6,
             fontStyle: 'italic',
             fontSize: '1.2rem',
@@ -99,13 +142,13 @@ const ProductsLines = () => {
             maxWidth: 800,
             mx: 'auto',
             display: 'block',
-            textAlign: 'center'
-        }}
+            textAlign: 'center',
+          }}
         >
-        {t('brands_trademark_note')}
+          {t('brands_trademark_note')}
         </Typography>
-
-    </Container>
+      </Container>
+    </Box>
   );
 };
 

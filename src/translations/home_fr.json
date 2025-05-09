@@ -13,6 +13,7 @@
     "services_assembly": "ASSEMBLAGE BOITIERS",
     "services_cutout": "PERÇAGE CABINETS",
     "services_machine": "INTÉGRATION MACHINE",
+    "service_panel_help":"Survolez une catégorie pour en savoir plus.",
     "about_us_contact": "NOUS CONTACTER",
     "about_us_team": "NOTRE ÉQUIPE",
     "about_us_join_us": "REJOIGNEZ-NOUS",
@@ -80,7 +81,7 @@
     "home_content_main": "Contenu principal après le Hero.",
 
     "home_expertise": "Notre expertise",
-    "home_welcome": "Propulser l’avenir de l’automatisation",
+    "home_welcome": "À la recherche de l’excellence",
     "home_content_1": "Solutions sur mesure en panneaux électriques et automatisation",
     "home_content_2": "Chez Electrotech, nous sommes spécialisés dans la conception, la fabrication et l'intégration de panneaux de contrôle électriques de haute qualité pour l'automatisation industrielle. Fondée en 1997, notre entreprise québécoise possède 27 ans d'expertise dans de multiples secteurs, offrant des solutions d'automatisation sur mesure qui améliorent l'efficacité, la fiabilité et la sécurité. Nous sommes reconnus pour notre excellence en contrôle industriel et en ingénierie d'automatisation, et nous nous engageons à dépasser les attentes de nos clients, partenaires et employés avec professionnalisme et intégrité.",
     "home_contact_us_title" : "Information générale",
