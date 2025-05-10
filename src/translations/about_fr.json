@@ -1,6 +1,6 @@
 {
     "since": "Depuis",
-    "our_team_title_page": "Rencontrez Notre Équipe",
+    "our_team_title_page": "Notre Équipe",
     "our_team_intro": "Les experts derrière vos solutions d’automatisation. Chez Electrotech Automatisation Industrielle, notre équipe est la force motrice de notre succès. Avec une passion commune pour l’innovation, la précision et la fiabilité, nous travaillons ensemble pour offrir à nos clients des solutions d’automatisation de panneaux électriques de première qualité.",
     "our_team_leadership_title": "Notre Direction",
 
@@ -26,10 +26,11 @@
     "our_team_job_button": "Voir les Offres d’Emploi",
     "our_team_remi_title": "TI & Projets",
     "our_team_gabriel_title": "Chef des Ventes",
-    "our_team_alex_title": "Designer",
-    "our_team_jpd_title": "Contrôleur",
+    "our_team_alex_title": "Concepteur",
+    "our_team_jpd_title": "Contrôleur Financier",
     "our_team_pascal_title": "Chef d’expédition",
     "our_team_jocelyn_title": "Chef Qualité",
-    "our_team_martine_title": "Acheteuse"
+    "our_team_martine_title": "Acheteuse",
+    "our_team_jpp_title": "Concepteur & Projets"
   }
   

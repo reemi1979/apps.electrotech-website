@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import { Divider } from '@mui/material';
 import Slideshow from './AchievementsPhotos';
 import BackgroundBanner from '../../components/BackgroundBanner';
+import AchievementsAccordion from './AchievementsAccordion';
+
 
 const Achievements = () => {
   const theme = useTheme();
@@ -30,9 +32,9 @@ const Achievements = () => {
       <BackgroundBanner image="photos/blue.jpg" height={100} top={bannerTop} />
 
     <Container sx={{ py: 8 }}>
-      {/* Centered title and intro */}    
-      
- 
+      {/* Centered title and intro */}
+
+
 
       <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.blue, mt: 10, textAlign: 'center' }}>
         {t('achievements_title')}
@@ -52,88 +54,8 @@ const Achievements = () => {
 
       <Divider sx={{ my: 2, borderColor: 'text.secondary', borderBottomWidth: 2 }} />
 
-      {/* Left-aligned content */}
-      <Box sx={{ maxWidth: 800, mx: 'auto', textAlign: 'left' }}>
-        <Box sx={{ my: 4 }}>
-          <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-            {t('key_milestones_title')}
-          </Typography>
+<AchievementsAccordion />
 
-          <Typography variant="h5" sx={{ color: theme.palette.text.blue }}>
-            {t('milestone_1_title')}
-          </Typography>
-          <Typography variant="h6" component="p">{t('milestone_1_desc')}</Typography>
-
-          <Typography variant="h5" sx={{ color: theme.palette.text.blue, mt: 2 }}>
-            {t('milestone_2_title')}
-          </Typography>
-          <Typography variant="h6" component="p">{t('milestone_2_desc')}</Typography>
-
-          <Typography variant="h5" sx={{ color: theme.palette.text.blue, mt: 2 }}>
-            {t('milestone_3_title')}
-          </Typography>
-          <Typography variant="h6" component="p">{t('milestone_3_desc')}</Typography>
-
-          <Typography variant="h5" sx={{ color: theme.palette.text.blue, mt: 2 }}>
-            {t('milestone_4_title')}
-          </Typography>
-          <Typography variant="h6" component="p">{t('milestone_4_desc')}</Typography>
-        </Box>
-
-        <Box sx={{ my: 4 }}>
-          <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-            {t('client_testimonials_title')}
-          </Typography>
-
-          <Typography variant="h6" component="p">{t('testimonial_1')}</Typography>
-          <Typography variant="h6" component="p" sx={{ mt: 1 }}>
-            {t('testimonial_2')}
-          </Typography>
-        </Box>
-
-        <Box sx={{ my: 4 }}>
-          <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-            {t('at_a_glance_title')}
-          </Typography>
-
-            <Box textAlign="left" sx={{ maxWidth: 800, mx: 'auto' }}>
-            <ul>
-              <li><Typography variant="h6" component="p">{t('glance_1')}</Typography></li>
-              <li><Typography variant="h6" component="p">{t('glance_2')}</Typography></li>
-              <li><Typography variant="h6" component="p">{t('glance_3')}</Typography></li>
-              <li><Typography variant="h6" component="p">{t('glance_4')}</Typography></li>
-              <li><Typography variant="h6" component="p">{t('glance_5')}</Typography></li>
-            </ul>
-          </Box>
-        </Box>
-
-        <Box sx={{ my: 4 }}>
-          <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-            {t('why_proud_title')}
-          </Typography>
-          <Typography variant="h6" component="p">
-            {t('why_proud_desc')}
-          </Typography>
-        </Box>
-
-        <Box sx={{ my: 4 }}>
-          <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-            {t('work_with_us_title')}
-          </Typography>
-          <Typography variant="h6" component="p" sx={{ mb: 2 }}>
-            {t('work_with_us_desc')}
-          </Typography>
-          <Button
-            component={Link}
-            to="/contact-us"
-            variant="contained"
-            color="primary"
-          >
-            {t('contact_us_button')}
-          </Button>
-        </Box>
-      </Box>
-      
     </Container>
     </Box>
   );

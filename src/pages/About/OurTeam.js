@@ -7,6 +7,7 @@ import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { Divider } from '@mui/material';
 import BackgroundBanner from '../../components/BackgroundBanner';
+import OurTeamAccordion from './OurTeamAccordion';
 
 const teamMembers = [
   {
@@ -64,6 +65,11 @@ const teamMembers = [
     fullname: 'Jocelyn Lamarre',
     img: 'jocelyn.jpg',
   },
+  {
+    key: 'jpp',
+    fullname: 'Jean-Patrick Picotte',
+    img: 'jpp.jpg',
+  },
 ];
 
 const OurTeam = () => {
@@ -87,7 +93,7 @@ const OurTeam = () => {
 
     <Box sx={{ position: 'relative' }}>
       
-    <BackgroundBanner image="photos/ourteam/bg1.jpg" height={500} top={bannerTop} />
+    <BackgroundBanner image="photos/ourteam/bg1.jpg" height={300} top={bannerTop} />
 
     <Container sx={{ py: 8 }}>
       {/* Centered title + intro */}
@@ -96,12 +102,8 @@ const OurTeam = () => {
         {t('our_team_title_page')}
       </Typography>
 
-      <Typography ref={titleRef} variant="h6" component="p" sx={{ color: theme.palette.text.white, maxWidth: 800, mx: 'auto', mb: 4, textAlign: 'center' }}>
+      <Typography ref={titleRef} variant="h6" component="p" sx={{ color: theme.palette.text.white, maxWidth: 800, mx: 'auto', mb: 10, textAlign: 'center' }}>
         {t('our_team_intro')}
-      </Typography>
-
-      <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.white, mt: 1, mb: 4, textAlign: 'center' }}>
-        {t('our_team_team_title')}
       </Typography>
 
       <Grid container spacing={4} justifyContent="center">
@@ -120,12 +122,11 @@ const OurTeam = () => {
                 width: 150,
                 height: 150,
                 mx: 'auto',
-                borderRadius: '50%',
                 overflow: 'hidden',
                 transition: 'transform 0.6s ease',
-                '&:hover': {
-                  transform: 'scale(1.3)',
-                },
+                  '&:hover': {
+                    transform: 'scale(1.3)',
+                  },
               }}
             >
               <Box
@@ -133,9 +134,11 @@ const OurTeam = () => {
                 src={`${process.env.PUBLIC_URL}/photos/ourteam/${member.img}`}
                 alt={member.fullname}
                 sx={{
-                  width: '100%',
+                  width: '104%',
                   height: '100%',
-                  objectFit: 'cover',
+                  objectFit: 'cover', 
+                  marginLeft: '-2%',
+                  borderRadius: '10%',
                 }}
               />
             </Box >
@@ -182,43 +185,8 @@ const OurTeam = () => {
 
       <Divider sx={{ my: 2, borderColor: 'text.secondary', borderBottomWidth: 2 }} />
 
-      <Box sx={{ my: 4, textAlign: 'left', maxWidth: 800, mx: 'auto' }}>
-        
-      <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-          {t('our_team_team_others')}
-        </Typography>
+      <OurTeamAccordion></OurTeamAccordion>
 
-        <Typography variant="h6" component="p">🔹 {t('our_team_designers')}</Typography>
-        <Typography variant="h6" component="p">🔹 {t('our_team_technicians')}</Typography>
-        <Typography variant="h6" component="p">🔹 {t('our_team_sales')}</Typography>
-        <Typography variant="h6" component="p">🔹 {t('our_team_managers')}</Typography>
-      </Box>
-
-      <Box sx={{ my: 4, textAlign: 'left', maxWidth: 800, mx: 'auto' }}>
-        <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-          {t('our_team_commitment_title')}
-        </Typography>
-        <Typography variant="h6" component="p">
-          {t('our_team_commitment_desc')}
-        </Typography>
-      </Box>
-
-      <Box sx={{ my: 4, textAlign: 'left', maxWidth: 800, mx: 'auto' }}>
-        <Typography variant="h4" gutterBottom sx={{ color: theme.palette.text.blue }}>
-          {t('our_team_join_title')}
-        </Typography>
-        <Typography variant="h6" component="p" sx={{ mb: 2 }}>
-          {t('our_team_join_desc')}
-        </Typography>
-        <Button
-          component={Link}
-          to="/join-us"
-          variant="contained"
-          color="primary"
-        >
-          {t('our_team_job_button')}
-        </Button>
-      </Box>
     </Container>
     </Box>
   );

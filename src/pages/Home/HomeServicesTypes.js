@@ -60,10 +60,10 @@ const HomeServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => 
 
         <Box sx={{ position: 'relative' }}>
               
-            <BackgroundBanner image="photos/yellow.jpg" height={300} top={150} />
+            
         
             <Box sx={{ px: 2, maxWidth: 1400, mx: 'auto' }}>
-            
+            <BackgroundBanner image="photos/blue.jpg" height={250} top={0} />
                 {/* TITRE FIXE EN HAUT */}
                 <Box
                     sx={{
@@ -76,13 +76,13 @@ const HomeServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => 
                 >
                     <Typography
                     variant="h3"
-                    sx={{ mb: 2, color: theme.palette.text.secondary }}
+                    sx={{ mb: 2, color: theme.palette.text.white }}
                     >
                     {t('home_service_default_title')}
                     </Typography>
                     <Typography
                     variant="h4"
-                    sx={{ maxWidth: 1400, mx: 'auto', color: theme.palette.text.blue }}
+                    sx={{ maxWidth: 1400, mx: 'auto', color: theme.palette.text.white }}
                     >
                     {t('home_service_default_description')}
                     </Typography>
@@ -102,7 +102,7 @@ const HomeServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => 
                             willChange: 'transform',
                             width: 100,
                             height: 100,
-                            borderRadius: '50%',
+                            borderRadius: '10%',
                             objectFit: 'cover',
                             mx: 'auto',
                             transition: 'all 0.3s ease-in-out',

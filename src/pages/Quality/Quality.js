@@ -1,4 +1,4 @@
-// src/pages/Certification/Certification.js
+// src/pages/Quality/Quality.js
 import React, { useState, useEffect, useRef } from 'react';
 import { Box, Typography, Grid, Container, Fade } from '@mui/material';
 import { useTranslation } from 'react-i18next';
@@ -9,10 +9,12 @@ import ulLogo from '../../assets/ul_light-gray.svg';
 import QualityPhotos from './QualityPhotos';
 import { useTheme } from '@mui/material/styles';
 import ScrollToNextSectionButton from '../../components/ScrollToNextSectionButton';
+import BackgroundBanner from '../../components/BackgroundBanner';
+import QualityFlipBox1 from './QualityFlipBox1';
 
 const MotionBox = motion(Box);
 
-const Certification = () => {
+const Quality = () => {
 
     const theme = useTheme();
     const { t } = useTranslation('quality');
@@ -21,6 +23,8 @@ const Certification = () => {
     const [fadeIn, setFadeIn] = useState(true);
     const isDark = theme.palette.mode === 'dark';
     const [selected, setSelected] = useState(null);
+    const logoContainerRef = useRef(null);
+    const [bannerTop, setBannerTop] = useState(300);
 
     const messages = [
         { src: process.env.PUBLIC_URL + '/photos/certifications/a.jpg', titleKey: 'quality_photos_1_title', descriptionKey: 'quality_photos_1_description' },
@@ -90,10 +94,21 @@ const Certification = () => {
         return () => clearInterval(interval);
     }, [availableCerts.length]);
 
+    useEffect(() => {
+        if (logoContainerRef.current) {
+        const rect = logoContainerRef.current.getBoundingClientRect();
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const centerY = rect.top + scrollTop + rect.height / 2;
+        setBannerTop(centerY - 25); // center minus half banner height (assuming 50px height)
+        }
+    }, []);
+
     const currentKey = availableCerts[currentIndex];
     const currentCert = certifications[currentKey];
 
     return (
+
+<>
     <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
 
         <Box id="section1" sx={{ minHeight: '100vh', position: 'relative', px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
@@ -101,18 +116,21 @@ const Certification = () => {
             <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.secondary, mt: 1 }}>
                 {t('certification_title')}
             </Typography>
-            <Typography variant="h6" sx={{ mb: 1, maxWidth: 800, mx: 'auto', color: theme.palette.text.primary }}>
+            {/* <Typography variant="h6" sx={{ mb: 1, maxWidth: 800, mx: 'auto', color: theme.palette.text.primary }}>
                 {t('certification_title_description')}
-            </Typography>
+            </Typography> */}
+
+            
 
             <Fade in={fadeIn} timeout={500}>
                 <Box
                     component="img"
+                    ref={logoContainerRef}
                     src={currentCert.logo}
                     alt={`${currentKey.toUpperCase()} Certification Logo`}
                     sx={{
-                    width: 150,
-                    height: 150,
+                    width: { xs: 200, sm: 350, md: 500 },   // ⬅ responsive widths
+                    height: { xs: 200, sm: 350, md: 500 },  // ⬅ responsive heights
                     mb: 2,
                     animation: 'pulse 2s ease-in-out infinite',
                     filter: isDark ? 'none' : 'invert(1)',
@@ -123,9 +141,10 @@ const Certification = () => {
             <Typography variant="h4" sx={{  mt: 2 , color: theme.palette.text.secondary }}>
                 <strong>{currentCert.name}</strong><br />
             </Typography>
-            <Typography variant="h6" sx={{ mt: 2 , color: theme.palette.text.primary }}>
+
+            {/* <Typography variant="h6" sx={{ mt: 2 , color: theme.palette.text.primary }}>
                 {t('certification_issuing_org')}: {currentCert.organization}<br />
-            </Typography>
+            </Typography> */}
 
             <Typography 
                 variant="body2" 
@@ -138,9 +157,19 @@ const Certification = () => {
                 {currentCert.trademark}
             </Typography>
 
+        
+
+        </Box>
+                
+        <Box id="section2" sx={{ minHeight: '100vh', display: 'flex',alignItems: 'center',justifyContent: 'center', px: 2, py:2, textAlign: 'center', mx: 'auto', }}>
+
+            <QualityFlipBox1></QualityFlipBox1>
+
         </Box>
 
-        <Box id="section2" sx={{ minHeight: '100vh', position: 'relative', px: 2, py:2, textAlign: 'center', mx: 'auto', }}>
+   </Container>
+
+        <Box id="section3" sx={{ minHeight: '100vh', position: 'relative', px: 2, py:2, textAlign: 'center', mx: 'auto', }}>
 
             <Typography variant="h4" sx={{ color: theme.palette.text.secondary, mt: 1 }}>
                 {t('certification_help_title')}
@@ -156,13 +185,17 @@ const Certification = () => {
 
         </Box>
 
-        <Box id="section3" sx={{ minHeight: '80vh', position: 'relative', px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
+ 
 
-            <Typography variant="h4" sx={{ color: theme.palette.text.secondary, mt: 1, mb:2 }}>
+        <Box id="section4" sx={{ minHeight: '80vh', position: 'relative', px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
+            
+            <BackgroundBanner image="photos/blue.jpg" height={150} top={0} />
+            <Typography variant="h4" sx={{ color: theme.palette.text.white, mt: 1, mb:2 }}>
                 {t('certification_why_matter')}
             </Typography>
 
             <Grid container spacing={4} justifyContent="center" sx={{ mb:2, minHeight: { xs: 400, sm: 'auto' } }}>
+                
                 {messages.map((item, index) => (
                     <Grid item xs={6} sm={4} md={3} lg={2} key={index} textAlign="center">
                     <MotionBox
@@ -174,7 +207,7 @@ const Certification = () => {
                         sx={{
                         width: 100,
                         height: 100,
-                        borderRadius: '50%',
+                        borderRadius: '10%',
                         objectFit: 'cover',
                         mx: 'auto',
                         transition: 'all 0.3s ease-in-out',
@@ -235,10 +268,9 @@ const Certification = () => {
             `}
         </style>
 
-    </Container>
+</>
 
-    
     );
 };
 
-export default Certification;
+export default Quality;

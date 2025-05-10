@@ -1,0 +1,164 @@
+import React, { useState } from 'react';
+import { Box, Typography, keyframes } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+import { useTheme } from '@mui/material/styles';
+import CloseIcon from '@mui/icons-material/Close';
+import { useMediaQuery } from '@mui/material';
+
+function HomeFlipBox1() {
+  const { t } = useTranslation();
+  const theme = useTheme();
+  const [flipped, setFlipped] = useState(false);
+  const isSmallScreen = useMediaQuery('(max-width:650px)');
+
+  // Define the shake keyframes
+  const shake = keyframes`
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(1deg); }
+    40% { transform: rotate(-1deg); }
+    60% { transform: rotate(1deg); }
+    80% { transform: rotate(-1deg); }
+    100% { transform: rotate(0deg); }
+  `;
+
+  return (
+    <Box
+      sx={{
+        perspective: '1000px',
+        width: '100%',
+        maxWidth: '1200px',
+        height: isSmallScreen ? '70vh' : '50vh',
+        margin: '0 auto',
+        cursor: 'pointer'
+      }}
+      onClick={() => setFlipped(!flipped)}
+    >
+      <Box
+        sx={{
+          position: 'relative',
+          width: '100%',
+          height: '100%',
+          textAlign: 'center',
+          transition: 'transform 0.8s',
+          transformStyle: 'preserve-3d',
+          transform: flipped ? 'rotateX(180deg)' : 'rotateX(0deg)',
+        }}
+      >
+        {/* Front Side */}
+        <Box
+          sx={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            backfaceVisibility: 'hidden',
+            display: 'flex',
+            flexDirection: isSmallScreen ? 'column' : 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            backgroundColor: theme.palette.background.default,
+            border: `1px solid ${theme.palette.divider}`,
+            borderRadius: '12px',
+            boxShadow: theme.shadows[3],
+            px: 2,
+            overflow: 'hidden',
+            '&:hover': !flipped
+            ? {
+                animation: `${shake} 0.7s ease-in-out`
+              }
+            : {}
+          }}
+        >
+          {/* Text block */}
+          <Box
+            sx={{
+              flex: 1,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              textAlign: 'center',
+              px: 4
+            }}
+          >
+            <Typography
+              variant="h2"
+              sx={{ fontWeight: 'bold', color: theme.palette.text.secondary }}
+            >
+              {t('home_welcome')}
+            </Typography>
+          </Box>
+
+          {/* Image block */}
+          <Box
+            sx={{
+              position: 'relative',
+              height: isSmallScreen ? '50%' : '100%',
+              width: 'auto',
+              display: 'flex'
+            }}
+          >
+            <Box
+              component="img"
+              src={`${process.env.PUBLIC_URL}/photos/home/t1.svg`}
+              alt="Trophy 1"
+              sx={{
+                height: '100%',
+                position: 'relative',
+                zIndex: 1
+              }}
+            />
+            <Box
+              component="img"
+              src={`${process.env.PUBLIC_URL}/photos/home/t2.svg`}
+              alt="Trophy 2"
+              sx={{
+                height: '50%',
+                position: 'absolute',
+                bottom: '10%',
+                left: '50%',
+                zIndex: 2
+              }}
+            />
+          </Box>
+        </Box>
+
+        {/* Back Side */}
+        <Box
+          sx={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            backfaceVisibility: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: theme.palette.background.paper,
+            border: `1px solid ${theme.palette.divider}`,
+            borderRadius: '12px',
+            boxShadow: theme.shadows[3],
+            transform: 'rotateX(180deg)',
+            px: 2
+          }}
+        >
+          <Typography
+            variant="h4"
+            sx={{ mb: 2, maxWidth: '1000px', margin: '0 auto', color: theme.palette.text.primary }}
+          >
+            {t('home_content_1')}
+          </Typography>
+          <Typography
+            variant={!isSmallScreen ? 'h6' : 'subtitle1'}
+            sx={{ mb: 10, maxWidth: '1000px', margin: '0 auto' }}
+          >
+            {t('home_content_2')}
+          </Typography>
+          <Box sx={{ position: 'absolute', bottom: 16, right: 16 }}>
+            <CloseIcon sx={{ fontSize: 40, color: theme.palette.text.secondary }} />
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  );
+}
+
+export default HomeFlipBox1;

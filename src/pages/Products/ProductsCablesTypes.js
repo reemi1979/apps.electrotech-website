@@ -20,7 +20,7 @@ const ProductsCablesTypes = ({ selected, setSelected }) => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ px: 2, py: 6, maxWidth: 1400, mx: 'auto' }}>
+    <Box sx={{ px: 2, maxWidth: 1400, mx: 'auto' }}>
       <Grid container spacing={4} justifyContent="center">
         {cableTypes.map((item, index) => (
           <Grid item xs={6} sm={4} md={3} lg={2} key={index} textAlign="center">
@@ -32,7 +32,7 @@ const ProductsCablesTypes = ({ selected, setSelected }) => {
               sx={{
                 width: 100,
                 height: 100,
-                borderRadius: '50%',
+                borderRadius: '10%',
                 objectFit: 'cover',
                 mx: 'auto',
                 transition: 'all 0.3s ease-in-out',

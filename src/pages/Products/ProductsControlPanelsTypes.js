@@ -22,11 +22,12 @@ const ProductsControlPanelsTypes = ({ selected, setSelected }) => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ px: 2, py: 6, maxWidth: 1400, mx: 'auto' }}>
+    <Box sx={{ px: 2, maxWidth: 1400, mx: 'auto' }}>
 
-      <Grid container spacing={4} justifyContent="center">
+
+      <Grid container spacing={2} justifyContent="center" sx={{ mb:2, minHeight: { xs: 270, sm: 'auto' } }}>
         {controlPanelsTypes.map((item, index) => (
-          <Grid item xs={6} sm={4} md={3} lg={2} key={index} textAlign="center">
+          <Grid item xs={4} sm={4} md={3} lg={2} key={index} textAlign="center">
             <MotionBox
               component="img"
               src={item.src}
@@ -35,7 +36,7 @@ const ProductsControlPanelsTypes = ({ selected, setSelected }) => {
               sx={{
                 width: 100,
                 height: 100,
-                borderRadius: '50%',
+                borderRadius: '10%',
                 objectFit: 'cover',
                 mx: 'auto',
                 transition: 'all 0.3s ease-in-out',

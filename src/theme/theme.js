@@ -12,15 +12,23 @@ export const getDesignTokens = (mode) => ({
 
       paper: mode === 'dark' 
         ? '#2c2c2c' // ⬛ Dark: cards/dialogs
-        : '#dedede', // ⬜ Light: cards/dialogs
+        : '#ebebeb', // ⬜ Light: cards/dialogs
 
-      white: mode === 'dark' 
+      light: mode === 'dark' 
         ? '#dedede' // ⬜ Light: 
         : '#dedede', // ⬜ Light: 
+
+      white: mode === 'dark' 
+        ? '#ffffff' // ⬜ Light: 
+        : '#ffffff', // ⬜ Light: 
 
       contrast: mode === 'dark' 
         ? '#dedede' // ⬜ Light: 
         : '#2c2c2c', // ⬛ Light: 
+
+      black: mode === 'dark' 
+        ? '#1c1c1c' // ⬛ Light: 
+        : '#1c1c1c', // ⬛ Light: 
     },
 
     //Requis pour @MUI
@@ -54,8 +62,8 @@ export const getDesignTokens = (mode) => ({
         ? '#dedede'             // ⚪ Dark: always white text // SUB-TITLE
         : '#dedede',            // ⚪ Light: always white text // SUB-TITLE
       black: mode === 'dark' 
-        ? '#444444'              // ⚫ Dark: always black text // SUB-TITLE
-        : '#444444' ,            // ⚫ Light: always black text // SUB-TITLE
+        ? '#1c1c1c'              // ⚫ Dark: always black text // SUB-TITLE
+        : '#1c1c1c' ,            // ⚫ Light: always black text // SUB-TITLE
       yellow: mode === 'dark' 
         ? '#BCBF2C'              // 🟨 Dark: always yellow text // SUB-TITLE
         : '#BCBF2C' ,            // 🟨 Light: always yellow text // SUB-TITLE

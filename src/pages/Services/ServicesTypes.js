@@ -72,7 +72,7 @@ const ServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => {
                     willChange: 'transform',
                     width: 100,
                     height: 100,
-                    borderRadius: '50%',
+                    borderRadius: '10%',
                     objectFit: 'cover',
                     mx: 'auto',
                     transition: 'all 0.3s ease-in-out',

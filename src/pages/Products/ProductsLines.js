@@ -47,7 +47,7 @@ const ProductsLines = () => {
         const rect = firstLogoRef.current.getBoundingClientRect();
         const scrollTop = window.scrollY || window.pageYOffset;
         const topPosition = rect.top + scrollTop;
-        setBannerTop(topPosition + 50);
+        setBannerTop(topPosition - 20);
       }
     };
   
@@ -69,7 +69,7 @@ const ProductsLines = () => {
         const rect = firstLogoRef.current.getBoundingClientRect();
         const scrollTop = window.scrollY || window.pageYOffset;
         const topPosition = rect.top + scrollTop;
-        setBannerTop(topPosition + 50);
+        setBannerTop(topPosition - 20);
       }
     }, 100); // 100ms delay to allow layout
   
@@ -78,19 +78,17 @@ const ProductsLines = () => {
 
   return (
     <Box sx={{ position: 'relative' }}>
-      <BackgroundBanner image="photos/lobby.jpg" height={350} top={bannerTop} />
+      <BackgroundBanner image="photos/blue.jpg" height={50} top={bannerTop} />
 
       <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
         <Typography variant="h3" gutterBottom sx={{ mt: 6, color: theme.palette.text.secondary }}>
           {t('products_lines_section_title')}
         </Typography>
-        <Typography variant="h6" sx={{ maxWidth: 800, mx: 'auto' }}>
+        <Typography variant="h6" sx={{ mb:4, maxWidth: 800, mx: 'auto' }}>
           {t('products_lines_section_description')}
         </Typography>
 
-        <Typography variant="h6" gutterBottom sx={{ mb: 6, color: theme.palette.text.blue }}>
-          {t(`brands_warning_min_order`)}
-        </Typography>
+
 
         <Grid container spacing={4} justifyContent="center">
           {manufacturers.map((item, index) => (
@@ -114,7 +112,7 @@ const ProductsLines = () => {
                   height: 100,
                   objectFit: 'contain',
                   backgroundColor: theme.palette.background.white,
-                  borderRadius: 2,
+                  borderRadius: "10%",
                   p: 1,
                   mx: 'auto',
                   transition: 'all 0.3s ease-in-out',
@@ -147,6 +145,11 @@ const ProductsLines = () => {
         >
           {t('brands_trademark_note')}
         </Typography>
+
+        <Typography variant="h6" gutterBottom sx={{ mb: 6, color: theme.palette.text.blue }}>
+          {t(`brands_warning_min_order`)}
+        </Typography>
+
       </Container>
     </Box>
   );

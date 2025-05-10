@@ -28,12 +28,6 @@ const News = () => {
 
   return (
     <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
-      <Box
-        component="img"
-        src={process.env.PUBLIC_URL + '/news/news.png'}
-        alt="Actualités"
-        sx={{ width: 120, mb: 4 }}
-      />
 
       {sortedNews.map((item) => (
         <Box key={item.id} sx={{ mb: 8 }}>

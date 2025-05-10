@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Button from '@mui/material/Button';
+import { alpha } from '@mui/material/styles';
 
 const slugify = (text) =>
     text
@@ -101,7 +102,7 @@ const NewsList = () => {
                             borderRadius: 2,
                             textDecoration: 'none',
                             color: 'inherit',
-                            backgroundColor: theme.palette.background.default,
+                            backgroundColor: alpha(theme.palette.background.paper, 0.4),
                             transition: 'background-color 0.3s',
                             '&:hover': { backgroundColor: theme.palette.background.paper }
                             }}

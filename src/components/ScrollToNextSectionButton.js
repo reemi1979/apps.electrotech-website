@@ -5,12 +5,14 @@ import { Fab, Zoom } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { gsap } from 'gsap';
 import ScrollToPlugin from "gsap/ScrollToPlugin";
+import { useMediaQuery } from '@mui/material';
 
 gsap.registerPlugin(ScrollToPlugin);
 
 const ScrollToNextSectionButton = ({ sectionIds }) => {
   const [visible, setVisible] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+ const isSmallScreen  = useMediaQuery('(max-width:500px)');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,8 +69,8 @@ const ScrollToNextSectionButton = ({ sectionIds }) => {
 
     }
   };
-
-  return (
+  
+  return !isSmallScreen ? (
     <Zoom in={visible}>
       <Fab
         color="primary"
@@ -90,7 +92,10 @@ const ScrollToNextSectionButton = ({ sectionIds }) => {
         <KeyboardArrowDownIcon />
       </Fab>
     </Zoom>
-  );
+  ) : (
+    (<></>)
+  )
+
 };
 
 export default ScrollToNextSectionButton;

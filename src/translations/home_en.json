@@ -2,7 +2,7 @@
 
     "home": "HOME",
     "news": "NEWS",
-    "certifications": "CERTIFICATIONS",
+    "quality": "QUALITY",
     "quote": "REQUEST QUOTE",
     "products_panels": "CONTROL PANELS",
     "products_cables": "CABLES",
@@ -30,7 +30,10 @@
     "news_ai_note": "If you appear in a photo and wish to be removed, please contact us.",
     "news_title_sub": "Stay up to date with the latest news, projects, and updates from Electrotech.",
 
+
     "facebook_follow_us" : "Follow us on Facebook",
+    "linkedin_follow_us" : "Connect with us on LinkedIn",
+
     "theme_toggle_light": "LIGHT MODE",
     "theme_toggle_dark": "DARK MODE",
     "bienvenue": "Welcome to Electrotech",
@@ -117,8 +120,15 @@
     "home_welcome": "Committed to Excellence",
     "home_content_1" : "Custom Electrical Panel & Automation Solutions",
     "home_content_2" : "At Electrotech, we specialize in designing, manufacturing, and integrating high-quality electrical control panels for industrial automation. Founded in 1997, our Quebec-based company brings 27 years of expertise across multiple industries, delivering custom automation solutions that enhance efficiency, reliability, and safety. We are recognized for our excellence in industrial control and automation engineering, and we are committed to exceeding the expectations of our clients, partners, and employees with professionalism and integrity.",
-    "home_contact_us_title" : "General Information",
-    "home_contact_us" : "Contact us",
+
+    "home_accordion_title": "Are you looking for more information?",
+    "home_accordion_location": "Where are we located?",
+    "home_accordion_phone": "What’s our phone number?",
+    "home_accordion_email": "How to contact us by email?",
+    "home_contact_us_title": "We are here to help you!",
+    "home_contact_us": "Contact Us",
+    "home_accordion_facebook": "Want to contact us via Facebook?",
+    "home_accordion_linkedin": "Explore our LinkedIn presence!",
 
     "home_content_main": "Main content after the Hero section.",
 

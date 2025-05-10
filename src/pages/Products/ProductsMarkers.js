@@ -22,13 +22,11 @@ const ProductsMarkers = () => {
         {t('selected_control_panel_help')}
       </Typography>
 
-      <Box sx={{ textAlign: 'left', maxWidth: 800, mx: 'auto' }}>
+      <Box sx={{ textAlign: 'left', mt: 6, maxWidth: 800, mx: 'auto' }}>
         <ProductsMarkersTypes selected={selected} setSelected={setSelected} />
       </Box>
 
-      <Typography variant="h6" gutterBottom sx={{ color: theme.palette.text.white }}>
-        {t(`product_warning_min_order`)}
-      </Typography>
+
 
       <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.yellow }}>
         {t(`selected_markers_${selected}_description_title`)}
@@ -36,6 +34,10 @@ const ProductsMarkers = () => {
 
       <Typography variant="h6" sx={{ mb: 4, maxWidth: 800, mx: 'auto', color: theme.palette.text.white }}>
         {t(`selected_markers_${selected}_description`)}
+      </Typography>
+
+      <Typography variant="body2" gutterBottom sx={{ color: theme.palette.text.primary }}>
+        {t(`product_warning_min_order`)}
       </Typography>
     </Container>
     </Box>

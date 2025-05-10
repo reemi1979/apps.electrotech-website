@@ -1,6 +1,6 @@
 // src/Home/HomeIndustries.js
 
-import React, { useState , useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useTheme } from '@mui/material/styles';
@@ -59,7 +59,7 @@ const MotionBox = motion(Box);
     
         <Box sx={{ position: 'relative' }}>
               
-        <BackgroundBanner image="photos/lobby.jpg" height={500} top={150} />
+        
 
             <Box sx={{ px: 2, maxWidth: 1400, mx: 'auto' }}>
                 {/* TITRE FIXE EN HAUT */}
@@ -74,13 +74,13 @@ const MotionBox = motion(Box);
                 >
                     <Typography
                     variant="h3"
-                    sx={{ mb: 2, color: theme.palette.text.secondary }}
+                    sx={{ mb: 2, color: theme.palette.text.white }}
                     >
                     {t('home_industrie_default_title')}
                     </Typography>
                     <Typography
                     variant="h4"
-                    sx={{ maxWidth: 1400, mx: 'auto', color: theme.palette.text.blue }}
+                    sx={{ maxWidth: 1400, mx: 'auto', color: theme.palette.text.white }}
                     >
                     {t('home_industrie_default_description')}
                     </Typography>
@@ -88,8 +88,9 @@ const MotionBox = motion(Box);
 
                 {/* IMAGES EN CERCLES */}
                 <Grid container spacing={2} justifyContent="center" sx={{ mb:2, minHeight: { xs: 400, sm: 'auto' } }}>
+                    <BackgroundBanner image="photos/lobby.jpg" height={250} top={0} />
                     {industries.map((item, index) => (
-                    <Grid item xs={4} sm={4} md={3} lg={2} key={index} textAlign="center">
+                    <Grid item xs={4} sm={4} md={3} lg={2} key={index} textAlign="center" >
                         <MotionBox
                         component="img"
                         src={item.src}
@@ -100,7 +101,7 @@ const MotionBox = motion(Box);
                             willChange: 'transform',
                             width: 100,
                             height: 100,
-                            borderRadius: '50%',
+                            borderRadius: '10%',
                             objectFit: 'cover',
                             mx: 'auto',
                             transition: 'all 0.3s ease-in-out',
@@ -122,7 +123,7 @@ const MotionBox = motion(Box);
                     ))}
                 </Grid>
 
-                <Box
+                <Box 
                     sx={{
                     height: 'auto',
                     minHeight: 140,

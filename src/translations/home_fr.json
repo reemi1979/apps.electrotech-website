@@ -2,7 +2,7 @@
 
     "home": "ACCUEIL",
     "news": "NOUVELLES",
-    "certifications": "CERTIFICATIONS",
+    "quality": "QUALITÉ",
     "quote": "DEMANDE DE DEVIS",
     "products_panels": "PANNEAUX DE CONTRÔLE",
     "products_cables": "CÂBLES",
@@ -25,11 +25,13 @@
     "about": "À PROPOS",
     "news_title" : "Actualités",
     "news_back_button" : "Retour aux actualités",
-    "load_more" : "Chager plus",
+    "load_more" : "Charger plus",
     "news_ai": "Ce contenu est importé automatiquement de notre page Facebook, puis modifié, traduit et résumé à l’aide de l’API d’OpenAI.",
     "news_ai_note": "Si vous apparaissez sur une photo et souhaitez être retiré, veuillez nous contacter.",
     "news_title_sub": "Tenez-vous à jour avec les dernières actualités, projets et nouveautés d'Électrotech.",
+
     "facebook_follow_us" : "Suivez-nous sur Facebook",
+    "linkedin_follow_us" : "Connectez-vous avec nous sur LinkedIn",
 
     "theme_toggle_light": "MODE CLAIR",
     "theme_toggle_dark": "MODE SOMBRE",
@@ -84,8 +86,15 @@
     "home_welcome": "À la recherche de l’excellence",
     "home_content_1": "Solutions sur mesure en panneaux électriques et automatisation",
     "home_content_2": "Chez Electrotech, nous sommes spécialisés dans la conception, la fabrication et l'intégration de panneaux de contrôle électriques de haute qualité pour l'automatisation industrielle. Fondée en 1997, notre entreprise québécoise possède 27 ans d'expertise dans de multiples secteurs, offrant des solutions d'automatisation sur mesure qui améliorent l'efficacité, la fiabilité et la sécurité. Nous sommes reconnus pour notre excellence en contrôle industriel et en ingénierie d'automatisation, et nous nous engageons à dépasser les attentes de nos clients, partenaires et employés avec professionnalisme et intégrité.",
-    "home_contact_us_title" : "Information générale",
-    "home_contact_us" : "Écrivez-nous",
+
+    "home_accordion_title": "Vous recherchez plus d’informations?",
+    "home_accordion_location": "Où sommes-nous situés?",
+    "home_accordion_phone": "Quel est notre numéro de téléphone?",
+    "home_accordion_email": "Comment nous contacter par courriel?",
+    "home_contact_us_title": "Nous sommes là pour vous aider!",
+    "home_contact_us": "Nous contacter",
+    "home_accordion_facebook": "Vous souhaitez nous contacter via Facebook ?",
+    "home_accordion_linkedin": "Découvrez notre profil LinkedIn !",
 
     "home_industrie" : "Nos Industries",
     "home_industrie_default_title": "Secteurs desservis",

@@ -8,7 +8,7 @@ import Layout from './pages/Layout';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home/Home'));
-const Certification = lazy(() => import('./pages/Certification/Certification'));
+const Quality = lazy(() => import('./pages/Quality/Quality'));
 const NewsList = lazy(() => import('./pages/News/NewsList'));
 const NewsDetail = lazy(() => import('./pages/News/NewsDetail'));
 const ProductsControlPanels = lazy(() => import('./pages/Products/ProductsControlPanels'));
@@ -29,7 +29,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
-              <Route path="/certifications" element={<Certification />} />
+              <Route path="/quality" element={<Quality />} />
               <Route path="/news" element={<NewsList />} />
               <Route path="/:slug" element={<NewsDetail />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />

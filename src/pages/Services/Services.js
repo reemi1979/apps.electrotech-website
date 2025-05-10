@@ -40,6 +40,7 @@ const Services = () => {
         {t('service_panel_help')}
       </Typography>
 
+
       <Box sx={{ textAlign: 'left', mt: 6, maxWidth: 800, mx: 'auto' }}>
 
         {/* ✅ PASSE selectedIndex au lieu de selected */}

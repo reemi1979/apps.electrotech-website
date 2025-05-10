@@ -56,7 +56,7 @@ const HeaderBarResponsive = () => {
     const navGroups = {
         main: [
         { label: t('news'), link: '/news' },
-        { label: t('certifications'), link: '/certifications' },
+        { label: t('quality'), link: '/quality' },
         { label: t('quote'), link: '/quote' },
         ],
         products: [

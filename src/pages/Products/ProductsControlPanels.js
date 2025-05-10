@@ -25,7 +25,7 @@ const ProductsControlPanels = () => {
           {t('selected_control_panel_help')}
         </Typography>
 
-        <Box sx={{ textAlign: 'left' , maxWidth: 800, mx: 'auto' }}>
+        <Box sx={{ textAlign: 'left' , mt: 6, maxWidth: 800, mx: 'auto' }}>
           <ProductsControlPanelsTypes selected={selected} setSelected={setSelected} />
         </Box>
 
