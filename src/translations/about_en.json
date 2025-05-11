@@ -51,7 +51,10 @@
       "contact_us_success": "Message sent successfully!",
       "contact_us_error": "There was an error sending your message.",
       "contact_us_required": "This field is required.",
-      "contact_us_invalid_contact": "Enter a valid email or phone number."
+      "contact_us_invalid_contact": "Enter a valid email or phone number.",
+      "contact_us_company_name": "Electrotech Automatisation Industrielle",
+      "contact_us_address": "Address: 625 Simonds S, Granby, QC J2J 1C2\nPhone: (450) 776-2628\nProvince: Québec",
+      "contact_us_hours": "Opening Hours:\nMonday–Friday: 8:00 AM – 5:00 PM\nSaturday–Sunday: Closed"
 
   }
   
