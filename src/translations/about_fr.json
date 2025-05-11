@@ -31,6 +31,28 @@
     "our_team_pascal_title": "Chef d’expédition",
     "our_team_jocelyn_title": "Chef Qualité",
     "our_team_martine_title": "Acheteuse",
-    "our_team_jpp_title": "Concepteur & Projets"
+    "our_team_jpp_title": "Concepteur & Projets",
+
+    "contact_us_title": "Nous contacter",
+    "contact_us_reason": "Pourquoi nous contactez-vous?",
+    "contact_us_reason_quotation": "Demande de soumission",
+    "contact_us_reason_job": "Offre d'emploi",
+    "contact_us_reason_question": "Question générale",
+    "contact_us_reason_bug": "Signaler un bogue sur le site",
+    "contact_us_reason_other": "Autre",
+    "contact_us_name": "Votre nom",
+    "contact_us_contact": "Votre courriel ou numéro de téléphone",
+    "contact_us_company": "Nom de l'entreprise (optionnel)",
+    "contact_us_function": "Titre ou fonction (optionnel)",
+    "contact_us_country": "Pays (optionnel)",
+    "contact_us_subject": "Sujet",
+    "contact_us_message": "Comment pouvons-nous vous aider?",
+    "contact_us_send": "Envoyer",
+    "contact_us_success": "Message envoyé avec succès!",
+    "contact_us_error": "Erreur lors de l'envoi du message.",
+    "contact_us_required": "Ce champ est requis.",
+    "contact_us_invalid_contact": "Entrez un courriel ou numéro de téléphone valide."
+
+
   }
   

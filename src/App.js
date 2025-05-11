@@ -20,6 +20,7 @@ const Achievements = lazy(() => import('./pages/About/Achievements'));
 const OurTeam = lazy(() => import('./pages/About/OurTeam'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TrackingProjects = lazy(() => import('./pages/Tracking/TrackingProjects'));
+const ContactUs = lazy(() => import('./pages/About/ContactUs'));
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
               <Route path="/tracking/:projectNumber" element={<TrackingProjects />} />
               <Route path="/achievements" element={<Achievements />} />
               <Route path="/our-team" element={<OurTeam />} />
+              <Route path="/contact-us" element={<ContactUs />} />
             </Route>
           </Routes>
         </Suspense>

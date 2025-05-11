@@ -31,6 +31,27 @@
     "our_team_pascal_title": "Shipping Lead",
     "our_team_jocelyn_title": "Quality Lead",
     "our_team_martine_title": "Buyer",
-    "our_team_jpp_title": "Designer & Projects Lead"
+    "our_team_jpp_title": "Designer & Projects Lead",
+
+      "contact_us_title": "Contact Us",
+      "contact_us_reason": "Why do you contact us?",
+      "contact_us_reason_quotation": "Quotation",
+      "contact_us_reason_job": "Job Posting",
+      "contact_us_reason_question": "General Question",
+      "contact_us_reason_bug": "Report Website Bug",
+      "contact_us_reason_other": "Other",
+      "contact_us_name": "Your Name",
+      "contact_us_contact": "Your Email or Phone Number",
+      "contact_us_company": "Company Name (optional)",
+      "contact_us_function": "Title / Function (optional)",
+      "contact_us_country": "Country (optional)",
+      "contact_us_subject": "Subject",
+      "contact_us_message": "How can we help you?",
+      "contact_us_send": "Send",
+      "contact_us_success": "Message sent successfully!",
+      "contact_us_error": "There was an error sending your message.",
+      "contact_us_required": "This field is required.",
+      "contact_us_invalid_contact": "Enter a valid email or phone number."
+
   }
   
