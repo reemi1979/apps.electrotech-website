@@ -41,6 +41,7 @@ function QualityFlipBox1() {
           textAlign: 'center',
           transition: 'transform 0.8s',
           transformStyle: 'preserve-3d',
+          willChange: 'transform',
           transform: flipped ? 'rotateX(180deg)' : 'rotateX(0deg)',
         }}
       >
@@ -51,6 +52,8 @@ function QualityFlipBox1() {
             width: '100%',
             height: '100%',
             backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
+            transform: 'rotateX(0deg)',
             display: 'flex',
             flexDirection: isSmallScreen ? 'column' : 'row',
             alignItems: 'center',
@@ -119,6 +122,7 @@ function QualityFlipBox1() {
             width: '100%',
             height: '100%',
             backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',

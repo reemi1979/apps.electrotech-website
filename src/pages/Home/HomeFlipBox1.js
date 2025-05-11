@@ -41,6 +41,7 @@ function HomeFlipBox1() {
           textAlign: 'center',
           transition: 'transform 0.8s',
           transformStyle: 'preserve-3d',
+          willChange: 'transform',
           transform: flipped ? 'rotateX(180deg)' : 'rotateX(0deg)',
         }}
       >
