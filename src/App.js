@@ -23,35 +23,38 @@ const TrackingProjects = lazy(() => import('./pages/Tracking/TrackingProjects'))
 const ContactUs = lazy(() => import('./pages/About/ContactUs'));
 
 const App = () => {
-  return (
-    <>
-      <Router basename={process.env.PUBLIC_URL}>
-        <Suspense fallback={<div style={{ textAlign: 'center', padding: '2rem' }}>Loading...</div>}>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="/quality" element={<Quality />} />
-              <Route path="/news" element={<NewsList />} />
-              <Route path="/:slug" element={<NewsDetail />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/products-control-panels" element={<ProductsControlPanels />} />
-              <Route path="/products-cables" element={<ProductsCables />} />
-              <Route path="/products-markers" element={<ProductsMarkers />} />
-              <Route path="/products-lines" element={<ProductsLines />} />
-              <Route path="/services/:index" element={<Services />} />
-              <Route path="/tracking" element={<TrackingProjects />} />
-              <Route path="/tracking/:projectNumber" element={<TrackingProjects />} />
-              <Route path="/achievements" element={<Achievements />} />
-              <Route path="/our-team" element={<OurTeam />} />
-              <Route path="/contact-us" element={<ContactUs />} />
-            </Route>
-          </Routes>
-        </Suspense>
-      </Router>
 
-      <CookieManager />
-    </>
-  );
+    console.log("Website made by Rémi Gauvin - 2025");
+
+    return (
+        <>
+        <Router basename={process.env.PUBLIC_URL}>
+            <Suspense fallback={<div style={{ textAlign: 'center', padding: '2rem' }}>Loading...</div>}>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="/quality" element={<Quality />} />
+                <Route path="/news" element={<NewsList />} />
+                <Route path="/:slug" element={<NewsDetail />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/products-control-panels" element={<ProductsControlPanels />} />
+                <Route path="/products-cables" element={<ProductsCables />} />
+                <Route path="/products-markers" element={<ProductsMarkers />} />
+                <Route path="/products-lines" element={<ProductsLines />} />
+                <Route path="/services/:index" element={<Services />} />
+                <Route path="/tracking" element={<TrackingProjects />} />
+                <Route path="/tracking/:projectNumber" element={<TrackingProjects />} />
+                <Route path="/achievements" element={<Achievements />} />
+                <Route path="/our-team" element={<OurTeam />} />
+                <Route path="/contact-us" element={<ContactUs />} />
+                </Route>
+            </Routes>
+            </Suspense>
+        </Router>
+
+        <CookieManager />
+        </>
+    );
 };
 
 export default App;

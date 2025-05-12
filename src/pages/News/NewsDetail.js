@@ -1,6 +1,6 @@
 // src/pages/News/NewsDetail.js
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Box, Typography, Container, CircularProgress } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -64,59 +64,59 @@ const NewsDetail = () => {
 
     return (
         <Container sx={{ py: 8, textAlign: 'center', color: 'white' }}>
-        <Box sx={{ textAlign: 'left', mb: 4 }}>
-            <Button
-            variant="contained"
-            color="primary"
-            onClick={() => navigate(-1)}
-            sx={{ fontSize: '1rem' }}
+            <Box sx={{ textAlign: 'left', mb: 4 }}>
+                <Button
+                variant="contained"
+                color="primary"
+                onClick={() => navigate(-1)}
+                sx={{ fontSize: '1rem' }}
+                >
+                ← {t('news_back_button')}
+                </Button>
+            </Box>
+
+
+            <Typography variant="h2" gutterBottom sx={{ color: theme.palette.text.secondary }}>
+                {title}
+            </Typography>
+
+            {news.type === 'video' ? (
+                <Box
+                    component="video"
+                    src={process.env.PUBLIC_URL + `/news/vid/${news.id}.mp4`}
+                    controls
+                    autoPlay
+                    muted
+                    loop
+                    sx={{
+                        width: '100%',
+                        maxWidth: 900,
+                        height: 'auto',
+                        borderRadius: 2,
+                        my: 4,
+                    }}
+                />
+            ) : (
+                <Box
+                    component="img"
+                    src={process.env.PUBLIC_URL + `/news/img/${news.id}.jpg`}
+                    alt={title}
+                    sx={{
+                        width: '100%',
+                        maxWidth: 900,
+                        height: 'auto',
+                        borderRadius: 2,
+                        my: 4,
+                    }}
+                />
+            )}
+
+            <Typography 
+                variant="h6" 
+                sx={{ maxWidth: 900, mx: 'auto', textAlign: 'left', whiteSpace: 'pre-line', color: theme.palette.text.primary}}
+                dangerouslySetInnerHTML={{ __html: description }}
             >
-            ← {t('news_back_button')}
-            </Button>
-        </Box>
-
-
-        <Typography variant="h2" gutterBottom sx={{ color: theme.palette.text.secondary }}>
-            {title}
-        </Typography>
-
-        {news.type === 'video' ? (
-            <Box
-            component="video"
-            src={process.env.PUBLIC_URL + `/news/vid/${news.id}.mp4`}
-            controls
-            autoPlay
-            muted
-            loop
-            sx={{
-                width: '100%',
-                maxWidth: 900,
-                height: 'auto',
-                borderRadius: 2,
-                my: 4,
-            }}
-            />
-        ) : (
-            <Box
-            component="img"
-            src={process.env.PUBLIC_URL + `/news/img/${news.id}.jpg`}
-            alt={title}
-            sx={{
-                width: '100%',
-                maxWidth: 900,
-                height: 'auto',
-                borderRadius: 2,
-                my: 4,
-            }}
-            />
-        )}
-
-        <Typography 
-            variant="h6" 
-            sx={{ maxWidth: 900, mx: 'auto', textAlign: 'left', whiteSpace: 'pre-line', color: theme.palette.text.primary}}
-            dangerouslySetInnerHTML={{ __html: description }}
-        >
-        </Typography>
+            </Typography>
         </Container>
     );
 };

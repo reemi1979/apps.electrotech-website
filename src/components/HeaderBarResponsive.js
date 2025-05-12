@@ -96,60 +96,61 @@ const HeaderBarResponsive = () => {
       
     const renderNavGroup = (groupName, groupItems) => {
         const navStyle = navControlsColors(); // ✅ même logique que pour les boutons
-    
         return (
-        <FormControl
-            variant="standard"
-            sx={{
-            minWidth: 120,
-            ml: 2,
-            minHeight: 64,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'flex-end',
-            '&:hover': {
-                color: theme.palette.custom.electrotechYellow
-            }
-            }}
-        >
 
-        <Select
-            displayEmpty
-            variant="standard"
-            disableUnderline
-            MenuProps={{ disableScrollLock: true }}
-            sx={{
-            fontSize: '20px',
-            minHeight: 60,
-            ...navStyle, // ✅ couleur + textShadow
-            '&:hover': {
-                color: theme.palette.custom.electrotechYellow
-            },
-            '&.Mui-focused': {
-                color: theme.palette.custom.electrotechYellow
-            },    
-            '& .MuiSelect-icon': {
-                color: navStyle.color // ✅ flèche visible en light + dark
-            }
-            }}
-            renderValue={() => t(groupName)}
-        >
-
-            {groupItems.map((item) => (
-            <MenuItem
-                key={item.link}
-                component={Link}
-                to={item.link}
+            <FormControl
+                variant="standard"
                 sx={{
-                '&:hover': { color: theme.palette.custom.electrotechYellow }, // Mouse-over effect
+                    minWidth: 120,
+                    ml: 2,
+                    minHeight: 64,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'flex-end',
+                    '&:hover': {
+                        color: theme.palette.custom.electrotechYellow
+                    }
                 }}
             >
-                {item.label}
-            </MenuItem>
-            ))}
-        </Select>
-        </FormControl>
-    );
+
+                <Select
+                    displayEmpty
+                    variant="standard"
+                    disableUnderline
+                    MenuProps={{ disableScrollLock: true }}
+                    sx={{
+                        fontSize: '20px',
+                        minHeight: 60,
+                        ...navStyle, // ✅ couleur + textShadow
+                        '&:hover': {
+                            color: theme.palette.custom.electrotechYellow
+                        },
+                        '&.Mui-focused': {
+                            color: theme.palette.custom.electrotechYellow
+                        },    
+                        '& .MuiSelect-icon': {
+                            color: navStyle.color // ✅ flèche visible en light + dark
+                        }
+                    }}
+                    renderValue={() => t(groupName)}
+                >
+
+                    {groupItems.map((item) => (
+                        <MenuItem
+                            key={item.link}
+                            component={Link}
+                            to={item.link}
+                            sx={{
+                            '&:hover': { color: theme.palette.custom.electrotechYellow }, // Mouse-over effect
+                            }}
+                        >
+                            {item.label}
+                        </MenuItem>
+                    ))}
+
+                </Select>
+            </FormControl>
+        );
     }
 
     const navStyle = navControlsColors();
@@ -273,8 +274,6 @@ const HeaderBarResponsive = () => {
 
                 </>
             )}
-            
-            
             
             </Toolbar>
         </AppBar>

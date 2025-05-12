@@ -1,6 +1,6 @@
 // src/components/ThemeToggleButton.js
 
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { IconButton, Tooltip, ListItemText, ListItemButton } from '@mui/material';
 import { Brightness7, Brightness4 } from '@mui/icons-material';
 import { ColorModeContext } from '../theme/ThemeContext';

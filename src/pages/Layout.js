@@ -1,6 +1,6 @@
 // src/pages/Layout.js
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import HeaderBarResponsive from '../components/HeaderBarResponsive';
 import Footer from '../components/Footer';
 import ScrollToTopButton from '../components/ScrollToTopButton';

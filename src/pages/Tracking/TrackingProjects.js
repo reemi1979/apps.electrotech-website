@@ -1,12 +1,13 @@
 // src/pages/Tracking/TrackingProjects.js
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Box, Container, Typography, Button, TextField, Stepper, Step, StepLabel, StepContent, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const TrackingProjects = () => {
+
     const [token, setToken] = useState(null);
     const [apiProjectData, setApiProjectData] = useState([]);
     const [searchInput, setSearchInput] = useState('');
@@ -62,29 +63,29 @@ const TrackingProjects = () => {
     const panelCount = selectedProject?.panels || 1; // évite div/0
 
     const cncPercent = selectedProject?.cnc
-      ? ((selectedProject.cnc.backplate / panelCount) + (selectedProject.cnc.panel / panelCount)) / 2
-      : 0;
-      
+    ? ((selectedProject.cnc.backplate / panelCount) + (selectedProject.cnc.panel / panelCount)) / 2
+    : 0;
+    
     const cncPercentClamped = Math.min(cncPercent, 1);
 
     let testPercent = 0;
     if (selectedProject) {
-      const rawPercent = (selectedProject.test?.qtytested || 0) / (selectedProject.panels || 1);
-      if (selectedProject.test?.completed) {
+    const rawPercent = (selectedProject.test?.qtytested || 0) / (selectedProject.panels || 1);
+    if (selectedProject.test?.completed) {
         testPercent = 1; // Force 100% if completed
-      } else {
+    } else {
         testPercent = Math.min(rawPercent, 0.90); // Clamp to max 90% if not completed
-      }
+    }
     }    
 
     let prodPercent = 0;
     if (selectedProject) {
-      const rawPercent = (selectedProject.prod.proddone || 0) / (selectedProject.prod.prodplan || 1);
-      if (selectedProject.prod.completed) {
+    const rawPercent = (selectedProject.prod.proddone || 0) / (selectedProject.prod.prodplan || 1);
+    if (selectedProject.prod.completed) {
         prodPercent = 1; // Force 100% if completed
-      } else {
+    } else {
         prodPercent = Math.min(rawPercent, 0.9); // Clamp to max 90% if not completed
-      }
+    }
     }
     
 
@@ -105,25 +106,25 @@ const TrackingProjects = () => {
         {
             label: `${t('tracking_step_production')} (${Math.round(prodPercent * 100)}%)`,
             optional: selectedProject.state?.quaranteen
-              ? <Typography variant="caption" color="error">{t('tracking_step_error_alert')}</Typography>
-              : undefined,
+            ? <Typography variant="caption" color="error">{t('tracking_step_error_alert')}</Typography>
+            : undefined,
             value: selectedProject.prod.completed,
             error: selectedProject.state?.quaranteen
-          },
-          {
+        },
+        {
             label: `${t('tracking_step_tests')} (${Math.round(testPercent * 100)}%)`,
             optional:
-              selectedProject.test?.qtytested === selectedProject.panels &&
-              !selectedProject.test?.completed ? (
+            selectedProject.test?.qtytested === selectedProject.panels &&
+            !selectedProject.test?.completed ? (
                 <Typography variant="caption" color="error">
-                  {t('tracking_step_error_alert')}
+                {t('tracking_step_error_alert')}
                 </Typography>
-              ) : undefined,
+            ) : undefined,
             value: selectedProject.test.completed,
             error:
-              selectedProject.test?.qtytested === selectedProject.panels &&
-              !selectedProject.test?.completed
-          },
+            selectedProject.test?.qtytested === selectedProject.panels &&
+            !selectedProject.test?.completed
+        },
         { label: t('tracking_step_shipped'), value: selectedProject.shipping.shipped }
     ] : [];
         
@@ -131,40 +132,40 @@ const TrackingProjects = () => {
 
     const renderSearch = () => (
         <>
-          <Typography variant="h5" gutterBottom sx={{ textAlign: 'center' }}>
+        <Typography variant="h5" gutterBottom sx={{ textAlign: 'center' }}>
             {t('tracking_textfield_directive')}
-          </Typography>
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <TextField
-              label={t('tracking_textfield')}
-              value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value)}
-              variant="outlined"
-              sx={{
+            label={t('tracking_textfield')}
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+            variant="outlined"
+            sx={{
                 width: '200px',
                 '& .MuiOutlinedInput-root': {
-                  borderTopRightRadius: 0,
-                  borderBottomRightRadius: 0,
+                borderTopRightRadius: 0,
+                borderBottomRightRadius: 0,
                 },
-              }}
+            }}
             />
             <Button
-              onClick={handleSearch}
-              variant="contained"
-              sx={{
+            onClick={handleSearch}
+            variant="contained"
+            sx={{
                 height: '56px',
                 borderTopLeftRadius: 0,
                 borderBottomLeftRadius: 0,
                 minWidth: '80px'
-              }}
+            }}
             >
-              {t('tracking_search_button')}
+            {t('tracking_search_button')}
             </Button>
-          </Box>
+        </Box>
         </>
-      );
-      
-      
+    );
+    
+    
 
     const renderNoResults = () => (
         <>

@@ -1,6 +1,6 @@
 // src/pages/Services/ServicesTypes.js
 
-import React, { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useTheme } from '@mui/material/styles';

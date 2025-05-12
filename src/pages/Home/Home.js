@@ -1,7 +1,7 @@
 // src/Home/Homes.js
 
-import React, { useEffect, useState } from 'react';
-import { Box, Typography, Grid, Button } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';

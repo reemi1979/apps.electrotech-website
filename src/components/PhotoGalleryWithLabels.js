@@ -1,144 +1,129 @@
 // src/components/PhotoGalleryWithLabels.js
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Box, Typography, Grid, Modal, Backdrop } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import InViewPhotoCard from './InViewPhotoCard';
 import { useTheme } from '@mui/material/styles';
 
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box);
 
 const PhotoGalleryWithLabels = ({ photos }) => {
-  const [selected, setSelected] = useState(null);
-  const theme = useTheme();
+    const [selected, setSelected] = useState(null);
+    const theme = useTheme();
 
-  const isDark = theme.palette.mode === 'dark';
-  const overlayGradient = isDark
-    ? 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)'
-    : 'linear-gradient(to top, rgba(255,255,255,0.7), transparent)';
-  const textShadow = isDark ? '1px 1px 4px rgba(0,0,0,0.8)' : '1px 1px 4px rgba(255,255,255,0.8)';
+    const isDark = theme.palette.mode === 'dark';
+    const textShadow = isDark ? '1px 1px 4px rgba(0,0,0,0.8)' : '1px 1px 4px rgba(255,255,255,0.8)';
 
-  return (
-    <>
-      <Grid container spacing={2} sx={{ px: 2, py: 4, justifyContent: 'center', maxWidth: 1400, margin: '0 auto' }}>
-        {photos.map((photo, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <InViewPhotoCard photo={photo} onClick={() => setSelected(photo)} />
-          </Grid>
-        ))}
-      </Grid>
+    return (
+        <>
+        <Grid container spacing={2} sx={{ px: 2, py: 4, justifyContent: 'center', maxWidth: 1400, margin: '0 auto' }}>
+            {photos.map((photo, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+                <InViewPhotoCard photo={photo} onClick={() => setSelected(photo)} />
+            </Grid>
+            ))}
+        </Grid>
 
-      <AnimatePresence>
-        {selected && (
-          <Modal
-            open={Boolean(selected)}
-            onClose={() => setSelected(null)}
-            closeAfterTransition
-            disableScrollLock
-            slots={{ backdrop: Backdrop }}
-            slotProps={{
-              backdrop: {
-                timeout: 500,
-                sx: { backgroundColor: 'rgba(0, 0, 0, 0.8)' }, // stays dark for modal background
-              },
-            }}
-          >
-            <Box
-              sx={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                outline: 'none',
-                width: '90vw',
-                maxWidth: 700,
-              }}
-            >
-              <MotionBox
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
-                sx={{
-                  position: 'relative',
-                  borderRadius: 3,
-                  overflow: 'hidden',
-                  bgcolor: theme.palette.background.default,
-                  color: theme.palette.text.primary,
+        <AnimatePresence>
+            {selected && (
+            <Modal
+                open={Boolean(selected)}
+                onClose={() => setSelected(null)}
+                closeAfterTransition
+                disableScrollLock
+                slots={{ backdrop: Backdrop }}
+                slotProps={{
+                backdrop: {
+                    timeout: 500,
+                    sx: { backgroundColor: 'rgba(0, 0, 0, 0.8)' }, // stays dark for modal background
+                },
                 }}
-              >
-                {/* Image */}
+            >
                 <Box
-                  component="img"
-                  src={selected.src}
-                  alt={selected.title}
-                  sx={{
-                    width: '100%',
-                    height: 'auto',
-                    display: 'block',
-                  }}
-                />
-
-                {/* Overlay gradient */}
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    height: '50%',
-                    background: overlayGradient,
-                  }}
-                />
-
-                {/* Text on image */}
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    bottom: 16,
-                    left: 16,
-                    right: 16,
-                    zIndex: 1,
-                  }}
+                    sx={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        outline: 'none',
+                        width: '90vw',
+                        maxWidth: 700,
+                    }}
                 >
-                  <Typography
-                    variant="caption"
-                    sx={{
-                      textTransform: 'uppercase',
-                      color: theme.palette.text.primary,
-                      textShadow: textShadow,
-                    }}
-                  >
-                    {selected.category}
-                  </Typography>
-                  <Typography
-                    variant="h5"
-                    fontWeight="bold"
-                    sx={{
-                      mb: 1,
-                      color: theme.palette.text.primary,
-                      textShadow: textShadow,
-                    }}
-                  >
-                    {selected.title}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{
-                      color: theme.palette.text.primary,
-                      textShadow: textShadow,
-                    }}
-                  >
-                    {selected.description}
-                  </Typography>
+                    <MotionBox
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        transition={{ duration: 0.3 }}
+                        sx={{
+                            position: 'relative',
+                            borderRadius: 3,
+                            overflow: 'hidden',
+                            bgcolor: theme.palette.background.default,
+                            color: theme.palette.text.primary,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            maxHeight: '90vh',
+                        }}
+                        >
+                        {/* Image */}
+                        <Box
+                            component="img"
+                            src={selected.src}
+                            alt={selected.title}
+                            sx={{
+                            width: '100%',
+                            maxHeight: '70vh',
+                            objectFit: 'contain',
+                            }}
+                        />
+
+                        {/* Text below image */}
+                        <Box
+                            sx={{
+                            p: 3,
+                            overflowY: 'auto',
+                            }}
+                        >
+                            <Typography
+                            variant="caption"
+                            sx={{
+                                textTransform: 'uppercase',
+                                color: theme.palette.text.primary,
+                                textShadow,
+                            }}
+                            >
+                            {selected.category}
+                            </Typography>
+                            <Typography
+                            variant="h5"
+                            fontWeight="bold"
+                            sx={{
+                                mb: 1,
+                                color: theme.palette.text.primary,
+                                textShadow,
+                            }}
+                            >
+                            {selected.title}
+                            </Typography>
+                            <Typography
+                            variant="body1"
+                            sx={{
+                                color: theme.palette.text.primary,
+                                textShadow,
+                            }}
+                            >
+                            {selected.description}
+                            </Typography>
+                        </Box>
+                    </MotionBox>
                 </Box>
-              </MotionBox>
-            </Box>
-          </Modal>
-        )}
-      </AnimatePresence>
-    </>
-  );
+            </Modal>
+            )}
+        </AnimatePresence>
+        </>
+    );
 };
 
 export default PhotoGalleryWithLabels;

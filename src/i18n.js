@@ -42,18 +42,18 @@ i18n
 .use(initReactI18next)
 .init({
     backend: {
-    loadPath: '/locales/{{lng}}/{{ns}}.json'
+        loadPath: '/locales/{{lng}}/{{ns}}.json'
     },
     resources,
     fallbackLng: 'fr', // 👈 important si langue non supportée
     supportedLngs: ['fr', 'en'], // 👈 limite aux langues qu’on gère
     defaultNS: 'home',
     detection: {
-    order: ['localStorage', 'navigator'],
-    caches: ['localStorage'],
+        order: ['localStorage', 'navigator'],
+        caches: ['localStorage'],
     },
     interpolation: {
-    escapeValue: false,
+        escapeValue: false,
     },
 });
 
