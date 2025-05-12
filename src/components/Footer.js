@@ -7,6 +7,7 @@ import { useTheme } from '@mui/material/styles';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ThemeToggleButton from './ThemeToggleButton';
+import { Trans } from 'react-i18next';
 
 const Footer = ({ toggleBackground, backgroundEnabled }) => {
     const { t } = useTranslation();
@@ -93,8 +94,19 @@ const Footer = ({ toggleBackground, backgroundEnabled }) => {
 
             {/* Droits réservés */}
             <Typography variant="caption" sx={{ display: 'block', mt: 1 }}>
-                © {new Date().getFullYear()} Electrotech Automatisation Industrielle - {t('footer_rights')}
+            © {new Date().getFullYear()} Electrotech Automatisation Industrielle – {t('footer_rights')}
             </Typography>
+
+            <Typography variant="caption" sx={{ display: 'block' }}>
+            <Trans
+                i18nKey="footer_recaptcha_notice"
+                components={{
+                    privacy: <MuiLink href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" underline="hover" />,
+                    terms: <MuiLink href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" underline="hover" />
+                }}
+            />
+            </Typography>
+
         </Box>
     );
 };

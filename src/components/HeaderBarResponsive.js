@@ -15,7 +15,6 @@ import { Link, useLocation } from 'react-router-dom';
 import ThemeToggleButton from './ThemeToggleButton';
 import i18n from '../i18n';
 
-
 const HeaderBarResponsive = () => {
 
     const [drawerOpen, setDrawerOpen] = useState(false);
@@ -55,29 +54,29 @@ const HeaderBarResponsive = () => {
         
     const navGroups = {
         main: [
-        { label: t('news'), link: '/news' },
-        { label: t('quality'), link: '/quality' },
-        { label: t('quote'), link: '/quote' },
+            { label: t('quality'), link: '/quality' },
+            { label: t('quote'), link: '/quote' },
+            { label: t('track'), link: '/tracking' },
         ],
         products: [
-        { label: t('products_panels'), link: '/products-control-panels' },
-        { label: t('products_cables'), link: '/products-cables' },
-        { label: t('products_markers'), link: '/products-markers' },
-        { label: t('products_lines'), link: '/products-lines' },
+            { label: t('products_panels'), link: '/products-control-panels' },
+            { label: t('products_cables'), link: '/products-cables' },
+            { label: t('products_markers'), link: '/products-markers' },
+            { label: t('products_lines'), link: '/products-lines' },
         ],
         services: [
-        { label: t('services_assembly'), link: '/services/0' },
-        { label: t('services_design'), link: '/services/1' },
-        { label: t('services_machine'), link: '/services/2' },
-        { label: t('services_programming'), link: '/services/3' },
-        { label: t('services_cutout'), link: '/services/4' },
+            { label: t('services_assembly'), link: '/services/0' },
+            { label: t('services_design'), link: '/services/1' },
+            { label: t('services_machine'), link: '/services/2' },
+            { label: t('services_programming'), link: '/services/3' },
+            { label: t('services_cutout'), link: '/services/4' },
         ],
         about: [
-        { label: t('achievements'), link: '/achievements' },  
-        { label: t('about_us_contact'), link: '/contact-us' },
-        { label: t('about_us_team'), link: '/our-team' },
-        { label: t('about_us_our_partners'), link: '/our-partners' },
-        { label: t('about_us_join_us'), link: '/join-us' },
+            { label: t('news'), link: '/news' },
+            { label: t('achievements'), link: '/achievements' },  
+            { label: t('about_us_contact'), link: '/contact-us' },
+            { label: t('about_us_team'), link: '/our-team' },
+            { label: t('about_us_join_us'), link: '/jobs' },
         ],
     };
 

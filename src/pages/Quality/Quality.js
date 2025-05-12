@@ -99,7 +99,7 @@ const Quality = () => {
     return (
 
 <>
-    <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
+    <Container sx={{ mt: 8, color: 'white', textAlign: 'center' }}>
 
         <Box id="section1" sx={{ minHeight: '100vh', position: 'relative', px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
 
@@ -174,7 +174,7 @@ const Quality = () => {
                 {t('certification_why_matter')}
             </Typography>
 
-            <Grid container spacing={4} justifyContent="center" sx={{ mb:2, minHeight: { xs: 400, sm: 'auto' } }}>
+            <Grid container spacing={2} justifyContent="center" sx={{ mb:2, minHeight: { xs: 100, sm: 'auto' } }}>
                 
                 {messages.map((item, index) => (
                     <Grid item xs={6} sm={4} md={3} lg={2} key={index} textAlign="center">

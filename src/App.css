@@ -25,3 +25,6 @@ video {
   height: 100%;
 }
 
+.grecaptcha-badge {
+  display: none !important;
+}

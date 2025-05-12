@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Box, Button, Grid, MenuItem, TextField, Typography, Container  } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import validator from 'validator';
-import BackgroundBanner from '../../components/BackgroundBanner';
 
 const ContactUs = () => {
 
@@ -75,8 +74,7 @@ const ContactUs = () => {
     return (
         <Box sx={{ position: 'relative' }}>
 
-            <BackgroundBanner image="photos/blue.jpg" height={100} top={200} />
-
+     
             <Container maxWidth={false} sx={{ maxWidth: '1280px', mx: 'auto', mt: 10, px: 2 }}>
                 <Grid container spacing={2}>
                     

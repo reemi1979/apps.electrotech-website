@@ -3,7 +3,8 @@
     "home": "HOME",
     "news": "NEWS",
     "quality": "QUALITY",
-    "quote": "REQUEST QUOTE",
+    "track": "PROJECTS TRACKING",
+    "quote": "QUOTE",
     "products_panels": "CONTROL PANELS",
     "products_cables": "CABLES",
     "products_markers": "MARKERS",
@@ -16,7 +17,7 @@
     "service_panel_help":"Hover over a category type to learn more.",
     "about_us_contact": "CONTACT US",
     "about_us_team": "OUR TEAM",
-    "about_us_join_us": "JOIN US",
+    "about_us_join_us": "JOBS",
     "about_us_our_partners": "OUR PARTNERS",
     "products": "PRODUCTS",
     "services": "SERVICES",
@@ -43,7 +44,8 @@
     "footer_contact": "Contact",
     "footer_hide_background": "Hide Background",
     "footer_show_background": "Show Background",
-
+    "footer_recaptcha_notice": "This site is protected by reCAPTCHA. Google's <privacy>Privacy Policy</privacy> and <terms>Terms of Service</terms> apply.",
+    
     "hero_button_sound_on": "Unmute",
     "hero_button_sound_off": "Mute",
     "hero_tracking": "Follow your project progress!",

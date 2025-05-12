@@ -3,6 +3,8 @@
 🔄 Étapes à faire quand tu vas “sortir du test” :
 
 
+
+
 1. Modifier deploy-to-s3.bat:
     :: === CHEMIN DE DÉPLOIEMENT ===
     :: Pour la racine : set "DEPLOY_PATH="
@@ -15,9 +17,10 @@
 
 
 3. Modifier package.json :
-    "homepage": "/"
+    changer le homepage folder si requis dans package.json
+    AVANT : "homepage": "/testNewApp/" , APRÈS : "homepage": "/"
 
-
+  
 4. Modifier env.prodction : 
     REACT_APP_VIDEO_PATH=/video.mp4
     PUBLIC_URL=/

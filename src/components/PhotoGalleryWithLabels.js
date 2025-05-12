@@ -17,6 +17,7 @@ const PhotoGalleryWithLabels = ({ photos }) => {
 
     return (
         <>
+            
         <Grid container spacing={2} sx={{ px: 2, py: 4, justifyContent: 'center', maxWidth: 1400, margin: '0 auto' }}>
             {photos.map((photo, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>

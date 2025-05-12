@@ -201,22 +201,24 @@ const TrackingProjects = () => {
     );
 
     return (
-        <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
-            <Box p={4}>
+        <Box id="section1" sx={{ position: 'relative', zIndex: 0, height: '90vh' }}>
+            <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
+                <Box p={4}>
 
-                <Typography variant="h3" sx={{ color: theme.palette.text.secondary, mb: 2 }}>
-                    {t('tracking_title')}
-                </Typography>
+                    <Typography variant="h3" sx={{ color: theme.palette.text.secondary, mb: 2 }}>
+                        {t('tracking_title')}
+                    </Typography>
 
-                <Typography variant="h6" sx={{ mb: 10, maxWidth: 800, mx: 'auto', color: theme.palette.text.primary }}>
-                    {t('tracking_title_description')}
-                </Typography>
+                    <Typography variant="h6" sx={{ mb: 10, maxWidth: 800, mx: 'auto', color: theme.palette.text.primary }}>
+                        {t('tracking_title_description')}
+                    </Typography>
 
-                {!projectNumber ? renderSearch() :
-                    !selectedProject ? renderNoResults() :
-                        renderResults()}
-            </Box>
-        </Container>
+                    {!projectNumber ? renderSearch() :
+                        !selectedProject ? renderNoResults() :
+                            renderResults()}
+                </Box>
+            </Container>
+        </Box>
     );
 };
 
