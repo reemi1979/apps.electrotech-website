@@ -85,9 +85,16 @@
     "home_content_main": "Contenu principal après le Hero.",
 
     "home_expertise": "Notre expertise",
-    "home_welcome": "À la recherche de l’excellence",
-    "home_content_1": "Solutions sur mesure en panneaux électriques et automatisation",
-    "home_content_2": "Chez Electrotech, nous sommes spécialisés dans la conception, la fabrication et l'intégration de panneaux de contrôle électriques de haute qualité pour l'automatisation industrielle. Fondée en 1997, notre entreprise québécoise possède 27 ans d'expertise dans de multiples secteurs, offrant des solutions d'automatisation sur mesure qui améliorent l'efficacité, la fiabilité et la sécurité. Nous sommes reconnus pour notre excellence en contrôle industriel et en ingénierie d'automatisation, et nous nous engageons à dépasser les attentes de nos clients, partenaires et employés avec professionnalisme et intégrité.",
+    "home_flipbox1_title": "À la recherche de l’excellence",
+    "home_flipbox2_title": "Satisfaction Client",
+    "home_flipbox3_title": "Confiance, performance, résultats",
+
+    "home_flipbox1_content_1": "Solutions sur mesure en panneaux électriques et automatisation",
+    "home_flipbox1_content_2": "Chez Electrotech, nous sommes spécialisés dans la conception, la fabrication et l'intégration de panneaux de contrôle électriques de haute qualité pour l'automatisation industrielle. Fondée en 1997, notre entreprise québécoise possède 27 ans d'expertise dans de multiples secteurs, offrant des solutions d'automatisation sur mesure qui améliorent l'efficacité, la fiabilité et la sécurité. Nous sommes reconnus pour notre excellence en contrôle industriel et en ingénierie d'automatisation, et nous nous engageons à dépasser les attentes de nos clients, partenaires et employés avec professionnalisme et intégrité.",
+    "home_flipbox2_content_1": "",
+    "home_flipbox2_content_2": "Chez Électrotech, nous nous engageons à offrir les plus hauts standards de qualité et de sécurité dans chacun de nos projets. Nos certifications reflètent notre engagement envers l'amélioration continue et l'excellence dans l'industrie de l'automatisation des panneaux électriques.",
+    "home_flipbox3_content_1": "",
+    "home_flipbox3_content_2": "Experts en automatisation et en conception de systèmes de contrôle, nous assurons des solutions optimisées pour la performance et l’efficacité. Nos représentants dédiés comprennent vos besoins et vous guident vers les meilleures solutions. Nous garantissons une exécution fluide des projets, du concept à la réalisation, livrés à temps et dans le respect du budget.",
 
     "home_accordion_title": "Vous recherchez plus d’informations?",
     "home_accordion_location": "Où sommes-nous situés?",

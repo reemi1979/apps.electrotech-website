@@ -14,6 +14,8 @@ import HomeServices from './HomeServices';
 import ScrollToNextSectionButton from '../../components/ScrollToNextSectionButton';
 import HomeAccordion from './HomeAccordion';
 import HomeFlipBox1 from './HomeFlipBox1';
+import HomeFlipBox2 from './HomeFlipBox2';
+import HomeFlipBox3 from './HomeFlipBox3';
 
 const Home = () => {
 
@@ -26,7 +28,7 @@ const Home = () => {
     
     const [currentSection, setCurrentSection] = useState(1);
     const nextSectionId = `section${currentSection + 1}`; // incrémente
-    const isLastSection = currentSection >= 6;
+    const isLastSection = currentSection >= 9;
     
     useEffect(() => {
       const handleScroll = () => {
@@ -61,8 +63,7 @@ const Home = () => {
 
         </Box>
 
-
-        <Box id="section2" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
+        <Box id="section2" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto', }}>
 
             <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -88,12 +89,28 @@ const Home = () => {
             /></LazyLoad>
             </motion.div>
 
+        </Box>
+
+
+        <Box id="section3" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto', }}>
+
              <HomeFlipBox1 />
 
         </Box>
             
+        <Box id="section4" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto', }}>
 
-        <Box id="section3" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto', }}>
+             <HomeFlipBox2 />
+
+        </Box>
+
+        <Box id="section5" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto', }}>
+                
+            <HomeFlipBox3 />
+
+        </Box>
+
+        <Box id="section6" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto', }}>
 
             <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
                 {t('home_expertise')}     
@@ -101,25 +118,23 @@ const Home = () => {
             <LazyLoad once><HomePhotos /></LazyLoad>
         </Box>
 
-
-        <Box id="section4" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto', }}>
+        <Box id="section7" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto', }}>
 
             <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
                 <HomeIndustries />
             </Typography>
-
+            
         </Box>   
             
+        <Box id="section8" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto', }}>
 
-            <Box id="section5" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto', }}>
+            <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
+                <HomeServices />
+            </Typography>
 
-                <Typography variant="h3" sx={{ mb: 2 , color: theme.palette.text.secondary}}>
-                    <HomeServices />
-                </Typography>
-
-            </Box>
+        </Box>
   
-        <Box id="section6" sx={{ minHeight: '80vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
+        <Box id="section9" sx={{ minHeight: '80vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
 
             <HomeAccordion mapLink={mapLink} isMobile={isMobile} t={t} theme={theme} />
 

@@ -119,10 +119,17 @@
     "home_service_cnc_description": "Precision drilling and machining of enclosures or backplates using our Rittal Perforex CNC machine.",
 
     "home_expertise": "Our Expertise",
-    "home_welcome": "Committed to Excellence",
-    "home_content_1" : "Custom Electrical Panel & Automation Solutions",
-    "home_content_2" : "At Electrotech, we specialize in designing, manufacturing, and integrating high-quality electrical control panels for industrial automation. Founded in 1997, our Quebec-based company brings 27 years of expertise across multiple industries, delivering custom automation solutions that enhance efficiency, reliability, and safety. We are recognized for our excellence in industrial control and automation engineering, and we are committed to exceeding the expectations of our clients, partners, and employees with professionalism and integrity.",
+    "home_flipbox1_title": "Committed to Excellence",
+    "home_flipbox2_title": "Customer Satisfaction",
+    "home_flipbox3_title": "Trust, Performance, Results",
 
+    "home_flipbox1_content_1" : "Custom Electrical Panel & Automation Solutions",
+    "home_flipbox1_content_2" : "At Electrotech, we specialize in designing, manufacturing, and integrating high-quality electrical control panels for industrial automation. Founded in 1997, our Quebec-based company brings 27 years of expertise across multiple industries, delivering custom automation solutions that enhance efficiency, reliability, and safety. We are recognized for our excellence in industrial control and automation engineering, and we are committed to exceeding the expectations of our clients, partners, and employees with professionalism and integrity.",
+    "home_flipbox2_content_1": "",
+    "home_flipbox2_content_2": "At Électrotech, we are committed to delivering the highest standards of quality and safety in every project we undertake. Our certifications reflect our dedication to continuous improvement and excellence in the electrical panel automation industry.",
+    "home_flipbox3_content_1": "",
+    "home_flipbox3_content_2": "Experts in automation and control system design, ensuring each solution is optimized for performance and efficiency. Dedicated representatives who understand your needs and provide expert guidance on the best solutions. Ensuring smooth project execution from concept to completion, delivering on time and within budget.",
+    
     "home_accordion_title": "Are you looking for more information?",
     "home_accordion_location": "Where are we located?",
     "home_accordion_phone": "What’s our phone number?",

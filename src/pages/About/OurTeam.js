@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { Divider } from '@mui/material';
 import BackgroundBanner from '../../components/BackgroundBanner';
 import OurTeamAccordion from './OurTeamAccordion';
+import OurTeamFlipBox1 from './OurTeamFlipBox1';
 
 const teamMembers = [
   {
@@ -106,7 +107,7 @@ const OurTeam = () => {
         {t('our_team_intro')}
       </Typography>
 
-      <Grid container spacing={4} justifyContent="center">
+      <Grid container spacing={4} sx={{ mb:10 }} justifyContent="center">
         {teamMembers.map((member) => (
           <Grid
               item
@@ -171,17 +172,11 @@ const OurTeam = () => {
         ))}
       </Grid>
 
-      {/* <Container sx={{ py: 8, textAlign: 'center' }}>
-
-      <Box sx={{ mt: 2, minHeight: 50, maxWidth: 600, mx: 'auto' }}>
-        <Typography variant="body1" sx={{ color: theme.palette.text.primary }}>
-          {hoveredMember ? t(`our_team_${hoveredMember}_desc`) : ''}
-        </Typography>
-      </Box>
-
-    </Container> */}
+      <OurTeamFlipBox1></OurTeamFlipBox1>
 
       {/* ALL TO LEFT FROM HERE ↓↓↓ */}
+      
+        <br /><br /><br />
 
       <Divider sx={{ my: 2, borderColor: 'text.secondary', borderBottomWidth: 2 }} />
 

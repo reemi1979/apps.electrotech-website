@@ -92,7 +92,7 @@ function HomeFlipBox1() {
                         variant="h2"
                         sx={{ fontWeight: 'bold', color: theme.palette.text.secondary }}
                     >
-                        {t('home_flipbox1_title')}
+                        {t('home_flipbox3_title')}
                     </Typography>
                 </Box>
 
@@ -100,32 +100,24 @@ function HomeFlipBox1() {
 
                 <Box
                     sx={{
-                    position: 'relative',
-                    height: isSmallScreen ? '50%' : '100%',
-                    width: 'auto',
-                    display: 'flex'
+                        position: 'relative',
+                        height: isSmallScreen ? '50%' : '100%',
+                        width: 'auto',
+                        display: 'flex',
+                        overflow: 'hidden',
                     }}
                 >
                     <Box
                         component="img"
-                        src={`${process.env.PUBLIC_URL}/photos/home/t1.svg`}
+                        src={`${process.env.PUBLIC_URL}/logos/eplan.svg`}
                         alt="Trophy 1"
                         sx={{
-                            height: '100%',
+                            height: isSmallScreen ? '100%' : '100%',
+                            width: 'auto',
+                            transform: isSmallScreen ? 'scale(1.0)' : 'scale(1.2)',
                             position: 'relative',
+                            transformOrigin: 'left center',
                             zIndex: 1
-                        }}
-                    />
-                    <Box
-                        component="img"
-                        src={`${process.env.PUBLIC_URL}/photos/home/t2.svg`}
-                        alt="Trophy 2"
-                        sx={{
-                            height: '50%',
-                            position: 'absolute',
-                            bottom: '10%',
-                            left: '50%',
-                            zIndex: 2
                         }}
                         />
                     </Box>
@@ -157,13 +149,13 @@ function HomeFlipBox1() {
                         variant="h4"
                         sx={{ mb: 2, maxWidth: '1000px', margin: '0 auto', color: theme.palette.text.primary }}
                     >
-                        {t('home_flipbox1_content_1')}
+                        {t('home_flipbox3_content_1')}
                     </Typography>
                     <Typography
                         variant={!isSmallScreen ? 'h6' : 'subtitle1'}
                         sx={{ mb: 10, maxWidth: '1000px', margin: '0 auto' }}
                     >
-                        {t('home_flipbox1_content_2')}
+                        {t('home_flipbox3_content_2')}
                     </Typography>
                     <Box sx={{ position: 'absolute', bottom: 16, right: 16 }}>
                         <CloseIcon sx={{ fontSize: 40, color: theme.palette.text.secondary }} />
