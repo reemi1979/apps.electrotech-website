@@ -83,6 +83,7 @@ const ContactUs = () => {
         <meta property="og:url" content="https://www.electrotech.ca/contact-us" />
         <meta property="og:image" content="https://www.electrotech.ca/photos/og-thumbnail.jpg" />
         <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="4066793063644485" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact – Électrotech Automatisation Industrielle" />
         <meta name="twitter:description" content="Faites une demande ou posez vos questions à Électrotech via notre formulaire de contact." />
