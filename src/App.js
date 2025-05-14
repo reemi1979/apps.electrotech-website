@@ -15,6 +15,7 @@ const ProductsControlPanels = lazy(() => import('./pages/Products/ProductsContro
 const ProductsCables = lazy(() => import('./pages/Products/ProductsCables'));
 const ProductsMarkers = lazy(() => import('./pages/Products/ProductsMarkers'));
 const ProductsLines = lazy(() => import('./pages/Products/ProductsLines'));
+const PanneauxDeControle = lazy(() => import('./pages/Products/PanneauxDeControle'));
 const Services = lazy(() => import('./pages/Services/Services'));
 const Achievements = lazy(() => import('./pages/About/Achievements'));
 const OurTeam = lazy(() => import('./pages/About/OurTeam'));
@@ -43,6 +44,7 @@ const App = () => {
                 <Route path="/products-cables" element={<ProductsCables />} />
                 <Route path="/products-markers" element={<ProductsMarkers />} />
                 <Route path="/products-lines" element={<ProductsLines />} />
+                <Route path="/panneaux-de-controle" element={<PanneauxDeControle />} />
                 <Route path="/services/:index" element={<Services />} />
                 <Route path="/tracking" element={<TrackingProjects />} />
                 <Route path="/tracking/:projectNumber" element={<TrackingProjects />} />

@@ -95,7 +95,17 @@ const Footer = ({ toggleBackground, backgroundEnabled }) => {
             {/* Droits réservés */}
             <Typography variant="caption" sx={{ display: 'block', mt: 1 }}>
             © {new Date().getFullYear()} Electrotech Automatisation Industrielle – {t('footer_rights')}
+            
             </Typography>
+
+<MuiLink
+  component={Link}
+  to="/panneaux-de-controle"
+  underline="hover"
+  sx={{ color: theme.palette.text.primary }}
+>
+  Panneaux de contrôle
+</MuiLink>
 
             <Typography variant="caption" sx={{ display: 'block' }}>
             <Trans
