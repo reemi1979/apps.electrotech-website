@@ -1,4 +1,3 @@
-// src/Home/Homes.js
 import { useEffect, useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import { Helmet } from 'react-helmet';
@@ -55,6 +54,7 @@ const Home = () => {
         <meta name="twitter:title" content="Électrotech – Automatisation et panneaux de contrôle industriel" />
         <meta name="twitter:description" content="Découvrez nos services d'ingénierie et de fabrication de panneaux électriques sur mesure à Granby." />
         <meta name="twitter:image" content="https://www.electrotech.ca/photos/og-thumbnail.jpg" />
+
         <script type="application/ld+json">
           {`
           {
@@ -92,10 +92,9 @@ const Home = () => {
           }
           `}
         </script>
-      
       </Helmet>
 
-      {/* Sections */}
+      {/* Your layout continues exactly as is */}
       <Box id="section1" sx={{ position: 'relative', zIndex: 0, height: '100vh' }}>
         <LazyLoad once>
           <HeroVideo />
@@ -144,19 +143,19 @@ const Home = () => {
         </motion.div>
       </Box>
 
-      <Box id="section3" sx={{ minHeight: '100vh', ...sharedBoxStyle }}>
+      <Box id="section3" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto' }}>
         <HomeFlipBox1 />
       </Box>
 
-      <Box id="section4" sx={{ minHeight: '100vh', ...sharedBoxStyle }}>
+      <Box id="section4" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto' }}>
         <HomeFlipBox2 />
       </Box>
 
-      <Box id="section5" sx={{ minHeight: '100vh', ...sharedBoxStyle }}>
+      <Box id="section5" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto' }}>
         <HomeFlipBox3 />
       </Box>
 
-      <Box id="section6" sx={{ minHeight: '100vh', ...sharedBoxStyle }}>
+      <Box id="section6" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto' }}>
         <Typography variant="h3" sx={{ mb: 2, color: theme.palette.text.secondary }}>
           {t('home_expertise')}
         </Typography>
@@ -165,38 +164,25 @@ const Home = () => {
         </LazyLoad>
       </Box>
 
-      <Box id="section7" sx={{ minHeight: '100vh', ...sharedBoxStyle }}>
+      <Box id="section7" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto' }}>
         <Typography variant="h3" sx={{ mb: 2, color: theme.palette.text.secondary }}>
           <HomeIndustries />
         </Typography>
       </Box>
 
-      <Box id="section8" sx={{ minHeight: '100vh', ...sharedBoxStyle }}>
+      <Box id="section8" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto' }}>
         <Typography variant="h3" sx={{ mb: 2, color: theme.palette.text.secondary }}>
           <HomeServices />
         </Typography>
       </Box>
 
-      <Box id="section9" sx={{ minHeight: '80vh', ...sharedBoxStyle }}>
+      <Box id="section9" sx={{ minHeight: '80vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto' }}>
         <HomeAccordion mapLink={mapLink} isMobile={isMobile} t={t} theme={theme} />
       </Box>
 
       <ScrollToNextSectionButton sectionIds={['section1', 'section2', 'section3', 'section4', 'section5', 'section6']} />
     </>
   );
-};
-
-// Common style used across sections
-const sharedBoxStyle = {
-  display: 'flex',
-  position: 'relative',
-  zIndex: 1,
-  px: 2,
-  py: 2,
-  alignItems: 'center',
-  justifyContent: 'center',
-  textAlign: 'center',
-  mx: 'auto',
 };
 
 export default Home;
