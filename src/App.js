@@ -22,6 +22,7 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TrackingProjects = lazy(() => import('./pages/Tracking/TrackingProjects'));
 const ContactUs = lazy(() => import('./pages/About/ContactUs'));
 const JobList = lazy(() => import('./pages/About/JobList'));
+const QuotePage = lazy(() => import('./pages/Quote/QuotePage'));
 
 const App = () => {
 
@@ -49,6 +50,7 @@ const App = () => {
                 <Route path="/our-team" element={<OurTeam />} />
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/jobs" element={<JobList />} />
+                <Route path="/quote" element={<QuotePage />} />
                 </Route>
             </Routes>
             </Suspense>

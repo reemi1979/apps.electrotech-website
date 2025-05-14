@@ -111,9 +111,7 @@ const OurTeam = () => {
         {teamMembers.map((member) => (
           <Grid
               item
-              xs={12}
-              sm={6}
-              md={3}
+              size={{ xs:6, sm:3 ,md:2 }}
               key={member.key}
               onMouseEnter={() => setHoveredMember(member.key)}
               onMouseLeave={() => setHoveredMember(null)}

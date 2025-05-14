@@ -201,7 +201,8 @@ const TrackingProjects = () => {
     );
 
     return (
-        <Box id="section1" sx={{ position: 'relative', zIndex: 0, height: '90vh' }}>
+        <Box id="section1" sx={{ position: 'relative', zIndex: 0, minHeight: '100vh', pb: 10 }}>
+
             <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
                 <Box p={4}>
 

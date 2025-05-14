@@ -32,7 +32,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "obfuscate": "javascript-obfuscator build/static/js --output build/static/js --compact true --self-defending true"
+    "obfuscate": "javascript-obfuscator build/static/js --output build/static/js --compact true --self-defending true",
+    "generate-sitemap": "node generate-sitemap.js"
   },
   "eslintConfig": {
     "extends": [
@@ -52,8 +53,9 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "/testNewApp/",
+  "homepage": "/",
   "devDependencies": {
-    "javascript-obfuscator": "^4.1.1"
+    "javascript-obfuscator": "^4.1.1",
+    "sitemap": "^8.0.0"
   }
 }

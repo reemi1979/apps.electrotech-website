@@ -25,7 +25,7 @@ const PhotoGallery = ({ basePath, typeFolderMap, selectedType }) => {
         <>
         <Grid container spacing={2} sx={{ px: 2, py: 4, justifyContent: 'center' }}>
             {photos.map((photo, index) => (
-            <Grid item xs={12} sm={6} md={6} key={index}>
+            <Grid item size={{ xs:12, sm:6 ,md:6 }} key={index}>
                 <InViewPhotoCard photo={photo} onClick={() => setSelectedPhoto(photo)} />
             </Grid>
             ))}
