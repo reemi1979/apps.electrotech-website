@@ -6,12 +6,12 @@ import { motion } from 'framer-motion';
 import { isMobile } from 'react-device-detect';
 import LazyLoad from 'react-lazyload';
 import HeroVideo from './HeroVideo';
-import HomeFlipBox1 from './HomeFlipBox1';
-import HomeFlipBox2 from './HomeFlipBox2';
-import HomeFlipBox3 from './HomeFlipBox3';
 import ScrollToNextSectionButton from '../../components/ScrollToNextSectionButton';
 import SeoHelmet from '../../components/SeoHelmet';
 
+const HomeFlipBox1 = lazy(() => import('./HomeFlipBox1'));
+const HomeFlipBox2 = lazy(() => import('./HomeFlipBox2'));
+const HomeFlipBox3 = lazy(() => import('./HomeFlipBox3'));
 const HomePhotos = lazy(() => import('./HomePhotos'));
 const HomeIndustries = lazy(() => import('./HomeIndustries'));
 const HomeServices = lazy(() => import('./HomeServices'));
@@ -90,15 +90,15 @@ const Home = () => {
       </Box>
 
       <Box id="section3" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto' }}>
-        <HomeFlipBox1 />
+        <Suspense fallback={null}><HomeFlipBox1 /></Suspense>
       </Box>
 
       <Box id="section4" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto' }}>
-        <HomeFlipBox2 />
+        <Suspense fallback={null}><HomeFlipBox2 /></Suspense>
       </Box>
 
       <Box id="section5" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto' }}>
-        <HomeFlipBox3 />
+        <Suspense fallback={null}><HomeFlipBox3 /></Suspense>
       </Box>
 
       <Box id="section6" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto' }}>
