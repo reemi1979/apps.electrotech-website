@@ -102,7 +102,7 @@ function HomeFlipBox2() {
             >
                 <Box
                     component="img"
-                    src={`${process.env.PUBLIC_URL}/photos/certifications/stamp.png`}
+                    src={`${process.env.PUBLIC_URL}/photos/certifications/stamp.webp`}
                     alt="Trophy 1"
                     sx={{
                         height: isSmallScreen ? '100%' : '110%',

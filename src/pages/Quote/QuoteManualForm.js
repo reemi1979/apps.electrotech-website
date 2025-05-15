@@ -10,7 +10,7 @@ export default function QuoteManualForm({ data, onChange }) {
 
   const handleFileUpload = (e) => {
     const newFiles = Array.from(e.target.files).filter(file =>
-      ['application/pdf', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'image/png', 'image/jpeg', 'image/jpg'].includes(file.type)
+      ['application/pdf', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'image/png', 'image/jpeg', 'image/webp'].includes(file.type)
     );
     const currentFiles = data.files || [];
     onChange({ ...data, files: [...currentFiles, ...newFiles] });

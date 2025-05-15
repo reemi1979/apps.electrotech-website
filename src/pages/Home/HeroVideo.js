@@ -23,7 +23,7 @@ const HeroVideo = () => {
     ? process.env.PUBLIC_URL + '/video/playlist.m3u8'
     : 'https://electrotech.ca/video/playlist.m3u8';
 
-  const posterUrl = process.env.PUBLIC_URL + '/video.jpg';
+  const posterUrl = process.env.PUBLIC_URL + '/video.webp';
 
   useEffect(() => {
     const timeout = setTimeout(() => {

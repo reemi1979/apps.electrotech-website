@@ -6,12 +6,12 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 
 const markerTypes = [
-    { src: process.env.PUBLIC_URL + '/photos/products/markers/a.jpg', titleKey: 'product_markers_cables_title', name: 'cables' },
-    { src: process.env.PUBLIC_URL + '/photos/products/markers/b.jpg', titleKey: 'product_markers_wires_title', name: 'wires' },
-    { src: process.env.PUBLIC_URL + '/photos/products/markers/c.jpg', titleKey: 'product_markers_plates_title', name: 'plates' },
-    { src: process.env.PUBLIC_URL + '/photos/products/markers/d.jpg', titleKey: 'product_markers_components_title', name: 'components' },
-    { src: process.env.PUBLIC_URL + '/photos/products/markers/e.jpg', titleKey: 'product_markers_terminals_title', name: 'terminals' }, 
-    { src: process.env.PUBLIC_URL + '/photos/products/markers/f.jpg', titleKey: 'product_markers_stainless_title', name: 'stainless' }
+    { src: process.env.PUBLIC_URL + '/photos/products/markers/a.webp', titleKey: 'product_markers_cables_title', name: 'cables' },
+    { src: process.env.PUBLIC_URL + '/photos/products/markers/b.webp', titleKey: 'product_markers_wires_title', name: 'wires' },
+    { src: process.env.PUBLIC_URL + '/photos/products/markers/c.webp', titleKey: 'product_markers_plates_title', name: 'plates' },
+    { src: process.env.PUBLIC_URL + '/photos/products/markers/d.webp', titleKey: 'product_markers_components_title', name: 'components' },
+    { src: process.env.PUBLIC_URL + '/photos/products/markers/e.webp', titleKey: 'product_markers_terminals_title', name: 'terminals' }, 
+    { src: process.env.PUBLIC_URL + '/photos/products/markers/f.webp', titleKey: 'product_markers_stainless_title', name: 'stainless' }
 ];
 
 const MotionBox = motion(Box);

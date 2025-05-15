@@ -20,7 +20,7 @@ const ProductsCables = () => {
         
         <Box sx={{ position: 'relative' }}>
         
-            <BackgroundBanner image="photos/lobby.jpg" height={550} top={200} />
+            <BackgroundBanner image="photos/lobby.webp" height={550} top={200} />
             
             <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
 

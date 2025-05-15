@@ -8,11 +8,11 @@ import { useTranslation } from 'react-i18next';
 import BackgroundBanner from '../../components/BackgroundBanner';
 
 const services = [
-{ src: process.env.PUBLIC_URL + '/photos/services/a.jpg', titleKey: 'home_service_assy_title', descriptionKey: 'home_service_assy_description' },
-{ src: process.env.PUBLIC_URL + '/photos/services/b.jpg', titleKey: 'home_service_design_title', descriptionKey: 'home_service_design_description' },
-{ src: process.env.PUBLIC_URL + '/photos/services/c.jpg', titleKey: 'home_service_machine_title', descriptionKey: 'home_service_machine_description' },
-{ src: process.env.PUBLIC_URL + '/photos/services/d.jpg', titleKey: 'home_service_prog_title', descriptionKey: 'home_service_prog_description' },
-{ src: process.env.PUBLIC_URL + '/photos/services/e.jpg', titleKey: 'home_service_cnc_title', descriptionKey: 'home_service_cnc_description' },
+{ src: process.env.PUBLIC_URL + '/photos/services/a.webp', titleKey: 'home_service_assy_title', descriptionKey: 'home_service_assy_description' },
+{ src: process.env.PUBLIC_URL + '/photos/services/b.webp', titleKey: 'home_service_design_title', descriptionKey: 'home_service_design_description' },
+{ src: process.env.PUBLIC_URL + '/photos/services/c.webp', titleKey: 'home_service_machine_title', descriptionKey: 'home_service_machine_description' },
+{ src: process.env.PUBLIC_URL + '/photos/services/d.webp', titleKey: 'home_service_prog_title', descriptionKey: 'home_service_prog_description' },
+{ src: process.env.PUBLIC_URL + '/photos/services/e.webp', titleKey: 'home_service_cnc_title', descriptionKey: 'home_service_cnc_description' },
 ];
 
 const MotionBox = motion.create(Box);
@@ -63,7 +63,7 @@ const HomeServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => 
               
             <Box sx={{ px: 2, maxWidth: 1400, mx: 'auto' }}>
 
-                <BackgroundBanner image="photos/blue.jpg" height={250} top={0} />
+                <BackgroundBanner image="photos/blue.webp" height={250} top={0} />
 
                 {/* TITRE FIXE EN HAUT */}
 

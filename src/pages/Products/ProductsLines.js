@@ -16,7 +16,7 @@ const manufacturers = [
     { name: 'Siemens', logo: process.env.PUBLIC_URL + '/photos/products/parts/siemens.svg' },
     { name: 'Allen-Bradley', logo: process.env.PUBLIC_URL + '/photos/products/parts/allenbradley.svg' },
     { name: 'Schneider Electric', logo: process.env.PUBLIC_URL + '/photos/products/parts/schneider.svg' },
-    { name: 'Hoffman nVent', logo: process.env.PUBLIC_URL + '/photos/products/parts/hoffman.png' },
+    { name: 'Hoffman nVent', logo: process.env.PUBLIC_URL + '/photos/products/parts/hoffman.webp' },
     { name: 'Phoenix Contact', logo: process.env.PUBLIC_URL + '/photos/products/parts/phoenix.svg' },
     { name: 'Murr', logo: process.env.PUBLIC_URL + '/photos/products/parts/murr.svg' },
     { name: 'IFM', logo: process.env.PUBLIC_URL + '/photos/products/parts/ifm.svg' },
@@ -82,7 +82,7 @@ const ProductsLines = () => {
             <>
               <SeoHelmet />
         <Box sx={{ position: 'relative' }}>
-        <BackgroundBanner image="photos/blue.jpg" height={50} top={bannerTop} />
+        <BackgroundBanner image="photos/blue.webp" height={50} top={bannerTop} />
 
         <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
 

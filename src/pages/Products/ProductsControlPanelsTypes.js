@@ -6,11 +6,11 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 
 const controlPanelsTypes = [
-  { src: process.env.PUBLIC_URL + '/photos/products/controlpanels/a.jpg', titleKey: 'product_control_panel_standard_title', name: 'standard' },
-  { src: process.env.PUBLIC_URL + '/photos/products/controlpanels/b.jpg', titleKey: 'product_control_panel_custom_title', name: 'custom' },
-  { src: process.env.PUBLIC_URL + '/photos/products/controlpanels/c.jpg', titleKey: 'product_control_panel_serie_title', name: 'serie' },
-  { src: process.env.PUBLIC_URL + '/photos/products/controlpanels/d.jpg', titleKey: 'product_control_panel_pushbutton_title', name: 'pushbuttons' },
-  { src: process.env.PUBLIC_URL + '/photos/products/controlpanels/e.jpg', titleKey: 'product_control_panel_junctionbox_title', name: 'junctionbox' }
+  { src: process.env.PUBLIC_URL + '/photos/products/controlpanels/a.webp', titleKey: 'product_control_panel_standard_title', name: 'standard' },
+  { src: process.env.PUBLIC_URL + '/photos/products/controlpanels/b.webp', titleKey: 'product_control_panel_custom_title', name: 'custom' },
+  { src: process.env.PUBLIC_URL + '/photos/products/controlpanels/c.webp', titleKey: 'product_control_panel_serie_title', name: 'serie' },
+  { src: process.env.PUBLIC_URL + '/photos/products/controlpanels/d.webp', titleKey: 'product_control_panel_pushbutton_title', name: 'pushbuttons' },
+  { src: process.env.PUBLIC_URL + '/photos/products/controlpanels/e.webp', titleKey: 'product_control_panel_junctionbox_title', name: 'junctionbox' }
 ];
 
 const MotionBox = motion(Box);

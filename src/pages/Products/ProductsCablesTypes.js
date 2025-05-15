@@ -6,10 +6,10 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 
 const cableTypes = [
-  { src: process.env.PUBLIC_URL + '/photos/products/cables/a.jpg', titleKey: 'product_cables_cables_title', name: 'cables' },
-  { src: process.env.PUBLIC_URL + '/photos/products/cables/b.jpg', titleKey: 'product_cables_harness_title', name: 'harness' },
-  { src: process.env.PUBLIC_URL + '/photos/products/cables/c.jpg', titleKey: 'product_cables_wires_title', name: 'wires' },
-  { src: process.env.PUBLIC_URL + '/photos/products/cables/d.jpg', titleKey: 'product_cables_connectors_title', name: 'connectors' }
+  { src: process.env.PUBLIC_URL + '/photos/products/cables/a.webp', titleKey: 'product_cables_cables_title', name: 'cables' },
+  { src: process.env.PUBLIC_URL + '/photos/products/cables/b.webp', titleKey: 'product_cables_harness_title', name: 'harness' },
+  { src: process.env.PUBLIC_URL + '/photos/products/cables/c.webp', titleKey: 'product_cables_wires_title', name: 'wires' },
+  { src: process.env.PUBLIC_URL + '/photos/products/cables/d.webp', titleKey: 'product_cables_connectors_title', name: 'connectors' }
 ];
 
 const MotionBox = motion(Box);

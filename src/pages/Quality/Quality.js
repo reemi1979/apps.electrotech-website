@@ -27,9 +27,9 @@ const Quality = () => {
     const logoContainerRef = useRef(null);
 
     const messages = [
-        { src: process.env.PUBLIC_URL + '/photos/certifications/a.jpg', titleKey: 'quality_photos_1_title', descriptionKey: 'quality_photos_1_description' },
-        { src: process.env.PUBLIC_URL + '/photos/certifications/b.jpg', titleKey: 'quality_photos_2_title', descriptionKey: 'quality_photos_2_description' },
-        { src: process.env.PUBLIC_URL + '/photos/certifications/c.jpg', titleKey: 'quality_photos_3_title', descriptionKey: 'quality_photos_3_description' }
+        { src: process.env.PUBLIC_URL + '/photos/certifications/a.webp', titleKey: 'quality_photos_1_title', descriptionKey: 'quality_photos_1_description' },
+        { src: process.env.PUBLIC_URL + '/photos/certifications/b.webp', titleKey: 'quality_photos_2_title', descriptionKey: 'quality_photos_2_description' },
+        { src: process.env.PUBLIC_URL + '/photos/certifications/c.webp', titleKey: 'quality_photos_3_title', descriptionKey: 'quality_photos_3_description' }
     ];
 
     const certifications = {
@@ -172,7 +172,7 @@ const Quality = () => {
 
         <Box id="section4" sx={{ minHeight: '80vh', position: 'relative', px: 2, py: 2, textAlign: 'center', mx: 'auto', }}>
             
-            <BackgroundBanner image="photos/blue.jpg" height={150} top={0} />
+            <BackgroundBanner image="photos/blue.webp" height={150} top={0} />
 
             <Typography variant="h4" sx={{ color: theme.palette.text.white, mt: 1, mb:2 }}>
                 {t('certification_why_matter')}

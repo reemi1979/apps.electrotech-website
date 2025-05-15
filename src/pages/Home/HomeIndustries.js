@@ -8,15 +8,15 @@ import { useTranslation } from 'react-i18next';
 import BackgroundBanner from '../../components/BackgroundBanner';
 
 const industries = [
-    { src: process.env.PUBLIC_URL + '/photos/industries/a.jpg', titleKey: 'home_industrie_airport_title', descriptionKey: 'home_industrie_airport_description' },
-    { src: process.env.PUBLIC_URL + '/photos/industries/b.jpg', titleKey: 'home_industrie_distribution_title', descriptionKey: 'home_industrie_distribution_description' },
-    { src: process.env.PUBLIC_URL + '/photos/industries/c.jpg', titleKey: 'home_industrie_manufacturing_title', descriptionKey: 'home_industrie_manufacturing_description' },
-    { src: process.env.PUBLIC_URL + '/photos/industries/d.jpg', titleKey: 'home_industrie_oem_title', descriptionKey: 'home_industrie_oem_description' },
-    { src: process.env.PUBLIC_URL + '/photos/industries/e.jpg', titleKey: 'home_industrie_foodpharma_title', descriptionKey: 'home_industrie_foodpharma_description' },
-    { src: process.env.PUBLIC_URL + '/photos/industries/f.jpg', titleKey: 'home_industrie_energy_title', descriptionKey: 'home_industrie_energy_description' },
-    { src: process.env.PUBLIC_URL + '/photos/industries/g.jpg', titleKey: 'home_industrie_mining_title', descriptionKey: 'home_industrie_mining_description' },
-    { src: process.env.PUBLIC_URL + '/photos/industries/h.jpg', titleKey: 'home_industrie_engineer_title', descriptionKey: 'home_industrie_engineer_description' },
-    { src: process.env.PUBLIC_URL + '/photos/industries/i.jpg', titleKey: 'home_industrie_transport_title', descriptionKey: 'home_industrie_transport_description' }
+    { src: process.env.PUBLIC_URL + '/photos/industries/a.webp', titleKey: 'home_industrie_airport_title', descriptionKey: 'home_industrie_airport_description' },
+    { src: process.env.PUBLIC_URL + '/photos/industries/b.webp', titleKey: 'home_industrie_distribution_title', descriptionKey: 'home_industrie_distribution_description' },
+    { src: process.env.PUBLIC_URL + '/photos/industries/c.webp', titleKey: 'home_industrie_manufacturing_title', descriptionKey: 'home_industrie_manufacturing_description' },
+    { src: process.env.PUBLIC_URL + '/photos/industries/d.webp', titleKey: 'home_industrie_oem_title', descriptionKey: 'home_industrie_oem_description' },
+    { src: process.env.PUBLIC_URL + '/photos/industries/e.webp', titleKey: 'home_industrie_foodpharma_title', descriptionKey: 'home_industrie_foodpharma_description' },
+    { src: process.env.PUBLIC_URL + '/photos/industries/f.webp', titleKey: 'home_industrie_energy_title', descriptionKey: 'home_industrie_energy_description' },
+    { src: process.env.PUBLIC_URL + '/photos/industries/g.webp', titleKey: 'home_industrie_mining_title', descriptionKey: 'home_industrie_mining_description' },
+    { src: process.env.PUBLIC_URL + '/photos/industries/h.webp', titleKey: 'home_industrie_engineer_title', descriptionKey: 'home_industrie_engineer_description' },
+    { src: process.env.PUBLIC_URL + '/photos/industries/i.webp', titleKey: 'home_industrie_transport_title', descriptionKey: 'home_industrie_transport_description' }
 ];
 
 const MotionBox = motion.create(Box);
@@ -98,7 +98,7 @@ const HomeIndustries = () => {
                         justifyContent="center"
                         sx={{ mb: 2, minHeight: { xs: 400, sm: 'auto' } }}
                     >
-                        <BackgroundBanner image="photos/lobby.jpg" height={250} top={0} />
+                        <BackgroundBanner image="photos/lobby.webp" height={250} top={0} />
 
                         {industries.map((item, index) => (
                             <Grid

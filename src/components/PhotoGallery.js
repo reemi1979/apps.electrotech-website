@@ -14,7 +14,7 @@ const PhotoGallery = ({ basePath, typeFolderMap, selectedType }) => {
 
     const genPhotos = (folder, count) =>
         Array.from({ length: count }, (_, i) => ({
-        src: `${process.env.PUBLIC_URL}/${basePath}/${folder}/${String.fromCharCode(97 + i)}.jpg`,
+        src: `${process.env.PUBLIC_URL}/${basePath}/${folder}/${String.fromCharCode(97 + i)}.webp`,
         }));
 
     const folder = typeFolderMap[selectedType];
