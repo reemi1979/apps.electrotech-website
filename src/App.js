@@ -1,7 +1,7 @@
 //src app.js
 
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import CookieManager from './components/CookieManager';
 import Layout from './pages/Layout';
@@ -53,6 +53,7 @@ const App = () => {
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/jobs" element={<JobList />} />
                 <Route path="/quote" element={<QuotePage />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
                 </Route>
             </Routes>
             </Suspense>

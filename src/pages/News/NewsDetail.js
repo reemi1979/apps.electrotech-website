@@ -1,7 +1,7 @@
 // src/pages/News/NewsDetail.js
 
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import { Box, Typography, Container, CircularProgress } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
@@ -26,7 +26,11 @@ const NewsDetail = () => {
     const [news, setNews] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    const isLegacySlug = slug?.match(/\.(asp|html|php)$/i);
+
     useEffect(() => {
+        if (isLegacySlug) return;
+
         fetch(process.env.PUBLIC_URL + '/news/news.json')
         .then((res) => res.json())
         .then((data) => {
@@ -38,7 +42,11 @@ const NewsDetail = () => {
             setNews(found);
             setLoading(false);
         });
-    }, [slug]);
+    }, [slug, isLegacySlug]);
+
+    if (isLegacySlug) {
+        return <Navigate to="/" replace />;
+    }
         
 
     if (loading) {
