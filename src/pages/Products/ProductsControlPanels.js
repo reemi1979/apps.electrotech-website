@@ -7,6 +7,7 @@ import ProductsControlPanelsTypes from './ProductsControlPanelsTypes';
 import { useTheme } from '@mui/material/styles';
 import ProductsControlPanelsPhotos from './ProductsControlPanelsPhotos';
 import BackgroundBanner from '../../components/BackgroundBanner';
+import ProductHelmet from './ProductHelmet';
 
 const ProductsControlPanels = () => {
     const theme = useTheme();
@@ -14,6 +15,8 @@ const ProductsControlPanels = () => {
     const [selected, setSelected] = useState('standard'); // valeur par défaut
 
     return (
+        <>
+        <ProductHelmet />
         <Box sx={{ position: 'relative' }}>
     
             <BackgroundBanner image="photos/lobby.jpg" height={550} top={200} />
@@ -41,6 +44,7 @@ const ProductsControlPanels = () => {
             </Container>
 
         </Box>
+        </>
     );
 };
 

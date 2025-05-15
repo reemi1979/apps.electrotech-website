@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import ProductsMarkersTypes from './ProductsMarkersTypes';
 import BackgroundBanner from '../../components/BackgroundBanner';
+import ProductHelmet from './ProductHelmet';
 
 const ProductsMarkers = () => {
     const theme = useTheme();
@@ -13,6 +14,8 @@ const ProductsMarkers = () => {
     const [selected, setSelected] = useState('cables');
 
     return (
+        <>
+      <ProductHelmet />
         <Box sx={{ position: 'relative' }}>
         
             <BackgroundBanner image="photos/lobby.jpg" height={550} top={200} />
@@ -41,6 +44,7 @@ const ProductsMarkers = () => {
 
             </Container>
         </Box>
+         </>
     );
 };
 

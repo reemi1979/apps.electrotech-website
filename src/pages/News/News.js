@@ -1,5 +1,5 @@
 // src/pages/News/News.js
-
+import { Helmet } from 'react-helmet';
 import { useState, useEffect } from 'react';
 import { Box, Typography, Container, Modal, Backdrop } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -27,6 +27,29 @@ const News = () => {
     });
 
     return (
+        <>
+        
+        <Helmet>
+            <title>Actualités Électrotech – Nouvelles en automatisation industrielle</title>
+            <meta
+                name="description"
+                content="Consultez les dernières nouvelles d’Électrotech à Granby : projets récents, innovations en automatisation et vie d’entreprise."
+            />
+            <link rel="canonical" href="https://www.electrotech.ca/news" />
+            <meta property="og:title" content="Actualités – Électrotech Automatisation Industrielle" />
+            <meta property="og:description" content="Restez à jour sur les projets, événements et innovations d’Électrotech en automatisation industrielle." />
+            <meta property="og:url" content="https://www.electrotech.ca/news" />
+            <meta property="og:image" content="https://www.electrotech.ca/photos/og-thumbnail.jpg" />
+            <meta property="og:type" content="website" />
+            <meta property="og:locale" content="fr_CA" />
+            <meta property="fb:app_id" content="4066793063644485" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Actualités – Électrotech Automatisation Industrielle" />
+            <meta name="twitter:description" content="Découvrez nos actualités récentes : innovations, réalisations, projets clients et plus encore." />
+            <meta name="twitter:image" content="https://www.electrotech.ca/photos/og-thumbnail.jpg" />
+        </Helmet>
+
+
         <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
 
             {sortedNews.map((item) => (
@@ -120,6 +143,7 @@ const News = () => {
             </AnimatePresence>
 
         </Container>
+        </>
     );
 };
 

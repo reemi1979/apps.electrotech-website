@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import BackgroundBanner from '../../components/BackgroundBanner';
+import ProductHelmet from './ProductHelmet';
 
 const MotionBox = motion(Box);
 
@@ -78,6 +79,8 @@ const ProductsLines = () => {
     }, []);
 
     return (
+            <>
+              <ProductHelmet />
         <Box sx={{ position: 'relative' }}>
         <BackgroundBanner image="photos/blue.jpg" height={50} top={bannerTop} />
 
@@ -153,6 +156,7 @@ const ProductsLines = () => {
 
         </Container>
         </Box>
+        </>
     );
 };
 

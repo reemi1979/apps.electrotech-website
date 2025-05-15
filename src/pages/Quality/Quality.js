@@ -12,6 +12,7 @@ import { useTheme } from '@mui/material/styles';
 import ScrollToNextSectionButton from '../../components/ScrollToNextSectionButton';
 import BackgroundBanner from '../../components/BackgroundBanner';
 import QualityFlipBox1 from './QualityFlipBox1';
+import { Helmet } from 'react-helmet';
 
 const MotionBox = motion(Box);
 
@@ -98,7 +99,29 @@ const Quality = () => {
 
     return (
 
-<>
+        <>
+        
+        <Helmet>
+            <title>Qualité et rigueur – Électrotech Automatisation Industrielle</title>
+            <meta
+                name="description"
+                content="Chez Électrotech, la qualité est au cœur de chaque panneau de contrôle. Découvrez nos standards, certifications et processus de test rigoureux."
+            />
+            <link rel="canonical" href="https://www.electrotech.ca/quality" />
+            <meta property="og:title" content="Notre engagement qualité – Électrotech" />
+            <meta property="og:description" content="Processus de qualité, tests en atelier et certifications CSA/UL. Électrotech mise sur l’excellence à chaque étape." />
+            <meta property="og:url" content="https://www.electrotech.ca/quality" />
+            <meta property="og:image" content="https://www.electrotech.ca/photos/og-thumbnail.jpg" />
+            <meta property="og:type" content="website" />
+            <meta property="og:locale" content="fr_CA" />
+            <meta property="fb:app_id" content="4066793063644485" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Qualité industrielle – Électrotech" />
+            <meta name="twitter:description" content="Normes strictes, composants fiables, procédures testées : découvrez l’approche qualité d’Électrotech à Granby." />
+            <meta name="twitter:image" content="https://www.electrotech.ca/photos/og-thumbnail.jpg" />
+        </Helmet>
+
+
     <Container sx={{ mt: 8, color: 'white', textAlign: 'center' }}>
 
         <Box id="section1" sx={{ minHeight: '100vh', position: 'relative', px: 2, py: 10, textAlign: 'center', mx: 'auto', }}>
