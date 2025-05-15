@@ -8,6 +8,9 @@ import { useTheme } from '@mui/material/styles';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import Hls from 'hls.js';
 
+// Détection iOS
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
 const HeroVideo = () => {
   const { t } = useTranslation();
   const videoRef = useRef(null);
@@ -16,41 +19,32 @@ const HeroVideo = () => {
   const navigate = useNavigate();
   const theme = useTheme();
 
-  const playlistUrl =
-    window.location.hostname === 'localhost'
-      ? process.env.PUBLIC_URL + '/video/playlist.m3u8'
-      : 'https://electrotech.ca/video/playlist.m3u8';
-  const mp4Fallback = process.env.PUBLIC_URL + '/video.mp4';
+  const playlistUrl = window.location.hostname === 'localhost'
+    ? process.env.PUBLIC_URL + '/video/playlist.m3u8'
+    : 'https://electrotech.ca/video/playlist.m3u8';
+
   const posterUrl = process.env.PUBLIC_URL + '/video.jpg';
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShouldPlay(true);
     }, 500);
+
     return () => clearTimeout(timeout);
   }, []);
 
   useEffect(() => {
-    if (!shouldPlay || !videoRef.current) return;
-
-    const video = videoRef.current;
-
-    if (Hls.isSupported()) {
+    if (shouldPlay && videoRef.current && Hls.isSupported() && !isIOS) {
       const hls = new Hls();
       hls.loadSource(playlistUrl);
-      hls.attachMedia(video);
+      hls.attachMedia(videoRef.current);
       hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        video.play().catch(() => {});
+        videoRef.current.play().catch(() => {});
       });
+
       return () => hls.destroy();
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = playlistUrl;
-      video.play().catch(() => {});
-    } else {
-      video.src = mp4Fallback;
-      video.play().catch(() => {});
     }
-  }, [shouldPlay, playlistUrl, mp4Fallback]);
+  }, [shouldPlay, playlistUrl]);
 
   const toggleSound = () => {
     if (videoRef.current) {
@@ -78,10 +72,12 @@ const HeroVideo = () => {
         {shouldPlay && (
           <video
             ref={videoRef}
+            src={isIOS ? playlistUrl : undefined} // src direct pour iOS
             poster={posterUrl}
             muted={isMuted}
             loop
             playsInline
+            autoPlay
             preload="none"
             style={{
               width: '100%',
@@ -89,7 +85,6 @@ const HeroVideo = () => {
               objectFit: 'cover',
               objectPosition: 'center top',
             }}
-            controls={false}
           />
         )}
       </div>
