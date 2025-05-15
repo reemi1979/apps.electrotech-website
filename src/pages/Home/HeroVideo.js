@@ -53,6 +53,7 @@ const HeroVideo = () => {
             muted={isMuted}
             loop
             playsInline
+            preload="none"
             style={{
                 width: '100%',
                 height: '100%',
