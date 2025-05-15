@@ -16,33 +16,41 @@ const HeroVideo = () => {
   const navigate = useNavigate();
   const theme = useTheme();
 
-  const playlistUrl = window.location.hostname === 'localhost'
-    ? process.env.PUBLIC_URL + '/video/playlist.m3u8'
-    : 'https://electrotech.ca/video/playlist.m3u8';
+  const playlistUrl =
+    window.location.hostname === 'localhost'
+      ? process.env.PUBLIC_URL + '/video/playlist.m3u8'
+      : 'https://electrotech.ca/video/playlist.m3u8';
+  const mp4Fallback = process.env.PUBLIC_URL + '/video.mp4';
   const posterUrl = process.env.PUBLIC_URL + '/video.jpg';
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShouldPlay(true);
     }, 500);
-
     return () => clearTimeout(timeout);
   }, []);
 
   useEffect(() => {
-    if (shouldPlay && videoRef.current && Hls.isSupported()) {
+    if (!shouldPlay || !videoRef.current) return;
+
+    const video = videoRef.current;
+
+    if (Hls.isSupported()) {
       const hls = new Hls();
       hls.loadSource(playlistUrl);
-      hls.attachMedia(videoRef.current);
+      hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        videoRef.current.play().catch(() => {});
+        video.play().catch(() => {});
       });
-
-      return () => {
-        hls.destroy();
-      };
+      return () => hls.destroy();
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = playlistUrl;
+      video.play().catch(() => {});
+    } else {
+      video.src = mp4Fallback;
+      video.play().catch(() => {});
     }
-  }, [shouldPlay, playlistUrl]);
+  }, [shouldPlay, playlistUrl, mp4Fallback]);
 
   const toggleSound = () => {
     if (videoRef.current) {
@@ -102,7 +110,10 @@ const HeroVideo = () => {
           flexWrap: 'wrap',
         }}
       >
-        <Typography variant="h6" sx={{ color: theme.palette.text.black, fontSize: '1rem', fontWeight: 'bold' }}>
+        <Typography
+          variant="h6"
+          sx={{ color: theme.palette.text.black, fontSize: '1rem', fontWeight: 'bold' }}
+        >
           {t('hero_tracking')}
         </Typography>
 
