@@ -114,7 +114,7 @@ function HomeFlipBox1() {
                         sx={{
                             height: isSmallScreen ? '100%' : '100%',
                             width: 'auto',
-                            transform: isSmallScreen ? 'scale(1.0)' : 'scale(1.2)',
+                            transform: isSmallScreen ? 'scale(1.0)' : 'scale(1.0)',
                             position: 'relative',
                             transformOrigin: 'left center',
                             zIndex: 1

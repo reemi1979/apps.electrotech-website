@@ -1,11 +1,11 @@
-//src app.js
-
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
-import CookieManager from './components/CookieManager';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import Layout from './pages/Layout';
 import LoadingScreen from './components/LoadingScreen';
+
+// Lazy load CookieManager pour améliorer LCP
+const CookieManager = lazy(() => import('./components/CookieManager'));
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home/Home'));
@@ -27,15 +27,19 @@ const JobList = lazy(() => import('./pages/About/JobList'));
 const QuotePage = lazy(() => import('./pages/Quote/QuotePage'));
 
 const App = () => {
-  console.log("Website made by Rémi Gauvin - 2025");
+  const [showCookies, setShowCookies] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowCookies(true), 600);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
       <Router>
         <Suspense fallback={<LoadingScreen />}>
           <Routes>
-
-            {/* Routes with language prefix (fr, en, etc.) */}
+            {/* Routes avec /fr ou /en */}
             <Route path="/:lang" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="quality" element={<Quality />} />
@@ -49,8 +53,8 @@ const App = () => {
               <Route path="products-markers" element={<ProductsMarkers />} />
               <Route path="products-lines" element={<ProductsLines />} />
               <Route path="panneaux-de-controle" element={<PanneauxDeControle />} />
-              <Route path="services/:index" element={<Services />} />
               <Route path="services" element={<Services />} />
+              <Route path="services/:index" element={<Services />} />
               <Route path="services/assemblage-de-boitiers" element={<Services />} />
               <Route path="services/conception-électrique" element={<Services />} />
               <Route path="services/assemblage-machine" element={<Services />} />
@@ -65,7 +69,7 @@ const App = () => {
               <Route path="quote" element={<QuotePage />} />
             </Route>
 
-            {/* Default routes without language prefix */}
+            {/* Routes sans préfixe */}
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="quality" element={<Quality />} />
@@ -79,8 +83,8 @@ const App = () => {
               <Route path="products-markers" element={<ProductsMarkers />} />
               <Route path="products-lines" element={<ProductsLines />} />
               <Route path="panneaux-de-controle" element={<PanneauxDeControle />} />
-              <Route path="services/:index" element={<Services />} />
               <Route path="services" element={<Services />} />
+              <Route path="services/:index" element={<Services />} />
               <Route path="services/assemblage-de-boitiers" element={<Services />} />
               <Route path="services/conception-électrique" element={<Services />} />
               <Route path="services/assemblage-machine" element={<Services />} />
@@ -94,11 +98,15 @@ const App = () => {
               <Route path="jobs" element={<JobList />} />
               <Route path="quote" element={<QuotePage />} />
             </Route>
-
           </Routes>
         </Suspense>
       </Router>
-      <CookieManager />
+
+      {showCookies && (
+        <Suspense fallback={null}>
+          <CookieManager />
+        </Suspense>
+      )}
     </>
   );
 };

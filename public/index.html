@@ -48,17 +48,19 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/icon-192x192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js?render=6LdtmzUrAAAAAIfQeyOHcZcCCaE2QrK16MmJcFQZ"></script>
-
     <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L4V2JJRX6"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    setTimeout(() => {
+      const script = document.createElement('script');
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-2L4V2JJRX6';
+      script.async = true;
+      document.head.appendChild(script);
 
-    gtag('config', 'G-2L4V2JJRX6');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-2L4V2JJRX6');
+    }, 3000); // ⏱️ tu peux ajuster à 1000 si tu veux plus rapide
   </script>
 
   </head>

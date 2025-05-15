@@ -1,16 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box, Button, Grid, MenuItem, TextField, Typography, Container } from '@mui/material';
 import SeoHelmet from '../../components/SeoHelmet';
 import { useTranslation } from 'react-i18next';
 import validator from 'validator';
 
 const ContactUs = () => {
+
   const { t } = useTranslation('about');
+  
   const [formData, setFormData] = useState({
     reason: '', name: '', contact: '', company: '',
     title: '', country: '', subject: '', message: ''
   });
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js?render=6LdtmzUrAAAAAIfQeyOHcZcCCaE2QrK16MmJcFQZ';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const handleChange = (field) => (event) => {
     setFormData({ ...formData, [field]: event.target.value });

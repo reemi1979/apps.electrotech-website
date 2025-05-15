@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, lazy, Suspense } from 'react';
 import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
@@ -6,15 +6,16 @@ import { motion } from 'framer-motion';
 import { isMobile } from 'react-device-detect';
 import LazyLoad from 'react-lazyload';
 import HeroVideo from './HeroVideo';
-import HomePhotos from './HomePhotos';
-import HomeIndustries from './HomeIndustries';
-import HomeServices from './HomeServices';
-import ScrollToNextSectionButton from '../../components/ScrollToNextSectionButton';
-import HomeAccordion from './HomeAccordion';
 import HomeFlipBox1 from './HomeFlipBox1';
 import HomeFlipBox2 from './HomeFlipBox2';
 import HomeFlipBox3 from './HomeFlipBox3';
+import ScrollToNextSectionButton from '../../components/ScrollToNextSectionButton';
 import SeoHelmet from '../../components/SeoHelmet';
+
+const HomePhotos = lazy(() => import('./HomePhotos'));
+const HomeIndustries = lazy(() => import('./HomeIndustries'));
+const HomeServices = lazy(() => import('./HomeServices'));
+const HomeAccordion = lazy(() => import('./HomeAccordion'));
 
 const Home = () => {
   const { t } = useTranslation();
@@ -104,25 +105,33 @@ const Home = () => {
         <Typography variant="h3" sx={{ mb: 2, color: theme.palette.text.secondary }}>
           {t('home_expertise')}
         </Typography>
-        <LazyLoad once>
-          <HomePhotos />
-        </LazyLoad>
+        <Suspense fallback={null}>
+          <LazyLoad once>
+            <HomePhotos />
+          </LazyLoad>
+        </Suspense>
       </Box>
 
       <Box id="section7" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto' }}>
         <Typography variant="h3" sx={{ mb: 2, color: theme.palette.text.secondary }}>
-          <HomeIndustries />
+          <Suspense fallback={null}>
+            <HomeIndustries />
+          </Suspense>
         </Typography>
       </Box>
 
       <Box id="section8" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto' }}>
         <Typography variant="h3" sx={{ mb: 2, color: theme.palette.text.secondary }}>
-          <HomeServices />
+          <Suspense fallback={null}>
+            <HomeServices />
+          </Suspense>
         </Typography>
       </Box>
 
       <Box id="section9" sx={{ minHeight: '80vh', position: 'relative', zIndex: 1, px: 2, py: 2, textAlign: 'center', mx: 'auto' }}>
-        <HomeAccordion mapLink={mapLink} isMobile={isMobile} t={t} theme={theme} />
+        <Suspense fallback={null}>
+          <HomeAccordion mapLink={mapLink} isMobile={isMobile} t={t} theme={theme} />
+        </Suspense>
       </Box>
 
       <ScrollToNextSectionButton sectionIds={['section1', 'section2', 'section3', 'section4', 'section5', 'section6']} />
