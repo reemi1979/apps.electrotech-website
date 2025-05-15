@@ -15,6 +15,9 @@ import achievementsFR from './translations/achievements_fr.json';
 import achievementsEN from './translations/achievements_en.json';
 import aboutFR from './translations/about_fr.json';
 import aboutEN from './translations/about_en.json';
+import seoFR from './translations/seo_fr.json';
+import seoEN from './translations/seo_en.json';
+
 
 const resources = {
   fr: {
@@ -24,6 +27,7 @@ const resources = {
     products: productsFR,
     achievements: achievementsFR,
     about: aboutFR,
+    seo: seoFR,
   },
   en: {
     home: homeEN,
@@ -32,6 +36,7 @@ const resources = {
     products: productsEN,
     achievements: achievementsEN,
     about: aboutEN,
+    seo: seoEN,
   },
 };
 

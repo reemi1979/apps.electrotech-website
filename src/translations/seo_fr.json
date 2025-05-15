@@ -1,0 +1,91 @@
+{
+  "defaultTitle": "Électrotech – Automatisation et panneaux de contrôle",
+  "defaultDescription": "Depuis 1997, Électrotech conçoit et fabrique des panneaux de contrôle industriels à Granby.",
+
+  "pages": {
+    "/": {
+      "title": "Électrotech – Panneaux de contrôle et automatisation à Granby",
+      "description": "Fabricant de panneaux électriques industriels depuis 1997. Automatisation, qualité et performance."
+    },
+    "/news": {
+      "title": "Nouvelles et actualités | Électrotech",
+      "description": "Restez informé des dernières nouvelles, projets et innovations d’Électrotech."
+    },
+    "/services": {
+      "title": "Nos services industriels | Électrotech",
+      "description": "De la conception électrique à l’assemblage, découvrez l’étendue de nos services en automatisation."
+    },
+    "/quality": {
+      "title": "Contrôle de qualité | Électrotech",
+      "description": "Nos processus rigoureux de contrôle assurent des produits fiables, sécuritaires et certifiés."
+    },
+    "/privacy-policy": {
+      "title": "Politique de confidentialité | Électrotech",
+      "description": "Découvrez comment nous protégeons vos données personnelles conformément aux normes."
+    },
+    "/products-control-panels": {
+      "title": "Panneaux de contrôle industriels | Électrotech",
+      "description": "Panneaux électriques certifiés, conçus pour vos besoins en automatisation industrielle."
+    },
+    "/products-cables": {
+      "title": "Câbles et harnais | Électrotech",
+      "description": "Fabrication de câbles, harnais et connecteurs pour applications industrielles."
+    },
+    "/products-lines": {
+      "title": "Lignes automatisées | Électrotech",
+      "description": "Lignes de production optimisées pour l’efficacité et la performance industrielle."
+    },
+    "/products-markers": {
+      "title": "Marqueurs industriels | Électrotech",
+      "description": "Solutions de marquage industriel : fils, plaques gravées, composantes et plus."
+    },
+    "/services/assemblage-de-boitiers": {
+      "title": "Assemblage de boîtiers de contrôle | Électrotech",
+      "description": "Assemblage professionnel de boîtiers électriques avec rigueur et précision."
+    },
+    "/services/programmation": {
+      "title": "Programmation PLC & HMI | Électrotech",
+      "description": "Programmation d’automates et interfaces pour vos processus industriels."
+    },
+    "/services/percage-cabinet": {
+      "title": "Perçage de cabinets électriques | Électrotech",
+      "description": "Service de perçage précis avec la technologie Rittal Perforex."
+    },
+    "/services/assemblage-machine": {
+      "title": "Assemblage de machines | Électrotech",
+      "description": "Intégration et assemblage mécanique de vos équipements industriels."
+    },
+    "/services/conception-électrique": {
+      "title": "Conception électrique industrielle | Électrotech",
+      "description": "Conception de schémas électriques selon vos besoins et normes CSA/UL."
+    },
+    "/achievements": {
+      "title": "Réalisations | Électrotech",
+      "description": "Découvrez nos projets marquants en automatisation industrielle."
+    },
+    "/jobs": {
+      "title": "Emplois disponibles | Électrotech",
+      "description": "Joignez une équipe dynamique en ingénierie, production ou automatisation."
+    },
+    "/tracking": {
+      "title": "Suivi de production en temps réel | Électrotech",
+      "description": "Consultez l’état de vos projets de fabrication en direct grâce à notre outil de suivi de production."
+    },
+    "/boites-a-boutons": {
+      "title": "Boîtes à boutons industrielles | Électrotech",
+      "description": "Boîtes à boutons robustes et ergonomiques pour environnements industriels exigeants."
+    },
+    "/contact-us": {
+      "title": "Contactez-nous | Électrotech",
+      "description": "Besoin d’une soumission ou d’un renseignement ? Contactez notre équipe dès maintenant."
+    },
+    "/quote": {
+      "title": "Demande de soumission | Électrotech",
+      "description": "Soumettez votre projet de panneau de contrôle ou d’automatisation et recevez une évaluation rapidement."
+    },
+    "/our-team": {
+      "title": "Notre équipe | Électrotech",
+      "description": "Rencontrez nos experts en automatisation, ingénierie et production."
+    }
+  }
+}

@@ -43,11 +43,19 @@ const App = () => {
               <Route path=":slug" element={<NewsDetail />} />
               <Route path="privacy-policy" element={<PrivacyPolicy />} />
               <Route path="products-control-panels" element={<ProductsControlPanels />} />
+              <Route path="boites-a-boutons" element={<ProductsControlPanels />} />
+              <Route path="boitier-control-industriel" element={<ProductsControlPanels />} />
               <Route path="products-cables" element={<ProductsCables />} />
               <Route path="products-markers" element={<ProductsMarkers />} />
               <Route path="products-lines" element={<ProductsLines />} />
               <Route path="panneaux-de-controle" element={<PanneauxDeControle />} />
               <Route path="services/:index" element={<Services />} />
+              <Route path="services" element={<Services />} />
+              <Route path="services/assemblage-de-boitiers" element={<Services />} />
+              <Route path="services/conception-électrique" element={<Services />} />
+              <Route path="services/assemblage-machine" element={<Services />} />
+              <Route path="services/percage-cabinet" element={<Services />} />
+              <Route path="services/programmation" element={<Services />} />
               <Route path="tracking" element={<TrackingProjects />} />
               <Route path="tracking/:projectNumber" element={<TrackingProjects />} />
               <Route path="achievements" element={<Achievements />} />
@@ -65,11 +73,19 @@ const App = () => {
               <Route path=":slug" element={<NewsDetail />} />
               <Route path="privacy-policy" element={<PrivacyPolicy />} />
               <Route path="products-control-panels" element={<ProductsControlPanels />} />
+              <Route path="boites-a-boutons" element={<ProductsControlPanels />} />
+              <Route path="boitier-control-industriel" element={<ProductsControlPanels />} />
               <Route path="products-cables" element={<ProductsCables />} />
               <Route path="products-markers" element={<ProductsMarkers />} />
               <Route path="products-lines" element={<ProductsLines />} />
               <Route path="panneaux-de-controle" element={<PanneauxDeControle />} />
               <Route path="services/:index" element={<Services />} />
+              <Route path="services" element={<Services />} />
+              <Route path="services/assemblage-de-boitiers" element={<Services />} />
+              <Route path="services/conception-électrique" element={<Services />} />
+              <Route path="services/assemblage-machine" element={<Services />} />
+              <Route path="services/percage-cabinet" element={<Services />} />
+              <Route path="services/programmation" element={<Services />} />
               <Route path="tracking" element={<TrackingProjects />} />
               <Route path="tracking/:projectNumber" element={<TrackingProjects />} />
               <Route path="achievements" element={<Achievements />} />

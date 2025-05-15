@@ -22,14 +22,14 @@ const teamMembers = [
     img: 'isabelle.jpg',
   },
   {
-    key: 'zachary',
-    fullname: 'Zachary Fortin',
-    img: 'zachary.jpg',
-  },
-  {
     key: 'jerome',
     fullname: 'Jérôme Fortin',
     img: 'jerome.jpg',
+  },
+  {
+    key: 'zachary',
+    fullname: 'Zachary Fortin',
+    img: 'zachary.jpg',
   },
   {
     key: 'remi',
@@ -37,14 +37,19 @@ const teamMembers = [
     img: 'remi.jpg',
   },
   {
-    key: 'gabriel',
-    fullname: 'Gabriel Potvin',
-    img: 'gab.jpg',
+    key: 'jpp',
+    fullname: 'Jean-Patrick Picotte',
+    img: 'jpp.jpg',
   },
   {
     key: 'jpd',
     fullname: 'Jean-Philippe Duval',
     img: 'jpd.jpg',
+  },
+  {
+    key: 'gabriel',
+    fullname: 'Gabriel Potvin',
+    img: 'gab.jpg',
   },
   {
     key: 'alex',
@@ -66,11 +71,7 @@ const teamMembers = [
     fullname: 'Jocelyn Lamarre',
     img: 'jocelyn.jpg',
   },
-  {
-    key: 'jpp',
-    fullname: 'Jean-Patrick Picotte',
-    img: 'jpp.jpg',
-  },
+
 ];
 
 const OurTeam = () => {
