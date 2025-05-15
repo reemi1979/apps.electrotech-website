@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import ProductsCablesTypes from './ProductsCablesTypes';
 import BackgroundBanner from '../../components/BackgroundBanner';
-import ProductHelmet from './ProductHelmet';
+import SeoHelmet from '../../components/SeoHelmet';
 
 const ProductsCables = () => {
     const theme = useTheme();
@@ -16,7 +16,7 @@ const ProductsCables = () => {
 
     return (
         <>
-        <ProductHelmet />
+        <SeoHelmet />
         
         <Box sx={{ position: 'relative' }}>
         

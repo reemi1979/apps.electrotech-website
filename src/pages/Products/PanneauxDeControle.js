@@ -1,41 +1,45 @@
-import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
-import ProductHelmet from './ProductHelmet';
+import { Typography, Container } from '@mui/material';
+import SeoHelmet from '../../components/SeoHelmet';
+import { useTranslation } from 'react-i18next';
 
 const PanneauxDeControle = () => {
+
+  const { t } = useTranslation('products');
+
   return (
     <>
-      <ProductHelmet />
+      <SeoHelmet />
 
       <Container maxWidth="md" sx={{ mt: 10, mb: 10 }}>
         <Typography variant="h2" gutterBottom>
-          Fabrication de panneaux de contrôle industriel
+          {t('panneaux.heading')}
         </Typography>
 
         <Typography variant="body1" paragraph>
-          Depuis 1997, Électrotech conçoit et fabrique des panneaux de contrôle industriels adaptés aux besoins de l'industrie manufacturière, agroalimentaire, et de l'automatisation en général. Nos panneaux intègrent des automates programmables (PLC), des interfaces opérateurs (HMI), des dispositifs de sécurité et de communication modernes.
+          {t('panneaux.para1')}
         </Typography>
 
         <Typography variant="body1" paragraph>
-          Nous utilisons des composants de marques reconnues comme Allen-Bradley, Siemens, Schneider, IFM, Phoenix Contact et bien d'autres. Nos installations sont conçues selon les normes CSA, UL ou CE, selon vos besoins spécifiques.
+          {t('panneaux.para2')}
         </Typography>
 
         <Typography variant="body1" paragraph>
-          Grâce à notre expertise en électricité industrielle et à notre machine de perçage Rittal Perforex, nous offrons une précision et une rapidité inégalées. Tous nos panneaux sont testés rigoureusement avant livraison.
+          {t('panneaux.para3')}
         </Typography>
 
         <Typography variant="h4" gutterBottom sx={{ mt: 6 }}>
-          Pourquoi choisir Électrotech ?
+          {t('panneaux.whyTitle')}
         </Typography>
 
         <ul>
-          <li><Typography variant="body1">Plus de 25 ans d'expérience</Typography></li>
-          <li><Typography variant="body1">Conception et fabrication sur place à Granby</Typography></li>
-          <li><Typography variant="body1">Équipe multidisciplinaire : ingénieurs, électriciens, programmeurs</Typography></li>
-          <li><Typography variant="body1">Qualité certifiée et tests en atelier</Typography></li>
-          <li><Typography variant="body1">Service clé en main : conception, fabrication, mise en service</Typography></li>
+          <li><Typography variant="body1">{t('panneaux.point1')}</Typography></li>
+          <li><Typography variant="body1">{t('panneaux.point2')}</Typography></li>
+          <li><Typography variant="body1">{t('panneaux.point3')}</Typography></li>
+          <li><Typography variant="body1">{t('panneaux.point4')}</Typography></li>
+          <li><Typography variant="body1">{t('panneaux.point5')}</Typography></li>
         </ul>
       </Container>
+      
     </>
   );
 };

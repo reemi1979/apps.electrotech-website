@@ -7,7 +7,7 @@ import ProductsControlPanelsTypes from './ProductsControlPanelsTypes';
 import { useTheme } from '@mui/material/styles';
 import ProductsControlPanelsPhotos from './ProductsControlPanelsPhotos';
 import BackgroundBanner from '../../components/BackgroundBanner';
-import ProductHelmet from './ProductHelmet';
+import SeoHelmet from '../../components/SeoHelmet';
 
 const ProductsControlPanels = () => {
     const theme = useTheme();
@@ -16,7 +16,7 @@ const ProductsControlPanels = () => {
 
     return (
         <>
-        <ProductHelmet />
+        <SeoHelmet />
         <Box sx={{ position: 'relative' }}>
     
             <BackgroundBanner image="photos/lobby.jpg" height={550} top={200} />

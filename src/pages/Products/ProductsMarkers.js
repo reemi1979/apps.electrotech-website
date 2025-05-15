@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import ProductsMarkersTypes from './ProductsMarkersTypes';
 import BackgroundBanner from '../../components/BackgroundBanner';
-import ProductHelmet from './ProductHelmet';
+import SeoHelmet from '../../components/SeoHelmet';
 
 const ProductsMarkers = () => {
     const theme = useTheme();
@@ -15,7 +15,7 @@ const ProductsMarkers = () => {
 
     return (
         <>
-      <ProductHelmet />
+      <SeoHelmet />
         <Box sx={{ position: 'relative' }}>
         
             <BackgroundBanner image="photos/lobby.jpg" height={550} top={200} />

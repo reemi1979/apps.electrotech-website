@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Box, Button, Grid, MenuItem, TextField, Typography, Container } from '@mui/material';
-import { Helmet } from 'react-helmet';
+import SeoHelmet from '../../components/SeoHelmet';
 import { useTranslation } from 'react-i18next';
 import validator from 'validator';
 
@@ -71,24 +71,7 @@ const ContactUs = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact – Électrotech Automatisation Industrielle</title>
-        <meta
-          name="description"
-          content="Contactez Électrotech à Granby pour toute demande d'information, soumission ou collaboration. Nous sommes spécialistes en automatisation industrielle."
-        />
-        <link rel="canonical" href="https://www.electrotech.ca/contact-us" />
-        <meta property="og:title" content="Contact – Électrotech Automatisation Industrielle" />
-        <meta property="og:description" content="Prenez contact avec Électrotech pour vos projets de panneaux de contrôle, services ou demandes de soumission." />
-        <meta property="og:url" content="https://www.electrotech.ca/contact-us" />
-        <meta property="og:image" content="https://www.electrotech.ca/photos/og-thumbnail.jpg" />
-        <meta property="og:type" content="website" />
-        <meta property="fb:app_id" content="4066793063644485" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact – Électrotech Automatisation Industrielle" />
-        <meta name="twitter:description" content="Faites une demande ou posez vos questions à Électrotech via notre formulaire de contact." />
-        <meta name="twitter:image" content="https://www.electrotech.ca/photos/og-thumbnail.jpg" />
-      </Helmet>
+      <SeoHelmet />
 
       <Box sx={{ position: 'relative' }}>
         <Container maxWidth={false} sx={{ maxWidth: '1280px', mx: 'auto', mt: 10, px: 2 }}>

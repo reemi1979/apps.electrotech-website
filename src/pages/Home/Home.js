@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Box, Typography } from '@mui/material';
-import { Helmet } from 'react-helmet';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -15,7 +14,7 @@ import HomeAccordion from './HomeAccordion';
 import HomeFlipBox1 from './HomeFlipBox1';
 import HomeFlipBox2 from './HomeFlipBox2';
 import HomeFlipBox3 from './HomeFlipBox3';
-import HomeHelmet from './HomeHelmet'
+import SeoHelmet from '../../components/SeoHelmet';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -38,7 +37,7 @@ const Home = () => {
   return (
     <>
       
-      <HomeHelmet />
+      <SeoHelmet />
 
       {/* Your layout continues exactly as is */}
       <Box id="section1" sx={{ position: 'relative', zIndex: 0, height: '100vh' }}>

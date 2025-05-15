@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
+import SeoHelmet from '../../components/SeoHelmet';
 import { client } from '../../utils/sanity';
 import {
   Box,
@@ -49,25 +49,7 @@ const JobList = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Emplois chez Électrotech – Opportunités de carrière à Granby</title>
-        <meta
-          name="description"
-          content="Découvrez les offres d’emploi chez Électrotech à Granby. Joignez-vous à une équipe spécialisée en automatisation et panneaux de contrôle industriel."
-        />
-        <link rel="canonical" href="https://www.electrotech.ca/jobs" />
-        <meta property="og:title" content="Offres d’emploi – Électrotech Automatisation Industrielle" />
-        <meta property="og:description" content="Rejoignez Électrotech à Granby : postes ouverts en automatisation, électricité industrielle et plus." />
-        <meta property="og:url" content="https://www.electrotech.ca/jobs" />
-        <meta property="og:image" content="https://www.electrotech.ca/photos/og-thumbnail.jpg" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="fr_CA" />
-        <meta property="fb:app_id" content="4066793063644485" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Emplois – Électrotech Automatisation Industrielle" />
-        <meta name="twitter:description" content="Postulez chez Électrotech et contribuez à des projets d’envergure en automatisation et conception de panneaux électriques." />
-        <meta name="twitter:image" content="https://www.electrotech.ca/photos/og-thumbnail.jpg" />
-      </Helmet>
+      <SeoHelmet />
 
       <Box id="section1" sx={{ position: 'relative', zIndex: 0, height: '90vh' }}>
         <Box sx={{ mt: 10, p: 4, maxWidth: '1200px', mx: 'auto' }}>

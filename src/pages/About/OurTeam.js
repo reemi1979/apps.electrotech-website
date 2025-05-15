@@ -1,14 +1,14 @@
 // src/pages/About/Ourteam.js
 
-import React, { useRef, useEffect, useState } from 'react';
-import { Box, Typography, Container, Button, Grid } from '@mui/material';
+import { useRef, useEffect, useState } from 'react';
+import { Box, Typography, Container, Grid } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
 import { Divider } from '@mui/material';
 import BackgroundBanner from '../../components/BackgroundBanner';
 import OurTeamAccordion from './OurTeamAccordion';
 import OurTeamFlipBox1 from './OurTeamFlipBox1';
+import SeoHelmet from '../../components/SeoHelmet';
 
 const teamMembers = [
   {
@@ -91,6 +91,10 @@ const OurTeam = () => {
 
 
   return (
+
+    <>
+
+    <SeoHelmet />
 
     <Box sx={{ position: 'relative' }}>
       
@@ -182,6 +186,9 @@ const OurTeam = () => {
 
     </Container>
     </Box>
+
+    </>
+
   );
 };
 

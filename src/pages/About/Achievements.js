@@ -8,6 +8,7 @@ import { Divider } from '@mui/material';
 import Slideshow from './AchievementsPhotos';
 import BackgroundBanner from '../../components/BackgroundBanner';
 import AchievementsAccordion from './AchievementsAccordion';
+import SeoHelmet from '../../components/SeoHelmet';
 
 const Achievements = () => {
     const theme = useTheme();
@@ -26,6 +27,9 @@ const Achievements = () => {
     }, []);
 
     return (
+        <>
+
+        <SeoHelmet />
 
         <Box sx={{ position: 'relative' }}>
             <BackgroundBanner image="photos/blue.jpg" height={100} top={bannerTop} />
@@ -54,6 +58,8 @@ const Achievements = () => {
 
             </Container>
         </Box>
+        
+        </>
     );
 };
 

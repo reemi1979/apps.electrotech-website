@@ -70,6 +70,22 @@
     "products_lines_section_title": "Marques de confiance que nous distribuons",
     "products_lines_section_description": "Nous distribuons des composantes de qualité provenant de fabricants réputés pour la fabrication ou l’entretien de vos panneaux de contrôle. Plusieurs autres marques disponibles",
 
-    "brands_trademark_note": "Tous les logos et marques de commerce sont la propriété de leurs détenteurs respectifs et sont utilisés uniquement à des fins d’identification. Si vous êtes le propriétaire et souhaitez que votre logo soit retiré, veuillez nous contacter."
-  }
+    "brands_trademark_note": "Tous les logos et marques de commerce sont la propriété de leurs détenteurs respectifs et sont utilisés uniquement à des fins d’identification. Si vous êtes le propriétaire et souhaitez que votre logo soit retiré, veuillez nous contacter.",
+
+    "panneaux": {
+        "title": "Électrotech – Panneaux de contrôle industriels",
+        "descriptionSeo": "Panneaux de contrôle sur mesure pour l'automatisation industrielle. Conception, fabrication et mise en service à Granby depuis 1997.",
+        "heading": "Fabrication de panneaux de contrôle industriel",
+        "para1": "Depuis 1997, Électrotech conçoit et fabrique des panneaux de contrôle industriels adaptés aux besoins de l'industrie manufacturière, agroalimentaire, et de l'automatisation en général. Nos panneaux intègrent des automates programmables (PLC), des interfaces opérateurs (HMI), des dispositifs de sécurité et de communication modernes.",
+        "para2": "Nous utilisons des composants de marques reconnues comme Allen-Bradley, Siemens, Schneider, IFM, Phoenix Contact et bien d'autres. Nos installations sont conçues selon les normes CSA, UL ou CE, selon vos besoins spécifiques.",
+        "para3": "Grâce à notre expertise en électricité industrielle et à notre machine de perçage Rittal Perforex, nous offrons une précision et une rapidité inégalées. Tous nos panneaux sont testés rigoureusement avant livraison.",
+        "whyTitle": "Pourquoi choisir Électrotech ?",
+        "point1": "Plus de 25 ans d'expérience",
+        "point2": "Conception et fabrication sur place à Granby",
+        "point3": "Équipe multidisciplinaire : ingénieurs, électriciens, programmeurs",
+        "point4": "Qualité certifiée et tests en atelier",
+        "point5": "Service clé en main : conception, fabrication, mise en service"
+    }
+
+}
     

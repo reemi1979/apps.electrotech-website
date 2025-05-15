@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import BackgroundBanner from '../../components/BackgroundBanner';
-import ProductHelmet from './ProductHelmet';
+import SeoHelmet from '../../components/SeoHelmet';
 
 const MotionBox = motion(Box);
 
@@ -80,7 +80,7 @@ const ProductsLines = () => {
 
     return (
             <>
-              <ProductHelmet />
+              <SeoHelmet />
         <Box sx={{ position: 'relative' }}>
         <BackgroundBanner image="photos/blue.jpg" height={50} top={bannerTop} />
 

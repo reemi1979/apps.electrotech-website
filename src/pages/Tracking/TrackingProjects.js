@@ -5,6 +5,7 @@ import { Box, Container, Typography, Button, TextField, Stepper, Step, StepLabel
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import { useParams, useNavigate } from 'react-router-dom';
+import SeoHelmet from '../../components/SeoHelmet';
 
 const TrackingProjects = () => {
 
@@ -201,6 +202,10 @@ const TrackingProjects = () => {
     );
 
     return (
+        <>
+        
+        <SeoHelmet />
+
         <Box id="section1" sx={{ position: 'relative', zIndex: 0, minHeight: '100vh', pb: 10 }}>
 
             <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
@@ -220,6 +225,8 @@ const TrackingProjects = () => {
                 </Box>
             </Container>
         </Box>
+        </>
+
     );
 };
 

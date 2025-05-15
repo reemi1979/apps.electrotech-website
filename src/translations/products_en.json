@@ -69,6 +69,23 @@
     "products_lines_section_title": "Trusted Brands We Supply",
     "products_lines_section_description": "We distribute quality components from leading manufacturers to build or maintain your control Control Panels. More brands availables.",
 
-    "brands_trademark_note": "All logos and trademarks are the property of their respective owners and are used for identification purposes only. If you are the owner and wish to have your logo removed, please contact us."
+    "brands_trademark_note": "All logos and trademarks are the property of their respective owners and are used for identification purposes only. If you are the owner and wish to have your logo removed, please contact us.",
+
+    "panneaux": {
+        "title": "Electrotech – Industrial Control Panels",
+        "descriptionSeo": "Custom control panels for industrial automation. Design, manufacturing, and commissioning in Granby since 1997.",
+        "heading": "Manufacturing of Industrial Control Panels",
+        "para1": "Since 1997, Electrotech has been designing and manufacturing industrial control panels tailored to the needs of the manufacturing, food processing, and automation industries. Our panels integrate programmable logic controllers (PLCs), human-machine interfaces (HMIs), safety systems, and modern communication devices.",
+        "para2": "We use components from trusted brands like Allen-Bradley, Siemens, Schneider, IFM, Phoenix Contact, and many more. Our panels are built to CSA, UL, or CE standards, based on your specific requirements.",
+        "para3": "With our expertise in industrial electricity and our Rittal Perforex drilling machine, we provide unmatched precision and speed. All our panels are thoroughly tested before delivery.",
+        "whyTitle": "Why Choose Electrotech?",
+        "point1": "Over 25 years of experience",
+        "point2": "In-house design and manufacturing in Granby",
+        "point3": "Multidisciplinary team: engineers, electricians, programmers",
+        "point4": "Certified quality and in-shop testing",
+        "point5": "Turnkey service: design, manufacturing, commissioning"
+    }
+
+
 }
     

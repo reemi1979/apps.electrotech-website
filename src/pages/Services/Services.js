@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 import BackgroundBanner from '../../components/BackgroundBanner';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
+import SeoHelmet from '../../components/SeoHelmet';
 
 const selectedTypeMap = ['standard', 'custom', 'serie', 'pushbuttons', 'junctionbox'];
 
@@ -31,7 +32,12 @@ const Services = () => {
     }, [index]);
 
     return (
-        <Box sx={{ position: 'relative' }}>
+
+        <>
+
+        <SeoHelmet />
+
+            <Box sx={{ position: 'relative' }}>
         
             <BackgroundBanner image="photos/lobby.jpg" height={550} top={200} />
 
@@ -52,6 +58,8 @@ const Services = () => {
                 <ServicesPhotos selectedType={selected} />
             </Container>
         </Box>
+
+        </>
     );
 };
 

@@ -8,7 +8,7 @@ import { useTheme } from '@mui/material/styles';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Button from '@mui/material/Button';
 import { alpha } from '@mui/material/styles';
-import { Helmet } from 'react-helmet';
+import SeoHelmet from '../../components/SeoHelmet';
 
 const slugify = (text) =>
     text
@@ -43,26 +43,7 @@ const NewsList = () => {
     return (
         <>
         
-        <Helmet>
-            <title>Actualités Électrotech – Nouvelles en automatisation industrielle</title>
-            <meta
-                name="description"
-                content="Consultez les dernières nouvelles d’Électrotech à Granby : projets récents, innovations en automatisation et vie d’entreprise."
-            />
-            <link rel="canonical" href="https://www.electrotech.ca/news" />
-            <meta property="og:title" content="Actualités – Électrotech Automatisation Industrielle" />
-            <meta property="og:description" content="Restez à jour sur les projets, événements et innovations d’Électrotech en automatisation industrielle." />
-            <meta property="og:url" content="https://www.electrotech.ca/news" />
-            <meta property="og:image" content="https://www.electrotech.ca/photos/og-thumbnail.jpg" />
-            <meta property="og:type" content="website" />
-            <meta property="og:locale" content="fr_CA" />
-            <meta property="fb:app_id" content="4066793063644485" />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="Actualités – Électrotech Automatisation Industrielle" />
-            <meta name="twitter:description" content="Découvrez nos actualités récentes : innovations, réalisations, projets clients et plus encore." />
-            <meta name="twitter:image" content="https://www.electrotech.ca/photos/og-thumbnail.jpg" />
-        </Helmet>
-        
+        <SeoHelmet />
         
         <Container sx={{ py: 8, maxWidth: '800px', mx: 'auto' }}>
 
