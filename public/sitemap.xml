@@ -1,18 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://www.electrotech.ca/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/quality</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/news</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/privacy-policy</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/products-control-panels</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/products-cables</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/products-markers</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/products-lines</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/tracking</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/achievements</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/our-team</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/contact-us</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/jobs</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/quote</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.electrotech.ca/panneaux-de-controle</loc><priority>0.9</priority></url>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <!-- 🏠 Home page -->
+  <url>
+    <loc>https://www.electrotech.ca/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.electrotech.ca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.electrotech.ca/en/" />
+    <lastmod>2025-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 📊 Quality -->
+  <url>
+    <loc>https://www.electrotech.ca/quality</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.electrotech.ca/quality" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.electrotech.ca/en/quality" />
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 📰 News List -->
+  <url>
+    <loc>https://www.electrotech.ca/news</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.electrotech.ca/news" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.electrotech.ca/en/news" />
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 🔐 Privacy -->
+  <url>
+    <loc>https://www.electrotech.ca/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.electrotech.ca/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.electrotech.ca/en/privacy-policy" />
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- 🛠️ Control Panels -->
+  <url>
+    <loc>https://www.electrotech.ca/products-control-panels</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.electrotech.ca/products-control-panels" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.electrotech.ca/en/products-control-panels" />
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.electrotech.ca/photos/products/control-panels/a.jpg</image:loc>
+      <image:title>Panneaux de contrôle industriels</image:title>
+    </image:image>
+  </url>
+
+  <!-- ⚡ Cables -->
+  <url>
+    <loc>https://www.electrotech.ca/products-cables</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.electrotech.ca/products-cables" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.electrotech.ca/en/products-cables" />
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.electrotech.ca/photos/products/cables/a.jpg</image:loc>
+      <image:title>Câbles industriels</image:title>
+    </image:image>
+  </url>
+
+  <!-- 🧾 Quote Form -->
+  <url>
+    <loc>https://www.electrotech.ca/quote</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.electrotech.ca/quote" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.electrotech.ca/en/quote" />
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 📞 Contact -->
+  <url>
+    <loc>https://www.electrotech.ca/contact-us</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.electrotech.ca/contact-us" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.electrotech.ca/en/contact-us" />
+    <lastmod>2025-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 🧠 Achievements -->
+  <url>
+    <loc>https://www.electrotech.ca/achievements</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.electrotech.ca/achievements" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.electrotech.ca/en/achievements" />
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 👷‍♂️ Jobs -->
+  <url>
+    <loc>https://www.electrotech.ca/jobs</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.electrotech.ca/jobs" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.electrotech.ca/en/jobs" />
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>

@@ -1,10 +1,11 @@
 //src app.js
 
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import CookieManager from './components/CookieManager';
 import Layout from './pages/Layout';
+import LoadingScreen from './components/LoadingScreen';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home/Home'));
@@ -26,43 +27,64 @@ const JobList = lazy(() => import('./pages/About/JobList'));
 const QuotePage = lazy(() => import('./pages/Quote/QuotePage'));
 
 const App = () => {
+  console.log("Website made by Rémi Gauvin - 2025");
 
-    console.log("Website made by Rémi Gauvin - 2025");
+  return (
+    <>
+      <Router>
+        <Suspense fallback={<LoadingScreen />}>
+          <Routes>
 
-    return (
-        <>
-        <Router basename={process.env.PUBLIC_URL}>
-            <Suspense fallback={<div style={{ textAlign: 'center', padding: '2rem' }}>Loading...</div>}>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route path="/quality" element={<Quality />} />
-                <Route path="/news" element={<NewsList />} />
-                <Route path="/:slug" element={<NewsDetail />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                <Route path="/products-control-panels" element={<ProductsControlPanels />} />
-                <Route path="/products-cables" element={<ProductsCables />} />
-                <Route path="/products-markers" element={<ProductsMarkers />} />
-                <Route path="/products-lines" element={<ProductsLines />} />
-                <Route path="/panneaux-de-controle" element={<PanneauxDeControle />} />
-                <Route path="/services/:index" element={<Services />} />
-                <Route path="/tracking" element={<TrackingProjects />} />
-                <Route path="/tracking/:projectNumber" element={<TrackingProjects />} />
-                <Route path="/achievements" element={<Achievements />} />
-                <Route path="/our-team" element={<OurTeam />} />
-                <Route path="/contact-us" element={<ContactUs />} />
-                <Route path="/jobs" element={<JobList />} />
-                <Route path="/quote" element={<QuotePage />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
-                </Route>
-            </Routes>
-            </Suspense>
-        </Router>
+            {/* Routes with language prefix (fr, en, etc.) */}
+            <Route path="/:lang" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="quality" element={<Quality />} />
+              <Route path="news" element={<NewsList />} />
+              <Route path=":slug" element={<NewsDetail />} />
+              <Route path="privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="products-control-panels" element={<ProductsControlPanels />} />
+              <Route path="products-cables" element={<ProductsCables />} />
+              <Route path="products-markers" element={<ProductsMarkers />} />
+              <Route path="products-lines" element={<ProductsLines />} />
+              <Route path="panneaux-de-controle" element={<PanneauxDeControle />} />
+              <Route path="services/:index" element={<Services />} />
+              <Route path="tracking" element={<TrackingProjects />} />
+              <Route path="tracking/:projectNumber" element={<TrackingProjects />} />
+              <Route path="achievements" element={<Achievements />} />
+              <Route path="our-team" element={<OurTeam />} />
+              <Route path="contact-us" element={<ContactUs />} />
+              <Route path="jobs" element={<JobList />} />
+              <Route path="quote" element={<QuotePage />} />
+            </Route>
 
-        <CookieManager />
-        </>
-    );
+            {/* Default routes without language prefix */}
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="quality" element={<Quality />} />
+              <Route path="news" element={<NewsList />} />
+              <Route path=":slug" element={<NewsDetail />} />
+              <Route path="privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="products-control-panels" element={<ProductsControlPanels />} />
+              <Route path="products-cables" element={<ProductsCables />} />
+              <Route path="products-markers" element={<ProductsMarkers />} />
+              <Route path="products-lines" element={<ProductsLines />} />
+              <Route path="panneaux-de-controle" element={<PanneauxDeControle />} />
+              <Route path="services/:index" element={<Services />} />
+              <Route path="tracking" element={<TrackingProjects />} />
+              <Route path="tracking/:projectNumber" element={<TrackingProjects />} />
+              <Route path="achievements" element={<Achievements />} />
+              <Route path="our-team" element={<OurTeam />} />
+              <Route path="contact-us" element={<ContactUs />} />
+              <Route path="jobs" element={<JobList />} />
+              <Route path="quote" element={<QuotePage />} />
+            </Route>
+
+          </Routes>
+        </Suspense>
+      </Router>
+      <CookieManager />
+    </>
+  );
 };
 
 export default App;
-

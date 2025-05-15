@@ -1,5 +1,4 @@
 // src/pages/Layout.js
-
 import { useState } from 'react';
 import HeaderBarResponsive from '../components/HeaderBarResponsive';
 import Footer from '../components/Footer';
@@ -7,10 +6,11 @@ import ScrollToTopButton from '../components/ScrollToTopButton';
 import { Box } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
+import LanguageSync from '../components/LanguageSync';
 
 const Layout = () => {
-
     const [backgroundEnabled, setBackgroundEnabled] = useState(true);
+    const [langReady, setLangReady] = useState(false);
     const theme = useTheme();
     const isDark = theme.palette.mode === 'dark';
 
@@ -25,7 +25,7 @@ const Layout = () => {
             display: 'flex',
             flexDirection: 'column',
             minHeight: '100vh',
-            overflow: 'hidden', // important pour que le ::before reste contenu
+            overflow: 'hidden',
             '&::before': {
                 content: '""',
                 position: 'absolute',
@@ -54,26 +54,25 @@ const Layout = () => {
                 '100%': { opacity: 0 },
             },
         }}
-        >
+    >
         <Box sx={{ position: 'relative', zIndex: 1 }}>
-            <HeaderBarResponsive />
-            <Box sx={{ flex: 1 }}>
-            <Outlet />
-            </Box>
-            <ScrollToTopButton />
-            <Footer
-            toggleBackground={toggleBackground}
-            backgroundEnabled={backgroundEnabled}
-            />
+            <LanguageSync onReady={() => setLangReady(true)} />
+            {langReady && (
+              <>
+                <HeaderBarResponsive />
+                <Box sx={{ flex: 1 }}>
+                  <Outlet />
+                </Box>
+                <ScrollToTopButton />
+                <Footer
+                  toggleBackground={toggleBackground}
+                  backgroundEnabled={backgroundEnabled}
+                />
+              </>
+            )}
         </Box>
-
     </Box>
-
-
-
-  
     );
 };
 
 export default Layout;
-
