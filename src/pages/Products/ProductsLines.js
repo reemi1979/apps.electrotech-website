@@ -33,7 +33,7 @@ const manufacturers = [
     { name: 'Harting', logo: process.env.PUBLIC_URL + '/photos/products/parts/harting.svg' },
     { name: 'Wöhner', logo: process.env.PUBLIC_URL + '/photos/products/parts/wohner.svg' },
     { name: 'Icotek', logo: process.env.PUBLIC_URL + '/photos/products/parts/icotek.svg' },
-    { name: 'Puls', logo: process.env.PUBLIC_URL + '/photos/products/parts/puls.jpeg' },
+    { name: 'Puls', logo: process.env.PUBLIC_URL + '/photos/products/parts/puls.webp' },
     { name: 'Pepperl+Fuchs', logo: process.env.PUBLIC_URL + '/photos/products/parts/pf.svg' }
 ];
 

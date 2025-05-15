@@ -90,15 +90,15 @@ const Home = () => {
       </Box>
 
       <Box id="section3" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto' }}>
-        <Suspense fallback={null}><HomeFlipBox1 /></Suspense>
+        <LazyLoad once offset={100}><Suspense fallback={null}><HomeFlipBox1 /></Suspense></LazyLoad>
       </Box>
 
       <Box id="section4" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto' }}>
-        <Suspense fallback={null}><HomeFlipBox2 /></Suspense>
+        <LazyLoad once offset={100}><Suspense fallback={null}><HomeFlipBox2 /></Suspense></LazyLoad>
       </Box>
 
       <Box id="section5" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto' }}>
-        <Suspense fallback={null}><HomeFlipBox3 /></Suspense>
+        <LazyLoad once offset={100}><Suspense fallback={null}><HomeFlipBox3 /></Suspense></LazyLoad>
       </Box>
 
       <Box id="section6" sx={{ minHeight: '100vh', position: 'relative', zIndex: 1, py: 2, textAlign: 'center', mx: 'auto' }}>
