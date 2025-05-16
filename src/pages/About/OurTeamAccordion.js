@@ -11,7 +11,6 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
-
 function OurTeamAccordion() {
     const { t } = useTranslation('about');
     const theme = useTheme();
@@ -93,7 +92,7 @@ function OurTeamAccordion() {
 
                     <Button
                         component={Link}
-                        to="/join-us"
+                        to="/jobs"
                         variant="contained"
                         color="primary"
                     >

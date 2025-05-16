@@ -35,7 +35,7 @@ const NewsList = () => {
         .then(res => res.json())
         .then(data => {
             const activeNews = data
-                .filter(n => n.activate && n.detected_as_job !== true) // ➔ ignorer les jobs
+                .filter(n => n.activate && n.detected_as_job !== true) 
                 .sort((a, b) => new Date(b.date) - new Date(a.date));
             setNewsList(activeNews);
         });
@@ -83,8 +83,7 @@ const NewsList = () => {
                 </Typography>
             </a>
             </Box>
-
-
+            
             <br /> <br />
 
             <Grid container spacing={3} justifyContent="center">

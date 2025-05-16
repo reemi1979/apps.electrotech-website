@@ -10,7 +10,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { PortableText } from '@portabletext/react';
 import { useTheme } from '@mui/material/styles';
 
-
 const components = {
   block: {
     h1: ({ children }) => <Typography variant="h5" fontWeight="bold" sx={{ mt: 2 }}>{children}</Typography>,

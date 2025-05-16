@@ -7,16 +7,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CssBaseline from '@mui/material/CssBaseline';
 import ThemeContextProvider from './theme/ThemeContext';
+import { HelmetProvider } from 'react-helmet-async';
 import './i18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
+      <HelmetProvider>
         <ThemeContextProvider>
-        <CssBaseline />
-        <App />
-        </ThemeContextProvider>
+          <CssBaseline />
+            <App />
+          </ThemeContextProvider>
+        </HelmetProvider>
     </React.StrictMode>
 );
 

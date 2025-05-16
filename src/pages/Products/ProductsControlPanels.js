@@ -15,7 +15,7 @@ import SeoHelmet from '../../components/SeoHelmet';
 const ProductsControlPanels = () => {
     const theme = useTheme();
     const { t } = useTranslation('products');
-    const [selected, setSelected] = useState('standard'); // valeur par défaut
+    const [selected, setSelected] = useState('standard');
 
     return (
         <>

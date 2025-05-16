@@ -1,6 +1,5 @@
 // src/components/BackgroundBanner.js
 
-import React from 'react';
 import Box from '@mui/material/Box';
 
 const BackgroundBanner = ({ image, height = 200, top = 0, overlayColor = 'rgba(0, 0, 0, 0.6)' }) => {

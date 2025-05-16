@@ -1,14 +1,12 @@
 // src/Home/HomeIndustries.js
 
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { motion } from 'framer-motion';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import BackgroundBanner from '../../components/BackgroundBanner';
-
 
 const industries = [
     { src: process.env.PUBLIC_URL + '/photos/industries/a.webp', titleKey: 'home_industrie_airport_title', descriptionKey: 'home_industrie_airport_description' },
@@ -22,49 +20,21 @@ const industries = [
     { src: process.env.PUBLIC_URL + '/photos/industries/i.webp', titleKey: 'home_industrie_transport_title', descriptionKey: 'home_industrie_transport_description' }
 ];
 
-const MotionBox = motion.create(Box);
-
 const HomeIndustries = () => {
     
     const [selectedIndex, setSelectedIndex] = useState(0);
     const theme = useTheme();
     const { t } = useTranslation();
-    const intervalRef = useRef(null);
-    const timeoutRef = useRef(null);
 
-    const startInterval = () => {
-        intervalRef.current = setInterval(() => {
-            setSelectedIndex(prev => (prev + 1) % industries.length);
-        }, 2000);
-    };
-
-    useEffect(() => {
-        startInterval();
-        return () => {
-            clearInterval(intervalRef.current);
-            clearTimeout(timeoutRef.current);
-        };
-    }, []);
-    
     const handleUserAction = (index) => {
         setSelectedIndex(index);
-        clearInterval(intervalRef.current); // stop auto-switch
-        clearTimeout(timeoutRef.current);   // clear timeout si déjà lancé
-    
-        timeoutRef.current = setTimeout(() => {
-            startInterval(); // redémarre après 10s
-        }, 10000);
     };
-
-    const selected = industries[selectedIndex];
 
     return (
     
         <Box sx={{ position: 'relative' }}>
         
             <Box sx={{ px: 2, maxWidth: 1400, mx: 'auto' }}>
-                
-                {/* TITRE FIXE EN HAUT */}
                 
                 <Box
                     sx={{
@@ -92,8 +62,6 @@ const HomeIndustries = () => {
 
                 </Box>
 
-                {/* IMAGES EN CERCLES */}
-
                     <Grid
                         container
                         columns={{ xs: 12, sm: 12, md: 12, lg: 12 }}
@@ -107,14 +75,14 @@ const HomeIndustries = () => {
                             <Grid
                             key={`${index}-${item.titleKey}`}
                             gridColumn={{
-                                xs: 'span 4', // 12 / 4 = 3 items per row
+                                xs: 'span 4', 
                                 sm: 'span 4',
-                                md: 'span 3', // 12 / 3 = 4 items per row
-                                lg: 'span 2', // 12 / 2 = 6 items per row
+                                md: 'span 3', 
+                                lg: 'span 2', 
                             }}
                             textAlign="center"
                             >
-                            <MotionBox
+                            <Box
                                 component="img"
                                 src={item.src}
                                 alt={t(item.titleKey)}

@@ -12,7 +12,6 @@ import OurTeamAccordion from './OurTeamAccordion';
 import OurTeamFlipBox1 from './OurTeamFlipBox1';
 import SeoHelmet from '../../components/SeoHelmet';
 
-
 const teamMembers = [
   { key: 'charles', fullname: 'Charles Fortin', img: 'charles.jpg', row: 1 },
   { key: 'isabelle', fullname: 'Isabelle Guay', img: 'isabelle.jpg', row: 1 },
@@ -22,7 +21,7 @@ const teamMembers = [
   { key: 'jpp', fullname: 'Jean-Patrick Picotte', img: 'jpp.jpg', row: 2 },
   { key: 'jpd', fullname: 'Jean-Philippe Duval', img: 'jpd.jpg', row: 2 },
   { key: 'gabriel', fullname: 'Gabriel Potvin', img: 'gab.jpg', row: 2 },
-  { key: 'ivanho', fullname: 'Ivanho Dion', img: 'ivanho.jpg', row: 2 },
+  { key: 'ivanho', fullname: 'Ivanho Dion', img: 'ivanho.jpg', row: 3 },
   { key: 'alex', fullname: 'Alex Mailhot', img: 'alex.jpg', row: 3 },
   { key: 'pascal', fullname: 'Pascal Fleury', img: 'pascal.jpg', row: 3 },
   { key: 'jocelyn', fullname: 'Jocelyn Lamarre', img: 'jocelyn.jpg', row: 3 },
@@ -78,11 +77,7 @@ const OurTeam = () => {
             <Grid container spacing={4} sx={{ mb: 6 }} justifyContent="center" key={rowIndex}>
               {group.map((member) => (
                 <Grid
-                  item
-                  xs={6}
-                  sm={6}
-                  md={3}
-                  lg={12 / group.length}
+                  size={{ xs: 6, sm: 6, md: 3, lg: 12 / group.length }}
                   key={member.key}
                   onMouseEnter={() => setHoveredMember(member.key)}
                   onMouseLeave={() => setHoveredMember(null)}

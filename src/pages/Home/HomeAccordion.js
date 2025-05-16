@@ -15,7 +15,6 @@ import FaxIcon from '@mui/icons-material/Fax';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 
-
 function HomeAccordion({ mapLink, isMobile }) {
     const { t } = useTranslation();
     const theme = useTheme();

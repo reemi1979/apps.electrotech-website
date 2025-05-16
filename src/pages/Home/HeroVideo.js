@@ -34,8 +34,9 @@ const HeroVideo = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  useEffect(() => {
-    if (shouldPlay && videoRef.current && !isIOS) {
+useEffect(() => {
+  if (shouldPlay && videoRef.current && !isIOS) {
+    const timeout = setTimeout(() => {
       import('hls.js').then(({ default: Hls }) => {
         if (Hls.isSupported()) {
           const hls = new Hls();
@@ -44,12 +45,13 @@ const HeroVideo = () => {
           hls.on(Hls.Events.MANIFEST_PARSED, () => {
             videoRef.current.play().catch(() => {});
           });
-
-          return () => hls.destroy();
         }
       });
-    }
-  }, [shouldPlay, playlistUrl]);
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  }
+}, [shouldPlay, playlistUrl]);
 
   const toggleSound = () => {
     if (videoRef.current) {
@@ -77,7 +79,7 @@ const HeroVideo = () => {
         {shouldPlay && (
           <video
             ref={videoRef}
-            src={isIOS ? playlistUrl : undefined} // src direct pour iOS
+            src={isIOS ? playlistUrl : undefined}
             poster={posterUrl}
             muted={isMuted}
             loop

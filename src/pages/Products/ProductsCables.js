@@ -14,7 +14,7 @@ import SeoHelmet from '../../components/SeoHelmet';
 const ProductsCables = () => {
     const theme = useTheme();
     const { t } = useTranslation('products');
-    const [selected, setSelected] = useState('cables'); // valeur par défaut
+    const [selected, setSelected] = useState('cables');
     
 
     return (

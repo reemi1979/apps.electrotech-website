@@ -1,15 +1,15 @@
-import { useEffect, useState, lazy, Suspense } from 'react';
+//src/pages/Home.js
+
+import { useEffect, lazy, Suspense } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { isMobile } from 'react-device-detect';
 import LazyLoad from 'react-lazyload';
 import HeroVideo from './HeroVideo';
 import ScrollToNextSectionButton from '../../components/ScrollToNextSectionButton';
 import SeoHelmet from '../../components/SeoHelmet';
-
 
 const HomeFlipBox1 = lazy(() => import('./HomeFlipBox1'));
 const HomeFlipBox2 = lazy(() => import('./HomeFlipBox2'));
@@ -22,14 +22,9 @@ const HomeAccordion = lazy(() => import('./HomeAccordion'));
 const Home = () => {
   const { t } = useTranslation();
   const theme = useTheme();
-  const isDark = theme.palette.mode === 'dark';
   const mapLink = isMobile
     ? 'geo:0,0?q=625+Simonds+Sud,+Granby,+QC+J2J+1C2'
     : 'https://www.google.com/maps?q=625+Simonds+Sud,+Granby,+QC+J2J+1C2';
-
-  const [currentSection, setCurrentSection] = useState(1);
-  const nextSectionId = `section${currentSection + 1}`;
-  const isLastSection = currentSection >= 9;
 
   useEffect(() => {
     const handleScroll = () => {};
@@ -42,54 +37,42 @@ const Home = () => {
       
       <SeoHelmet />
 
-      {/* Your layout continues exactly as is */}
       <Box id="section1" sx={{ position: 'relative', zIndex: 0, height: '100vh' }}>
         <LazyLoad once>
           <HeroVideo />
         </LazyLoad>
       </Box>
 
-      <Box
-        id="section2"
-        sx={{
-          minHeight: '100vh',
-          display: 'flex',
-          position: 'relative',
-          zIndex: 1,
-          px: 2,
-          py: 2,
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
-          mx: 'auto',
-        }}
-      >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <LazyLoad once>
-            <Box
-              component="img"
-              src={process.env.PUBLIC_URL + '/logos/logo.svg'}
-              alt="Électrotech Logo"
-              sx={{
-                width: { xs: '100%', md: 800 },
-                height: 'auto',
-                mb: 10,
-                mx: 'auto',
-                display: 'block',
-                filter: isDark ? 'brightness(0) invert(1)' : 'none',
-                transition: 'filter 0.5s ease-in-out',
-                '&:hover': {
-                  filter: isDark ? 'none' : 'brightness(0)',
-                },
-              }}
-            />
-          </LazyLoad>
-        </motion.div>
-      </Box>
+    <Box
+      id="section2"
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        position: 'relative',
+        zIndex: 1,
+        px: 2,
+        py: 2,
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        mx: 'auto',
+      }}
+    >
+      <LazyLoad once>
+        <Box
+          component="img"
+          src={process.env.PUBLIC_URL + '/logos/logo.svg'}
+          alt="Électrotech Logo"
+          sx={{
+            width: { xs: '100%', md: 800 },
+            height: 'auto',
+            mb: 10,
+            mx: 'auto',
+            display: 'block',
+          }}
+        />
+      </LazyLoad>
+    </Box>
 
       <Box id="section3" sx={{ minHeight: '100vh', display: 'flex', position: 'relative', zIndex: 1, px: 2, py: 2, alignItems: 'center', justifyContent: 'center', textAlign: 'center', mx: 'auto' }}>
         <Suspense fallback={null}><HomeFlipBox1 /></Suspense>
@@ -136,7 +119,7 @@ const Home = () => {
         </Suspense>
       </Box>
 
-      <ScrollToNextSectionButton sectionIds={['section1', 'section2', 'section3', 'section4', 'section5', 'section6']} />
+      <ScrollToNextSectionButton sectionIds={['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8', 'section9']} />
     </>
   );
 };

@@ -8,8 +8,9 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
 import SeoHelmet from '../../components/SeoHelmet';
-import validator from 'validator';
 
+const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
+const isValidPhone = (phone) => /^\+?[0-9\s\-()]{6,20}$/.test(phone);
 
 const ContactUs = () => {
 
@@ -42,8 +43,12 @@ const ContactUs = () => {
     const newErrors = {};
     if (!formData.reason) newErrors.reason = t('contact_us_required');
     if (!formData.name) newErrors.name = t('contact_us_required');
-    if (!formData.contact || (!validator.isEmail(formData.contact) && !validator.isMobilePhone(formData.contact, 'any')))
+    if (
+      !formData.contact ||
+      (!isValidEmail(formData.contact) && !isValidPhone(formData.contact))
+    ) {
       newErrors.contact = t('contact_us_invalid_contact');
+    }
     if (!formData.subject) newErrors.subject = t('contact_us_required');
     if (!formData.message) newErrors.message = t('contact_us_required');
     return newErrors;
@@ -99,7 +104,7 @@ const ContactUs = () => {
           <Grid container spacing={2}>
             {/* LEFT COLUMN */}
             <Box sx={{ maxWidth: 600, mx: 'auto', px: 2 }}>
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs:12, md:12 }}>
                 <Typography variant="h4" sx={{ mb: 2 }}>
                   {t('contact_us_company_name')}
                 </Typography>
@@ -124,7 +129,7 @@ const ContactUs = () => {
 
             {/* RIGHT COLUMN */}
             <Box sx={{ maxWidth: 600, mx: 'auto', px: 2 }}>
-              <Grid item xs={12} md={6}>
+              <Grid size={{ xs:12, md:12 }}>
                 <Typography variant="h4" sx={{ mb: 3 }}>
                   {t('contact_us_title')}
                 </Typography>

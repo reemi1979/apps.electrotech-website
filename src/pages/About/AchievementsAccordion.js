@@ -11,7 +11,6 @@ import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-
 function AchievementsAccordion() {
     const { t } = useTranslation('achievements');
     const theme = useTheme();

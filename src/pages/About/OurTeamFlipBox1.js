@@ -9,7 +9,6 @@ import { useTheme } from '@mui/material/styles';
 import CloseIcon from '@mui/icons-material/Close';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-
 function OurTeamFlipBox1() {
     const { t } = useTranslation('about');
     const theme = useTheme();

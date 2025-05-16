@@ -11,8 +11,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { useTheme } from '@mui/material/styles';
 
-
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box)
 
 const PhotoGallerySlideShow = ({
     basePath,

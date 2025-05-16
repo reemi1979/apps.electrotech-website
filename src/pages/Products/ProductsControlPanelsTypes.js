@@ -14,7 +14,7 @@ const controlPanelsTypes = [
   { src: process.env.PUBLIC_URL + '/photos/products/controlpanels/e.webp', titleKey: 'product_control_panel_junctionbox_title', name: 'junctionbox' }
 ];
 
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box)
 
 const ProductsControlPanelsTypes = ({ selected, setSelected }) => {
 
@@ -24,10 +24,9 @@ const ProductsControlPanelsTypes = ({ selected, setSelected }) => {
     return (
         <Box sx={{ px: 2, maxWidth: 1400, mx: 'auto' }}>
 
-
         <Grid container spacing={2} justifyContent="center" sx={{ mb:2, minHeight: { xs: 270, sm: 'auto' } }}>
             {controlPanelsTypes.map((item, index) => (
-            <Grid item xs={4} sm={4} md={3} lg={2} key={index} textAlign="center">
+            <Grid key={item.titleKey || index}  size={{ xs:4, sm:4, md:3, lg:2 }} textAlign="center">
                 <MotionBox
                     component="img"
                     src={item.src}

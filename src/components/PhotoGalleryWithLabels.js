@@ -10,7 +10,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import InViewPhotoCard from './InViewPhotoCard';
 import { useTheme } from '@mui/material/styles';
 
-
 const MotionBox = motion.create(Box);
 
 const PhotoGalleryWithLabels = ({ photos }) => {
@@ -25,7 +24,7 @@ const PhotoGalleryWithLabels = ({ photos }) => {
             
         <Grid container spacing={2} sx={{ px: 2, py: 4, justifyContent: 'center', maxWidth: 1400, margin: '0 auto' }}>
             {photos.map((photo, index) => (
-            <Grid item size={{ xs:12, sm:6 ,md:4 }}  key={index}>
+            <Grid size={{ xs:12, sm:6 ,md:4 }}  key={index}>
                 <InViewPhotoCard photo={photo} onClick={() => setSelected(photo)} />
             </Grid>
             ))}
@@ -42,7 +41,7 @@ const PhotoGalleryWithLabels = ({ photos }) => {
                 slotProps={{
                 backdrop: {
                     timeout: 500,
-                    sx: { backgroundColor: 'rgba(0, 0, 0, 0.8)' }, // stays dark for modal background
+                    sx: { backgroundColor: 'rgba(0, 0, 0, 0.8)' }, 
                 },
                 }}
             >
@@ -73,7 +72,7 @@ const PhotoGalleryWithLabels = ({ photos }) => {
                             maxHeight: '90vh',
                         }}
                         >
-                        {/* Image */}
+
                         <Box
                             component="img"
                             src={selected.src}
@@ -85,7 +84,6 @@ const PhotoGalleryWithLabels = ({ photos }) => {
                             }}
                         />
 
-                        {/* Text below image */}
                         <Box
                             sx={{
                             p: 3,

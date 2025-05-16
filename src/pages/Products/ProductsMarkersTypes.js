@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 
-
 const markerTypes = [
     { src: process.env.PUBLIC_URL + '/photos/products/markers/a.webp', titleKey: 'product_markers_cables_title', name: 'cables' },
     { src: process.env.PUBLIC_URL + '/photos/products/markers/b.webp', titleKey: 'product_markers_wires_title', name: 'wires' },
@@ -16,7 +15,7 @@ const markerTypes = [
     { src: process.env.PUBLIC_URL + '/photos/products/markers/f.webp', titleKey: 'product_markers_stainless_title', name: 'stainless' }
 ];
 
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box)
 
 const ProductsMarkersTypes = ({ selected, setSelected }) => {
 
@@ -27,7 +26,7 @@ const ProductsMarkersTypes = ({ selected, setSelected }) => {
         <Box sx={{ px: 2, maxWidth: 1400, mx: 'auto' }}>
         <Grid container spacing={4} justifyContent="center">
             {markerTypes.map((item, index) => (
-            <Grid item xs={6} sm={4} md={3} lg={2} key={index} textAlign="center">
+            <Grid key={item.titleKey || index}  size={{ xs:6, sm:4, md:3, lg:2 }} textAlign="center">
                 <MotionBox
                     component="img"
                     src={item.src}

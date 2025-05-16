@@ -5,7 +5,6 @@ import Fab from '@mui/material/Fab';
 import Zoom from '@mui/material/Zoom';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
-
 const ScrollToTopButton = () => {
     const [visible, setVisible] = useState(false);
 

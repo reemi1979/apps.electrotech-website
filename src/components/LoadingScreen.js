@@ -2,7 +2,6 @@
 
 import Box from '@mui/material/Box';
 
-
 const LoadingScreen = () => {
   return (
     <Box

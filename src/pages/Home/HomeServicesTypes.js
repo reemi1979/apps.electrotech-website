@@ -1,10 +1,8 @@
 // src/pages/Services/ServicesTypes.js
 
-import { useEffect, useRef } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { motion } from 'framer-motion';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import BackgroundBanner from '../../components/BackgroundBanner';
@@ -18,44 +16,16 @@ const services = [
 { src: process.env.PUBLIC_URL + '/photos/services/e.webp', titleKey: 'home_service_cnc_title', descriptionKey: 'home_service_cnc_description' },
 ];
 
-const MotionBox = motion.create(Box);
-
 const selectedTypeMap = ['assy', 'design', 'machine', 'prog', 'cnc'];
 
 const HomeServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => {
     
     const theme = useTheme();
     const { t } = useTranslation();
-    const intervalRef = useRef(null);
-    const timeoutRef = useRef(null);
 
-    const startInterval = () => {
-        intervalRef.current = setInterval(() => {
-            setSelectedIndex(prev => {
-                const newIndex = (prev + 1) % services.length;
-                setSelected(selectedTypeMap[newIndex]); // ✅ Update selected type for photos
-                return newIndex;
-            });
-        }, 2000);
-    };
-
-    useEffect(() => {
-        startInterval();
-        return () => {
-            clearInterval(intervalRef.current);
-            clearTimeout(timeoutRef.current);
-        };
-    }, []);
-    
     const handleUserAction = (index) => {
         setSelectedIndex(index);
-        clearInterval(intervalRef.current); // stop auto-switch
-        clearTimeout(timeoutRef.current);   // clear timeout si déjà lancé
         setSelected(selectedTypeMap[index]);
-
-        timeoutRef.current = setTimeout(() => {
-            startInterval(); // redémarre après 10s
-        }, 10000);
     };
 
     const selected = services[selectedIndex];
@@ -67,8 +37,6 @@ const HomeServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => 
             <Box sx={{ px: 2, maxWidth: 1400, mx: 'auto' }}>
 
                 <BackgroundBanner image="photos/blue.webp" height={250} top={0} />
-
-                {/* TITRE FIXE EN HAUT */}
 
                 <Box
                     sx={{
@@ -104,14 +72,14 @@ const HomeServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => 
                         <Grid
                         key={item.titleKey || index}
                         gridColumn={{
-                            xs: 'span 4', // 12/4 = 3 items/row
+                            xs: 'span 4',
                             sm: 'span 4',
-                            md: 'span 3', // 12/3 = 4 items/row
-                            lg: 'span 2', // 12/2 = 6 items/row
+                            md: 'span 3', 
+                            lg: 'span 2', 
                         }}
                         textAlign="center"
                         >
-                        <MotionBox
+                        <Box
                             component="img"
                             src={item.src}
                             alt={t(item.titleKey)}

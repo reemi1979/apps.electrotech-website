@@ -19,7 +19,6 @@ const Achievements = () => {
     const slideshowRef = useRef(null);
     const [bannerTop, setBannerTop] = useState(350);
 
-    // Measure slideshow vertical center
     useEffect(() => {
         if (slideshowRef.current) {
         const rect = slideshowRef.current.getBoundingClientRect();

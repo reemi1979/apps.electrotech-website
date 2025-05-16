@@ -10,8 +10,6 @@ import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import { ColorModeContext } from '../theme/ThemeContext';
 
-
-
 const ThemeToggleButton = ({ variant = 'icon', onClick }) => {
     const { mode, toggleColorMode } = useContext(ColorModeContext);
     const theme = useTheme();
@@ -22,7 +20,6 @@ const ThemeToggleButton = ({ variant = 'icon', onClick }) => {
       if (onClick) onClick();
     };
   
-    // Choisir texte traduit selon mode
     const text = mode === 'dark' ? t('theme_toggle_light') : t('theme_toggle_dark');
     const icon = mode === 'dark' ? <Brightness7 /> : <Brightness4 />;
   

@@ -11,8 +11,7 @@ import { useTheme } from '@mui/material/styles';
 import BackgroundBanner from '../../components/BackgroundBanner';
 import SeoHelmet from '../../components/SeoHelmet';
 
-
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box)
 
 const manufacturers = [
     { name: 'Rittal', logo: process.env.PUBLIC_URL + '/photos/products/parts/rittal.svg' },
@@ -57,10 +56,8 @@ const ProductsLines = () => {
         }
         };
     
-        // Run after render + layout
         const raf = requestAnimationFrame(updateBannerPosition);
     
-        // Update on resize
         window.addEventListener('resize', updateBannerPosition);
     
         return () => {
@@ -77,7 +74,7 @@ const ProductsLines = () => {
             const topPosition = rect.top + scrollTop;
             setBannerTop(topPosition - 20);
         }
-        }, 100); // 100ms delay to allow layout
+        }, 100); 
     
         return () => clearTimeout(timer);
     }, []);
@@ -101,12 +98,7 @@ const ProductsLines = () => {
             <Grid container spacing={4} justifyContent="center">
                 {manufacturers.map((item, index) => (
                     <Grid
-                        item
-                        xs={6}
-                        sm={4}
-                        md={3}
-                        lg={2}
-                        key={index}
+                        key={item.titleKey || index}  size={{ xs:6, sm:4, md:3, lg:2 }} 
                         textAlign="center"
                         ref={index === 0 ? firstLogoRef : null}
                     >

@@ -17,7 +17,8 @@ const services = [
 { src: process.env.PUBLIC_URL + '/photos/services/e.webp', titleKey: 'home_service_cnc_title', descriptionKey: 'home_service_cnc_description' },
 ];
 
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box)
+
 const selectedTypeMap = ['assy', 'design', 'machine', 'prog', 'cnc'];
 
 const ServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => {
@@ -43,6 +44,7 @@ const ServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => {
             clearInterval(intervalRef.current);
             clearTimeout(timeoutRef.current);
         };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
     const handleUserAction = (index) => {
@@ -64,7 +66,7 @@ const ServicesTypes = ({ selectedIndex, setSelectedIndex, setSelected }) => {
         {/* IMAGES EN CERCLES */}
         <Grid container spacing={2} justifyContent="center" sx={{ mb:2, minHeight: { xs: 270, sm: 'auto' } }}>
             {services.map((item, index) => (
-            <Grid item xs={4} sm={4} md={3} lg={2} key={index} textAlign="center">
+            <Grid key={item.titleKey || index}  size={{ xs:4, sm:4, md:3, lg:2 }}  textAlign="center">
                 <MotionBox
                 component="img"
                 src={item.src}

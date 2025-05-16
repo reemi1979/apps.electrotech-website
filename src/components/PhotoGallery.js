@@ -9,8 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import InViewPhotoCard from './InViewPhotoCard';
 import { useTheme } from '@mui/material/styles';
 
-
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box)
 
 const PhotoGallery = ({ basePath, typeFolderMap, selectedType }) => {
     const [selectedPhoto, setSelectedPhoto] = useState(null);
@@ -29,7 +28,7 @@ const PhotoGallery = ({ basePath, typeFolderMap, selectedType }) => {
         <>
         <Grid container spacing={2} sx={{ px: 2, py: 4, justifyContent: 'center' }}>
             {photos.map((photo, index) => (
-            <Grid item size={{ xs:12, sm:6 ,md:6 }} key={index}>
+            <Grid size={{ xs:12, sm:6 ,md:6 }} key={index}>
                 <InViewPhotoCard photo={photo} onClick={() => setSelectedPhoto(photo)} />
             </Grid>
             ))}

@@ -78,8 +78,6 @@ function HomeFlipBox1() {
                     }}
                 >
 
-                {/* Text block */}
-
                 <Box
                     sx={{
                     flex: 1,

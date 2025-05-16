@@ -8,7 +8,6 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { gsap } from 'gsap';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
-
 gsap.registerPlugin(ScrollToPlugin);
 
 const ScrollToNextSectionButton = ({ sectionIds }) => {

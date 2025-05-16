@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -14,7 +14,6 @@ const SeoHelmet = () => {
 
   const title = t(`pages.${currentPath}.title`, t('defaultTitle'));
   const description = t(`pages.${currentPath}.description`, t('defaultDescription'));
-
 
   return (
     <Helmet htmlAttributes={{ lang: i18n.language }}>

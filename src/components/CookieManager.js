@@ -14,15 +14,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 
-//POUR UTILISER AILLEURS
-// import { getCookiePrefs } from './components/CookieManager';
-
-// const cookies = getCookiePrefs();
-// if (cookies.analytics) {
-//   // Init Matomo ou GA
-// }
-
-
 const defaultPrefs = {
   necessary: true,
   functional: false,

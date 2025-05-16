@@ -6,7 +6,6 @@ import Container from '@mui/material/Container';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { useTheme } from '@mui/material/styles';
 
 import csaLogo from '../../assets/csa_light-gray.svg';
@@ -19,8 +18,6 @@ import BackgroundBanner from '../../components/BackgroundBanner';
 import QualityFlipBox1 from './QualityFlipBox1';
 import SeoHelmet from '../../components/SeoHelmet';
 
-
-const MotionBox = motion(Box);
 
 const Quality = () => {
 
@@ -78,6 +75,7 @@ const Quality = () => {
           clearInterval(intervalRef.current);
           clearTimeout(timeoutRef.current);
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       }, []);
     
       const handleUserAction = (index) => {
@@ -124,8 +122,8 @@ const Quality = () => {
                     src={currentCert.logo}
                     alt={`${currentKey.toUpperCase()} Certification Logo`}
                     sx={{
-                    width: { xs: 200, sm: 350, md: 500 },   // ⬅ responsive widths
-                    height: { xs: 200, sm: 350, md: 500 },  // ⬅ responsive heights
+                    width: { xs: 200, sm: 350, md: 500 }, 
+                    height: { xs: 200, sm: 350, md: 500 }, 
                     mb: 2,
                     animation: 'pulse 2s ease-in-out infinite',
                     filter: isDark ? 'none' : 'invert(1)',
@@ -187,8 +185,8 @@ const Quality = () => {
             <Grid container spacing={2} justifyContent="center" sx={{ mb:2, minHeight: { xs: 100, sm: 'auto' } }}>
                 
                 {messages.map((item, index) => (
-                    <Grid item xs={6} sm={4} md={3} lg={2} key={index} textAlign="center">
-                    <MotionBox
+                    <Grid key={item.titleKey || index} size={{ xs: 6, sm: 4, md: 3, lg: 2 }} textAlign="center">
+                    <Box
                         component="img"
                         src={item.src}
                         alt={t(item.titleKey)}

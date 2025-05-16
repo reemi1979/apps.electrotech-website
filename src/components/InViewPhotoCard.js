@@ -6,8 +6,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 
-
-const MotionBox = motion.create(Box); // ✅ Nouvelle syntaxe
+const MotionBox = motion.create(Box); 
 
 const InViewPhotoCard = ({ photo, onClick }) => {
 
@@ -24,10 +23,10 @@ return (
         onClick={onClick}
         sx={{
             position: 'relative',
-            height: { xs: 250, sm: 300 }, // hauteur responsive
-            width: '100%', // 🔥 pleine largeur en mobile
-            maxWidth: 400, // 💡 limite max (centre sur écran large)
-            mx: 'auto', // centre horizontalement
+            height: { xs: 250, sm: 300 }, 
+            width: '100%', 
+            maxWidth: 400, 
+            mx: 'auto',
             borderRadius: 3,
             overflow: 'hidden',
             cursor: 'pointer',
@@ -46,7 +45,6 @@ return (
         }}
     />
     
-    {/* ✅ dégradé style Netflix */}
     <Box
         sx={{
         position: 'absolute',
@@ -59,7 +57,6 @@ return (
         }}
     />
 
-    {/* texte */}
     <Box
         sx={{
         position: 'absolute',
@@ -72,7 +69,7 @@ return (
         variant="caption"
         fontWeight="bold"
         sx={{
-            color: theme.palette.text.white, // ✅ assure blanc
+            color: theme.palette.text.white,
             textTransform: 'uppercase',
             textShadow: '1px 1px 4px rgba(0,0,0,0.8)',
         }}
@@ -83,7 +80,7 @@ return (
         variant="h6"
         fontWeight="bold"
         sx={{
-            color: theme.palette.text.white, // ✅ assure blanc
+            color: theme.palette.text.white,
             textShadow: '1px 1px 4px rgba(0,0,0,0.8)',
         }}
         >
