@@ -22,7 +22,7 @@ const HeroVideo = () => {
 
   const playlistUrl = window.location.hostname === 'localhost'
     ? process.env.PUBLIC_URL + '/video/playlist.m3u8'
-    : 'https://electrotech.ca/video/playlist.m3u8';
+    : 'https://www.electrotech.ca/video/playlist.m3u8';
 
   const posterUrl = process.env.PUBLIC_URL + '/video.webp';
 
