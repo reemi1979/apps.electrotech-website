@@ -1,5 +1,6 @@
 import { useEffect, useState, lazy, Suspense } from 'react';
-import { Box, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -8,6 +9,7 @@ import LazyLoad from 'react-lazyload';
 import HeroVideo from './HeroVideo';
 import ScrollToNextSectionButton from '../../components/ScrollToNextSectionButton';
 import SeoHelmet from '../../components/SeoHelmet';
+
 
 const HomeFlipBox1 = lazy(() => import('./HomeFlipBox1'));
 const HomeFlipBox2 = lazy(() => import('./HomeFlipBox2'));

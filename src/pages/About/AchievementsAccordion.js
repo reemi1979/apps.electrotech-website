@@ -1,10 +1,16 @@
 // src/pages/About/AchievementAccordion.js
 
-import { Box, Typography, Accordion, AccordionSummary, AccordionDetails, Button } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Button from '@mui/material/Button';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+
 
 function AchievementsAccordion() {
     const { t } = useTranslation('achievements');

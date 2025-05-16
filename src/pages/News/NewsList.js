@@ -1,14 +1,17 @@
 // src/pages/News/NewsList.js
 
-import React, { useState, useEffect } from 'react';
-import { Box, Typography, Container, Grid } from '@mui/material';
+import { useState, useEffect } from 'react';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { alpha, useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '@mui/material/styles';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Button from '@mui/material/Button';
-import { alpha } from '@mui/material/styles';
 import SeoHelmet from '../../components/SeoHelmet';
+
 
 const slugify = (text) =>
     text

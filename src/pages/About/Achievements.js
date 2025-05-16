@@ -1,14 +1,17 @@
 // src/pages/Achievements/Achievements.js
 
 import { useEffect, useRef, useState } from 'react';
-import { Box, Typography, Container } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Divider from '@mui/material/Divider';
 import { useTheme } from '@mui/material/styles';
-import { Divider } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import Slideshow from './AchievementsPhotos';
 import BackgroundBanner from '../../components/BackgroundBanner';
 import AchievementsAccordion from './AchievementsAccordion';
 import SeoHelmet from '../../components/SeoHelmet';
+
 
 const Achievements = () => {
     const theme = useTheme();

@@ -1,9 +1,10 @@
 // src/pages/Products/ProductsControlPanelsTypes.js
-
-import { Box, Grid } from '@mui/material';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
+
 
 const controlPanelsTypes = [
   { src: process.env.PUBLIC_URL + '/photos/products/controlpanels/a.webp', titleKey: 'product_control_panel_standard_title', name: 'standard' },

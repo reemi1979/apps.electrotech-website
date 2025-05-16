@@ -1,7 +1,16 @@
 // src/pages/Quote/QuoteStep.js
-import React from 'react';
-import { Box, TextField, MenuItem, Typography, Button, Grid, IconButton, ToggleButtonGroup, ToggleButton } from '@mui/material';
+
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import ToggleButton from '@mui/material/ToggleButton';
 import DeleteIcon from '@mui/icons-material/Delete';
+
 
 export default function QuoteStep({ step, data, onUpdate }) {
   const handleChange = (key, value) => {

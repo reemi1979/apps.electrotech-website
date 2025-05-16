@@ -1,18 +1,24 @@
 // src/pages/Quality/Quality.js
-
 import { useState, useEffect, useRef } from 'react';
-import { Box, Typography, Grid, Container, Fade } from '@mui/material';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
+import Fade from '@mui/material/Fade';
+import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { useTheme } from '@mui/material/styles';
+
 import csaLogo from '../../assets/csa_light-gray.svg';
 import ceLogo from '../../assets/ce_light-gray.svg';
 import ulLogo from '../../assets/ul_light-gray.svg';
+
 import QualityPhotos from './QualityPhotos';
-import { useTheme } from '@mui/material/styles';
 import ScrollToNextSectionButton from '../../components/ScrollToNextSectionButton';
 import BackgroundBanner from '../../components/BackgroundBanner';
 import QualityFlipBox1 from './QualityFlipBox1';
 import SeoHelmet from '../../components/SeoHelmet';
+
 
 const MotionBox = motion(Box);
 

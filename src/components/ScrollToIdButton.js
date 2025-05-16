@@ -1,6 +1,7 @@
 // src/components/ScrollToIdButton.js
 
-import { Fab, Zoom } from '@mui/material';
+import Fab from '@mui/material/Fab';
+import Zoom from '@mui/material/Zoom';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const ScrollToIdButton = ({ targetId = 'section2' }) => {

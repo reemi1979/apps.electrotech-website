@@ -1,10 +1,15 @@
 // src/pages/News/News.js
-import SeoHelmet from '../../components/SeoHelmet';
 import { useState, useEffect } from 'react';
-import { Box, Typography, Container, Modal, Backdrop } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Modal from '@mui/material/Modal';
+import Backdrop from '@mui/material/Backdrop';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
+import SeoHelmet from '../../components/SeoHelmet';
+
 
 const MotionBox = motion(Box);
 

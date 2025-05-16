@@ -1,12 +1,16 @@
 // src/pages/components/PhotoGallerySlideShow.js
 
 import { useState, useEffect, useRef } from 'react';
-import { Box, Modal, Backdrop, Fab } from '@mui/material';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import Backdrop from '@mui/material/Backdrop';
+import Fab from '@mui/material/Fab';
 import { motion, AnimatePresence } from 'framer-motion';
 import InViewPhotoCard from './InViewPhotoCard';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { useTheme } from '@mui/material/styles';
+
 
 const MotionBox = motion(Box);
 

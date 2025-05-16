@@ -1,12 +1,15 @@
 // src/pages/News/NewsDetail.js
 
 import { useEffect, useState } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
-import { Box, Typography, Container, CircularProgress } from '@mui/material';
+import { useParams, Navigate, useNavigate } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import CircularProgress from '@mui/material/CircularProgress';
+import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
-import Button from '@mui/material/Button';
+
 
 const slugify = (text) =>
     text

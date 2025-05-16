@@ -1,11 +1,14 @@
 // src/pages/Services/ServicesTypes.js
 
 import { useEffect, useRef } from 'react';
-import { Box, Typography, Grid } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 import { motion } from 'framer-motion';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import BackgroundBanner from '../../components/BackgroundBanner';
+
 
 const services = [
 { src: process.env.PUBLIC_URL + '/photos/services/a.webp', titleKey: 'home_service_assy_title', descriptionKey: 'home_service_assy_description' },

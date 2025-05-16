@@ -35,7 +35,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "obfuscate": "javascript-obfuscator build/static/js --output build/static/js --compact true --self-defending true",
-    "generate-sitemap": "node generate-sitemap.js"
+    "generate-sitemap": "node generate-sitemap.js",
+    "analyze": "source-map-explorer build/static/js/*.js"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +59,7 @@
   "homepage": "/",
   "devDependencies": {
     "javascript-obfuscator": "^4.1.1",
-    "sitemap": "^8.0.0"
+    "sitemap": "^8.0.0",
+    "source-map-explorer": "^2.5.3"
   }
 }

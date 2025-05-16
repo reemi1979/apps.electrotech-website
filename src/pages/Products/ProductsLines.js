@@ -1,12 +1,16 @@
 // src/pages/Products/ProductsLines.js
 
 import { useEffect, useRef, useState } from 'react';
-import { Box, Typography, Container, Grid } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import BackgroundBanner from '../../components/BackgroundBanner';
 import SeoHelmet from '../../components/SeoHelmet';
+
 
 const MotionBox = motion(Box);
 

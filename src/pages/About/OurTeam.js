@@ -1,13 +1,17 @@
 // src/pages/About/Ourteam.js
 import { useRef, useEffect, useState } from 'react';
-import { Box, Typography, Container, Grid } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Divider from '@mui/material/Divider';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
-import { Divider } from '@mui/material';
 import BackgroundBanner from '../../components/BackgroundBanner';
 import OurTeamAccordion from './OurTeamAccordion';
 import OurTeamFlipBox1 from './OurTeamFlipBox1';
 import SeoHelmet from '../../components/SeoHelmet';
+
 
 const teamMembers = [
   { key: 'charles', fullname: 'Charles Fortin', img: 'charles.jpg', row: 1 },

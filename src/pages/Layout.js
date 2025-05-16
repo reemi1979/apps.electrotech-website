@@ -1,12 +1,13 @@
 // src/pages/Layout.js
 import { useState } from 'react';
+import Box from '@mui/material/Box';
+import { useTheme } from '@mui/material/styles';
+import { Outlet } from 'react-router-dom';
 import HeaderBarResponsive from '../components/HeaderBarResponsive';
 import Footer from '../components/Footer';
 import ScrollToTopButton from '../components/ScrollToTopButton';
-import { Box } from '@mui/material';
-import { Outlet } from 'react-router-dom';
-import { useTheme } from '@mui/material/styles';
 import LanguageSync from '../components/LanguageSync';
+
 
 const Layout = () => {
     const [backgroundEnabled, setBackgroundEnabled] = useState(true);

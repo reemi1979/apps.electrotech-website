@@ -1,6 +1,6 @@
 // src/Home/HomePhotos.js
 
-import { Box } from '@mui/material';
+import Box from '@mui/material/Box';
 import PhotoGalleryWithLabels from '../../components/PhotoGalleryWithLabels';
 import { useTranslation } from 'react-i18next';
 import BackgroundBanner from '../../components/BackgroundBanner';

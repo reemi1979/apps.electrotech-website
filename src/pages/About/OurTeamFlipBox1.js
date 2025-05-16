@@ -1,11 +1,14 @@
 //src/pages/About/OurTeamFlipBox1.js
 
 import { useState } from 'react';
-import { Box, Typography, keyframes } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { keyframes } from '@mui/system';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import CloseIcon from '@mui/icons-material/Close';
-import { useMediaQuery } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 function OurTeamFlipBox1() {
     const { t } = useTranslation('about');

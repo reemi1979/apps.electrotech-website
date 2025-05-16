@@ -2,8 +2,10 @@
 
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { Box, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
+
 
 const MotionBox = motion.create(Box); // ✅ Nouvelle syntaxe
 

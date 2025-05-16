@@ -1,13 +1,12 @@
 //src/pages/Home/HomeAccordion.js
 
-import {
-  Box, Link,
-  Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Button,
-} from '@mui/material';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Button from '@mui/material/Button';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -15,6 +14,7 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import FaxIcon from '@mui/icons-material/Fax';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
+
 
 function HomeAccordion({ mapLink, isMobile }) {
     const { t } = useTranslation();

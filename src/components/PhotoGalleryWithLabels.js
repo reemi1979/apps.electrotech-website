@@ -1,10 +1,15 @@
 // src/components/PhotoGalleryWithLabels.js
 
 import { useState } from 'react';
-import { Box, Typography, Grid, Modal, Backdrop } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Modal from '@mui/material/Modal';
+import Backdrop from '@mui/material/Backdrop';
 import { motion, AnimatePresence } from 'framer-motion';
 import InViewPhotoCard from './InViewPhotoCard';
 import { useTheme } from '@mui/material/styles';
+
 
 const MotionBox = motion.create(Box);
 

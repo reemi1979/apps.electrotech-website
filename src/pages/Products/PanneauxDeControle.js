@@ -1,4 +1,6 @@
-import { Typography, Container } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+
 import SeoHelmet from '../../components/SeoHelmet';
 import { useTranslation } from 'react-i18next';
 

@@ -1,8 +1,10 @@
 // src/components/ScrollToTopButton.js
 
 import { useState, useEffect } from 'react';
-import { Fab, Zoom } from '@mui/material';
+import Fab from '@mui/material/Fab';
+import Zoom from '@mui/material/Zoom';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+
 
 const ScrollToTopButton = () => {
     const [visible, setVisible] = useState(false);

@@ -1,11 +1,13 @@
 // src/components/ScrollToNextSectionButton.js
 
 import { useEffect, useState } from 'react';
-import { Fab, Zoom } from '@mui/material';
+import Fab from '@mui/material/Fab';
+import Zoom from '@mui/material/Zoom';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { gsap } from 'gsap';
-import ScrollToPlugin from "gsap/ScrollToPlugin";
-import { useMediaQuery } from '@mui/material';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
+
 
 gsap.registerPlugin(ScrollToPlugin);
 

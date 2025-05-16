@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import Hls from 'hls.js';
 
 // Détection iOS
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -34,15 +35,19 @@ const HeroVideo = () => {
   }, []);
 
   useEffect(() => {
-    if (shouldPlay && videoRef.current && Hls.isSupported() && !isIOS) {
-      const hls = new Hls();
-      hls.loadSource(playlistUrl);
-      hls.attachMedia(videoRef.current);
-      hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        videoRef.current.play().catch(() => {});
-      });
+    if (shouldPlay && videoRef.current && !isIOS) {
+      import('hls.js').then(({ default: Hls }) => {
+        if (Hls.isSupported()) {
+          const hls = new Hls();
+          hls.loadSource(playlistUrl);
+          hls.attachMedia(videoRef.current);
+          hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            videoRef.current.play().catch(() => {});
+          });
 
-      return () => hls.destroy();
+          return () => hls.destroy();
+        }
+      });
     }
   }, [shouldPlay, playlistUrl]);
 

@@ -1,8 +1,11 @@
 // src/pages/PrivacyPolicy.js
 
-import { Container, Typography, Box } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
+import { useTranslation } from 'react-i18next';
+
 
 const PrivacyPolicy = () => {
 

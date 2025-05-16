@@ -1,12 +1,15 @@
 // src/pages/Products/ProductsCables.js
 
 import { useState } from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
 import ProductsCablesTypes from './ProductsCablesTypes';
 import BackgroundBanner from '../../components/BackgroundBanner';
 import SeoHelmet from '../../components/SeoHelmet';
+
 
 const ProductsCables = () => {
     const theme = useTheme();

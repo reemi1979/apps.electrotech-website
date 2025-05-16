@@ -1,9 +1,11 @@
 // src/components/Products/ProductsCablesTypes.js
 
-import { Box, Grid } from '@mui/material';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
+
 
 const cableTypes = [
   { src: process.env.PUBLIC_URL + '/photos/products/cables/a.webp', titleKey: 'product_cables_cables_title', name: 'cables' },

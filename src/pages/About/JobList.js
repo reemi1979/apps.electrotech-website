@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
 import SeoHelmet from '../../components/SeoHelmet';
 import { client } from '../../utils/sanity';
-import {
-  Box,
-  Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails
-} from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { PortableText } from '@portabletext/react';
 import { useTheme } from '@mui/material/styles';
+
 
 const components = {
   block: {

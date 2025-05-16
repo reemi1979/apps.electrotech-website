@@ -1,14 +1,18 @@
 // src/pages/Services/Services.js
 
 import { useState, useEffect } from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { useTheme } from '@mui/material/styles';
+import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 import ServicesTypes from './ServicesTypes';
 import ServicesPhotos from './ServicesPhotos';
-import { useParams } from 'react-router-dom';
 import BackgroundBanner from '../../components/BackgroundBanner';
-import { useTheme } from '@mui/material/styles';
-import { useTranslation } from 'react-i18next';
 import SeoHelmet from '../../components/SeoHelmet';
+
 
 const selectedTypeMap = ['standard', 'custom', 'serie', 'pushbuttons', 'junctionbox'];
 

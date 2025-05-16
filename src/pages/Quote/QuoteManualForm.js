@@ -1,7 +1,13 @@
 // src/pages/Quote/QuoteManualForm.js
-import React from 'react';
-import { Box, TextField, Grid, Button, Typography, IconButton } from '@mui/material';
+
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
+
 
 export default function QuoteManualForm({ data, onChange }) {
   const handleFieldChange = (key, value) => {

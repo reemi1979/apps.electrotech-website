@@ -1,13 +1,16 @@
 // src/pages/Products/ProductsControlPanels.js
 
 import { useState } from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
-import ProductsControlPanelsTypes from './ProductsControlPanelsTypes';
 import { useTheme } from '@mui/material/styles';
+import ProductsControlPanelsTypes from './ProductsControlPanelsTypes';
 import ProductsControlPanelsPhotos from './ProductsControlPanelsPhotos';
 import BackgroundBanner from '../../components/BackgroundBanner';
 import SeoHelmet from '../../components/SeoHelmet';
+
 
 const ProductsControlPanels = () => {
     const theme = useTheme();

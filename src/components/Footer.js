@@ -1,13 +1,19 @@
 // src/components/Footer.js
 
-import { Box, Typography, Link as MuiLink, IconButton, Button, Stack } from '@mui/material';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import MuiLink from '@mui/material/Link';
+import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Link } from 'react-router-dom';
+import { useTranslation, Trans } from 'react-i18next';
+
 import ThemeToggleButton from './ThemeToggleButton';
-import { Trans } from 'react-i18next';
+
 
 const Footer = ({ toggleBackground, backgroundEnabled }) => {
     const { t } = useTranslation();

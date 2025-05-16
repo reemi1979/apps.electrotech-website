@@ -1,11 +1,14 @@
 // src/Home/HomeIndustries.js
 
 import { useState, useEffect, useRef } from 'react';
-import { Box, Typography, Grid } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 import { motion } from 'framer-motion';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import BackgroundBanner from '../../components/BackgroundBanner';
+
 
 const industries = [
     { src: process.env.PUBLIC_URL + '/photos/industries/a.webp', titleKey: 'home_industrie_airport_title', descriptionKey: 'home_industrie_airport_description' },

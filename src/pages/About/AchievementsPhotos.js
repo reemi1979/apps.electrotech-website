@@ -1,7 +1,7 @@
 // src/pages/About/AchievementPhotos.js
 
 import { useEffect, useState } from 'react';
-import { Box } from '@mui/material';
+import Box from '@mui/material/Box';
 
 const imageList = [
 	`${process.env.PUBLIC_URL}/photos/achievements/a.jpg`,
