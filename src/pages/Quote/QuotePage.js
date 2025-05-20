@@ -22,7 +22,7 @@ export default function QuotePage() {
         <Typography variant="h4" gutterBottom>
           Request a Quotation
         </Typography>
-
+{/* 
         <Box sx={{ mb: 4 }}>
           <Typography variant="subtitle1" sx={{ mb: 1 }}>
             Choose your preferred method:
@@ -36,7 +36,7 @@ export default function QuotePage() {
             <ToggleButton value="builder">Use Panel Builder</ToggleButton>
             <ToggleButton value="manual">Enter Details Manually</ToggleButton>
           </ToggleButtonGroup>
-        </Box>
+        </Box> */}
 
         {mode === 'builder' && <QuoteWizard />}
         {mode === 'manual' && <QuoteManualForm data={manualData} onChange={setManualData} />}

@@ -72,7 +72,7 @@ const ContactUs = () => {
         const fullData = { ...formData, recaptcha: token };
 
         try {
-          const res = await fetch('https://api.electrotech.ca/contact', {
+          const res = await fetch(process.env.REACT_APP_CONTACT_POST_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(fullData),

@@ -13,20 +13,21 @@ import OurTeamFlipBox1 from './OurTeamFlipBox1';
 import SeoHelmet from '../../components/SeoHelmet';
 
 const teamMembers = [
-  { key: 'charles', fullname: 'Charles Fortin', img: 'charles.jpg', row: 1 },
-  { key: 'isabelle', fullname: 'Isabelle Guay', img: 'isabelle.jpg', row: 1 },
-  { key: 'jerome', fullname: 'Jérôme Fortin', img: 'jerome.jpg', row: 1 },
-  { key: 'zachary', fullname: 'Zachary Fortin', img: 'zachary.jpg', row: 1 },
-  { key: 'remi', fullname: 'Rémi Gauvin', img: 'remi.jpg', row: 2 },
-  { key: 'jpp', fullname: 'Jean-Patrick Picotte', img: 'jpp.jpg', row: 2 },
-  { key: 'jpd', fullname: 'Jean-Philippe Duval', img: 'jpd.jpg', row: 2 },
-  { key: 'gabriel', fullname: 'Gabriel Potvin', img: 'gab.jpg', row: 2 },
-  { key: 'ivanho', fullname: 'Ivanho Dion', img: 'ivanho.jpg', row: 3 },
-  { key: 'alex', fullname: 'Alex Mailhot', img: 'alex.jpg', row: 3 },
-  { key: 'pascal', fullname: 'Pascal Fleury', img: 'pascal.jpg', row: 3 },
-  { key: 'jocelyn', fullname: 'Jocelyn Lamarre', img: 'jocelyn.jpg', row: 3 },
-  { key: 'martine', fullname: 'Martine Lecours', img: 'martine.jpg', row: 3 },
+  { key: 'charles', fullname: 'Charles Fortin', row: 1, isVideo: false },
+  { key: 'isabelle', fullname: 'Isabelle Guay', row: 1, isVideo: true },
+  { key: 'jerome', fullname: 'Jérôme Fortin', row: 1, isVideo: true },
+  { key: 'zachary', fullname: 'Zachary Fortin', row: 1, isVideo: false },
+  { key: 'remi', fullname: 'Rémi Gauvin', row: 2, isVideo: true },
+  { key: 'jpp', fullname: 'Jean-Patrick Picotte', row: 2, isVideo: false },
+  { key: 'jpd', fullname: 'Jean-Philippe Duval', row: 2, isVideo: true },
+  { key: 'gabriel', fullname: 'Gabriel Potvin', row: 2, isVideo: true },
+  { key: 'ivanho', fullname: 'Ivanho Dion', row: 3, isVideo: false },
+  { key: 'alex', fullname: 'Alex Mailhot', row: 3, isVideo: true },
+  { key: 'pascal', fullname: 'Pascal Fleury', row: 3, isVideo: true },
+  { key: 'jocelyn', fullname: 'Jocelyn Lamarre', row: 3, isVideo: false },
+  { key: 'martine', fullname: 'Martine Lecours', row: 3, isVideo: true },
 ];
+
 
 const OurTeam = () => {
   const theme = useTheme();
@@ -43,6 +44,21 @@ const OurTeam = () => {
       setBannerTop(top);
     }
   }, []);
+
+  useEffect(() => {
+    // Preload all video elements offscreen
+    teamMembers.forEach((member) => {
+      if (member.isVideo) {
+        const video = document.createElement('video');
+        video.src = `${process.env.PUBLIC_URL}/photos/ourteam/${member.key}.mp4`;
+        video.preload = 'auto';
+        video.muted = true;
+        video.setAttribute('playsinline', '');
+        video.style.display = 'none';
+        document.body.appendChild(video);
+      }
+    });
+}, []);
 
   const groupedByRow = teamMembers.reduce((acc, member) => {
     if (!acc[member.row]) acc[member.row] = [];
@@ -94,18 +110,51 @@ const OurTeam = () => {
                       },
                     }}
                   >
-                    <Box
-                      component="img"
-                      src={`${process.env.PUBLIC_URL}/photos/ourteam/${member.img}`}
-                      alt={member.fullname}
-                      sx={{
-                        width: '104%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        marginLeft: '-2%',
-                        borderRadius: '10%',
-                      }}
-                    />
+                    {member.isVideo ? (
+                      hoveredMember === member.key ? (
+                        <video
+                          src={`${process.env.PUBLIC_URL}/photos/ourteam/${member.key}.mp4`}
+                          muted
+                          autoPlay
+                          loop
+                          playsInline
+                          style={{
+                            width: '104%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            marginLeft: '-2%',
+                            borderRadius: '10%',
+                          }}
+                        />
+                      ) : (
+                        <Box
+                          component="img"
+                          src={`${process.env.PUBLIC_URL}/photos/ourteam/${member.key}.webp`}
+                          alt={member.fullname}
+                          sx={{
+                            width: '104%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            marginLeft: '-2%',
+                            borderRadius: '10%',
+                          }}
+                        />
+                      )
+                    ) : (
+                      <Box
+                        component="img"
+                        src={`${process.env.PUBLIC_URL}/photos/ourteam/${member.key}.webp`}
+                        alt={member.fullname}
+                        sx={{
+                          width: '104%',
+                          height: '100%',
+                          objectFit: 'cover',
+                          marginLeft: '-2%',
+                          borderRadius: '10%',
+                        }}
+                      />
+                    )}
+
                   </Box>
                   <Box sx={{ textAlign: 'center' }}>
                     <Typography
