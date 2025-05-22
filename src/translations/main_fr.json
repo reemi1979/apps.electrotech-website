@@ -164,6 +164,29 @@
 
     "home_photos_6_title": "Conception et dessins",
     "home_photos_6_category": "Ingénierie de précision et de durabilité",
-    "home_photos_6_description": "Conçus et fabriqués selon vos spécifications exactes, nos panneaux électriques allient agencement intelligent, câblage robuste et logique de contrôle évolutive, le tout avec une fiabilité industrielle."
+    "home_photos_6_description": "Conçus et fabriqués selon vos spécifications exactes, nos panneaux électriques allient agencement intelligent, câblage robuste et logique de contrôle évolutive, le tout avec une fiabilité industrielle.",
+    
+    "shipping_form_title": "Livraison de pièces chez Electrotech",
+    "shipping_form_intro": "Puisque vous fournissez des pièces pour un projet en collaboration avec Electrotech. Afin de faciliter la réception de votre envoi et de garantir un traitement rapide et efficace, nous vous remercions de suivre ces quelques recommandations :",
+    "shipping_form_identification": "Identification : Inscrivez notre numéro de projet",
+    "shipping_form_with_pm": "ainsi que le nom",
+    "shipping_form_on_label": "sur votre bon d'expédition",
+    "shipping_form_check_parts": "🧾 Confirmation des pièces : Vérifiez et confirmez les numéros de pièce ainsi que les quantités à fournir en vous référant à la liste en pièce jointe.",
+    "shipping_form_package_organization": "📦 Organisation des envois : Si votre envoi concerne plusieurs panneaux, veuillez, dans la mesure du possible, séparer les pièces par boîte.",
+    "shipping_form_invalid_id_title": "❌ L'identifiant fourni est invalide ou expiré.",
+    "shipping_form_invalid_id_message": "Veuillez vérifier le lien ou contacter Electrotech pour obtenir un nouveau lien de livraison.",
+    "shipping_form_sending": "Envoi en cours...",
+    "shipping_form_submit": "Envoyer",
+    "shipping_form_part_number": "No pièce",
+    "shipping_form_manufacturer": "Manufacturier",
+    "shipping_form_description": "Description",
+    "shipping_form_quantity": "Qté",
+    "shipping_form_upload_button": "Joindre un fichier (PDF, Excel, Image)",
+    "shipping_form_uploaded_files": "Fichiers joints :",
+    "shipping_form_delivery_method": "Livré par (transporteur)",
+    "shipping_form_delivery_date": "Date de livraison approximative",
+    "shipping_form_content_description": "Liste de pièces ou commentaires (Vous pouvez aussi joindre un fichier)",
+    "shipping_form_add_row": "+ Ajouter une ligne",
+    "shipping_form_client_parts": "Pièces fournies par le client"
 
   }

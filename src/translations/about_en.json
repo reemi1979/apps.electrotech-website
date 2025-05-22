@@ -16,9 +16,18 @@
     "our_team_zachary_desc": "Ensuring smooth project execution from concept to completion, delivering on time and within budget.",
     "our_team_jerome_title": "Project Manager",
     "our_team_jerome_desc": "Ensuring smooth project execution from concept to completion, delivering on time and within budget.", 
-
+    
+    "quote_manual_name": "Your Name",
+    "quote_manual_email": "Email",
+    "quote_manual_company": "Company",
+    "quote_manual_phone": "Phone",
+    "quote_manual_date": "Date you want the quotation",
+    "quote_manual_details": "Details",
+    "quote_manual_upload": "Upload Files (PDF, Excel, Images)",
+    "quote_manual_uploaded_files": "Uploaded Files:",
     "contact_us_sending": "Sending...",
     "contact_us_submit": "Submit",
+
     "our_team_team_others": "Our Other Key Roles",
     "our_team_team_title": "Our Team",
     "our_team_designers": "Electrical Designers – Experts in automation and control system design, ensuring each solution is optimized for performance and efficiency.",
@@ -61,7 +70,19 @@
       "contact_us_invalid_contact": "Enter a valid email or phone number.",
       "contact_us_company_name": "Electrotech Automatisation Industrielle",
       "contact_us_address": "Address: 625 Simonds S, Granby, QC J2J 1C2\nPhone: (450) 776-2628\nProvince: Québec",
-      "contact_us_hours": "Opening Hours:\nMonday–Friday: 8:00 AM – 5:00 PM\nSaturday–Sunday: Closed"
+      "contact_us_hours": "Opening Hours:\nMonday–Friday: 8:00 AM – 5:00 PM\nSaturday–Sunday: Closed",
+
+      "shipping_form_intro": "Since you are providing parts for a project in collaboration with Electrotech, please follow these recommendations to ensure smooth reception and efficient processing:",
+      "shipping_form_id": "📦 Identification: Write our project number {{project}} and the name of your project manager on your packing slip.",
+      "shipping_form_check": "🧾 Parts confirmation: Verify and confirm part numbers and quantities based on the attached list. Please include this list with your packing slip.",
+      "shipping_form_boxes": "📦 Shipment organization: If your shipment involves multiple panels, please separate parts by box if possible.",
+      "shipping_form_name": "Your Name",
+      "shipping_form_email": "Email",
+      "shipping_form_method": "Delivered by",
+      "shipping_form_date": "Estimated Delivery Date",
+      "shipping_form_description": "List of parts (or attach file)",
+      "shipping_form_attachments": "Upload a file (PDF, Excel, Image)",
+      "shipping_form_uploaded": "Uploaded Files:"
 
   }
   

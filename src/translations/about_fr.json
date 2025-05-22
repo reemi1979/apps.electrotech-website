@@ -59,8 +59,30 @@
     "contact_us_company_name": "Électrotech Automatisation Industrielle",
     "contact_us_address": "Adresse : 625 Rue Simonds S, Granby, QC J2J 1C2\nTéléphone : (450) 776-2628\nProvince : Québec",
     "contact_us_hours": "Heures d'ouverture :\nlundi au vendredi : 8h00–17h00\nsamedi et dimanche : Fermé",
-  "contact_us_sending": "Envoi en cours...",
-  "contact_us_submit": "Envoyer"
+  
+    "quote_manual_name": "Votre nom",
+    "quote_manual_email": "Courriel",
+    "quote_manual_company": "Entreprise",
+    "quote_manual_phone": "Téléphone",
+    "quote_manual_date": "Date souhaitée pour la soumission",
+    "quote_manual_details": "Détails",
+    "quote_manual_upload": "Téléverser des fichiers (PDF, Excel, Images)",
+    "quote_manual_uploaded_files": "Fichiers téléversés :",
+
+    "contact_us_sending": "Envoi en cours...",
+    "contact_us_submit": "Envoyer",
+
+    "shipping_form_intro": "Puisque vous fournissez des pièces pour un projet en collaboration avec Electrotech. Afin de faciliter la réception de votre envoi et de garantir un traitement rapide et efficace, nous vous remercions de suivre ces quelques recommandations :",
+    "shipping_form_id": "📦 Identification : Inscrivez notre numéro de projet {{project}} ainsi que le nom de votre chargé de projet sur votre bon d'expédition.",
+    "shipping_form_check": "🧾 Confirmation des pièces : Vérifiez et confirmez les numéros de pièce ainsi que les quantités à fournir en vous référant à la liste en pièce jointe.",
+    "shipping_form_boxes": "📦 Organisation des envois : Si votre envoi concerne plusieurs panneaux, veuillez, dans la mesure du possible, séparer les pièces par boîte.",
+    "shipping_form_name": "Nom",
+    "shipping_form_email": "Courriel",
+    "shipping_form_method": "Livré par",
+    "shipping_form_date": "Date de livraison approximative",
+    "shipping_form_description": "Liste des pièces (ou joindre fichier)",
+    "shipping_form_attachments": "Joindre un fichier (PDF, Excel, Image)",
+    "shipping_form_uploaded": "Fichiers joints :"
 
   }
   

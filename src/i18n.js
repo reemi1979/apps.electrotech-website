@@ -3,8 +3,8 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import homeFR from './translations/home_fr.json';
-import homeEN from './translations/home_en.json';
+import mainFR from './translations/main_fr.json';
+import mainEN from './translations/main_en.json';
 import policyFR from './translations/policy_fr.json';
 import policyEN from './translations/policy_en.json';
 import qualityFR from './translations/quality_fr.json';
@@ -21,7 +21,7 @@ import seoEN from './translations/seo_en.json';
 
 const resources = {
   fr: {
-    home: homeFR,
+    main: mainFR,
     policy: policyFR,
     quality: qualityFR,
     products: productsFR,
@@ -30,7 +30,7 @@ const resources = {
     seo: seoFR,
   },
   en: {
-    home: homeEN,
+    main: mainEN,
     policy: policyEN,
     quality: qualityEN,
     products: productsEN,
@@ -48,7 +48,7 @@ i18n
     resources,
     fallbackLng: 'fr',
     supportedLngs: ['fr', 'en'],
-    defaultNS: 'home',
+    defaultNS: 'main',
     detection: {
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],

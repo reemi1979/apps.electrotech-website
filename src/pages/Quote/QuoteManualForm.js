@@ -1,5 +1,5 @@
 // src/pages/Quote/QuoteManualForm.js
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
@@ -12,6 +12,7 @@ import { useTranslation } from 'react-i18next';
 export default function QuoteManualForm({ data, onChange }) {
   const { t } = useTranslation('about');
   const [submitting, setSubmitting] = useState(false);
+  const inputRef = useRef();
 
   const handleFieldChange = (key, value) => {
     onChange({ ...data, [key]: value });
@@ -107,111 +108,114 @@ export default function QuoteManualForm({ data, onChange }) {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-      <Grid container spacing={2}>
-        <Grid size={{xs:12, md:6}}>
-          <TextField
-            label="Your Name"
-            value={data.name || ''}
-            onChange={(e) => handleFieldChange('name', e.target.value)}
-            fullWidth
-          />
-        </Grid>
-        <Grid size={{xs:12, md:6}}>
-          <TextField
-            label="Email"
-            value={data.email || ''}
-            onChange={(e) => handleFieldChange('email', e.target.value)}
-            fullWidth
-          />
-        </Grid>
+  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+    <Grid container spacing={2}>
+      <Grid size={{ xs: 12, md: 6 }}>
+        <TextField
+          label={t('quote_manual_name')}
+          value={data.name || ''}
+          onChange={(e) => handleFieldChange('name', e.target.value)}
+          fullWidth
+        />
       </Grid>
-
-      <Grid container spacing={2}>
-        <Grid size={{xs:12, md:6}}>
-          <TextField
-            label="Company"
-            value={data.company || ''}
-            onChange={(e) => handleFieldChange('company', e.target.value)}
-            fullWidth
-          />
-        </Grid>
-        <Grid size={{xs:12, md:6}}>
-          <TextField
-            label="Phone"
-            value={data.phone || ''}
-            onChange={(e) => handleFieldChange('phone', e.target.value)}
-            fullWidth
-          />
-        </Grid>
+      <Grid size={{ xs: 12, md: 6 }}>
+        <TextField
+          label={t('quote_manual_email')}
+          value={data.email || ''}
+          onChange={(e) => handleFieldChange('email', e.target.value)}
+          fullWidth
+        />
       </Grid>
+    </Grid>
 
-      <TextField
-        label="Date you want the quotation"
-        type="date"
-        value={data.quoteDate || ''}
-        onChange={(e) => handleFieldChange('quoteDate', e.target.value)}
-        slotProps={{ inputLabel: { shrink: true } }}
-        fullWidth
-      />
+    <Grid container spacing={2}>
+      <Grid size={{ xs: 12, md: 6 }}>
+        <TextField
+          label={t('quote_manual_company')}
+          value={data.company || ''}
+          onChange={(e) => handleFieldChange('company', e.target.value)}
+          fullWidth
+        />
+      </Grid>
+      <Grid size={{ xs: 12, md: 6 }}>
+        <TextField
+          label={t('quote_manual_phone')}
+          value={data.phone || ''}
+          onChange={(e) => handleFieldChange('phone', e.target.value)}
+          fullWidth
+        />
+      </Grid>
+    </Grid>
 
-      <TextField
-        label="Details"
-        value={data.details || ''}
-        onChange={(e) => handleFieldChange('details', e.target.value)}
-        multiline
-        minRows={6}
-        fullWidth
-        sx={{ resize: 'vertical' }}
-        slotProps={{
-          input: {
-            sx: {
-              textarea: {
-                resize: 'vertical'
-              }
+    <TextField
+      label={t('quote_manual_date')}
+      type="date"
+      inputRef={inputRef}
+      value={data.quoteDate || ''}
+      onChange={(e) => handleFieldChange('quoteDate', e.target.value)}
+      slotProps={{ inputLabel: { shrink: true } }}
+      fullWidth
+      onClick={() => inputRef.current?.showPicker?.()}
+    />
+
+    <TextField
+      label={t('quote_manual_details')}
+      value={data.details || ''}
+      onChange={(e) => handleFieldChange('details', e.target.value)}
+      multiline
+      minRows={6}
+      fullWidth
+      sx={{ resize: 'vertical' }}
+      slotProps={{
+        input: {
+          sx: {
+            textarea: {
+              resize: 'vertical'
             }
           }
-        }}
-      />
+        }
+      }}
+    />
 
-      <Box>
-        <Button variant="outlined" component="label">
-          Upload Files (PDF, Excel, Images)
-          <input
-            type="file"
-            accept=".pdf,.xls,.xlsx,image/*"
-            hidden
-            onChange={handleFileUpload}
-          />
-        </Button>
-
-        <Box sx={{ mt: 1 }}>
-          {data.files?.length > 0 && (
-            <>
-              <Typography variant="subtitle2">Uploaded Files:</Typography>
-              <ul style={{ paddingLeft: '1rem', listStyle: 'none' }}>
-                {data.files.map((file, i) => (
-                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span>{file.name}</span>
-                    <IconButton onClick={() => handleRemoveFile(i)} size="small" color="error">
-                      <DeleteIcon fontSize="small" />
-                    </IconButton>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-        </Box>
-      </Box>
-
-      <Button
-        variant="contained"
-        onClick={handleSubmit}
-        disabled={submitting}
-        sx={{ alignSelf: 'flex-start', mt: 2 }}
-      >
-        {submitting ? t('contact_us_sending') : t('contact_us_submit')}
+    <Box>
+      <Button variant="contained" component="label">
+        {t('quote_manual_upload')}
+        <input
+          type="file"
+          accept=".pdf,.xls,.xlsx,image/*"
+          hidden
+          onChange={handleFileUpload}
+        />
       </Button>
+
+      <Box sx={{ mt: 1 }}>
+        {data.files?.length > 0 && (
+          <>
+            <Typography variant="subtitle2">{t('quote_manual_uploaded_files')}</Typography>
+            <ul style={{ paddingLeft: '1rem', listStyle: 'none' }}>
+              {data.files.map((file, i) => (
+                <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <span>{file.name}</span>
+                  <IconButton onClick={() => handleRemoveFile(i)} size="small" color="error">
+                    <DeleteIcon fontSize="small" />
+                  </IconButton>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </Box>
     </Box>
-  );
+
+    <Button
+      variant="contained"
+      onClick={handleSubmit}
+      disabled={submitting}
+      sx={{ alignSelf: 'flex-start', mt: 2 }}
+    >
+      {submitting ? t('contact_us_sending') : t('contact_us_submit')}
+    </Button>
+  </Box>
+);
+
 }

@@ -25,6 +25,7 @@ const TrackingProjects = lazy(() => import('./pages/Tracking/TrackingProjects'))
 const ContactUs = lazy(() => import('./pages/About/ContactUs'));
 const JobList = lazy(() => import('./pages/About/JobList'));
 const QuotePage = lazy(() => import('./pages/Quote/QuotePage'));
+const CustomerPartShippingForm = lazy(() => import('./pages/Customer/CustomerPartShippingForm'));
 
 const App = () => {
   const [showCookies, setShowCookies] = useState(false);
@@ -67,6 +68,8 @@ const App = () => {
               <Route path="contact-us" element={<ContactUs />} />
               <Route path="jobs" element={<JobList />} />
               <Route path="quote" element={<QuotePage />} />
+              <Route path="customer-part-shipping" element={<CustomerPartShippingForm />} />
+
             </Route>
 
             {/* Routes sans préfixe */}
@@ -97,6 +100,8 @@ const App = () => {
               <Route path="contact-us" element={<ContactUs />} />
               <Route path="jobs" element={<JobList />} />
               <Route path="quote" element={<QuotePage />} />
+              <Route path="customer-part-shipping" element={<CustomerPartShippingForm />} />
+
             </Route>
           </Routes>
         </Suspense>

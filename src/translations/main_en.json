@@ -163,7 +163,30 @@
 
     "home_photos_6_title": "Design and drawings",
     "home_photos_6_category": "Engineered for precision and durability",
-    "home_photos_6_description": "Designed and built to match your exact specifications, our electrical panels combine smart layout, robust wiring, and scalable control logic — all backed by industrial-grade reliability."
-
+    "home_photos_6_description": "Designed and built to match your exact specifications, our electrical panels combine smart layout, robust wiring, and scalable control logic — all backed by industrial-grade reliability.",
+    
+    "shipping_form_title": "Parts Delivery to Electrotech",
+    "shipping_form_intro": "Since you are supplying parts for a project in collaboration with Electrotech, please follow these recommendations to ensure quick and efficient processing:",
+    "shipping_form_identification": "Identification: Write our project number",
+    "shipping_form_with_pm": "as well as the name of the project manager",
+    "shipping_form_on_label": "on your shipping label",
+    "shipping_form_check_parts": "🧾 Parts Confirmation: Verify and confirm part numbers and quantities according to the attached list.",
+    "shipping_form_package_organization": "📦 Shipment Organization: If your shipment includes parts for multiple panels, please separate them by box if possible.",
+    "shipping_form_invalid_id_title": "❌ The provided identifier is invalid or expired.",
+    "shipping_form_invalid_id_message": "Please verify the link or contact Electrotech to obtain a new shipping link.",
+    "shipping_form_sending": "Sending...",
+    "shipping_form_submit": "Submit",
+    "shipping_form_part_number": "Part No",
+    "shipping_form_manufacturer": "Manufacturer",
+    "shipping_form_description": "Description",
+    "shipping_form_quantity": "Qty",
+    "shipping_form_upload_button": "Upload Files (PDF, Excel, Image)",
+    "shipping_form_uploaded_files": "Uploaded Files:",
+    "shipping_form_delivery_method": "Delivered by (carrier)",
+    "shipping_form_delivery_date": "Approximate delivery date",
+    "shipping_form_content_description": "Parts list or comments (You can also attach a file)",
+    "shipping_form_add_row": "+ Add a row",
+    "shipping_form_client_parts": "Parts supplied by the client"
+    
   }
   
