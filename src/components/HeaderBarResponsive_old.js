@@ -22,10 +22,9 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ThemeToggleButton from './ThemeToggleButton';
 import i18n from '../i18n';
-
 
 const HeaderBarResponsive = () => {
 
@@ -37,7 +36,6 @@ const HeaderBarResponsive = () => {
     const [openServices, setOpenServices] = useState(false);
     const isHome = location.pathname === '/' || location.pathname === '/home';
     const { t } = useTranslation();
-    const navigate = useNavigate();
 
     const electrotechTextColor = isHome
         ? theme.palette.text.primary
@@ -93,38 +91,6 @@ const HeaderBarResponsive = () => {
         ],
     };
 
-    const handleLanguageChange = (newLang) => {
-        const currentPath = location.pathname;
-        const segments = currentPath.split('/');
-        const supported = ['fr', 'en'];
-        const hasLangPrefix = supported.includes(segments[1]);
-
-        let newPath = '';
-
-        if (newLang === 'fr') {
-            // Supprime le préfixe si existant
-            if (hasLangPrefix) {
-            segments.splice(1, 1);
-            }
-            newPath = segments.join('/') || '/';
-        } else {
-            // Ajoute /en ou remplace fr par en
-            if (hasLangPrefix) {
-            segments[1] = 'en';
-            } else {
-            segments.splice(1, 0, 'en');
-            }
-            newPath = segments.join('/');
-        }
-
-        i18n.changeLanguage(newLang);
-        navigate(newPath);
-    };
-
-    const buildPath = (link) => {
-        return i18n.language === 'fr' ? link : `/en${link}`;
-    };
-
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
         if (!drawerOpen) {
@@ -156,7 +122,6 @@ const HeaderBarResponsive = () => {
                     }
                 }}
             >
-
                 <Select
                     displayEmpty
                     variant="standard"
@@ -183,7 +148,7 @@ const HeaderBarResponsive = () => {
                         <MenuItem
                             key={item.link}
                             component={Link}
-                            to={buildPath(item.link)}
+                            to={item.link}
                             sx={{
                             '&:hover': { color: theme.palette.custom.electrotechYellow }, // Mouse-over effect
                             }}
@@ -207,7 +172,7 @@ const HeaderBarResponsive = () => {
 
             <Box 
                 component={Link}
-                to={i18n.language === 'fr' ? '/' : '/en'}
+                to="/"
                 sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, textDecoration: 'none' }}
                 >
                 <img
@@ -237,7 +202,9 @@ const HeaderBarResponsive = () => {
                     <MenuIcon />
                 </IconButton>
 
+
             ) : (
+
 
                 <>
                 <ThemeToggleButton />
@@ -248,7 +215,7 @@ const HeaderBarResponsive = () => {
                     <Button
                         key={item.link}
                         component={Link}
-                        to={buildPath(item.link)}
+                        to={item.link}
                         color="inherit"
                         sx={{
                         textTransform: 'none',
@@ -281,8 +248,8 @@ const HeaderBarResponsive = () => {
                 >
                     <Select
                     value={i18n.language}
-                    onChange={(e) => handleLanguageChange(e.target.value)}
-
+                    onChange={(e) => i18n.changeLanguage(e.target.value)}
+                    
                     variant="standard"
                     disableUnderline
                     MenuProps={{ disableScrollLock: true }}
@@ -328,7 +295,7 @@ const HeaderBarResponsive = () => {
                 {/* MAIN - Always visible */}
                 {navGroups.main.map((item) => (
                 <ListItem key={item.link} disablePadding>
-                    <ListItemButton component={Link} to={buildPath(item.link)} onClick={toggleDrawer}>
+                    <ListItemButton component={Link} to={item.link} onClick={toggleDrawer}>
                     <ListItemText primary={item.label} />
                     </ListItemButton>
                 </ListItem>
@@ -343,7 +310,7 @@ const HeaderBarResponsive = () => {
                 <List component="div" disablePadding>
                     {navGroups.products.map((item) => (
                     <ListItem key={item.link} disablePadding sx={{ pl: 4 }}>
-                        <ListItemButton component={Link} to={buildPath(item.link)} onClick={toggleDrawer}>
+                        <ListItemButton component={Link} to={item.link} onClick={toggleDrawer}>
                         <ListItemText primary={item.label} />
                         </ListItemButton>
                     </ListItem>
@@ -360,7 +327,7 @@ const HeaderBarResponsive = () => {
                 <List component="div" disablePadding>
                     {navGroups.services.map((item) => (
                     <ListItem key={item.link} disablePadding sx={{ pl: 4 }}>
-                        <ListItemButton component={Link} to={buildPath(item.link)} onClick={toggleDrawer}>
+                        <ListItemButton component={Link} to={item.link} onClick={toggleDrawer}>
                         <ListItemText primary={item.label} />
                         </ListItemButton>
                     </ListItem>
@@ -371,7 +338,7 @@ const HeaderBarResponsive = () => {
                 {/* ABOUT - Always visible */}
                 {navGroups.about.map((item) => (
                 <ListItem key={item.link} disablePadding>
-                    <ListItemButton component={Link} to={buildPath(item.link)} onClick={toggleDrawer}>
+                    <ListItemButton component={Link} to={item.link} onClick={toggleDrawer}>
                     <ListItemText primary={item.label} />
                     </ListItemButton>
                 </ListItem>
@@ -384,7 +351,7 @@ const HeaderBarResponsive = () => {
                 <ListItem disablePadding>
                     <ListItemButton
                         onClick={() => {
-                        handleLanguageChange('fr');
+                        i18n.changeLanguage('fr');
                         toggleDrawer();
                         }}
                         component="button"
@@ -402,7 +369,7 @@ const HeaderBarResponsive = () => {
                 <ListItem disablePadding>
                     <ListItemButton
                         onClick={() => {
-                        handleLanguageChange('en');
+                        i18n.changeLanguage('en');
                         toggleDrawer();
                         }}
                         component="button"
