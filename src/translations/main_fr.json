@@ -30,7 +30,8 @@
     "news_ai": "Ce contenu est importé automatiquement de notre page Facebook, puis modifié, traduit et résumé à l’aide de l’API d’OpenAI.",
     "news_ai_note": "Si vous apparaissez sur une photo et souhaitez être retiré, veuillez nous contacter.",
     "news_title_sub": "Tenez-vous à jour avec les dernières actualités, projets et nouveautés d'Électrotech.",
-
+    "footer_contact_us": "Nous Contacter",
+    
     "facebook_follow_us" : "Suivez-nous sur Facebook",
     "linkedin_follow_us" : "Connectez-vous avec nous sur LinkedIn",
 
