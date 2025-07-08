@@ -29,6 +29,7 @@ const ContactUs = lazy(() => import('./pages/About/ContactUs'));
 const JobList = lazy(() => import('./pages/About/JobList'));
 const QuotePage = lazy(() => import('./pages/Quote/QuotePage'));
 const CustomerPartShippingForm = lazy(() => import('./pages/Customer/CustomerPartShippingForm'));
+const VideoShowcase = lazy(() => import('./pages/VideoShowcase/VideoShowcase'));
 
 const App = () => {
   const [showCookies, setShowCookies] = useState(false);
@@ -72,6 +73,7 @@ const App = () => {
               <Route path="jobs" element={<JobList />} />
               <Route path="quote" element={<QuotePage />} />
               <Route path="customer-part-shipping" element={<CustomerPartShippingForm />} />
+              <Route path="video-showcase" element={<VideoShowcase />} />
 
             </Route>
 
@@ -104,6 +106,7 @@ const App = () => {
               <Route path="jobs" element={<JobList />} />
               <Route path="quote" element={<QuotePage />} />
               <Route path="customer-part-shipping" element={<CustomerPartShippingForm />} />
+              <Route path="video-showcase" element={<VideoShowcase />} />
 
             </Route>
           </Routes>

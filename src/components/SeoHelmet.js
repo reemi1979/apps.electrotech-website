@@ -6,7 +6,11 @@ const SeoHelmet = () => {
   const { pathname } = useLocation();
   const { t, i18n } = useTranslation('seo');
 
-  const canonicalUrl = `https://www.electrotech.ca${pathname.endsWith('/') ? pathname : pathname + '/'}`;
+  //const canonicalUrl = `https://www.electrotech.ca${pathname.endsWith('/') ? pathname : pathname + '/'}`;
+  // 1. Chemin « propre » : sans slash final (sauf racine), sans query/hash
+  const cleanPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
+  const canonicalUrl = `https://www.electrotech.ca${cleanPath}`;
+
   const lang = i18n.language === 'en' ? 'en_CA' : 'fr_CA';
 
   const rawPath = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
@@ -15,6 +19,9 @@ const SeoHelmet = () => {
   const title = t(`pages.${currentPath}.title`, t('defaultTitle'));
   const description = t(`pages.${currentPath}.description`, t('defaultDescription'));
 
+  const hrefFr = `https://www.electrotech.ca${cleanPath.replace(/^\/(en)/, '') || '/'}`;
+  const hrefEn = `https://www.electrotech.ca/en${cleanPath.replace(/^\/(en|fr)/, '') || '/'}`;
+
   return (
     <Helmet htmlAttributes={{ lang: i18n.language }}>
 
@@ -22,6 +29,11 @@ const SeoHelmet = () => {
       <meta name="description" content={description} />
 
       <link rel="canonical" href={canonicalUrl} />
+
+      <link rel="alternate" hrefLang="fr-CA" href={hrefFr} />
+      <link rel="alternate" hrefLang="en-CA" href={hrefEn} />
+      <link rel="alternate" hrefLang="x-default" href="https://www.electrotech.ca/" />
+
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />

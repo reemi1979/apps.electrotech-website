@@ -32,6 +32,10 @@
     "news_title_sub": "Stay up to date with the latest news, projects, and updates from Electrotech.",
     "footer_contact_us": "Contact Us",
 
+    "industrial_demo_title": "Industrial Automation Demonstration",
+    "industrial_demo_description": "Discover how our control panels manage complex industrial processes with precision, safety, and efficiency. This video showcases real-world applications of our automation systems in action.",
+    "video_not_supported": "Your browser does not support HTML5 video.",
+
     "facebook_follow_us" : "Follow us on Facebook",
     "linkedin_follow_us" : "Connect with us on LinkedIn",
 
