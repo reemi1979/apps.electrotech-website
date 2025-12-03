@@ -1,3 +1,5 @@
+// HeroVideo.js (clean MP4 version)
+
 import { useEffect, useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -20,9 +22,11 @@ const HeroVideo = () => {
   const navigate = useNavigate();
   const theme = useTheme();
 
-  const playlistUrl = window.location.hostname === 'localhost'
-    ? process.env.PUBLIC_URL + '/video/playlist.m3u8'
-    : 'https://www.electrotech.ca/video/playlist.m3u8';
+  // const playlistUrl = window.location.hostname === 'localhost'
+  //   ? process.env.PUBLIC_URL + '/video/playlist.m3u8'
+  //   : 'https://www.electrotech.ca/video/playlist.m3u8';
+
+  const playlistUrl = 'https://www.electrotech.ca/video.mp4';
 
   const posterUrl = process.env.PUBLIC_URL + '/video.webp';
 
@@ -34,24 +38,24 @@ const HeroVideo = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-useEffect(() => {
-  if (shouldPlay && videoRef.current && !isIOS) {
-    const timeout = setTimeout(() => {
-      import('hls.js').then(({ default: Hls }) => {
-        if (Hls.isSupported()) {
-          const hls = new Hls();
-          hls.loadSource(playlistUrl);
-          hls.attachMedia(videoRef.current);
-          hls.on(Hls.Events.MANIFEST_PARSED, () => {
-            videoRef.current.play().catch(() => {});
-          });
-        }
-      });
-    }, 1000);
+// useEffect(() => {
+//   if (shouldPlay && videoRef.current && !isIOS) {
+//     const timeout = setTimeout(() => {
+//       import('hls.js').then(({ default: Hls }) => {
+//         if (Hls.isSupported()) {
+//           const hls = new Hls();
+//           hls.loadSource(playlistUrl);
+//           hls.attachMedia(videoRef.current);
+//           hls.on(Hls.Events.MANIFEST_PARSED, () => {
+//             videoRef.current.play().catch(() => {});
+//           });
+//         }
+//       });
+//     }, 1000);
 
-    return () => clearTimeout(timeout);
-  }
-}, [shouldPlay, playlistUrl]);
+//     return () => clearTimeout(timeout);
+//   }
+// }, [shouldPlay, playlistUrl]);
 
   const toggleSound = () => {
     if (videoRef.current) {
@@ -91,8 +95,14 @@ useEffect(() => {
               height: '100%',
               objectFit: 'cover',
               objectPosition: 'center top',
-            }}
-          />
+            }}>
+          {/* 👇  Static sources for SEO & fallback  */}
+          {/* <source src={playlistUrl} type="application/x-mpegURL" />
+          <source src="https://www.electrotech.ca/video.mp4" type="video/mp4" /> */}
+          <source src="https://www.electrotech.ca/video.mp4" type="video/mp4" />
+
+        </video>
+            
         )}
       </div>
 

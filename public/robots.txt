@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /search
 
 Sitemap: https://www.electrotech.ca/sitemap.xml

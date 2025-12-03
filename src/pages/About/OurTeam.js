@@ -14,18 +14,18 @@ import SeoHelmet from '../../components/SeoHelmet';
 
 const teamMembers = [
   { key: 'charles', fullname: 'Charles Fortin', row: 1, isVideo: false },
-  { key: 'isabelle', fullname: 'Isabelle Guay', row: 1, isVideo: true },
-  { key: 'jerome', fullname: 'Jérôme Fortin', row: 1, isVideo: true },
+  { key: 'isabelle', fullname: 'Isabelle Guay', row: 1, isVideo: false },
+  { key: 'jerome', fullname: 'Jérôme Fortin', row: 1, isVideo: false },
   { key: 'zachary', fullname: 'Zachary Fortin', row: 1, isVideo: false },
-  { key: 'remi', fullname: 'Rémi Gauvin', row: 2, isVideo: true },
+  { key: 'remi', fullname: 'Rémi Gauvin', row: 2, isVideo: false },
   { key: 'jpp', fullname: 'Jean-Patrick Picotte', row: 2, isVideo: false },
-  { key: 'jpd', fullname: 'Jean-Philippe Duval', row: 2, isVideo: true },
-  { key: 'gabriel', fullname: 'Gabriel Potvin', row: 2, isVideo: true },
+  { key: 'jpd', fullname: 'Jean-Philippe Duval', row: 2, isVideo: false },
+  { key: 'gabriel', fullname: 'Gabriel Potvin', row: 2, isVideo: false },
   { key: 'ivanho', fullname: 'Ivanho Dion', row: 3, isVideo: false },
-  { key: 'alex', fullname: 'Alex Mailhot', row: 3, isVideo: true },
-  { key: 'pascal', fullname: 'Pascal Fleury', row: 3, isVideo: true },
+  { key: 'alex', fullname: 'Alex Mailhot', row: 3, isVideo: false },
+  { key: 'pascal', fullname: 'Pascal Fleury', row: 3, isVideo: false },
   { key: 'jocelyn', fullname: 'Jocelyn Lamarre', row: 3, isVideo: false },
-  { key: 'martine', fullname: 'Martine Lecours', row: 3, isVideo: true },
+  { key: 'martine', fullname: 'Martine Lecours', row: 3, isVideo: false },
 ];
 
 

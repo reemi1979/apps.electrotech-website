@@ -96,7 +96,7 @@ const NewsList = () => {
                         <Grid item xs={12} sm={6} md={6} sx={{ flexBasis: 400, flexGrow: 1, display: 'flex' }} key={news.id}>
                         <Box
                             component={Link}
-                            to={`/${slug}`}
+                            to={`/news/${slug}`}
                             sx={{
                             width: '100%',
                             maxWidth: 500,
