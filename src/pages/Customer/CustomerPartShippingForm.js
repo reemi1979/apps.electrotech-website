@@ -1,8 +1,5 @@
 // src/pages/Shipping/CustomerPartShippingForm.js
 
-// liens pour se rendre
-//https://electrotech.ca/customer-part-shipping?OrderNumber=A0232-1
-
 import { useEffect, useState, useRef  } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';

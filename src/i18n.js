@@ -5,38 +5,18 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import mainFR from './translations/main_fr.json';
 import mainEN from './translations/main_en.json';
-import policyFR from './translations/policy_fr.json';
-import policyEN from './translations/policy_en.json';
-import qualityFR from './translations/quality_fr.json';
-import qualityEN from './translations/quality_en.json';
-import productsFR from './translations/products_fr.json';
-import productsEN from './translations/products_en.json';
-import achievementsFR from './translations/achievements_fr.json';
-import achievementsEN from './translations/achievements_en.json';
 import aboutFR from './translations/about_fr.json';
 import aboutEN from './translations/about_en.json';
-import seoFR from './translations/seo_fr.json';
-import seoEN from './translations/seo_en.json';
 
 
 const resources = {
   fr: {
     main: mainFR,
-    policy: policyFR,
-    quality: qualityFR,
-    products: productsFR,
-    achievements: achievementsFR,
     about: aboutFR,
-    seo: seoFR,
   },
   en: {
     main: mainEN,
-    policy: policyEN,
-    quality: qualityEN,
-    products: productsEN,
-    achievements: achievementsEN,
     about: aboutEN,
-    seo: seoEN,
   },
 };
 

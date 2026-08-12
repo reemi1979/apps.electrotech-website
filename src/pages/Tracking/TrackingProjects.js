@@ -13,7 +13,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import { useParams, useNavigate } from 'react-router-dom';
-import SeoHelmet from '../../components/SeoHelmet';
 
 const TrackingProjects = () => {
     const [token, setToken] = useState(null);
@@ -66,7 +65,10 @@ const TrackingProjects = () => {
         : [apiProjectData.find(p => p.project === projectNumber)].filter(Boolean);
 
     const handleSearch = () => {
-        if (searchInput.trim() !== '') navigate(`/tracking/${searchInput.trim()}`);
+        if (searchInput.trim() !== '') {
+            const languagePrefix = window.location.pathname.startsWith('/en/') ? '/en' : '';
+            navigate(`${languagePrefix}/tracking/${searchInput.trim()}`);
+        }
     };
 
     const getStepsForProject = (project) => {
@@ -203,7 +205,6 @@ const TrackingProjects = () => {
 
     return (
         <>
-            <SeoHelmet />
             <Box id="section1" sx={{ position: 'relative', zIndex: 0, minHeight: '100vh', pb: 10 }}>
                 <Container sx={{ py: 8, color: 'white', textAlign: 'center' }}>
                     <Box p={4}>

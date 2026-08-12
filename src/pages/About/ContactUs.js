@@ -7,7 +7,6 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
-import SeoHelmet from '../../components/SeoHelmet';
 
 const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
 const isValidPhone = (phone) => /^\+?[0-9\s\-()]{6,20}$/.test(phone);
@@ -97,8 +96,6 @@ const ContactUs = () => {
 
   return (
     <>
-      <SeoHelmet />
-
       <Box sx={{ position: 'relative' }}>
         <Container maxWidth={false} sx={{ maxWidth: '1280px', mx: 'auto', mt: 10, px: 2 }}>
           <Grid container spacing={2}>
