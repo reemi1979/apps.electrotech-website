@@ -8,6 +8,7 @@ const TrackingProjects = lazy(() => import('./pages/Tracking/TrackingProjects'))
 const QuotePage = lazy(() => import('./pages/Quote/QuotePage'));
 const ContactUs = lazy(() => import('./pages/About/ContactUs'));
 const CustomerPartShippingForm = lazy(() => import('./pages/Customer/CustomerPartShippingForm'));
+const QuotationQuestionnaire = lazy(() => import('./pages/Questionnaire/QuotationQuestionnaire'));
 
 const App = () => (
   <Router>
@@ -19,6 +20,7 @@ const App = () => (
           <Route path="quote" element={<QuotePage />} />
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="customer-part-shipping" element={<CustomerPartShippingForm />} />
+          <Route path="questionnaire" element={<QuotationQuestionnaire />} />
         </Route>
         <Route path="/en" element={<Layout />}>
           <Route index element={<Home />} />
@@ -26,6 +28,7 @@ const App = () => (
           <Route path="quote" element={<QuotePage />} />
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="customer-part-shipping" element={<CustomerPartShippingForm />} />
+          <Route path="questionnaire" element={<QuotationQuestionnaire />} />
         </Route>
         <Route path="/fr" element={<Layout />}>
           <Route index element={<Home />} />
@@ -33,6 +36,7 @@ const App = () => (
           <Route path="quote" element={<QuotePage />} />
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="customer-part-shipping" element={<CustomerPartShippingForm />} />
+          <Route path="questionnaire" element={<QuotationQuestionnaire />} />
         </Route>
       </Routes>
     </Suspense>
