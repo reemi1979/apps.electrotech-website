@@ -29,6 +29,14 @@ const App = () => (
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="customer-part-shipping" element={<CustomerPartShippingForm />} />
         </Route>
+        <Route path="/fr" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="tracking" element={<TrackingProjects />} />
+          <Route path="tracking/:projectNumber" element={<TrackingProjects />} />
+          <Route path="quote" element={<QuotePage />} />
+          <Route path="contact-us" element={<ContactUs />} />
+          <Route path="customer-part-shipping" element={<CustomerPartShippingForm />} />
+        </Route>
       </Routes>
     </Suspense>
   </Router>

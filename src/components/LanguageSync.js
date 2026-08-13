@@ -10,7 +10,8 @@ const LanguageSync = ({ onReady }) => {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const targetLang = 'en';
+    const pathLanguage = pathname.split('/')[1];
+    const targetLang = pathLanguage === 'fr' ? 'fr' : 'en';
 
     if (i18n.language !== targetLang) {
       i18n.changeLanguage(targetLang).then(() => {

@@ -66,7 +66,7 @@ const TrackingProjects = () => {
 
     const handleSearch = () => {
         if (searchInput.trim() !== '') {
-            const languagePrefix = window.location.pathname.startsWith('/en/') ? '/en' : '';
+            const languagePrefix = window.location.pathname.match(/^\/(fr|en)(?=\/|$)/)?.[0] || '';
             navigate(`${languagePrefix}/tracking/${searchInput.trim()}`);
         }
     };

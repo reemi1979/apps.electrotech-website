@@ -14,12 +14,13 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const HeaderBarResponsive = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isSmallScreen = useMediaQuery('(max-width:900px)');
+  const location = useLocation();
   const { t } = useTranslation();
   const navStyle = {
     color: 'black',
@@ -28,7 +29,8 @@ const HeaderBarResponsive = () => {
   const navItems = [
     { label: t('track'), link: '/tracking' },
   ];
-  const buildPath = (link) => `/en${link}`;
+  const languagePrefix = location.pathname.match(/^\/(fr|en)(?=\/|$)/)?.[0] || '/en';
+  const buildPath = (link) => `${languagePrefix}${link}`;
 
   const navButtons = navItems.map((item) => (
     <Button key={item.link || item.href} component={item.href ? 'a' : Link} href={item.href} to={item.href ? undefined : buildPath(item.link)} color="inherit" sx={{ textTransform: 'none', fontSize: '20px', minHeight: 60, ...navStyle, '&:hover': { color: theme.palette.custom.electrotechYellow, backgroundColor: 'transparent' } }}>
