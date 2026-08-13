@@ -14,7 +14,7 @@ const Layout = () => {
         minHeight: '100vh',
         overflow: 'hidden',
         '&::before': {
-          content: '""', position: 'absolute', inset: 0,
+          content: '""', position: 'fixed', inset: 0,
           backgroundImage: `url(${process.env.PUBLIC_URL}/logos/electron-bg-white.svg)`,
           backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center',
           backgroundAttachment: 'scroll', opacity: 0.38, zIndex: 0, pointerEvents: 'none',

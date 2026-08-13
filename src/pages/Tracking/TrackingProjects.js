@@ -5,19 +5,36 @@ import Typography from '@mui/material/Typography';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import TextField from '@mui/material/TextField';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
 
 const TrackingProjects = () => {
   const [projects, setProjects] = useState([]);
   const [loadError, setLoadError] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
+  const [contactForm, setContactForm] = useState({ name: '', contact: '', message: '' });
+  const [contactStatus, setContactStatus] = useState('');
+  const [submittingContact, setSubmittingContact] = useState(false);
   const [searchParams] = useSearchParams();
   const trackingId = searchParams.get('id');
   const { t } = useTranslation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const trackingContactUrl = process.env.REACT_APP_CONTACT_POST_URL
+    ? new URL('/tracking-contact', process.env.REACT_APP_CONTACT_POST_URL).toString()
+    : '';
 
   const formatLastUpdate = (lastUpdate) => {
     if (!lastUpdate) return '';
@@ -52,6 +69,54 @@ const TrackingProjects = () => {
     return () => { active = false; };
   }, [trackingId]);
 
+  useEffect(() => {
+    const siteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
+    if (!siteKey || document.querySelector('script[data-recaptcha="tracking-contact"]')) return undefined;
+
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    script.defer = true;
+    script.dataset.recaptcha = 'tracking-contact';
+    document.body.appendChild(script);
+    return () => script.remove();
+  }, []);
+
+  const submitTrackingContact = () => {
+    if (submittingContact || !contactForm.name.trim() || !contactForm.contact.trim() || !contactForm.message.trim()) {
+      setContactStatus('validation');
+      return;
+    }
+    if (!trackingContactUrl || !process.env.REACT_APP_RECAPTCHA_SITE_KEY || !window.grecaptcha) {
+      setContactStatus('error');
+      return;
+    }
+
+    setSubmittingContact(true);
+    setContactStatus('');
+    window.grecaptcha.ready(() => {
+      window.grecaptcha.execute(process.env.REACT_APP_RECAPTCHA_SITE_KEY, { action: 'tracking_contact' }).then(async (recaptcha) => {
+        try {
+          const response = await fetch(trackingContactUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ trackingId, ...contactForm, recaptcha })
+          });
+          if (!response.ok) throw new Error('Tracking contact request failed.');
+          setContactForm({ name: '', contact: '', message: '' });
+          setContactStatus('success');
+        } catch {
+          setContactStatus('error');
+        } finally {
+          setSubmittingContact(false);
+        }
+      }).catch(() => {
+        setContactStatus('error');
+        setSubmittingContact(false);
+      });
+    });
+  };
+
   const getStepsForProject = (project) => {
     const panelCount = project.panels || 1;
     const cncPercent = project.cnc
@@ -78,29 +143,51 @@ const TrackingProjects = () => {
 
   const renderResults = () => (
     <>
-      <Typography variant="h5" gutterBottom sx={{ mb: 6 }}>
-        {t('tracking_for')}
-      </Typography>
+      <Box sx={{ maxWidth: 720, mx: 'auto', mb: 4, textAlign: 'center' }}>
+        <Typography variant="h6" sx={{ fontWeight: 700 }}>{projects[0]?.clientName || t('tracking_client_placeholder')}</Typography>
+        <Button variant="contained" sx={{ mt: 2 }} onClick={() => { setContactStatus(''); setContactOpen(true); }}>
+          {t('tracking_contact_manager', { name: projects[0]?.projectManager || t('tracking_project_manager_placeholder') })}
+        </Button>
+      </Box>
       {projects.map((project, index) => (
-        <Box key={project.project || index} sx={{ mb: 6 }}>
-          {project.title && <Typography variant="h5" sx={{ mb: 2 }}>{project.title}</Typography>}
-          {projects.length > 1 && <Typography variant="subtitle1" sx={{ mb: 1 }}>{project.project}</Typography>}
-          <Box sx={{ maxWidth: 640, mx: 'auto', mb: 4, textAlign: 'left' }}>
-            {project.clientName && <Typography><strong>{t('tracking_client')}:</strong> {project.clientName}</Typography>}
-            <Typography><strong>{t('tracking_panel_quantity')}:</strong> {project.panelQuantity ?? 0}</Typography>
-            {project.projectManager && <Typography><strong>{t('tracking_project_manager')}:</strong> {project.projectManager}</Typography>}
-            {project.lastUpdate && <Typography><strong>{t('tracking_last_update')}:</strong> {formatLastUpdate(project.lastUpdate)}</Typography>}
-          </Box>
-          <Stepper alternativeLabel={!isMobile} orientation={isMobile ? 'vertical' : 'horizontal'}>
-            {getStepsForProject(project).map((step, stepIndex) => (
-              <Step key={stepIndex} completed={Boolean(step.value)}>
-                <StepLabel optional={step.optional} error={step.error}>{step.label}</StepLabel>
-                {isMobile && <Typography color={step.value ? 'green' : 'grey'}>{step.value ? 'Completed' : 'In Progress'}</Typography>}
-              </Step>
-            ))}
-          </Stepper>
-        </Box>
+        <Accordion key={project.project || index} defaultExpanded={projects.length === 1} sx={{ maxWidth: 1100, mx: 'auto', mb: 2, textAlign: 'left', borderRadius: 2, overflow: 'hidden' }}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ px: { xs: 2, sm: 4 } }}>
+            <Box sx={{ textAlign: 'left' }}>
+              <Typography variant="h6">
+                {project.project} - {project.title || t('tracking_title_placeholder')} - {project.panelQuantity ?? 0} x
+              </Typography>
+            </Box>
+          </AccordionSummary>
+          <AccordionDetails sx={{ px: { xs: 2, sm: 4 }, pb: 4 }}>
+            <Box sx={{ mb: 4, textAlign: 'center' }}>
+              <Typography color="text.secondary"><strong>{t('tracking_last_update')}:</strong> {project.lastUpdate ? formatLastUpdate(project.lastUpdate) : t('tracking_last_update_placeholder')}</Typography>
+            </Box>
+            <Stepper alternativeLabel={!isMobile} orientation={isMobile ? 'vertical' : 'horizontal'}>
+              {getStepsForProject(project).map((step, stepIndex) => (
+                <Step key={stepIndex} completed={Boolean(step.value)}>
+                  <StepLabel optional={step.optional} error={step.error}>{step.label}</StepLabel>
+                  {isMobile && <Typography color={step.value ? 'green' : 'grey'}>{step.value ? 'Completed' : 'In Progress'}</Typography>}
+                </Step>
+              ))}
+            </Stepper>
+          </AccordionDetails>
+        </Accordion>
       ))}
+      <Dialog open={contactOpen} onClose={() => !submittingContact && setContactOpen(false)} fullWidth maxWidth="sm">
+        <DialogTitle>{t('tracking_contact_manager', { name: projects[0]?.projectManager || t('tracking_project_manager_placeholder') })}</DialogTitle>
+        <DialogContent>
+          <TextField autoFocus fullWidth required margin="dense" label={t('tracking_contact_name')} value={contactForm.name} onChange={(event) => setContactForm({ ...contactForm, name: event.target.value })} />
+          <TextField fullWidth required margin="dense" label={t('tracking_contact_details')} value={contactForm.contact} onChange={(event) => setContactForm({ ...contactForm, contact: event.target.value })} />
+          <TextField fullWidth required multiline minRows={5} margin="dense" label={t('tracking_contact_message')} value={contactForm.message} onChange={(event) => setContactForm({ ...contactForm, message: event.target.value })} />
+          {contactStatus === 'validation' && <Typography color="error" sx={{ mt: 2 }}>{t('tracking_contact_validation')}</Typography>}
+          {contactStatus === 'error' && <Typography color="error" sx={{ mt: 2 }}>{t('tracking_contact_error')}</Typography>}
+          {contactStatus === 'success' && <Typography color="success.main" sx={{ mt: 2 }}>{t('tracking_contact_success')}</Typography>}
+        </DialogContent>
+        <DialogActions>
+          <Button disabled={submittingContact} onClick={() => setContactOpen(false)}>{t('tracking_contact_cancel')}</Button>
+          <Button variant="contained" disabled={submittingContact || contactStatus === 'success'} onClick={submitTrackingContact}>{t('tracking_contact_send')}</Button>
+        </DialogActions>
+      </Dialog>
     </>
   );
 
