@@ -19,7 +19,7 @@ echo ======================================
 call "%NODE_PATH%\npm.cmd" run build
 if errorlevel 1 (
     echo ❌ Erreur dans npm run build
-    pause
+    if not defined NO_PAUSE pause
     exit /b 1
 )
 
@@ -30,7 +30,7 @@ echo ======================================
 call "%NODE_PATH%\npm.cmd" run obfuscate
 if errorlevel 1 (
     echo ❌ Erreur dans npm run obfuscate
-    pause
+    if not defined NO_PAUSE pause
     exit /b 1
 )
 
@@ -43,7 +43,7 @@ call "%AWS_PATH%\aws.exe" s3 sync build/ s3://%BUCKET%/ --delete
 
 if errorlevel 1 (
     echo ❌ Erreur lors de l'envoi à S3
-    pause
+    if not defined NO_PAUSE pause
     exit /b 1
 )
 
@@ -55,11 +55,11 @@ call "%AWS_PATH%\aws.exe" cloudfront create-invalidation --distribution-id %DIST
 
 if errorlevel 1 (
     echo ❌ Erreur lors de l'invalidation CloudFront
-    pause
+    if not defined NO_PAUSE pause
     exit /b 1
 )
 
 echo ======================================
 echo ✅ Déploiement terminé avec succès !
 echo 🌐 Accès : https://apps.electrotech.ca/
-pause
+if not defined NO_PAUSE pause
