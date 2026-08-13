@@ -19,6 +19,12 @@ const TrackingProjects = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+  const formatLastUpdate = (lastUpdate) => {
+    if (!lastUpdate) return '';
+    const date = new Date(lastUpdate);
+    return Number.isNaN(date.getTime()) ? String(lastUpdate) : date.toLocaleString();
+  };
+
   useEffect(() => {
     if (!trackingId) {
       setProjects([]);
@@ -79,6 +85,12 @@ const TrackingProjects = () => {
         <Box key={project.project || index} sx={{ mb: 6 }}>
           {project.title && <Typography variant="h5" sx={{ mb: 2 }}>{project.title}</Typography>}
           {projects.length > 1 && <Typography variant="subtitle1" sx={{ mb: 1 }}>{project.project}</Typography>}
+          <Box sx={{ maxWidth: 640, mx: 'auto', mb: 4, textAlign: 'left' }}>
+            {project.clientName && <Typography><strong>{t('tracking_client')}:</strong> {project.clientName}</Typography>}
+            <Typography><strong>{t('tracking_panel_quantity')}:</strong> {project.panelQuantity ?? 0}</Typography>
+            {project.projectManager && <Typography><strong>{t('tracking_project_manager')}:</strong> {project.projectManager}</Typography>}
+            {project.lastUpdate && <Typography><strong>{t('tracking_last_update')}:</strong> {formatLastUpdate(project.lastUpdate)}</Typography>}
+          </Box>
           <Stepper alternativeLabel={!isMobile} orientation={isMobile ? 'vertical' : 'horizontal'}>
             {getStepsForProject(project).map((step, stepIndex) => (
               <Step key={stepIndex} completed={Boolean(step.value)}>
