@@ -56,12 +56,9 @@
     "hero_tracking_button": "Track",
 
     "tracking_title": "Follow your project progress!",
-    "tracking_title_description": "Ask your project manager at Electrotech to obtain your tracking number.",
-    "tracking_textfield": "Project number",
-    "tracking_textfield_directive": "Enter your project number",
-    "tracking_search_button": "Search",
-    "tracking_no_result":"No project found for ",
-    "tracking_for": "Tracking for ",
+    "tracking_link_required": "Use the secure tracking link provided by your Electrotech project manager.",
+    "tracking_invalid_link":"This tracking link is invalid or has expired.",
+    "tracking_for": "Project tracking",
     "tracking_step_received": "Received by Electrotech",
     "tracking_step_confirmed": "Confirmed",
     "tracking_step_orders_sent": "Orders Sent",
@@ -191,6 +188,5 @@
     "shipping_form_content_description": "Parts list or comments (You can also attach a file)",
     "shipping_form_add_row": "+ Add a row",
     "shipping_form_client_parts": "Parts supplied by the client"
-    
+
   }
-  
